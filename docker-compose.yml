@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: docker/app/Dockerfile
+    volumes:
+      - ./:/var/www
+      - /var/www/node_modules
+    environment:
+      - APP_ENV=${APP_ENV:-production}
+    command: ./bin/build
+
+  nginx:
+    image: 'nginx:stable'
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - ${DOCKER_NGINX_PORT:-8080}:80
+    depends_on:
+      - app
