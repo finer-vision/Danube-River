@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+video, img {
+  object-fit: cover;
+}
+
+html, body, #root-app {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html {
+  font-family: "DIN", Arial, sans-serif;
+  font-size: $root-size;
+  line-height: 1.5;
+}
