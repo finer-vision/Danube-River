@@ -4,11 +4,19 @@ Design-focused micro-site telling the story of the danube river – Europe's sec
 
 ### Getting Started
 
-With [Docker](https://docs.docker.com/install/) installed, run the following. 
+With [Docker](https://docs.docker.com/install/) installed, run the following.
 
 ```bash
 cp .env.example .env
 docker-compose up
+```
+
+### Adding Dependencies
+
+If you are using [Docker](https://docs.docker.com/install/) make sure you install the dependencies inside the machine.
+
+```bash
+docker-compose exec app npm add package
 ```
 
 ### Building for Production
@@ -36,4 +44,4 @@ Setup ownership of the public directories to NGINX's `www-data` user and group.
 
 ```bash
 chown www-data:www-data -R build
-``` 
+```
