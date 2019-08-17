@@ -1,0 +1,30 @@
+.Hero {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: 50% 100%;
+  @include fluid-attr("padding", 15px, 60px, $responsive-min, $responsive-max);
+
+  &__logo {
+    display: flex;
+    justify-content: flex-end;
+    @include fluid-attr("margin-bottom", 15px, 40px, $responsive-min, $responsive-max);
+
+    img {
+      width: 100%;
+      @include fluid-attr("max-width", 100px, 139px, $responsive-min, $responsive-max);
+    }
+  }
+
+  .type-h4 {
+    color: $primary;
+  }
+
+  .type-hero {
+    font-family: "Editor", serif;
+    font-weight: bold;
+    color: $secondary;
+  }
+}
