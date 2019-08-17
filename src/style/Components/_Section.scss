@@ -25,6 +25,7 @@
 
   &--width-400px {
     @include fluid-attr("width", 100%, 400px, $responsive-min, $responsive-max);
+    max-width: 100%;
   }
 
   &__container {

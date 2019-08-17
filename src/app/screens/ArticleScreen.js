@@ -81,7 +81,7 @@ export default class ArticleScreen extends BaseScreen {
                         </div>
                     </div>
                     <div className="Section__column Section__column--desktop-50 text-right">
-                        <img src={`assets/img/map.png`}/>
+                        <img src={`assets/img/map.png`} className="img-fluid"/>
                     </div>
                 </div>
                 <div className="Image">
@@ -90,15 +90,17 @@ export default class ArticleScreen extends BaseScreen {
             </Section>
 
             <Section classes="Section--auto-height">
-                <div className="Paragraph mt-185px">
-                    <h4 className="type-h4 dark-blue">The days when microplastics could be ignored are long gone, and surveys that
-                        are now specifically
-                        looking at their presence are revealing the scale of the problem – and helping us to identify
-                        where
-                        they are coming from…</h4>
-                </div>
-                <div className="Image">
-                    <img src={`assets/img/graph.png`} className="Image__element"/>
+                <div className="Section__container">
+                    <div className="Paragraph mt-185px">
+                        <h4 className="type-h4 dark-blue">The days when microplastics could be ignored are long gone, and surveys that
+                            are now specifically
+                            looking at their presence are revealing the scale of the problem – and helping us to identify
+                            where
+                            they are coming from…</h4>
+                    </div>
+                    <div className="Image">
+                        <img src={`assets/img/graph.png`} className="Image__element"/>
+                    </div>
                 </div>
             </Section>
         </Screen>
