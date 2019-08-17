@@ -1,7 +1,32 @@
 import React, { Component } from "react";
-import { asset } from "../core/utils";
 
-// #EB4535
+const Country = props => (
+  <text
+    fontFamily="Aktiv Grotesk Ex Trial"
+    fontSize={14}
+    letterSpacing={2}
+    fill="#FFF"
+    transform={`translate(${props.x} ${props.y})`}
+  >
+    <tspan x={2} y={14}>
+      {props.name.toUpperCase()}
+    </tspan>
+  </text>
+);
+
+const HotSpot = props => (
+  <g transform={`translate(${props.x} ${props.y})`}>
+    <ellipse fill="#EB4535" cx={30} cy={29} rx={20} ry={19}/>
+    <ellipse
+      stroke="#EB4535"
+      strokeWidth={2}
+      cx={30.5}
+      cy={29.5}
+      rx={30.5}
+      ry={29.5}
+    />
+  </g>
+);
 
 export default class MapZoomed extends Component {
   render = () => (
@@ -22,11 +47,6 @@ export default class MapZoomed extends Component {
                 <mask id="prefix__d" fill="#fff">
                   <use xlinkHref="#prefix__c"/>
                 </mask>
-                <path
-                  fill="#13551B"
-                  mask="url(#prefix__d)"
-                  d="M976 417h95v15h-95zM1575 763h102v15h-102zM1055 817h95v15h-95zM622 355h102v15H622z"
-                />
               </g>
             </g>
             <g
@@ -43,203 +63,27 @@ export default class MapZoomed extends Component {
             </g>
           </g>
           <path fill="#13551B" d="M675 409h99v15h-99z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#FFF"
-            transform="translate(675 409)"
-          >
-            <tspan x={2} y={14}>
-              {'HUNGARY'}
-            </tspan>
-          </text>
-          <path fill="#13551B" d="M687 243h102v15H687z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#FFF"
-            transform="translate(687 243)"
-          >
-            <tspan x={2} y={14}>
-              {'SLOVAKIA'}
-            </tspan>
-          </text>
-          <path fill="#13551B" d="M1060 792h103v15h-103z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#FFF"
-            transform="translate(1060 792)"
-          >
-            <tspan x={2} y={14}>
-              {'BULGARIA'}
-            </tspan>
-          </text>
-          <path fill="#13551B" d="M1269 382h103v15h-103z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#FFF"
-            transform="translate(1269 382)"
-          >
-            <tspan x={2} y={14}>
-              {'MOLDOVA'}
-            </tspan>
-          </text>
-          <path fill="#13551B" d="M1186 179h91v15h-91z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#FFF"
-            transform="translate(1186 179)"
-          >
-            <tspan x={2} y={14}>
-              {'UKRAINE'}
-            </tspan>
-          </text>
-          <path fill="#13551B" d="M552 649h150v30H552z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#FFF"
-            transform="translate(552 649)"
-          >
-            <tspan x={23.269} y={14}>
-              {'BOSNIA &amp; '}
-            </tspan>
-            <tspan x={2} y={29}>
-              {'HERZAGOVINA'}
-            </tspan>
-          </text>
-          <path fill="#13551B" d="M797 715h76v15h-76z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#FFF"
-            transform="translate(797 715)"
-          >
-            <tspan x={2.5} y={14}>
-              {'SERBIA'}
-            </tspan>
-          </text>
-          <path fill="#13551B" d="M389 348h89v15h-89z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#fff"
-            transform="translate(389 348)"
-          >
-            <tspan x={2} y={14}>
-              {'AUSTRIA'}
-            </tspan>
-          </text>
-          <path fill="#13551B" d="M376 500h102v15H376z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#FFF"
-            transform="translate(376 500)"
-          >
-            <tspan x={2} y={14}>
-              {'SLOVENIA'}
-            </tspan>
-          </text>
-          <path fill="#13551B" d="M109 583h57v15h-57z"/>
-          <text
-            fontFamily="Aktiv Grotesk Ex Trial"
-            fontSize={14}
-            letterSpacing={2}
-            fill="#FFF"
-            transform="translate(109 583)"
-          >
-            <tspan x={2} y={14}>
-              {'ITALY'}
-            </tspan>
-          </text>
-          <g transform="translate(269 214)">
-            <ellipse fill="#EB4535" cx={30} cy={29} rx={20} ry={19}/>
-            <ellipse
-              stroke="#EB4535"
-              strokeWidth={2}
-              cx={30.5}
-              cy={29.5}
-              rx={30.5}
-              ry={29.5}
-            />
-          </g>
-          <g transform="translate(499 267)">
-            <ellipse fill="#EB4535" cx={30} cy={29} rx={20} ry={19}/>
-            <ellipse
-              stroke="#EB4535"
-              strokeWidth={2}
-              cx={30.5}
-              cy={29.5}
-              rx={30.5}
-              ry={29.5}
-            />
-          </g>
-          <g transform="translate(909 620)">
-            <ellipse fill="#EB4535" cx={30} cy={29} rx={20} ry={19}/>
-            <ellipse
-              stroke="#EB4535"
-              strokeWidth={2}
-              cx={30.5}
-              cy={29.5}
-              rx={30.5}
-              ry={29.5}
-            />
-          </g>
-          <g transform="translate(1240 591)">
-            <ellipse fill="#EB4535" cx={30} cy={29} rx={20} ry={19}/>
-            <ellipse
-              stroke="#EB4535"
-              strokeWidth={2}
-              cx={30.5}
-              cy={29.5}
-              rx={30.5}
-              ry={29.5}
-            />
-          </g>
-          <g transform="translate(1320 561)">
-            <ellipse fill="#EB4535" cx={30} cy={29} rx={20} ry={19}/>
-            <ellipse
-              stroke="#EB4535"
-              strokeWidth={2}
-              cx={30.5}
-              cy={29.5}
-              rx={30.5}
-              ry={29.5}
-            />
-          </g>
-          <text fontFamily="Aktiv Grotesk Ex Trial" fontSize={14} letterSpacing={2} fill="#FFF">
-            <tspan x={421} y={161}>
-              {'CZECHIA'}
-            </tspan>
-          </text>
-          <text fontFamily="Aktiv Grotesk Ex Trial" fontSize={14} letterSpacing={2} fill="#FFF">
-            <tspan x={1020} y={507}>
-              {'ROMANIA'}
-            </tspan>
-          </text>
-          <text fontFamily="Aktiv Grotesk Ex Trial" fontSize={14} letterSpacing={2} fill="#FFF">
-            <tspan x={499} y={561}>
-              {'CROATIA'}
-            </tspan>
-          </text>
-          <text fontFamily="Aktiv Grotesk Ex Trial" fontSize={14} letterSpacing={2} fill="#FFF">
-            <tspan x={64} y={99}>
-              {'GERMANY'}
-            </tspan>
-          </text>
+
+          <Country x={675} y={409} name="Hungary"/>
+          <Country x={687} y={243} name="Slovakia"/>
+          <Country x={1060} y={792} name="Bulgaria"/>
+          <Country x={1269} y={382} name="Moldova"/>
+          <Country x={1186} y={179} name="Ukraine"/>
+          <Country x={552} y={649} name="Bosnia & Herzagovina"/>
+          <Country x={797} y={715} name="Serbia"/>
+          <Country x={389} y={348} name="Austria"/>
+          <Country x={376} y={500} name="Slovenia"/>
+          <Country x={109} y={583} name="Italy"/>
+          <Country x={421} y={161} name="Czechia"/>
+          <Country x={1020} y={507} name="Romania"/>
+          <Country x={499} y={561} name="Croatia"/>
+          <Country x={64} y={99} name="Germany"/>
+
+          <HotSpot x={269} y={214}/>
+          <HotSpot x={499} y={267}/>
+          <HotSpot x={909} y={620}/>
+          <HotSpot x={1240} y={591}/>
+          <HotSpot x={1320} y={561}/>
         </g>
       </svg>
     </div>
