@@ -7,7 +7,7 @@ import { AppContext } from "../context/AppContext";
 export default class LandingScreen extends BaseScreen {
   render = () => (
     <Screen name="Landing">
-      <h1>Landing Screen</h1>
+      <div className="type-h1">Landing Screen</div>
     </Screen>
   );
 }

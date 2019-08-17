@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ "$APP_ENV" = local ]]
+if [ "$APP_ENV" = "local" ]
 then
     npm run watch
 else
