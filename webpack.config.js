@@ -3,8 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CleanObsoleteChunks = require('webpack-clean-obsolete-chunks');
 
-const ENV = process.argv[process.argv.length - 1];
+const ENV = process.argv[process.argv.length - 1] || 'production';
 const SRC_DIR = path.resolve(__dirname, 'src');
 const BUILD_DIR = path.resolve(__dirname, 'build');
 
@@ -30,6 +31,7 @@ const plugins = [
       useShortDoctype: true,
     },
   }),
+  new CleanObsoleteChunks(),
 ];
 
 if (ENV === 'production') {
@@ -42,7 +44,17 @@ if (ENV === 'production') {
 }
 
 module.exports = {
+  target: 'web',
   mode: ENV,
+  devServer: {
+    port: process.env.DEV_SERVER_PORT || 8081,
+    host: '0.0.0.0',
+    open: false,
+    writeToDisk: true,
+    proxy: {
+      '/': 'http://nginx',
+    },
+  },
   entry: [
     path.join(SRC_DIR, 'index.js'),
     path.join(SRC_DIR, 'index.scss'),
@@ -76,7 +88,7 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.(png|jpg|svg|gif|mp4|woff2)$/i,
+        test: /\.(png|jpg|svg|gif|mp4|woff|woff2)$/i,
         use: [
           {
             loader: 'url-loader',
