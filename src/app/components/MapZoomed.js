@@ -15,9 +15,10 @@ const Country = props => (
 );
 
 const HotSpot = props => (
-  <g transform={`translate(${props.x} ${props.y})`}>
+  <g transform={`translate(${props.x} ${props.y})`} onClick={props.onClick} className="MapZoomed__hotSpot">
     <ellipse fill="#EB4535" cx={30} cy={29} rx={20} ry={19}/>
     <ellipse
+      className="MapZoomed__hotSpot-orbit"
       stroke="#EB4535"
       strokeWidth={2}
       cx={30.5}
@@ -29,10 +30,19 @@ const HotSpot = props => (
 );
 
 export default class MapZoomed extends Component {
+  state = {
+    activeHotSpot: null,
+  };
+
+  #toggleHotSpot = id => () => {
+    const activeHotSpot = this.state.activeHotSpot === id ? null : id;
+    this.setState({activeHotSpot});
+    console.log('(click) hot spot -> id', id);
+  };
+
   render = () => (
     <div className="MapZoomed">
       <svg viewBox="0 0 1440 900" style={{width: '100%'}}>
-        <title>{'Group 50'}</title>
         <defs>
           <path id="prefix__a" d="M0 0h1440v900H0z"/>
           <path id="prefix__c" d="M.767 0h2560v1440H.767z"/>
@@ -79,11 +89,11 @@ export default class MapZoomed extends Component {
           <Country x={499} y={561} name="Croatia"/>
           <Country x={64} y={99} name="Germany"/>
 
-          <HotSpot x={269} y={214}/>
-          <HotSpot x={499} y={267}/>
-          <HotSpot x={909} y={620}/>
-          <HotSpot x={1240} y={591}/>
-          <HotSpot x={1320} y={561}/>
+          <HotSpot x={269} y={214} onClick={this.#toggleHotSpot(1)}/>
+          <HotSpot x={499} y={267} onClick={this.#toggleHotSpot(2)}/>
+          <HotSpot x={909} y={620} onClick={this.#toggleHotSpot(3)}/>
+          <HotSpot x={1240} y={591} onClick={this.#toggleHotSpot(4)}/>
+          <HotSpot x={1320} y={561} onClick={this.#toggleHotSpot(5)}/>
         </g>
       </svg>
     </div>

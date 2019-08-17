@@ -8,4 +8,21 @@
   background-repeat: no-repeat;
   background-position: 57.7% 49.7%;
   background-size: 174%;
+
+  &__hotSpot {
+    cursor: pointer;
+
+    &-orbit {
+      rx: 30.5;
+      ry: 29.5;
+      animation: orbit 2s ease infinite;
+
+      @keyframes orbit {
+        50% {
+          rx: 18.3;
+          ry: 17.7;
+        }
+      }
+    }
+  }
 }
