@@ -1,7 +1,10 @@
 .Section {
+  width: 100%;
+  height: 100vh;
 
-  &__container {
-
+  & > div {
+    width: 100%;
+    height: 100%;
   }
 
   &--blue {

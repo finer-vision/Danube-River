@@ -1,13 +1,27 @@
 import React from "react";
 import BaseScreen from "./BaseScreen";
 import Screen from "../components/Screen";
-import { Link } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
+import Hero from "../components/Hero";
+import Video from "../components/Video";
+import { asset } from "../core/utils";
+import Section from "../components/Section";
 
+@AppContext
 export default class LandingScreen extends BaseScreen {
   render = () => (
     <Screen name="Landing">
-      <div className="type-h1">Landing Screen</div>
-        <Link to="/article">Article</Link>
+      <Section>
+        <Hero
+          tag="Life of a River"
+          title="The Danube"
+          background={asset('assets/img/landing-screen-hero.png')}
+        />
+      </Section>
+
+      <Section>
+        <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
+      </Section>
     </Screen>
   );
 }

@@ -1,25 +1,25 @@
 .type {
   &-hero {
-    font-size: 8.438rem;
+    @include fluid-type(35px, 135px, $responsive-min, $responsive-max);
   }
 
   &-h1 {
-    font-size: 3.563rem;
+    @include fluid-type(20px, 57px, $responsive-min, $responsive-max);
   }
 
   &-h2 {
-    font-size: 2.688rem;
+    @include fluid-type(16px, 43px, $responsive-min, $responsive-max);
   }
 
   &-h3 {
-    font-size: 2rem;
+    @include fluid-type(14px, 32px, $responsive-min, $responsive-max);
   }
 
   &-h4 {
-    font-size: 1.5rem;
+    @include fluid-type(12px, 18px, $responsive-min, $responsive-max);
   }
 
   &-tag {
-    font-size: 0.875rem;
+    @include fluid-type(10px, 14px, $responsive-min, $responsive-max);
   }
 }
