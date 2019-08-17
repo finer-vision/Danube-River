@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { asset } from '../core/utils'
+import { asset } from "../core/utils";
 
 export default class Hero extends Component {
   static propTypes = {

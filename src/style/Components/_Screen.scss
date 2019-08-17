@@ -2,4 +2,9 @@
   width: 100vw;
   height: 100vh;
   overflow: auto;
+  scroll-snap-type: y mandatory;
+
+  .Section {
+    scroll-snap-align: start;
+  }
 }
