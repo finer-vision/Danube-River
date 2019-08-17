@@ -1,4 +1,14 @@
 .Video {
+  position: relative;
+
+  &__mute {
+    position: absolute;
+    cursor: pointer;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+  }
+
   video {
     display: block;
     overflow: hidden;

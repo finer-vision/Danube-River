@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createRef} from "react";
 import BaseScreen from "./BaseScreen";
 import Screen from "../components/Screen";
 import { AppContext } from "../context/AppContext";
@@ -20,11 +20,7 @@ export default class LandingScreen extends BaseScreen {
       </Section>
 
       <Section>
-        <Video
-          autoPlay
-          muted
-          sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-        />
+        <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
       </Section>
     </Screen>
   );
