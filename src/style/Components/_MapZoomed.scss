@@ -1,0 +1,68 @@
+.MapZoomed {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #13551B;
+  overflow: hidden;
+  background-image: url("./assets/img/map-zoomed.jpg");
+  background-repeat: no-repeat;
+  background-position: 57.7% 49.7%;
+  background-size: 174%;
+
+  &__hotSpot {
+    cursor: pointer;
+
+    &-orbit {
+      rx: 30.5;
+      ry: 29.5;
+      animation: orbit 2s ease infinite;
+
+      @keyframes orbit {
+        50% {
+          rx: 18.3;
+          ry: 17.7;
+        }
+      }
+    }
+  }
+
+  &__popup {
+    $color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    text-align: center;
+    background-color: $color;
+    @include fluid-attr("padding-top", 8px, 15px, $responsive-min, $responsive-max);
+    @include fluid-attr("padding-bottom", 8px, 15px, $responsive-min, $responsive-max);
+    @include fluid-attr("padding-left", 12px, 30px, $responsive-min, $responsive-max);
+    @include fluid-attr("padding-right", 12px, 30px, $responsive-min, $responsive-max);
+    @include fluid-attr("width", 200px, 300px, $responsive-min, $responsive-max);
+    transform: translate(calc(-50% + 28px), 70px);
+
+    &-triangle {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 12.5px 15px 12.5px;
+      border-color: transparent transparent $color transparent;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+    }
+
+    .type-tag {
+      font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary;
+    }
+
+    .type-h4 {
+      max-width: 250px;
+      font-family: "Editor", serif;
+      font-weight: bold;
+      color: $secondary;
+    }
+  }
+}
