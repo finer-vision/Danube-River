@@ -12,11 +12,11 @@
   }
 
   &-h3 {
-    @include fluid-type(14px, 32px, $responsive-min, $responsive-max);
+    @include fluid-type(25px, 32px, $responsive-min, $responsive-max);
   }
 
   &-h4 {
-    @include fluid-type(12px, 18px, $responsive-min, $responsive-max);
+    @include fluid-type(20px, 24px, $responsive-min, $responsive-max);
   }
 
   &-tag {

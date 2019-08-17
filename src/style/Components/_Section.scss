@@ -7,7 +7,64 @@
     height: 100%;
   }
 
+  &--flex {
+    display: flex;
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__column {
+    @include mobile {
+      width: 100% !important;
+    }
+    &--desktop-50 {
+      width: 50%;
+    }
+  }
+
+  &--width-400px {
+    @include fluid-attr("width", 100%, 400px, $responsive-min, $responsive-max);
+  }
+
+  &__container {
+    margin-left: auto;
+    margin-right: auto;
+    @include fluid-attr("max-width", 100%, 1200px, $responsive-min, $responsive-max);
+    padding: 0 rem(15px);
+    @include mobile {
+      padding: 0 rem(15px);
+    }
+  }
+
   &--blue {
-    background-color: color(blue);
+    border-top: 1px solid $blueColor;
+    border-bottom: 1px solid $blueColor;
+    color: $whiteColor;
+    background-color: $blueColor;
+  }
+
+  &--dark-blue {
+    border-top: 1px solid $darkBlueColor;
+    border-bottom: 1px solid $darkBlueColor;
+    color: $whiteColor;
+    background-color: $darkBlueColor;
+  }
+
+  &--auto-height {
+    height: auto;
+  }
+
+  &--moved-to-left {
+    transform: translateX(rem(-75px));
+    @include mobile {
+      transform: none;
+    }
+  }
+
+  .type-big-title {
+    font-family: "Editor", serif;
+    font-weight: bold;
+    margin: 0;
   }
 }

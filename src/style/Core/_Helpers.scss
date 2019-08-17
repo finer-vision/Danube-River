@@ -1,0 +1,30 @@
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mb-50px {
+  @include fluid-attr("margin-bottom", 25px, 50px, $responsive-min, $responsive-max);
+}
+.mt-50px {
+  @include fluid-attr("margin-top", 25px, 50px, $responsive-min, $responsive-max);
+}
+.mb-30px {
+  @include fluid-attr("margin-bottom", 25px, 30px, $responsive-min, $responsive-max);
+}
+.mt-185px {
+  @include fluid-attr("margin-top", 45px, 185px, $responsive-min, $responsive-max);
+}
+.mt-210px {
+  @include fluid-attr("margin-top", 45px, 210px, $responsive-min, $responsive-max);
+}
+.mb-40px {
+  @include fluid-attr("margin-bottom", 40px, 40px, $responsive-min, $responsive-max);
+}
+.text-right {
+  text-align: right;
+}
+.float-right {
+  float: right;
+}
+.dark-blue {
+  color: $darkBlueColor;
+}
