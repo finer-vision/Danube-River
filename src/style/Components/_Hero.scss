@@ -10,6 +10,10 @@
     justify-content: flex-end;
     @include fluid-attr("margin-bottom", 15px, 40px, $responsive-min, $responsive-max);
 
+    @include mobile {
+      justify-content: center;
+    }
+
     img {
       width: 100%;
       @include fluid-attr("max-width", 100px, 139px, $responsive-min, $responsive-max);
