@@ -12,7 +12,7 @@ import MapZoomed from "../components/MapZoomed";
 export default class LandingScreen extends BaseScreen {
   render = () => (
     <Screen name="Landing">
-      <Section show={false}>
+      <Section show={true}>
         <Hero
           tag="Life of a River"
           title="The Danube"
@@ -20,11 +20,11 @@ export default class LandingScreen extends BaseScreen {
         />
       </Section>
 
-      <Section show={false}>
+      <Section show={true}>
         <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
       </Section>
 
-      <Section>
+      <Section show={true}>
         <MapZoomed/>
       </Section>
     </Screen>
