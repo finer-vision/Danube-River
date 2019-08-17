@@ -4,7 +4,7 @@ import Loading from "./Loading";
 
 const LandingScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "LandingScreen" */ "../screens/LandingScreen"));
 const NotFoundScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "NotFoundScreen" */ "../screens/NotFoundScreen"));
-const ArticleScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "ArticleScreen" */ '../screens/ArticleScreen'));
+const ArticleScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "ArticleScreen" */ "../screens/ArticleScreen"));
 
 const Screen = Component => props => <Component {...props}/>;
 
