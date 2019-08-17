@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 
 export default class Section extends Component {
 
+  static propTypes = {
+    show: PropTypes.bool,
+  };
+
   static defaultProps = {
     show: true,
   };
