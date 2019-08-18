@@ -14,20 +14,19 @@ static defaultProps = {
     pageTitleType: "type-hero",
 };
 
-  pageTitleType() {
+  displayPageTitle() {
       if(this.props.pageTitleType === "type-hero"){
           return (
               <div className="type-hero">
                   {this.props.title}
               </div>
           );
-      }else{
-          return (
-              <h1 className="type-h1 type-single-page">
-                  {this.props.title}
-              </h1>
-          );
       }
+      return (
+          <h1 className="type-h1 type-single-page">
+              {this.props.title}
+          </h1>
+      );
   }
 
   render = () => (
@@ -41,7 +40,7 @@ static defaultProps = {
         <div className="type-h4">
           {this.props.tag}
         </div>
-          {this.pageTitleType()}
+          {this.displayPageTitle()}
       </div>
     </div>
   );
