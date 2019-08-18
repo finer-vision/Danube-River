@@ -4,9 +4,11 @@ import Screen from "../components/Screen";
 import { AppContext } from "../context/AppContext";
 import { asset } from "../core/utils";
 import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 import Video from "../components/Video";
 import Section from "../components/Section";
-import MapZoomed from "../components/MapZoomed";
+import MapZoomed from "../components/MapZoomed/MapZoomed";
+import MapFull from "../components/MapFull/MapFull";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
@@ -26,6 +28,14 @@ export default class LandingScreen extends BaseScreen {
 
       <Section show={true}>
         <MapZoomed/>
+      </Section>
+
+      <Section show={true}>
+        <MapFull/>
+      </Section>
+
+      <Section show={true}>
+        <Footer/>
       </Section>
     </Screen>
   );
