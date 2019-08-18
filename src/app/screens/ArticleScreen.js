@@ -29,8 +29,9 @@ export default class ArticleScreen extends BaseScreen {
 
             <Section>
                 <Hero
-                    tag="Life of a River"
-                    title="The Danube"
+                    tag="MICROPLASTIC"
+                    title="Small thing, big problem"
+                    pageTitleType="type-single-page"
                     background={asset('assets/img/article-screen-hero.svg')}
                 />
             </Section>
