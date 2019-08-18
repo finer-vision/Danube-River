@@ -309,7 +309,7 @@ export default class ArticleScreen extends BaseScreen {
             </Section>
             <Section classes="Section--light-sea-green Section--auto-height">
                 <div className="Section__container">
-                    <div className="Paragraph mt-210px mb-80px">
+                    <div className="Paragraph mt-80px mb-80px">
                         <div className="Paragraph__content Paragraph--default-letter-spacing">
                             But the challenge with the Danube is, there are different countries with different governments
                             that have different priorities – which all need to work together to tackle the problem.
