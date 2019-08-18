@@ -44,4 +44,52 @@
       }
     }
   }
+
+  &__popup {
+    max-width: 750px;
+    @include fluid-attr("padding", 25px, 31px, $responsive-min, $responsive-max);
+
+    &-tag {
+      transform: translate(-6%, 0);
+
+      img {
+        transform: translate(0, -40%);
+      }
+
+      .type-p {
+        @include fluid-attr("padding", 8px, 16px, $responsive-min, $responsive-max);
+        color: $primary;
+        font-weight: 500;
+      }
+    }
+
+    &-id {
+      font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+      font-weight: bold;
+      line-height: 1;
+      color: $primary;
+      transform: translate(-5%, 30%);
+    }
+
+    &-inner {
+      @include fluid-attr("padding", 16px, 24px, $responsive-min, $responsive-max);
+      background-color: rgba(255, 255, 255, 0.9);
+      position: relative;
+      z-index: 1;
+    }
+
+    &-main {
+      .type-h2 {
+        font-family: Editor, serif;
+        font-weight: bold;
+        line-height: 1em;
+        color: $secondary;
+        margin-bottom: 0.8em;
+      }
+
+      .type-p {
+        color: $gray-300;
+      }
+    }
+  }
 }
