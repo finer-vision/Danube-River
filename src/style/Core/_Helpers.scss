@@ -137,11 +137,32 @@
   letter-spacing: initial;
   font-weight: 100;
 }
-.ml-20px {
+.ml-desktop-20px {
   margin-left: 20px;
+  @include mobile {
+    margin-left: initial;
+  }
 }
 .br-desktop {
   @include mobile {
     display: none;
   }
+}
+.d-mobile-block {
+  @include mobile {
+    display: block !important;
+  }
+}
+.d-mobile-none {
+  @include mobile {
+    display: none !important;
+  }
+}
+.d-desktop-block {
+  @include mobile {
+    display: none !important;
+  }
+}
+.d-none {
+  display: none;
 }

@@ -113,13 +113,17 @@ export default class ArticleScreen extends BaseScreen {
                             </div>
                         </div>
                         <div className="Section__column Section__column--desktop-50 text-right">
-                            <img src={`assets/img/map.png`} className="Image__element float-right"/>
+                            <img src={`assets/img/map.png`} className="Image__element d-mobile-none float-right mb-30px"/>
                         </div>
                     </div>
+                </div>
+                <div className="Image mt-30px mb-30px">
+                    <img src={`assets/img/map.png`} className="d-none d-mobile-block img-fluid"/>
                 </div>
                 <div className="Image">
                     <img src={`assets/img/img2-player.png`} className="Image__element Image--move-down"/>
                 </div>
+
             </Section>
 
             <Section classes="Section--auto-height">
@@ -153,9 +157,11 @@ export default class ArticleScreen extends BaseScreen {
                             </div>
                         </div>
                     </div>
-                    <div className="Image mt-65px">
-                        <img src={`assets/img/img3-plastic.png`} className="Image__element"/>
-                    </div>
+                </div>
+                <div className="Image mt-65px">
+                    <img src={`assets/img/img3-plastic.png`} className="Image__element"/>
+                </div>
+                <div className="Section__container">
                     <div className="max-width-760 mb-80px">
                         <h4 className="type-h4 dark-blue mt-80px">
                             But back to basics.<br/>
@@ -258,7 +264,7 @@ export default class ArticleScreen extends BaseScreen {
                                 Danube’s water.
                             </div>
                         </div>
-                        <div className="Section__column Section__column--desktop-50-custom ml-20px">
+                        <div className="Section__column Section__column--desktop-50-custom ml-desktop-20px">
                             <span className="quote-open-type-2">“</span>
                             <h2 className="type-h2 type-alert">
                                 It’s not as simple <br className="br-desktop"/>
