@@ -18,6 +18,7 @@
     @include mobile {
       width: 100% !important;
     }
+
     &--desktop-50 {
       width: 50%;
     }
@@ -52,13 +53,18 @@
     background-color: $darkBlueColor;
   }
 
+  &--light-sea-green {
+    border-top: 1px solid $lightseagreenColor;
+    border-bottom: 1px solid $lightseagreenColor;
+    color: $whiteColor;
+    background-color: $lightseagreenColor;
+  }
+
   &--auto-height {
     height: auto;
   }
 
   &--moved-to-left {
-    //transform: translateX(rem(-75px));
-    //@include fluid-attr("margin-left", 0, -75px, $responsive-min, $responsive-max);
     margin-left: -75px;
 
     @include mobile {

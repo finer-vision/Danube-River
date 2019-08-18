@@ -21,23 +21,27 @@ export default class ArticleScreen extends BaseScreen {
             </Section>
             <Section classes="Section--blue Section--auto-height">
                 <div className="Section__container">
-                    <div className="Paragraph mb-50px mt-185px">
-                        <h4 className="type-h4 mb-30px">The world knows there are problems caused by plastic.</h4>
-                        <div className="Paragraph__content">
-                            We’ve all seen the pictures of dolphins, sharks or rare birds tangled up with plastic and in
-                            many countries there have been big – and successful – campaigns to cut the number of plastic
-                            bags being used. But there is another sort of plastic pollution that is harder to spot,
-                            which is
-                            a big threat to marine life in rivers such as the Danube… and the chances are, you are
-                            helping
-                            add to them.
+                    <div className="max-width-760">
+                        <div className="Paragraph mb-50px mt-185px">
+                            <h4 className="type-h4 mb-30px">The world knows there are problems caused by plastic.</h4>
+                            <div className="Paragraph__content">
+                                We’ve all seen the pictures of dolphins, sharks or rare birds tangled up with plastic
+                                and in
+                                many countries there have been big – and successful – campaigns to cut the number of
+                                plastic
+                                bags being used. But there is another sort of plastic pollution that is harder to spot,
+                                which is
+                                a big threat to marine life in rivers such as the Danube… and the chances are, you are
+                                helping
+                                add to them.
+                            </div>
                         </div>
                     </div>
                     <div className="Paragraph mb-0">
                         <h3 className="type-h3 type-big-title Section--moved-to-left">So, what exactly do people mean
                             when
                             they talk about microplastics?</h3>
-                        <div className="Paragraph__content mt-50px">
+                        <div className="Paragraph__content max-width-760 mt-50px">
                             It’s a term used to describe any piece of plastic that is less than 5mm wide and they come
                             from
                             a variety of sources.
@@ -50,42 +54,48 @@ export default class ArticleScreen extends BaseScreen {
             </Section>
 
             <Section classes="Section--dark-blue Section--auto-height">
-                <div className="Section__container Section--flex mt-210px">
-                    <div className="Section__column Section__column--desktop-50">
-                        <div className="Section--width-400px float-right">
-                            <div className="Paragraph mb-40px">
-                                <div className="Paragraph__content">
-                                    They can also be small bits of plastic waste from factories, traditionally too small
-                                    to worry
-                                    about or regulate as they were flushed out in the manufacturing or cleaning process.
+                <div className="Section__container mt-210px">
+                    <div className="max-width-760 Section--flex">
+                        <div className="Section__column Section__column--desktop-50">
+                            <div className="Section--width-400px float-right">
+                                <div className="Paragraph mb-40px">
+                                    <div className="Paragraph__content">
+                                        They can also be small bits of plastic waste from factories, traditionally too
+                                        small
+                                        to worry
+                                        about or regulate as they were flushed out in the manufacturing or cleaning
+                                        process.
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="Paragraph mb-40px">
-                                <div className="Paragraph__content">
-                                    The company involved, Borealis, has since sought to tackle the issue, and has
-                                    launched plastic
-                                    recycling and anti-leak campaigns.
+                                <div className="Paragraph mb-40px">
+                                    <div className="Paragraph__content">
+                                        The company involved, Borealis, has since sought to tackle the issue, and has
+                                        launched plastic
+                                        recycling and anti-leak campaigns.
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="Paragraph">
-                                <div className="Paragraph__content">
-                                    But, as we’ve already mentioned, it’s not a case of just blaming businesses. Other
-                                    microplastics
-                                    are things called microbeads, which are found in some cosmetic products such as
-                                    shower gel or
-                                    some types of toothpaste. Recent estimates suggest clothing made from non-natural
-                                    fibers can
-                                    shed hundreds of thousands of microscopic pieces of plastic during the washing
-                                    machine process.
-                                    They can find their way into rivers and oceans because they are too small to be
-                                    filtered out at
-                                    wastewater treatment plants.
+                                <div className="Paragraph">
+                                    <div className="Paragraph__content">
+                                        But, as we’ve already mentioned, it’s not a case of just blaming businesses.
+                                        Other
+                                        microplastics
+                                        are things called microbeads, which are found in some cosmetic products such as
+                                        shower gel or
+                                        some types of toothpaste. Recent estimates suggest clothing made from
+                                        non-natural
+                                        fibers can
+                                        shed hundreds of thousands of microscopic pieces of plastic during the washing
+                                        machine process.
+                                        They can find their way into rivers and oceans because they are too small to be
+                                        filtered out at
+                                        wastewater treatment plants.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="Section__column Section__column--desktop-50 text-right">
-                        <img src={`assets/img/map.png`} className="img-fluid"/>
+                        <div className="Section__column Section__column--desktop-50 text-right">
+                            <img src={`assets/img/map.png`} className="img-fluid"/>
+                        </div>
                     </div>
                 </div>
                 <div className="Image">
@@ -95,26 +105,33 @@ export default class ArticleScreen extends BaseScreen {
 
             <Section classes="Section--auto-height">
                 <div className="Section__container">
-                    <div className="Paragraph Paragraph--max-width-760 mt-185px">
-                        <h4 className="type-h4 dark-blue">The days when microplastics could be ignored are long gone,
-                            and surveys that
-                            are now specifically
-                            looking at their presence are revealing the scale of the problem – and helping us to
-                            identify
-                            where
-                            they are coming from…</h4>
+                    <div className="max-width-760">
+                        <div className="Paragraph mt-185px">
+                            <h4 className="type-h4 dark-blue">The days when microplastics could be ignored are long
+                                gone,
+                                and surveys that
+                                are now specifically
+                                looking at their presence are revealing the scale of the problem – and helping us to
+                                identify
+                                where
+                                they are coming from…</h4>
+                        </div>
                     </div>
                     <div className="Image">
                         <img src={`assets/img/graph.png`} className="Image__element"/>
                     </div>
-                    <div className="Paragraph mt-65px">
-                        <div className="Paragraph__content Paragraph--default-letter-spacing">
-                            One place where there is still much to learn is the Danube. Gabor Bordos is a professor from
-                            the Wessling Research Institute, which has been getting hard figures for the presence of
-                            microplastics across Hungary. Its results from last year suggest there are about 50
-                            microplastic particles per cubic meter in the Danube. They also got what appears to have
-                            been direct evidence of human impact on the level of microplastics in the water – with more
-                            found in a stretch downriver from Budapest, than just north of the capital city.
+                    <div className="max-width-760">
+                        <div className="Paragraph mt-65px">
+                            <div className="Paragraph__content Paragraph--default-letter-spacing">
+                                One place where there is still much to learn is the Danube. Gabor Bordos is a professor
+                                from
+                                the Wessling Research Institute, which has been getting hard figures for the presence of
+                                microplastics across Hungary. Its results from last year suggest there are about 50
+                                microplastic particles per cubic meter in the Danube. They also got what appears to have
+                                been direct evidence of human impact on the level of microplastics in the water – with
+                                more
+                                found in a stretch downriver from Budapest, than just north of the capital city.
+                            </div>
                         </div>
                     </div>
                     <div className="Image mt-80px">
@@ -196,28 +213,64 @@ export default class ArticleScreen extends BaseScreen {
             </Section>
 
             <Section classes="Section--auto-height">
-                <div className="Section__container Section--flex max-width-960 mt-315px">
-                    <div className="Section__column Section__column--desktop-50">
-                        But there is still much to learn about the overall impact on the Danube and a survey of
-                        microplastics along the length of the river is under way. It is a multinational effort, with an
-                        aim to define the problem. It is hoped this will then inform the politicians taking decisions
-                        needed to safeguard the river’s waters, which cut across more countries than any other in the
-                        world. Philipp Hohenblum, a microplastics expert from the International Commission for the
-                        protection of the Danube River (ICPDR), is heading the survey in Vienna, Austria. He and 35
-                        colleagues have spent every day for the past month collecting, testing and analyzing the
-                        Danube’s water.
-                    </div>
-                    <div className="Section__column Section__column--desktop-50">
-                        <h2 className="type-h2 type-alert">
-                            It’s not as simple <br/>
-                            as spotting a <br/>
-                            discarded fast <br/>
-                            food wrapper.”
-                        </h2>
+                <div className="Section__container mt-315px">
+                    <div className="max-width-760 Section--flex">
+                        <div className="Section__column Section__column--desktop-50">
+                            But there is still much to learn about the overall impact on the Danube and a survey of
+                            microplastics along the length of the river is under way. It is a multinational effort, with
+                            an
+                            aim to define the problem. It is hoped this will then inform the politicians taking
+                            decisions
+                            needed to safeguard the river’s waters, which cut across more countries than any other in
+                            the
+                            world. Philipp Hohenblum, a microplastics expert from the International Commission for the
+                            protection of the Danube River (ICPDR), is heading the survey in Vienna, Austria. He and 35
+                            colleagues have spent every day for the past month collecting, testing and analyzing the
+                            Danube’s water.
+                        </div>
+                        <div className="Section__column Section__column--desktop-50">
+                            <h2 className="type-h2 type-alert">
+                                It’s not as simple <br/>
+                                as spotting a <br/>
+                                discarded fast <br/>
+                                food wrapper.”
+                            </h2>
+                        </div>
                     </div>
                 </div>
                 <div className="Image mt-80px">
                     <img src={`assets/img/img2-player.png`} className="Image__element"/>
+                </div>
+                <div className="max-width-760">
+                    <div className="Paragraph mt-65px">
+                        <div className="Paragraph__content Paragraph--default-letter-spacing">
+                            So, some of the world’s brightest minds have been focusing on tackling the issue and
+                            pressure is growing for governments to act. But on a more personal level, what can be done
+                            to tackle the problem? There’s an obvious answer – buy fewer plastic products and avoid
+                            shower gels and washing detergents that have microbeads in them.
+                        </div>
+                    </div>
+                </div>
+
+                <div className="Image">
+                    <img src={`assets/img/img4-fishing.png`} className="Image__element Image--move-down"/>
+                </div>
+            </Section>
+            <Section classes="Section--light-sea-green Section--auto-height">
+                <div className="Section__container">
+                    <div className="Paragraph mt-210px">
+                        <div className="Paragraph__content Paragraph--default-letter-spacing">
+                            But the challenge with the Danube is, there are different countries with different governments
+                            that have different priorities – which all need to work together to tackle the problem.
+                            Microbeads, for instance, are banned in cosmetics in the UK, France and Italy, but they are not
+                            yet outlawed across the whole European Union and other countries through which the Danube flows.
+                            <br/>
+                            <br/>
+                            But what is clear is there is a huge amount of goodwill and multinational effort, as shown by
+                            the work of the ICPDR and several regional environmental organizations, to identify and tackle
+                            what is the big problem caused by these very small things.
+                        </div>
+                    </div>
                 </div>
             </Section>
         </Screen>
