@@ -28,9 +28,6 @@
 .mt-210px {
   @include fluid-attr("margin-top", 45px, 210px, $responsive-min, $responsive-max);
 }
-.mt-315px {
-  @include fluid-attr("margin-top", 45px, 315px, $responsive-min, $responsive-max);
-}
 .mb-40px {
   @include fluid-attr("margin-bottom", 40px, 40px, $responsive-min, $responsive-max);
 }
@@ -60,9 +57,23 @@
   margin-left: auto;
   margin-right: auto;
 }
+.max-width-1257 {
+  max-width: 1257px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .letter-spacing-1_2 {
   letter-spacing: 1.2px;
 }
+.letter-spacing-normal {
+  letter-spacing: normal !important;
+}
 .font-grotesk {
   font-family: "Aktiv Grotesk Ex Trial",Arial,sans-serif;
+}
+.pr-15 {
+  padding-right: 15px;
+  @include mobile {
+    padding-right: 0;
+  }
 }

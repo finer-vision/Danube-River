@@ -9,6 +9,19 @@ import {asset} from "../core/utils";
 
 @AppContext
 export default class ArticleScreen extends BaseScreen {
+
+    componentDidMount() {
+        window.addEventListener("resize", () => {
+            this.handleSize(this.containerReference.width);;
+        });
+    }
+
+    handleSize(image) {
+        var elements = document.getElementsByClassName("Section__container");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.width=(image+"px");
+        }
+    }
     render = () => (
         <Screen name="ArticleScreen">
 
@@ -49,17 +62,20 @@ export default class ArticleScreen extends BaseScreen {
                     </div>
                 </div>
                 <div className="Image">
-                    <img src={`assets/img/img1-plastic.png`} className="Image__element Image--move-down"/>
+                    <img src={`assets/img/img1-plastic.png`}
+                         ref={el => this.containerReference = el}
+                         onLoad={() => this.handleSize(this.containerReference.width)}
+                         className="Image__element Image--move-down"/>
                 </div>
             </Section>
 
             <Section classes="Section--dark-blue Section--auto-height">
                 <div className="Section__container mt-210px">
-                    <div className="max-width-760 Section--flex">
+                    <div className="max-width-1257 Section--flex">
                         <div className="Section__column Section__column--desktop-50">
-                            <div className="Section--width-400px float-right">
+                            <div className="Section--width-400px float-right pr-15">
                                 <div className="Paragraph mb-40px">
-                                    <div className="Paragraph__content">
+                                    <div className="Paragraph__content letter-spacing-normal">
                                         They can also be small bits of plastic waste from factories, traditionally too
                                         small
                                         to worry
@@ -68,14 +84,14 @@ export default class ArticleScreen extends BaseScreen {
                                     </div>
                                 </div>
                                 <div className="Paragraph mb-40px">
-                                    <div className="Paragraph__content">
+                                    <div className="Paragraph__content letter-spacing-normal">
                                         The company involved, Borealis, has since sought to tackle the issue, and has
                                         launched plastic
                                         recycling and anti-leak campaigns.
                                     </div>
                                 </div>
                                 <div className="Paragraph">
-                                    <div className="Paragraph__content">
+                                    <div className="Paragraph__content letter-spacing-normal">
                                         But, as we’ve already mentioned, it’s not a case of just blaming businesses.
                                         Other
                                         microplastics
@@ -94,7 +110,7 @@ export default class ArticleScreen extends BaseScreen {
                             </div>
                         </div>
                         <div className="Section__column Section__column--desktop-50 text-right">
-                            <img src={`assets/img/map.png`} className="img-fluid"/>
+                            <img src={`assets/img/map.png`} className="Image__element"/>
                         </div>
                     </div>
                 </div>
@@ -137,7 +153,7 @@ export default class ArticleScreen extends BaseScreen {
                     <div className="Image mt-80px">
                         <img src={`assets/img/img3-plastic.png`} className="Image__element"/>
                     </div>
-                    <div className="max-width-760">
+                    <div className="max-width-760 mb-80px">
                         <h4 className="type-h4 dark-blue mt-80px">
                             But back to basics.<br/>
                             <br/>
@@ -172,7 +188,7 @@ export default class ArticleScreen extends BaseScreen {
             <Section classes="Section--dark-blue Section--auto-height">
                 <div className="Section__container">
                     <div className="max-width-760">
-                        <h4 className="type-h4 mt-80px mb-80px">
+                        <h4 className="type-h4 type-weight-500 mt-80px mb-80px">
                             That kind of makes sense.
                             <br/>
                             <br/>
@@ -189,7 +205,7 @@ export default class ArticleScreen extends BaseScreen {
                     </div>
                     <div className="max-width-760">
                         <div className="Paragraph mt-80px mb-80px">
-                            <div className="Paragraph__content">
+                            <div className="Paragraph__content letter-spacing-normal">
                                 And it is an ongoing problem – even if all production were ended tomorrow.
                                 <br/>
                                 <br/>
@@ -206,14 +222,16 @@ export default class ArticleScreen extends BaseScreen {
                             </div>
                         </div>
                     </div>
-                    <div className="Image mt-80px">
-                        <img src={`assets/img/img3-plastic.png`} className="Image__element Image--move-down-250"/>
-                    </div>
+
                 </div>
             </Section>
-
+            <Section classes="Section--dark-blue-and-white Section--auto-height">
+                <div className="Image">
+                    <img src={`assets/img/img3-plastic.png`} className="Image__element"/>
+                </div>
+            </Section>
             <Section classes="Section--auto-height">
-                <div className="Section__container mt-315px">
+                <div className="Section__container mt-80px">
                     <div className="max-width-760 Section--flex">
                         <div className="Section__column Section__column--desktop-50">
                             But there is still much to learn about the overall impact on the Danube and a survey of
@@ -241,13 +259,15 @@ export default class ArticleScreen extends BaseScreen {
                 <div className="Image mt-80px">
                     <img src={`assets/img/img2-player.png`} className="Image__element"/>
                 </div>
-                <div className="max-width-760">
-                    <div className="Paragraph mt-65px">
-                        <div className="Paragraph__content Paragraph--default-letter-spacing">
-                            So, some of the world’s brightest minds have been focusing on tackling the issue and
-                            pressure is growing for governments to act. But on a more personal level, what can be done
-                            to tackle the problem? There’s an obvious answer – buy fewer plastic products and avoid
-                            shower gels and washing detergents that have microbeads in them.
+                <div className="Section__container">
+                    <div className="max-width-760">
+                        <div className="Paragraph mt-65px">
+                            <div className="Paragraph__content Paragraph--default-letter-spacing">
+                                So, some of the world’s brightest minds have been focusing on tackling the issue and
+                                pressure is growing for governments to act. But on a more personal level, what can be done
+                                to tackle the problem? There’s an obvious answer – buy fewer plastic products and avoid
+                                shower gels and washing detergents that have microbeads in them.
+                            </div>
                         </div>
                     </div>
                 </div>

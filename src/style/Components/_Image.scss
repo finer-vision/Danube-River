@@ -17,10 +17,10 @@
     }
   }
 
-  &--move-down-250 {
-    transform: translateY(250px);
+  &--map {
+    max-width: none;
     @include mobile {
-      transform: none;
+      max-width: 100%;
     }
   }
 }
