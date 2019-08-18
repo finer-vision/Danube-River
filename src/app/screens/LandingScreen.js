@@ -25,11 +25,11 @@ export default class LandingScreen extends BaseScreen {
         <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
       </Section>
 
-      <Section show={true}>
+      <Section show={false}>
         <MapZoomed/>
       </Section>
 
-      <Section show={false}>
+      <Section show={true}>
         <MapFull/>
       </Section>
     </Screen>

@@ -1,0 +1,39 @@
+.MapFull {
+  position: relative;
+  //background-image: url("./assets/img/map-full.jpg");
+  background-image: url("./assets/img/map-zoomed.jpg");
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include mobile {
+      display: none;
+    }
+
+    &-item {
+      border-bottom: 1px solid #fff;
+      color: #fff;
+      @include fluid-attr("width", 70px, 100px, $responsive-min, $responsive-max);
+      @include fluid-attr("padding-top", 10px, 21px, $responsive-min, $responsive-max);
+      @include fluid-attr("padding-right", 8px, 14px, $responsive-min, $responsive-max);
+      @include fluid-attr("padding-bottom", 8px, 14px, $responsive-min, $responsive-max);
+
+      &--active {
+        background-color: $primary;
+        border-bottom: none;
+        width: auto;
+        @include fluid-attr("padding-top", 12px, 24px, $responsive-min, $responsive-max);
+        @include fluid-attr("padding-right", 16px, 48px, $responsive-min, $responsive-max);
+        @include fluid-attr("padding-bottom", 4px, 8px, $responsive-min, $responsive-max);
+        @include fluid-attr("padding-left", 12px, 24px, $responsive-min, $responsive-max);
+      }
+    }
+  }
+}
