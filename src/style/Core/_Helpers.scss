@@ -7,17 +7,29 @@
 .mt-30px {
   @include fluid-attr("margin-top", 25px, 30px, $responsive-min, $responsive-max);
 }
+.mt-10px {
+  @include fluid-attr("margin-top", 5px, 10px, $responsive-min, $responsive-max);
+}
 .mt-50px {
   @include fluid-attr("margin-top", 25px, 50px, $responsive-min, $responsive-max);
 }
 .mt-65px {
   @include fluid-attr("margin-top", 30px, 65px, $responsive-min, $responsive-max);
 }
+.mb-60px {
+  @include fluid-attr("margin-bottom", 30px, 60px, $responsive-min, $responsive-max);
+}
 .mt-80px {
   @include fluid-attr("margin-top", 45px, 80px, $responsive-min, $responsive-max);
 }
+.mt-110px {
+  @include fluid-attr("margin-top", 45px, 110px, $responsive-min, $responsive-max);
+}
 .mb-80px {
   @include fluid-attr("margin-bottom", 45px, 80px, $responsive-min, $responsive-max);
+}
+.mb-75px {
+  @include fluid-attr("margin-bottom", 45px, 75px, $responsive-min, $responsive-max);
 }
 .mb-30px {
   @include fluid-attr("margin-bottom", 25px, 30px, $responsive-min, $responsive-max);
@@ -75,5 +87,61 @@
   padding-right: 15px;
   @include mobile {
     padding-right: 0;
+  }
+}
+.quote-open {
+  display: block;
+  margin-bottom: -40px;
+  font-size: rem(135);
+  font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+  letter-spacing: 1.2px;
+  line-height: rem(121px);
+  color: red;
+}
+.quote-open-type-2 {
+  display: block;
+  margin-bottom: -20px;
+  font-size: rem(57px);
+  font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+  letter-spacing: 1.2px;
+  line-height: rem(68px);
+  color: red;
+  font-weight: 500;
+}
+.quote-author {
+  font-size: rem(24px);
+  line-height: rem(29px);
+  letter-spacing: rem(2px);
+  font-weight: 500;
+  color: $redColor;
+  text-transform: uppercase;
+  font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+  &-type-2 {
+    text-transform: none;
+  }
+}
+
+.quote-author-position {
+  font-size: rem(14px);
+  line-height: rem(15px);
+  letter-spacing: initial;
+  font-family: "Din", sans-serif;
+  &-type-2 {
+    color: $darkBlueColor;
+  }
+}
+
+.custom-text-styles {
+  font-size: rem(18px);
+  line-height: rem(27px);
+  letter-spacing: initial;
+  font-weight: 100;
+}
+.ml-20px {
+  margin-left: 20px;
+}
+.br-desktop {
+  @include mobile {
+    display: none;
   }
 }

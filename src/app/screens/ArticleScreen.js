@@ -6,6 +6,8 @@ import {AppContext} from "../context/AppContext";
 import Section from "../components/Section";
 import Hero from "../components/Hero";
 import {asset} from "../core/utils";
+import Footer from "../components/Footer";
+import Video from "../components/Video";
 
 @AppContext
 export default class ArticleScreen extends BaseScreen {
@@ -50,10 +52,10 @@ export default class ArticleScreen extends BaseScreen {
                             </div>
                         </div>
                     </div>
-                    <div className="Paragraph mb-0">
+                    <div className="Paragraph mb-50px">
                         <h3 className="type-h3 type-big-title Section--moved-to-left">So, what exactly do people mean
                             when
-                            they talk about microplastics?</h3>
+                            they talk <br/>about microplastics?</h3>
                         <div className="Paragraph__content max-width-760 mt-50px">
                             It’s a term used to describe any piece of plastic that is less than 5mm wide and they come
                             from
@@ -61,16 +63,17 @@ export default class ArticleScreen extends BaseScreen {
                         </div>
                     </div>
                 </div>
+            </Section>
+            <Section classes="Section--blue-and-dark-blue Section--auto-height">
                 <div className="Image">
                     <img src={`assets/img/img1-plastic.png`}
                          ref={el => this.containerReference = el}
                          onLoad={() => this.handleSize(this.containerReference.width)}
-                         className="Image__element Image--move-down"/>
+                         className="Image__element"/>
                 </div>
             </Section>
-
             <Section classes="Section--dark-blue Section--auto-height">
-                <div className="Section__container mt-210px">
+                <div className="Section__container mt-110px">
                     <div className="max-width-1257 Section--flex">
                         <div className="Section__column Section__column--desktop-50">
                             <div className="Section--width-400px float-right pr-15">
@@ -110,7 +113,7 @@ export default class ArticleScreen extends BaseScreen {
                             </div>
                         </div>
                         <div className="Section__column Section__column--desktop-50 text-right">
-                            <img src={`assets/img/map.png`} className="Image__element"/>
+                            <img src={`assets/img/map.png`} className="Image__element float-right"/>
                         </div>
                     </div>
                 </div>
@@ -122,7 +125,7 @@ export default class ArticleScreen extends BaseScreen {
             <Section classes="Section--auto-height">
                 <div className="Section__container">
                     <div className="max-width-760">
-                        <div className="Paragraph mt-185px">
+                        <div className="Paragraph mt-185px mb-30px">
                             <h4 className="type-h4 dark-blue">The days when microplastics could be ignored are long
                                 gone,
                                 and surveys that
@@ -150,7 +153,7 @@ export default class ArticleScreen extends BaseScreen {
                             </div>
                         </div>
                     </div>
-                    <div className="Image mt-80px">
+                    <div className="Image mt-65px">
                         <img src={`assets/img/img3-plastic.png`} className="Image__element"/>
                     </div>
                     <div className="max-width-760 mb-80px">
@@ -196,15 +199,22 @@ export default class ArticleScreen extends BaseScreen {
                         </h4>
                     </div>
                     <div className="max-width-960">
+                        <span className="quote-open">“</span>
                         <h2 className="type-h2 type-alert">
                             it has been estimated that the <br/>
                             average European shellfish <br/>
                             consumer will ingest up to 11,000 <br/>
                             microplastics per year.”
                         </h2>
+                        <div className="quote-author mt-30px">
+                            Stephanie Wright
+                        </div>
+                        <div className="quote-author-position mt-10px">
+                            Fellow at King’s College London
+                        </div>
                     </div>
                     <div className="max-width-760">
-                        <div className="Paragraph mt-80px mb-80px">
+                        <div className="Paragraph mt-65px mb-80px">
                             <div className="Paragraph__content letter-spacing-normal">
                                 And it is an ongoing problem – even if all production were ended tomorrow.
                                 <br/>
@@ -234,25 +244,34 @@ export default class ArticleScreen extends BaseScreen {
                 <div className="Section__container mt-80px">
                     <div className="max-width-760 Section--flex">
                         <div className="Section__column Section__column--desktop-50">
-                            But there is still much to learn about the overall impact on the Danube and a survey of
-                            microplastics along the length of the river is under way. It is a multinational effort, with
-                            an
-                            aim to define the problem. It is hoped this will then inform the politicians taking
-                            decisions
-                            needed to safeguard the river’s waters, which cut across more countries than any other in
-                            the
-                            world. Philipp Hohenblum, a microplastics expert from the International Commission for the
-                            protection of the Danube River (ICPDR), is heading the survey in Vienna, Austria. He and 35
-                            colleagues have spent every day for the past month collecting, testing and analyzing the
-                            Danube’s water.
+                            <div className="custom-text-styles">
+                                But there is still much to learn about the overall impact on the Danube and a survey of
+                                microplastics along the length of the river is under way. It is a multinational effort, with
+                                an
+                                aim to define the problem. It is hoped this will then inform the politicians taking
+                                decisions
+                                needed to safeguard the river’s waters, which cut across more countries than any other in
+                                the
+                                world. Philipp Hohenblum, a microplastics expert from the International Commission for the
+                                protection of the Danube River (ICPDR), is heading the survey in Vienna, Austria. He and 35
+                                colleagues have spent every day for the past month collecting, testing and analyzing the
+                                Danube’s water.
+                            </div>
                         </div>
-                        <div className="Section__column Section__column--desktop-50">
+                        <div className="Section__column Section__column--desktop-50-custom ml-20px">
+                            <span className="quote-open-type-2">“</span>
                             <h2 className="type-h2 type-alert">
-                                It’s not as simple <br/>
-                                as spotting a <br/>
-                                discarded fast <br/>
+                                It’s not as simple <br className="br-desktop"/>
+                                as spotting a <br className="br-desktop"/>
+                                discarded fast <br className="br-desktop"/>
                                 food wrapper.”
                             </h2>
+                            <div className="quote-author quote-author-type-2 mt-10px">
+                                Philipp Hohenblum
+                            </div>
+                            <div className="quote-author-position quote-author-position-type-2 mt-10px">
+                                Professor
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -261,7 +280,7 @@ export default class ArticleScreen extends BaseScreen {
                 </div>
                 <div className="Section__container">
                     <div className="max-width-760">
-                        <div className="Paragraph mt-65px">
+                        <div className="Paragraph mt-80px mb-75px">
                             <div className="Paragraph__content Paragraph--default-letter-spacing">
                                 So, some of the world’s brightest minds have been focusing on tackling the issue and
                                 pressure is growing for governments to act. But on a more personal level, what can be done
@@ -271,14 +290,19 @@ export default class ArticleScreen extends BaseScreen {
                         </div>
                     </div>
                 </div>
-
+            </Section>
+            <Section classes="Section--white-amd-blue-and-lightseagreen Section--auto-height">
                 <div className="Image">
-                    <img src={`assets/img/img4-fishing.png`} className="Image__element Image--move-down"/>
+                    {/*<img src={`assets/img/img4-fishing.png`} className="Image__element Image--move-down"/>*/}
+                    <Video showMuteButton={false}
+                           sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                           classes="Video--max-width-1257"
+                    />
                 </div>
             </Section>
             <Section classes="Section--light-sea-green Section--auto-height">
                 <div className="Section__container">
-                    <div className="Paragraph mt-210px">
+                    <div className="Paragraph mt-210px mb-80px">
                         <div className="Paragraph__content Paragraph--default-letter-spacing">
                             But the challenge with the Danube is, there are different countries with different governments
                             that have different priorities – which all need to work together to tackle the problem.
@@ -292,6 +316,10 @@ export default class ArticleScreen extends BaseScreen {
                         </div>
                     </div>
                 </div>
+            </Section>
+
+            <Section show={true}>
+                <Footer/>
             </Section>
         </Screen>
     );

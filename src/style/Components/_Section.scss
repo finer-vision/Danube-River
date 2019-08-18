@@ -8,6 +8,7 @@
   }
 
   &--flex {
+    position: relative;
     display: flex;
     @include mobile {
       display: block;
@@ -22,6 +23,27 @@
 
     &--desktop-50 {
       width: 50%;
+    }
+
+    &--desktop-50-custom {
+      position: absolute;
+      right: -100px;
+      top: 0;
+      width: 60%;
+      @include mobile {
+        width: 100%;
+        position: relative;
+        right: auto;
+      }
+    }
+
+    &--desktop-45 {
+      width: 45%;
+    }
+
+    &--desktop-55 {
+      width: 55%;
+      padding-left: 5%;
     }
   }
 
@@ -58,6 +80,14 @@
     background: repeating-linear-gradient($darkBlueColor, $darkBlueColor 50%, $whiteColor 50%, $whiteColor 100%);
   }
 
+  &--blue-and-dark-blue {
+    background: repeating-linear-gradient($blueColor, $blueColor 85%, $darkBlueColor 20%, $darkBlueColor 100%);
+  }
+
+  &--white-amd-blue-and-lightseagreen {
+    background: repeating-linear-gradient($whiteColor, $whiteColor 80%, $lightseagreenColor 20%, $lightseagreenColor 100%);
+  }
+
   &--light-sea-green {
     border-top: 1px solid $lightseagreenColor;
     border-bottom: 1px solid $lightseagreenColor;
@@ -70,7 +100,7 @@
   }
 
   &--moved-to-left {
-    margin-left: -75px;
+    margin-left: -55px;
 
     @include mobile {
       margin-left: 0;
@@ -79,6 +109,6 @@
 
   .type-big-title {
     font-family: "Editor", serif;
-    font-weight: bold;
+    font-weight: 500;
   }
 }
