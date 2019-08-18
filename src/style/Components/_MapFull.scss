@@ -25,6 +25,10 @@
       @include fluid-attr("padding-right", 8px, 14px, $responsive-min, $responsive-max);
       @include fluid-attr("padding-bottom", 8px, 14px, $responsive-min, $responsive-max);
 
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
       &--active {
         background-color: $primary;
         border-bottom: none;
@@ -33,6 +37,10 @@
         @include fluid-attr("padding-right", 16px, 48px, $responsive-min, $responsive-max);
         @include fluid-attr("padding-bottom", 4px, 8px, $responsive-min, $responsive-max);
         @include fluid-attr("padding-left", 12px, 24px, $responsive-min, $responsive-max);
+
+        &:hover {
+          background-color: lighten($primary, 5%);
+        }
       }
     }
   }
