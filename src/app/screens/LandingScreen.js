@@ -6,7 +6,8 @@ import { asset } from "../core/utils";
 import Hero from "../components/Hero";
 import Video from "../components/Video";
 import Section from "../components/Section";
-import MapZoomed from "../components/MapZoomed";
+import MapZoomed from "../components/MapZoomed/MapZoomed";
+import MapFull from "../components/MapFull/MapFull";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
@@ -26,6 +27,10 @@ export default class LandingScreen extends BaseScreen {
 
       <Section show={true}>
         <MapZoomed/>
+      </Section>
+
+      <Section show={false}>
+        <MapFull/>
       </Section>
     </Screen>
   );
