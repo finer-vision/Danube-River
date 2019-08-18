@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Nav from "./Nav";
 import config from "../../core/config";
 import { asset } from "../../core/utils";
+import Tilde from "../Tilde";
 
 export default class MapFull extends Component {
   state = {
@@ -53,7 +54,7 @@ export default class MapFull extends Component {
 
           <div className="MapFull__popup-background">
             <div className="flex align-center MapFull__popup-tag">
-              <img src={asset('/assets/img/tilde.svg')} alt={this.state.activeItem.title}/>
+              <Tilde/>
               <div className="type-p">
                 {this.state.activeItem.title.toUpperCase()}
               </div>

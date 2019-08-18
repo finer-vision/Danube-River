@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { asset } from "../core/utils";
+import Tilde from "./Tilde";
 
 export default class Hero extends Component {
   static propTypes = {
@@ -16,7 +17,7 @@ export default class Hero extends Component {
       </div>
 
       <div className="Hero__title">
-        <img src={asset('assets/img/tilde.svg')} alt="Tilde"/>
+        <Tilde/>
         <div className="type-h4">
           {this.props.tag}
         </div>

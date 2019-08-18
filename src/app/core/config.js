@@ -1,4 +1,8 @@
 export default {
+  color: {
+    primary: '#EB4535',
+    secondary: '#1C1264',
+  },
   menu: [
     {
       id: 1,
