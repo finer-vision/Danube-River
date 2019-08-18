@@ -1,6 +1,7 @@
 .Section {
   width: 100%;
   height: 100vh;
+  position: relative;
 
   & > div {
     width: 100%;
@@ -78,13 +79,16 @@
 
   &--dark-blue-and-white {
     background: repeating-linear-gradient($darkBlueColor, $darkBlueColor 50%, $whiteColor 50%, $whiteColor 100%);
+    &_85 {
+      background: repeating-linear-gradient($darkBlueColor, $darkBlueColor 85%, $whiteColor 50%, $whiteColor 100%);
+    }
   }
 
   &--blue-and-dark-blue {
     background: repeating-linear-gradient($blueColor, $blueColor 85%, $darkBlueColor 20%, $darkBlueColor 100%);
   }
 
-  &--white-amd-blue-and-lightseagreen {
+  &--white-and-blue-and-lightseagreen {
     background: repeating-linear-gradient($whiteColor, $whiteColor 80%, $lightseagreenColor 20%, $lightseagreenColor 100%);
   }
 
@@ -110,5 +114,19 @@
   .type-big-title {
     font-family: "Editor", serif;
     font-weight: 500;
+  }
+
+  &__waves-blur {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url('./assets/img/article-screen-hero.svg');
+    height: 196px !important;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    transition: filter .5s ease;
+    backface-visibility: hidden;
   }
 }

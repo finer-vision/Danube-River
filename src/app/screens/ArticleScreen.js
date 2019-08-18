@@ -34,6 +34,8 @@ export default class ArticleScreen extends BaseScreen {
                     pageTitleType="type-single-page"
                     background={asset('assets/img/article-screen-hero.svg')}
                 />
+                <div className="Section__waves-blur">
+                </div>
             </Section>
             <Section classes="Section--blue Section--auto-height">
                 <div className="Section__container">
@@ -53,7 +55,7 @@ export default class ArticleScreen extends BaseScreen {
                             </div>
                         </div>
                     </div>
-                    <div className="Paragraph mb-50px">
+                    <div className="Paragraph">
                         <h3 className="type-h3 type-big-title Section--moved-to-left">So, what exactly do people mean
                             when
                             they talk <br/>about microplastics?</h3>
@@ -66,7 +68,7 @@ export default class ArticleScreen extends BaseScreen {
                 </div>
             </Section>
             <Section classes="Section--blue-and-dark-blue Section--auto-height">
-                <div className="Image">
+                <div className="Image mt-50px">
                     <img src={`assets/img/img1-plastic.png`}
                          ref={el => this.containerReference = el}
                          onLoad={() => this.handleSize(this.containerReference.width)}
@@ -121,16 +123,19 @@ export default class ArticleScreen extends BaseScreen {
                 <div className="Image mt-30px mb-30px">
                     <img src={`assets/img/map.png`} className="d-none d-mobile-block img-fluid"/>
                 </div>
-                <div className="Image">
-                    <img src={`assets/img/img2-player.png`} className="Image__element Image--move-down"/>
-                </div>
-
             </Section>
-
+            <Section classes="Section--dark-blue-and-white_85 Section--auto-height">
+                <div className="Image">
+                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img2-player.png`}
+                           sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                           classes="Video--max-width-1257 Image--move-down Video--cursor-pointer"
+                    />
+                </div>
+            </Section>
             <Section classes="Section--auto-height">
                 <div className="Section__container">
                     <div className="max-width-760">
-                        <div className="Paragraph mt-185px mb-30px">
+                        <div className="Paragraph mt-80px mb-30px">
                             <h4 className="type-h4 dark-blue">The days when microplastics could be ignored are long
                                 gone,
                                 and surveys that
@@ -160,7 +165,10 @@ export default class ArticleScreen extends BaseScreen {
                     </div>
                 </div>
                 <div className="Image mt-65px">
-                    <img src={`assets/img/img3-plastic.png`} className="Image__element"/>
+                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img3-plastic.png`}
+                           sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                           classes="Video--max-width-942 Video--cursor-pointer"
+                    />
                 </div>
                 <div className="Section__container">
                     <div className="max-width-760 mb-80px">
@@ -221,7 +229,7 @@ export default class ArticleScreen extends BaseScreen {
                         </div>
                     </div>
                     <div className="max-width-760">
-                        <div className="Paragraph mt-65px mb-80px">
+                        <div className="Paragraph mt-65px">
                             <div className="Paragraph__content letter-spacing-normal">
                                 And it is an ongoing problem – even if all production were ended tomorrow.
                                 <br/>
@@ -243,8 +251,11 @@ export default class ArticleScreen extends BaseScreen {
                 </div>
             </Section>
             <Section classes="Section--dark-blue-and-white Section--auto-height">
-                <div className="Image">
-                    <img src={`assets/img/img3-plastic.png`} className="Image__element"/>
+                <div className="Image mt-80px">
+                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img3-plastic.png`}
+                           sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                           classes="Video--max-width-942 Video--cursor-pointer"
+                    />
                 </div>
             </Section>
             <Section classes="Section--auto-height">
@@ -283,11 +294,14 @@ export default class ArticleScreen extends BaseScreen {
                     </div>
                 </div>
                 <div className="Image mt-80px">
-                    <img src={`assets/img/img2-player.png`} className="Image__element"/>
+                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img2-player.png`}
+                           sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                           classes="Video--max-width-1257 Video--cursor-pointer"
+                    />
                 </div>
                 <div className="Section__container">
                     <div className="max-width-760">
-                        <div className="Paragraph mt-80px mb-75px">
+                        <div className="Paragraph mt-80px">
                             <div className="Paragraph__content Paragraph--default-letter-spacing">
                                 So, some of the world’s brightest minds have been focusing on tackling the issue and
                                 pressure is growing for governments to act. But on a more personal level, what can be done
@@ -298,12 +312,11 @@ export default class ArticleScreen extends BaseScreen {
                     </div>
                 </div>
             </Section>
-            <Section classes="Section--white-amd-blue-and-lightseagreen Section--auto-height">
-                <div className="Image">
-                    {/*<img src={`assets/img/img4-fishing.png`} className="Image__element Image--move-down"/>*/}
-                    <Video showMuteButton={false}
+            <Section classes="Section--white-and-blue-and-lightseagreen Section--auto-height">
+                <div className="Image mt-80px">
+                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img4-fishing.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-                           classes="Video--max-width-1257"
+                           classes="Video--max-width-1257 Video--cursor-pointer"
                     />
                 </div>
             </Section>

@@ -19,25 +19,33 @@ export default class Video extends Component {
 
   state = {
     muted: true,
+    playing: false,
+    showPlayButton: this.props.showPlayButton
   };
 
   componentDidMount () {
-    setTimeout(() => {
-      this.#observer = new IntersectionObserver(this.#handleEntry, {
-        root: document.querySelector('.Screen'),
-        rootMargin: '0px',
-        threshold: 0.01,
-      });
-      this.#observer.observe(this.#container.current);
-    }, 2000);
+    if(!this.props.poster){
+      setTimeout(() => {
+        this.#observer = new IntersectionObserver(this.#handleEntry, {
+          root: document.querySelector('.Screen'),
+          rootMargin: '0px',
+          threshold: 0.01,
+        });
+        this.#observer.observe(this.#container.current);
+      }, 2000);
+    }
   }
 
   componentWillUnmount () {
-    this.#observer.unobserve(this.#container.current);
+    if(!this.props.poster){
+      this.#observer.unobserve(this.#container.current);
+    }
   }
 
   #handleEntry = async entries => {
-    await this.#video.current[entries[0].isIntersecting ? 'play' : 'pause']();
+    if(this.props.showMuteButton){
+      await this.#video.current[entries[0].isIntersecting ? 'play' : 'pause']();
+    }
     this.#video.current.currentTime = 0;
   };
 
@@ -46,6 +54,28 @@ export default class Video extends Component {
     this.setState({muted});
     !muted && this.#video.current.play();
   };
+
+  playVideo = () => {
+    if(this.state.playing && this.props.showPlayButton){
+
+      this.#video.current.pause();
+      this.setState({playing:false,showPlayButton:true});
+    }else{
+
+      this.#video.current.play();
+      this.setState({playing:true,showPlayButton:false});
+    }
+  };
+
+  displayPlayButton() {
+    if(this.state.showPlayButton){
+      return (
+          <div className="Video__play-button">
+            <img src={`assets/img/play-button.svg`}/>
+          </div>
+      );
+    }
+  }
 
   displayMuteButton() {
     if (this.props.showMuteButton) {
@@ -76,8 +106,12 @@ export default class Video extends Component {
     return (
         <div className={"Video " + ( this.props.classes || "") } ref={this.#container}>
           {this.displayMuteButton()}
+          {this.displayPlayButton()}
 
-        <video ref={this.#video} playsInline autoPlay muted={this.state.muted}>
+        <video ref={this.#video} playsInline autoPlay={false} muted={this.state.muted}
+               onClick={this.playVideo.bind(this)}
+                poster={this.props.poster}
+        >
           {this.props.sources.map((source, index) => (
             <source key={`video-source-${index}`} src={source.src} type={source.type}/>
           ))}

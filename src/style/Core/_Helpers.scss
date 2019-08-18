@@ -1,14 +1,11 @@
 .mb-0 {
   margin-bottom: 0 !important;
 }
-.mb-50px {
-  @include fluid-attr("margin-bottom", 25px, 50px, $responsive-min, $responsive-max);
+.mt-10px {
+  @include fluid-attr("margin-top", 5px, 10px, $responsive-min, $responsive-max);
 }
 .mt-30px {
   @include fluid-attr("margin-top", 25px, 30px, $responsive-min, $responsive-max);
-}
-.mt-10px {
-  @include fluid-attr("margin-top", 5px, 10px, $responsive-min, $responsive-max);
 }
 .mt-50px {
   @include fluid-attr("margin-top", 25px, 50px, $responsive-min, $responsive-max);
@@ -16,32 +13,33 @@
 .mt-65px {
   @include fluid-attr("margin-top", 30px, 65px, $responsive-min, $responsive-max);
 }
-.mb-60px {
-  @include fluid-attr("margin-bottom", 30px, 60px, $responsive-min, $responsive-max);
-}
 .mt-80px {
   @include fluid-attr("margin-top", 45px, 80px, $responsive-min, $responsive-max);
 }
 .mt-110px {
   @include fluid-attr("margin-top", 45px, 110px, $responsive-min, $responsive-max);
 }
-.mb-80px {
-  @include fluid-attr("margin-bottom", 45px, 80px, $responsive-min, $responsive-max);
+.mt-185px {
+  @include fluid-attr("margin-top", 45px, 185px, $responsive-min, $responsive-max);
+}
+
+.mb-30px {
+  @include fluid-attr("margin-bottom", 25px, 30px, $responsive-min, $responsive-max);
+}
+.mb-40px {
+  @include fluid-attr("margin-bottom", 40px, 40px, $responsive-min, $responsive-max);
+}
+.mb-50px {
+  @include fluid-attr("margin-bottom", 25px, 50px, $responsive-min, $responsive-max);
 }
 .mb-75px {
   @include fluid-attr("margin-bottom", 45px, 75px, $responsive-min, $responsive-max);
 }
-.mb-30px {
-  @include fluid-attr("margin-bottom", 25px, 30px, $responsive-min, $responsive-max);
+.mb-80px {
+  @include fluid-attr("margin-bottom", 45px, 80px, $responsive-min, $responsive-max);
 }
-.mt-185px {
-  @include fluid-attr("margin-top", 45px, 185px, $responsive-min, $responsive-max);
-}
-.mt-210px {
-  @include fluid-attr("margin-top", 45px, 210px, $responsive-min, $responsive-max);
-}
-.mb-40px {
-  @include fluid-attr("margin-bottom", 40px, 40px, $responsive-min, $responsive-max);
+.mt-11px {
+  margin-top: 11px;
 }
 .text-right {
   text-align: right;
@@ -165,11 +163,4 @@
 }
 .d-none {
   display: none;
-}
-.blur-div {
-  width: 100%;
-  height: 200px;
-  margin-top: -100px;
-  filter: blur(8px);
-  z-index: 99;
 }

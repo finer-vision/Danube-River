@@ -5,6 +5,10 @@
   background-position: 50% 100%;
   @include fluid-attr("padding", 15px, 60px, $responsive-min, $responsive-max);
 
+  &__title {
+    z-index: 10;
+  }
+
   &__logo {
     display: flex;
     justify-content: flex-end;
