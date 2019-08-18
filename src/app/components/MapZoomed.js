@@ -57,11 +57,11 @@ export default class MapZoomed extends Component {
 
   state = {
     hotSpots: [
-      {active: false, x: 269, y: 214, tag: 'Sturgeon', title: 'The ‘Danube dinosaur’ facing extinction'},
-      {active: false, x: 499, y: 267, tag: 'Sturgeon', title: 'The ‘Danube dinosaur’ facing extinction'},
-      {active: false, x: 909, y: 620, tag: 'Sturgeon', title: 'The ‘Danube dinosaur’ facing extinction'},
-      {active: false, x: 1240, y: 591, tag: 'Sturgeon', title: 'The ‘Danube dinosaur’ facing extinction'},
-      {active: false, x: 1320, y: 561, tag: 'Sturgeon', title: 'The ‘Danube dinosaur’ facing extinction'},
+      {active: true, x: 269, y: 214, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
+      {active: false, x: 499, y: 267, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
+      {active: false, x: 909, y: 620, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
+      {active: false, x: 1240, y: 591, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
+      {active: false, x: 1320, y: 561, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
     ],
     popupPosition: {x: 0, y: 0},
   };
