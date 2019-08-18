@@ -16,17 +16,14 @@ export default class Nav extends Component {
 
   #handleClick = item => () => {
     if (item.active) {
-      return this.props.history.push(item.link);
+      return this.props.history.push(`/article/${item.id}`);
     }
-    item.active = true;
     const menu = this.state.menu.map(menuItem => {
       menuItem.active = menuItem.id === item.id;
       return menuItem;
     });
     this.setState({menu});
-    if (this.props.onChange) {
-      this.props.onChange(item);
-    }
+    this.props.onChange && this.props.onChange(item);
   };
 
   render () {

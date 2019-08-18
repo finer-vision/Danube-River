@@ -46,8 +46,10 @@
   }
 
   &__popup {
-    max-width: 750px;
-    @include fluid-attr("padding", 25px, 31px, $responsive-min, $responsive-max);
+    position: relative;
+    @include fluid-attr("max-width", 400px, 750px, $responsive-min, $responsive-max);
+    @include fluid-attr("padding-right", 25px, 40px, $responsive-min, $responsive-max);
+    @include fluid-attr("padding-left", 25px, 40px, $responsive-min, $responsive-max);
 
     &-tag {
       transform: translate(-6%, 0);
@@ -68,14 +70,21 @@
       font-weight: bold;
       line-height: 1;
       color: $primary;
-      transform: translate(-5%, 30%);
+      transform: translate(-5%, 0);
     }
 
-    &-inner {
-      @include fluid-attr("padding", 16px, 24px, $responsive-min, $responsive-max);
-      background-color: rgba(255, 255, 255, 0.9);
+    &-background {
       position: relative;
       z-index: 1;
+      @include fluid-attr("padding", 16px, 24px, $responsive-min, $responsive-max);
+      background-color: rgba(255, 255, 255, 0.9);
+      transform: translate(0, -10%);
+    }
+
+    &-img {
+      position: absolute;
+      right: 0;
+      transform: translate(20%, -35%);
     }
 
     &-main {

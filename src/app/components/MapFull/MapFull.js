@@ -6,10 +6,40 @@ import { asset } from "../../core/utils";
 export default class MapFull extends Component {
   state = {
     activeItem: {...config.menu[0]},
+    screen: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
   };
+
+  componentDidMount () {
+    window.addEventListener('resize', this.#handleResize);
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.#handleResize);
+  }
+
+  #handleResize = () => this.setState({
+    screen: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
+  });
 
   #handleNavChange = activeItem => {
     this.setState({activeItem});
+  };
+
+  #getImageSize = () => {
+    const originalWidth = 660;
+    const originalHeight = 389;
+    const aspectRatio = originalWidth / originalHeight;
+    const scale = 0.4;
+    return {
+      width: (this.state.screen.height * scale) * aspectRatio,
+      height: this.state.screen.height * scale,
+    };
   };
 
   render () {
@@ -21,7 +51,7 @@ export default class MapFull extends Component {
             {String(this.state.activeItem.id).padStart(2, '0')}
           </div>
 
-          <div className="MapFull__popup-inner">
+          <div className="MapFull__popup-background">
             <div className="flex align-center MapFull__popup-tag">
               <img src={asset('/assets/img/tilde.svg')} alt={this.state.activeItem.title}/>
               <div className="type-p">
@@ -37,6 +67,14 @@ export default class MapFull extends Component {
                 {this.state.activeItem.description}
               </div>
             </div>
+          </div>
+
+          <div className="MapFull__popup-img">
+            <img
+              src={asset(`/assets/img/${this.state.activeItem.id}.png`)}
+              alt={this.state.activeItem.title}
+              style={this.#getImageSize()}
+            />
           </div>
         </div>
       </div>
