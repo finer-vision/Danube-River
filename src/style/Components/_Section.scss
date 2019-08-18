@@ -57,15 +57,17 @@
   }
 
   &--moved-to-left {
-    transform: translateX(rem(-75px));
+    //transform: translateX(rem(-75px));
+    //@include fluid-attr("margin-left", 0, -75px, $responsive-min, $responsive-max);
+    margin-left: -75px;
+
     @include mobile {
-      transform: none;
+      margin-left: 0;
     }
   }
 
   .type-big-title {
     font-family: "Editor", serif;
     font-weight: bold;
-    margin: 0;
   }
 }

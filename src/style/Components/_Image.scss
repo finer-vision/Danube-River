@@ -16,4 +16,11 @@
       transform: none;
     }
   }
+
+  &--move-down-250 {
+    transform: translateY(250px);
+    @include mobile {
+      transform: none;
+    }
+  }
 }
