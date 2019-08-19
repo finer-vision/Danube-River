@@ -1,8 +1,11 @@
 .Paragraph {
-  @include fluid-attr("max-width", 100%, 815px, $responsive-min, $responsive-max);
+  @include fluid-attr("max-width", 500px, 815px, $responsive-min, $responsive-max);
   margin-left: auto;
   margin-right: auto;
   height: auto !important;
+  @include mobile {
+    max-width: 100%;
+  }
 
   &__content {
     font-family: "DIN", sans-serif;
@@ -10,8 +13,16 @@
     line-height: rem(27px);
     letter-spacing: rem(1px);
     font-weight: 100;
+    @include mobile {
+      letter-spacing: 0;
+    }
   }
+
   .type-h4 {
     font-weight: 500;
+  }
+
+  &--default-letter-spacing {
+    letter-spacing: normal;
   }
 }

@@ -5,6 +5,7 @@
   scroll-snap-type: y mandatory;
 
   .Section {
+    overflow: hidden;
     scroll-snap-align: start;
   }
 }

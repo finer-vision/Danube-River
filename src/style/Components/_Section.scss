@@ -1,6 +1,7 @@
 .Section {
   width: 100%;
   height: 100vh;
+  position: relative;
 
   & > div {
     width: 100%;
@@ -8,6 +9,7 @@
   }
 
   &--flex {
+    position: relative;
     display: flex;
     @include mobile {
       display: block;
@@ -15,11 +17,34 @@
   }
 
   &__column {
+    position: relative;
     @include mobile {
       width: 100% !important;
     }
+
     &--desktop-50 {
       width: 50%;
+    }
+
+    &--desktop-50-custom {
+      position: absolute;
+      right: -100px;
+      top: 0;
+      width: 60%;
+      @include mobile {
+        width: 100%;
+        position: relative;
+        right: auto;
+      }
+    }
+
+    &--desktop-45 {
+      width: 45%;
+    }
+
+    &--desktop-55 {
+      width: 55%;
+      padding-left: 5%;
     }
   }
 
@@ -31,25 +56,47 @@
   &__container {
     margin-left: auto;
     margin-right: auto;
-    @include fluid-attr("max-width", 100%, 1200px, $responsive-min, $responsive-max);
-    padding: 0 rem(15px);
+    @include fluid-attr("max-width", 100%, 1257px, $responsive-min, $responsive-max);
+    //padding: 0 rem(15px);
     @include mobile {
       padding: 0 rem(15px);
     }
   }
 
   &--blue {
-    border-top: 1px solid $blueColor;
-    border-bottom: 1px solid $blueColor;
-    color: $whiteColor;
-    background-color: $blueColor;
+    border-top: 1px solid $blue-color;
+    border-bottom: 1px solid $blue-color;
+    color: $white-color;
+    background-color: $blue-color;
   }
 
   &--dark-blue {
-    border-top: 1px solid $darkBlueColor;
-    border-bottom: 1px solid $darkBlueColor;
-    color: $whiteColor;
-    background-color: $darkBlueColor;
+    border-top: 1px solid $dark-blue-color;
+    border-bottom: 1px solid $dark-blue-color;
+    color: $white-color;
+    background-color: $dark-blue-color;
+  }
+
+  &--dark-blue-and-white {
+    background: repeating-linear-gradient($dark-blue-color, $dark-blue-color 50%, $white-color 50%, $white-color 100%);
+    &_85 {
+      background: repeating-linear-gradient($dark-blue-color, $dark-blue-color 85%, $white-color 50%, $white-color 100%);
+    }
+  }
+
+  &--blue-and-dark-blue {
+    background: repeating-linear-gradient($blue-color, $blue-color 85%, $dark-blue-color 20%, $dark-blue-color 100%);
+  }
+
+  &--white-and-blue-and-lightseagreen {
+    background: repeating-linear-gradient($white-color, $white-color 80%, $light-sea-green-color 20%, $light-sea-green-color 100%);
+  }
+
+  &--light-sea-green {
+    border-top: 1px solid $light-sea-green-color;
+    border-bottom: 1px solid $light-sea-green-color;
+    color: $white-color;
+    background-color: $light-sea-green-color;
   }
 
   &--auto-height {
@@ -57,15 +104,29 @@
   }
 
   &--moved-to-left {
-    transform: translateX(rem(-75px));
+    margin-left: -55px;
+
     @include mobile {
-      transform: none;
+      margin-left: 0;
     }
   }
 
   .type-big-title {
     font-family: "Editor", serif;
-    font-weight: bold;
-    margin: 0;
+    font-weight: 500;
+  }
+
+  &__waves-blur {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: url("./assets/img/article-screen-hero.svg");
+    height: 196px !important;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    transition: filter .5s ease;
+    backface-visibility: hidden;
   }
 }
