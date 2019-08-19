@@ -13,7 +13,7 @@ export default class App extends Component {
     <Suspense fallback={<Loading>Loading</Loading>}>
       <Switch>
         <Route exact path="/" render={Screen(LandingScreen)}/>
-        <Route path="/article" render={Screen(ArticleScreen)}/>
+        <Route exact path="/article/:id" render={Screen(ArticleScreen)}/>
         <Route render={Screen(NotFoundScreen)}/>
       </Switch>
     </Suspense>

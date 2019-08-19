@@ -1,9 +1,15 @@
 import React, {Component} from "react";
+import {withRouter} from "react-router-dom";
+import config from "../core/config";
 import {asset} from "../core/utils";
 import Tilde from "./Tilde";
-import config from "../core/config";
 
+@withRouter
 export default class Footer extends Component {
+  #goToArticle = article => () => {
+    this.props.history.push(`/article/${article.id}`);
+  };
+
   render = () => (
     <div className="Footer">
       <div className="Footer__title">
@@ -11,6 +17,19 @@ export default class Footer extends Component {
         <div className="type-h2">
           Dive in Deeper
         </div>
+      </div>
+
+      <div className="Footer__articles">
+        {config.articles.map(article => (
+          <div key={`footer-article-${article.id}`} className="Footer__article" onClick={this.#goToArticle(article)}>
+            <div className="type-tag">
+              {String(article.id).padStart(2, '0')}
+            </div>
+            <div className="type-h4">
+              {article.title}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="Footer__wave">
