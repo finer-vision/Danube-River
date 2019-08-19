@@ -7,8 +7,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Video from "../components/Video";
 import Section from "../components/Section";
-import MapZoomed from "../components/MapZoomed/MapZoomed";
-import MapFull from "../components/MapFull/MapFull";
+import Map from "../components/Map/index";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
@@ -26,15 +25,11 @@ export default class LandingScreen extends BaseScreen {
         <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
       </Section>
 
-      <Section show={false}>
-        <MapZoomed/>
+      <Section show={true}>
+        <Map/>
       </Section>
 
-      <Section show={false}>
-        <MapFull/>
-      </Section>
-
-      <Section show={true} className="Footer__section">
+      <Section show={false} className="Footer__section">
         <Footer/>
       </Section>
     </Screen>

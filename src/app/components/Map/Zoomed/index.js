@@ -1,20 +1,22 @@
 import React, {Component, createRef} from "react";
-import {map} from "../../core/utils";
+import {map} from "../../../core/utils";
 import Popup from "./Popup";
 import Country from "./Country";
 import HotSpot from "./HotSpot";
+import {MapContext} from "../../../context/MapContext";
 
 const MAP = {
   width: 1440,
   height: 900,
 };
 
+@MapContext
 export default class MapZoomed extends Component {
   #map = createRef();
 
   state = {
     hotSpots: [
-      {active: true, x: 269, y: 214, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
+      {active: false, x: 269, y: 214, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
       {active: false, x: 499, y: 267, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
       {active: false, x: 909, y: 620, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
       {active: false, x: 1240, y: 591, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
@@ -45,9 +47,13 @@ export default class MapZoomed extends Component {
     this.setState({popupPosition});
   };
 
-  #toggleHotSpot = index => async () => {
+  #toggleHotSpot = (index, active = false) => async () => {
     const hotSpots = this.state.hotSpots.map((hotSpot, hotSpotIndex) => {
-      hotSpot.active = hotSpotIndex === index;
+      if (hotSpotIndex === index) {
+        hotSpot.active = active;
+      } else {
+        hotSpot.active = false;
+      }
       return hotSpot;
     });
     await this.setState({hotSpots});
@@ -61,6 +67,10 @@ export default class MapZoomed extends Component {
   #getActiveHotSpot = () => {
     const activeHotSpotIndex = this.#getActiveHotSpotIndex();
     return activeHotSpotIndex === -1 ? null : this.state.hotSpots[activeHotSpotIndex];
+  };
+
+  #handleClick = () => {
+    this.props.map.setActiveMap('full');
   };
 
   render() {
@@ -122,7 +132,9 @@ export default class MapZoomed extends Component {
                 key={`hot-spot-${index}`}
                 x={hotSpot.x}
                 y={hotSpot.y}
-                onClick={this.#toggleHotSpot(index)}
+                onPointerEnter={this.#toggleHotSpot(index, true)}
+                onPointerLeave={this.#toggleHotSpot(index, false)}
+                onClick={this.#handleClick}
               />
             ))}
           </g>

@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {asset} from "../../core/utils";
+import {asset} from "../../../core/utils";
 import {withRouter} from "react-router-dom";
 import PropTypes from "prop-types";
-import config from "../../core/config";
+import config from "../../../core/config";
 
 @withRouter
 export default class Nav extends Component {

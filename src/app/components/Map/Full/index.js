@@ -1,9 +1,11 @@
 import React, {Component} from "react";
 import Nav from "./Nav";
-import config from "../../core/config";
-import {asset} from "../../core/utils";
-import Tilde from "../Tilde";
+import config from "../../../core/config";
+import {asset} from "../../../core/utils";
+import Tilde from "../../Tilde";
+import {MapContext} from "../../../context/MapContext";
 
+@MapContext
 export default class MapFull extends Component {
   state = {
     activeItem: {...config.menu[0]},

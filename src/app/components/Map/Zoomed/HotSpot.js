@@ -4,6 +4,8 @@ export default forwardRef((props, ref) => (
   <g
     ref={ref}
     transform={`translate(${props.x} ${props.y})`}
+    onPointerEnter={props.onPointerEnter}
+    onPointerLeave={props.onPointerLeave}
     onClick={props.onClick}
     className="MapZoomed__hotSpot"
   >

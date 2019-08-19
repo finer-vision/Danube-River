@@ -1,4 +1,6 @@
 .MapFull {
+  width: 100vw;
+  height: 100vh;
   position: relative;
   //background-image: url("./assets/img/map-full.jpg");
   background-image: url("./assets/img/map-zoomed.jpg");
@@ -7,11 +9,18 @@
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translate(0, -50%);
+    transform: translate(100%, -50%);
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    animation: slide-in 1s ease-in forwards;
+
+    @keyframes slide-in {
+      100% {
+        transform: translate(0%, -50%);
+      }
+    }
 
     @include mobile {
       display: none;
@@ -50,6 +59,15 @@
     @include fluid-attr("max-width", 400px, 750px);
     @include fluid-attr("padding-right", 25px, 40px);
     @include fluid-attr("padding-left", 25px, 40px);
+    opacity: 0;
+    animation: fade-in 1s ease-out forwards;
+    animation-delay: 1s;
+
+    @keyframes fade-in {
+      100% {
+        opacity: 1;
+      }
+    }
 
     &-tag {
       transform: translate(-6%, 0);
@@ -78,13 +96,29 @@
       z-index: 1;
       @include fluid-attr("padding", 16px, 24px);
       background-color: rgba(255, 255, 255, 0.9);
-      transform: translate(0, -10%);
+      transform: translate(0, 50%);
+      animation: pop-in-background 1s ease-out forwards;
+      animation-delay: 1s;
+
+      @keyframes pop-in-background {
+        100% {
+          transform: translate(0, -10%);
+        }
+      }
     }
 
     &-img {
       position: absolute;
       right: 0;
-      transform: translate(20%, -35%);
+      transform: translate(50%, -35%);
+      animation: pop-in-img 1s ease-out forwards;
+      animation-delay: 1s;
+
+      @keyframes pop-in-img {
+        100% {
+          transform: translate(20%, -35%);
+        }
+      }
     }
 
     &-main {
