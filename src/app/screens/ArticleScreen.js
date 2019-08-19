@@ -14,7 +14,7 @@ export default class ArticleScreen extends BaseScreen {
 
     componentDidMount() {
         window.addEventListener("resize", () => {
-            this.handleSize(this.containerReference.width);;
+            this.handleSize(this.containerReference.width);
         });
     }
 
