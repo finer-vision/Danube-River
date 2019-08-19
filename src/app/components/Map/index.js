@@ -12,7 +12,9 @@ export default class Map extends Component {
   #timeout = null;
 
   state = {
-    activeMap: 'zoomed',
+    // @todo replace when finished development
+    // activeMap: 'zoomed',
+    activeMap: 'full',
     showCloudsAnimation: false,
     activeItem: {...config.menu[0]},
   };
