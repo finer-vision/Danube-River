@@ -3,6 +3,7 @@ import {MapContextProvider} from "../../context/MapContext";
 import Full from "./Full/index";
 import Zoomed from "./Zoomed/index";
 import Clouds from "./Clouds";
+import config from "../../core/config";
 
 const CLOUDS_ANIMATION_TIME = 3000 * 1.1;
 const MAP_SWAP_AFTER_ANIMATION_PROGRESS = 0.3;
@@ -13,6 +14,7 @@ export default class Map extends Component {
   state = {
     activeMap: 'zoomed',
     showCloudsAnimation: false,
+    activeItem: {...config.menu[0]},
   };
 
   componentWillUnmount() {
@@ -37,13 +39,18 @@ export default class Map extends Component {
     }, CLOUDS_ANIMATION_TIME * MAP_SWAP_AFTER_ANIMATION_PROGRESS);
   };
 
+  #handleHotSpotClick = async index => {
+    await this.setState({activeItem: {...config.menu[index]}});
+    this.#setActiveMap('full');
+  };
+
   render() {
     return (
       <MapContextProvider value={this.#getContext()}>
         <div className="Map">
           {this.state.showCloudsAnimation && <Clouds/>}
-          {this.state.activeMap === 'zoomed' && <Zoomed/>}
-          {this.state.activeMap === 'full' && <Full/>}
+          {this.state.activeMap === 'zoomed' && <Zoomed onHotSpotClick={this.#handleHotSpotClick}/>}
+          {this.state.activeMap === 'full' && <Full activeItem={this.state.activeItem}/>}
         </div>
       </MapContextProvider>
     );

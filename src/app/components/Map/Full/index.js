@@ -7,8 +7,12 @@ import {MapContext} from "../../../context/MapContext";
 
 @MapContext
 export default class MapFull extends Component {
-  state = {
+  static defaultProps = {
     activeItem: {...config.menu[0]},
+  };
+
+  state = {
+    activeItem: this.props.activeItem,
     screen: {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -48,7 +52,7 @@ export default class MapFull extends Component {
   render() {
     return (
       <div className="MapFull">
-        <Nav onChange={this.#handleNavChange}/>
+        <Nav onChange={this.#handleNavChange} activeItem={this.state.activeItem}/>
         <div className="MapFull__popup">
           <div className="MapFull__popup-id type-hero">
             {String(this.state.activeItem.id).padStart(2, '0')}

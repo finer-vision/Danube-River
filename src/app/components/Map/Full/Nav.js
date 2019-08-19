@@ -7,41 +7,33 @@ import config from "../../../core/config";
 @withRouter
 export default class Nav extends Component {
   static propTypes = {
+    activeItem: PropTypes.object,
     onChange: PropTypes.func,
   };
 
-  state = {
-    menu: JSON.parse(JSON.stringify(config.menu)),
-  };
-
   #handleClick = item => () => {
-    if (item.active) {
+    if (item.id === this.props.activeItem.id) {
       return this.props.history.push(`/article/${item.id}`);
     }
-    const menu = this.state.menu.map(menuItem => {
-      menuItem.active = menuItem.id === item.id;
-      return menuItem;
-    });
-    this.setState({menu});
     this.props.onChange && this.props.onChange(item);
   };
 
   render() {
     return (
       <div className="MapFull__nav">
-        {this.state.menu.map(item => (
+        {config.menu.map(item => (
           <div
             key={`menu-item-${item.id}`}
-            className={`MapFull__nav-item ${item.active ? 'MapFull__nav-item--active' : ''}`}
+            className={`MapFull__nav-item ${item.id === this.props.activeItem.id ? 'MapFull__nav-item--active' : ''}`}
             onClick={this.#handleClick(item)}
           >
-            {item.active && (
+            {item.id === this.props.activeItem.id && (
               <div className="type-p">
                 Read about
               </div>
             )}
-            <div className={`type-${item.active ? 'h4' : 'tag'}`}>
-              {item.title} {item.active && <img src={asset('/assets/img/arrow.svg')} alt={`Read about ${item.title}`}/>}
+            <div className={`type-${item.id === this.props.activeItem.id ? 'h4' : 'tag'}`}>
+              {item.title} {item.id === this.props.activeItem.id && <img src={asset('/assets/img/arrow.svg')} alt={`Read about ${item.title}`}/>}
             </div>
           </div>
         ))}

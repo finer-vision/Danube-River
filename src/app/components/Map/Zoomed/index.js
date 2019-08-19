@@ -1,4 +1,5 @@
 import React, {Component, createRef} from "react";
+import PropTypes from "prop-types";
 import {map} from "../../../core/utils";
 import Popup from "./Popup";
 import Country from "./Country";
@@ -12,6 +13,10 @@ const MAP = {
 
 @MapContext
 export default class MapZoomed extends Component {
+  static propTypes = {
+    onHotSpotClick: PropTypes.func,
+  };
+
   #map = createRef();
 
   state = {
@@ -69,8 +74,10 @@ export default class MapZoomed extends Component {
     return activeHotSpotIndex === -1 ? null : this.state.hotSpots[activeHotSpotIndex];
   };
 
-  #handleClick = () => {
-    this.props.map.setActiveMap('full');
+  #handleClick = index => () => {
+    if (this.props.onHotSpotClick) {
+      this.props.onHotSpotClick(index);
+    }
   };
 
   render() {
@@ -134,7 +141,7 @@ export default class MapZoomed extends Component {
                 y={hotSpot.y}
                 onPointerEnter={this.#toggleHotSpot(index, true)}
                 onPointerLeave={this.#toggleHotSpot(index, false)}
-                onClick={this.#handleClick}
+                onClick={this.#handleClick(index)}
               />
             ))}
           </g>
