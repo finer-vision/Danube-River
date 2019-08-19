@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {MapContextProvider} from "../../context/MapContext";
-import Full from "./Full/index";
 import Zoomed from "./Zoomed/index";
+import Full from "./Full/index";
 import Clouds from "./Clouds";
 import config from "../../core/config";
 
@@ -25,7 +25,9 @@ export default class Map extends Component {
 
   #getContext = () => ({
     activeMap: this.state.activeMap,
+    activeItem: this.state.activeItem,
     setActiveMap: this.#setActiveMap,
+    setActiveItem: this.#setActiveItem,
   });
 
   #setActiveMap = activeMap => {
@@ -39,6 +41,10 @@ export default class Map extends Component {
         this.setState({showCloudsAnimation: false});
       }, CLOUDS_ANIMATION_TIME * (1 - MAP_SWAP_AFTER_ANIMATION_PROGRESS));
     }, CLOUDS_ANIMATION_TIME * MAP_SWAP_AFTER_ANIMATION_PROGRESS);
+  };
+
+  #setActiveItem = activeItem => {
+    this.setState({activeItem});
   };
 
   #handleHotSpotClick = async index => {
