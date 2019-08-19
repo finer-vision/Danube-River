@@ -17,7 +17,7 @@ export default class Video extends Component {
   #container = createRef();
   #video = createRef();
   #observer = null;
-
+  #timeout = null;
   state = {
     muted: true,
     playing: false,
@@ -26,18 +26,19 @@ export default class Video extends Component {
 
   componentDidMount () {
     if(!this.props.poster){
-      setTimeout(() => {
-        this.#observer = new IntersectionObserver(this.#handleEntry, {
-          root: document.querySelector('.Screen'),
-          rootMargin: '0px',
-          threshold: 0.01,
-        });
-        this.#observer.observe(this.#container.current);
-      }, 2000);
+        this.#timeout = setTimeout(() => {
+            this.#observer = new IntersectionObserver(this.#handleEntry, {
+                root: document.querySelector('.Screen'),
+                rootMargin: '0px',
+                threshold: 0.01,
+            });
+            this.#observer.observe(this.#container.current);
+        }, 2000);
     }
   }
 
   componentWillUnmount () {
+    this.#timeout !== null && clearTimeout(this.#timeout);
     if(!this.props.poster){
       this.#observer.unobserve(this.#container.current);
     }
