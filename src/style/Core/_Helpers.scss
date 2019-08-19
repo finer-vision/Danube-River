@@ -48,10 +48,10 @@
   float: right;
 }
 .dark-blue {
-  color: $darkBlueColor;
+  color: $dark-blue-color;
 }
 .red {
-  color: $redColor;
+  color: $red-color;
 }
 .img-fluid {
   max-width: 100%;
@@ -111,7 +111,7 @@
   line-height: rem(29px);
   letter-spacing: rem(2px);
   font-weight: 500;
-  color: $redColor;
+  color: $red-color;
   text-transform: uppercase;
   font-family: "Aktiv Grotesk Ex Trial", sans-serif;
   &-type-2 {
@@ -125,7 +125,7 @@
   letter-spacing: initial;
   font-family: "Din", sans-serif;
   &-type-2 {
-    color: $darkBlueColor;
+    color: $dark-blue-color;
   }
 }
 

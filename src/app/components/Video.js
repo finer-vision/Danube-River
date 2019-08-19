@@ -7,10 +7,12 @@ export default class Video extends Component {
       src: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
     })).isRequired,
+    showMuteButton:PropTypes.bool.isRequired
   };
 
   static defaultProps = {
     showMuteButton: true,
+    autoPlay: false,
   };
 
   #container = createRef();
@@ -55,7 +57,7 @@ export default class Video extends Component {
     !muted && this.#video.current.play();
   };
 
-  playVideo = () => {
+  #playVideo = () => {
     if(this.state.playing && this.props.showPlayButton){
 
       this.#video.current.pause();
@@ -104,14 +106,14 @@ export default class Video extends Component {
 
   render () {
     return (
-        <div className={"Video " + ( this.props.classes || "") } ref={this.#container}>
+          <div className={`Video ${this.props.className}` } ref={this.#container}>
           {this.displayMuteButton()}
           {this.displayPlayButton()}
 
-        <video ref={this.#video} playsInline autoPlay={false} muted={this.state.muted}
-               onClick={this.playVideo.bind(this)}
-                poster={this.props.poster}
-        >
+            <video ref={this.#video} playsInline autoPlay={this.props.autoPlay} muted={this.state.muted}
+                   onClick={this.#playVideo}
+                    poster={this.props.poster}
+            >
           {this.props.sources.map((source, index) => (
             <source key={`video-source-${index}`} src={source.src} type={source.type}/>
           ))}

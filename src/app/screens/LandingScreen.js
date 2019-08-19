@@ -23,7 +23,7 @@ export default class LandingScreen extends BaseScreen {
       </Section>
 
       <Section show={true}>
-        <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
+        <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]} autoplay={true}/>
       </Section>
 
       <Section show={true}>

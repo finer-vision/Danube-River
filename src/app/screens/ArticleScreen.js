@@ -32,7 +32,7 @@ export default class ArticleScreen extends BaseScreen {
                     tag="MICROPLASTIC"
                     title="Small thing, big problem"
                     pageTitleType="type-single-page"
-                    background={asset('assets/img/article-screen-hero.svg')}
+                    background={asset("assets/img/article-screen-hero.svg")}
                 />
                 <div className="Section__waves-blur">
                 </div>
@@ -128,7 +128,7 @@ export default class ArticleScreen extends BaseScreen {
                 <div className="Image">
                     <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img2-player.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-                           classes="Video--max-width-1257 Image--move-down Video--cursor-pointer"
+                           className="Video--max-width-1257 Image--move-down Video--cursor-pointer"
                     />
                 </div>
             </Section>
@@ -167,7 +167,7 @@ export default class ArticleScreen extends BaseScreen {
                 <div className="Image mt-65px">
                     <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img3-plastic.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-                           classes="Video--max-width-942 Video--cursor-pointer"
+                           className="Video--max-width-942 Video--cursor-pointer"
                     />
                 </div>
                 <div className="Section__container">
@@ -254,7 +254,7 @@ export default class ArticleScreen extends BaseScreen {
                 <div className="Image mt-80px">
                     <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img3-plastic.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-                           classes="Video--max-width-942 Video--cursor-pointer"
+                           className="Video--max-width-942 Video--cursor-pointer"
                     />
                 </div>
             </Section>
@@ -296,7 +296,7 @@ export default class ArticleScreen extends BaseScreen {
                 <div className="Image mt-80px">
                     <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img2-player.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-                           classes="Video--max-width-1257 Video--cursor-pointer"
+                           className="Video--max-width-1257 Video--cursor-pointer"
                     />
                 </div>
                 <div className="Section__container">
@@ -316,7 +316,7 @@ export default class ArticleScreen extends BaseScreen {
                 <div className="Image mt-80px">
                     <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img4-fishing.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-                           classes="Video--max-width-1257 Video--cursor-pointer"
+                           ClassName="Video--max-width-1257 Video--cursor-pointer"
                     />
                 </div>
             </Section>

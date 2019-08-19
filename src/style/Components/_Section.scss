@@ -64,39 +64,39 @@
   }
 
   &--blue {
-    border-top: 1px solid $blueColor;
-    border-bottom: 1px solid $blueColor;
-    color: $whiteColor;
-    background-color: $blueColor;
+    border-top: 1px solid $blue-color;
+    border-bottom: 1px solid $blue-color;
+    color: $white-color;
+    background-color: $blue-color;
   }
 
   &--dark-blue {
-    border-top: 1px solid $darkBlueColor;
-    border-bottom: 1px solid $darkBlueColor;
-    color: $whiteColor;
-    background-color: $darkBlueColor;
+    border-top: 1px solid $dark-blue-color;
+    border-bottom: 1px solid $dark-blue-color;
+    color: $white-color;
+    background-color: $dark-blue-color;
   }
 
   &--dark-blue-and-white {
-    background: repeating-linear-gradient($darkBlueColor, $darkBlueColor 50%, $whiteColor 50%, $whiteColor 100%);
+    background: repeating-linear-gradient($dark-blue-color, $dark-blue-color 50%, $white-color 50%, $white-color 100%);
     &_85 {
-      background: repeating-linear-gradient($darkBlueColor, $darkBlueColor 85%, $whiteColor 50%, $whiteColor 100%);
+      background: repeating-linear-gradient($dark-blue-color, $dark-blue-color 85%, $white-color 50%, $white-color 100%);
     }
   }
 
   &--blue-and-dark-blue {
-    background: repeating-linear-gradient($blueColor, $blueColor 85%, $darkBlueColor 20%, $darkBlueColor 100%);
+    background: repeating-linear-gradient($blue-color, $blue-color 85%, $dark-blue-color 20%, $dark-blue-color 100%);
   }
 
   &--white-and-blue-and-lightseagreen {
-    background: repeating-linear-gradient($whiteColor, $whiteColor 80%, $lightseagreenColor 20%, $lightseagreenColor 100%);
+    background: repeating-linear-gradient($white-color, $white-color 80%, $light-sea-green-color 20%, $light-sea-green-color 100%);
   }
 
   &--light-sea-green {
-    border-top: 1px solid $lightseagreenColor;
-    border-bottom: 1px solid $lightseagreenColor;
-    color: $whiteColor;
-    background-color: $lightseagreenColor;
+    border-top: 1px solid $light-sea-green-color;
+    border-bottom: 1px solid $light-sea-green-color;
+    color: $white-color;
+    background-color: $light-sea-green-color;
   }
 
   &--auto-height {
@@ -120,7 +120,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-image: url('./assets/img/article-screen-hero.svg');
+    background-image: url("./assets/img/article-screen-hero.svg");
     height: 196px !important;
     background-position: bottom;
     background-repeat: no-repeat;
