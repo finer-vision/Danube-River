@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
 
 export default class Section extends Component {
@@ -16,7 +16,7 @@ export default class Section extends Component {
       return null;
     }
     return (
-        <div className={"Section " + ( this.props.classes || "") }>
+      <div className={"Section " + (this.props.classes || "")}>
         {this.props.children}
       </div>
     );

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
-import { asset } from "../core/utils";
+import {asset} from "../core/utils";
 import Tilde from "./Tilde";
 
 export default class Hero extends Component {
@@ -8,28 +8,28 @@ export default class Hero extends Component {
     tag: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     background: PropTypes.string.isRequired,
-    pageTitleType: PropTypes.oneOf(['type-hero','type-single-page']),
+    pageTitleType: PropTypes.oneOf(['type-hero', 'type-single-page']),
     className: PropTypes.string
   };
 
-static defaultProps = {
+  static defaultProps = {
     pageTitleType: "type-hero",
     className: ''
-};
+  };
 
   displayPageTitle() {
-      if(this.props.pageTitleType === "type-hero"){
-          return (
-              <div className="type-hero">
-                  {this.props.title}
-              </div>
-          );
-      }
+    if (this.props.pageTitleType === "type-hero") {
       return (
-          <h1 className="type-h1 type-single-page">
-              {this.props.title}
-          </h1>
+        <div className="type-hero">
+          {this.props.title}
+        </div>
       );
+    }
+    return (
+      <h1 className="type-h1 type-single-page">
+        {this.props.title}
+      </h1>
+    );
   }
 
   render = () => (
@@ -43,7 +43,7 @@ static defaultProps = {
         <div className="type-h4">
           {this.props.tag}
         </div>
-          {this.displayPageTitle()}
+        {this.displayPageTitle()}
       </div>
     </div>
   );

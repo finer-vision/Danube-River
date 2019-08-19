@@ -79,6 +79,7 @@
 
   &--dark-blue-and-white {
     background: repeating-linear-gradient($dark-blue-color, $dark-blue-color 50%, $white-color 50%, $white-color 100%);
+
     &_85 {
       background: repeating-linear-gradient($dark-blue-color, $dark-blue-color 85%, $white-color 50%, $white-color 100%);
     }

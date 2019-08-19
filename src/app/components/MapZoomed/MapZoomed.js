@@ -1,5 +1,5 @@
-import React, { Component, createRef } from "react";
-import { map } from "../../core/utils";
+import React, {Component, createRef} from "react";
+import {map} from "../../core/utils";
 import Popup from "./Popup";
 import Country from "./Country";
 import HotSpot from "./HotSpot";
@@ -23,12 +23,12 @@ export default class MapZoomed extends Component {
     popupPosition: {x: 0, y: 0},
   };
 
-  componentDidMount () {
+  componentDidMount() {
     this.#setPopupPosition();
     window.addEventListener('resize', this.#setPopupPosition);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('resize', this.#setPopupPosition);
   }
 
@@ -63,7 +63,7 @@ export default class MapZoomed extends Component {
     return activeHotSpotIndex === -1 ? null : this.state.hotSpots[activeHotSpotIndex];
   };
 
-  render () {
+  render() {
     const activeHotSpot = this.#getActiveHotSpot();
 
     return (

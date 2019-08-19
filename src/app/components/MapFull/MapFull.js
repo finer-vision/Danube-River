@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import Nav from "./Nav";
 import config from "../../core/config";
-import { asset } from "../../core/utils";
+import {asset} from "../../core/utils";
 import Tilde from "../Tilde";
 
 export default class MapFull extends Component {
@@ -13,11 +13,11 @@ export default class MapFull extends Component {
     },
   };
 
-  componentDidMount () {
+  componentDidMount() {
     window.addEventListener('resize', this.#handleResize);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('resize', this.#handleResize);
   }
 
@@ -43,7 +43,7 @@ export default class MapFull extends Component {
     };
   };
 
-  render () {
+  render() {
     return (
       <div className="MapFull">
         <Nav onChange={this.#handleNavChange}/>

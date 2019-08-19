@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { asset } from "../../core/utils";
-import { withRouter } from "react-router-dom";
+import React, {Component} from "react";
+import {asset} from "../../core/utils";
+import {withRouter} from "react-router-dom";
 import PropTypes from "prop-types";
 import config from "../../core/config";
 
@@ -26,7 +26,7 @@ export default class Nav extends Component {
     this.props.onChange && this.props.onChange(item);
   };
 
-  render () {
+  render() {
     return (
       <div className="MapFull__nav">
         {this.state.menu.map(item => (

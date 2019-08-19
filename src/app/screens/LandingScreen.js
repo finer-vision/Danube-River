@@ -1,8 +1,8 @@
 import React from "react";
 import BaseScreen from "./BaseScreen";
 import Screen from "../components/Screen";
-import { AppContext } from "../context/AppContext";
-import { asset } from "../core/utils";
+import {AppContext} from "../context/AppContext";
+import {asset} from "../core/utils";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Video from "../components/Video";

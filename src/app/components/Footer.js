@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { asset } from "../core/utils";
+import React, {Component} from "react";
+import {asset} from "../core/utils";
 import Tilde from "./Tilde";
 import config from "../core/config";
 
