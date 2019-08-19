@@ -7,7 +7,6 @@ export default class Video extends Component {
       src: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
     })).isRequired,
-    showMuteButton:PropTypes.bool.isRequired
   };
 
   static defaultProps = {
