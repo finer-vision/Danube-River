@@ -33,14 +33,8 @@ export default class Footer extends Component {
       </div>
 
       <div className="Footer__wave">
-        <div
-          className="Footer__wave-top"
-          style={{backgroundImage: `url(${asset('/assets/img/wave-top.png')})`}}
-        />
-        <div
-          className="Footer__wave-bottom"
-          style={{backgroundImage: `url(${asset('/assets/img/wave-bottom.png')})`}}
-        />
+        <div className="Footer__wave-top"/>
+        <div className="Footer__wave-bottom"/>
 
         <div className="Footer__social">
           <div className="type-tag">

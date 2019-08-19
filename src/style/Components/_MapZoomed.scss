@@ -32,11 +32,11 @@
     position: absolute;
     text-align: center;
     background-color: $color;
-    @include fluid-attr("padding-top", 8px, 15px, $responsive-min, $responsive-max);
-    @include fluid-attr("padding-bottom", 8px, 15px, $responsive-min, $responsive-max);
-    @include fluid-attr("padding-left", 12px, 20px, $responsive-min, $responsive-max);
-    @include fluid-attr("padding-right", 12px, 20px, $responsive-min, $responsive-max);
-    @include fluid-attr("width", 200px, 330px, $responsive-min, $responsive-max);
+    @include fluid-attr("padding-top", 8px, 15px);
+    @include fluid-attr("padding-bottom", 8px, 15px);
+    @include fluid-attr("padding-left", 12px, 20px);
+    @include fluid-attr("padding-right", 12px, 20px);
+    @include fluid-attr("width", 200px, 330px);
     transform: translate(calc(-50% + 28px), 70px);
 
     &-triangle {

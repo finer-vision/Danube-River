@@ -34,7 +34,7 @@ export default class LandingScreen extends BaseScreen {
         <MapFull/>
       </Section>
 
-      <Section show={true}>
+      <Section show={true} className="Footer__section">
         <Footer/>
       </Section>
     </Screen>

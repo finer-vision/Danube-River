@@ -20,10 +20,10 @@
     &-item {
       border-bottom: 1px solid #fff;
       color: #fff;
-      @include fluid-attr("width", 70px, 100px, $responsive-min, $responsive-max);
-      @include fluid-attr("padding-top", 10px, 21px, $responsive-min, $responsive-max);
-      @include fluid-attr("padding-right", 8px, 14px, $responsive-min, $responsive-max);
-      @include fluid-attr("padding-bottom", 8px, 14px, $responsive-min, $responsive-max);
+      @include fluid-attr("width", 70px, 100px);
+      @include fluid-attr("padding-top", 10px, 21px);
+      @include fluid-attr("padding-right", 8px, 14px);
+      @include fluid-attr("padding-bottom", 8px, 14px);
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.2);
@@ -33,10 +33,10 @@
         background-color: $primary;
         border-bottom: none;
         width: auto;
-        @include fluid-attr("padding-top", 12px, 24px, $responsive-min, $responsive-max);
-        @include fluid-attr("padding-right", 16px, 48px, $responsive-min, $responsive-max);
-        @include fluid-attr("padding-bottom", 4px, 8px, $responsive-min, $responsive-max);
-        @include fluid-attr("padding-left", 12px, 24px, $responsive-min, $responsive-max);
+        @include fluid-attr("padding-top", 12px, 24px);
+        @include fluid-attr("padding-right", 16px, 48px);
+        @include fluid-attr("padding-bottom", 4px, 8px);
+        @include fluid-attr("padding-left", 12px, 24px);
 
         &:hover {
           background-color: lighten($primary, 5%);
@@ -47,9 +47,9 @@
 
   &__popup {
     position: relative;
-    @include fluid-attr("max-width", 400px, 750px, $responsive-min, $responsive-max);
-    @include fluid-attr("padding-right", 25px, 40px, $responsive-min, $responsive-max);
-    @include fluid-attr("padding-left", 25px, 40px, $responsive-min, $responsive-max);
+    @include fluid-attr("max-width", 400px, 750px);
+    @include fluid-attr("padding-right", 25px, 40px);
+    @include fluid-attr("padding-left", 25px, 40px);
 
     &-tag {
       transform: translate(-6%, 0);
@@ -59,7 +59,7 @@
       }
 
       .type-p {
-        @include fluid-attr("padding", 8px, 16px, $responsive-min, $responsive-max);
+        @include fluid-attr("padding", 8px, 16px);
         color: $primary;
         font-weight: 500;
       }
@@ -76,7 +76,7 @@
     &-background {
       position: relative;
       z-index: 1;
-      @include fluid-attr("padding", 16px, 24px, $responsive-min, $responsive-max);
+      @include fluid-attr("padding", 16px, 24px);
       background-color: rgba(255, 255, 255, 0.9);
       transform: translate(0, -10%);
     }

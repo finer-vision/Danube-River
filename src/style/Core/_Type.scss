@@ -32,8 +32,8 @@
     font-weight: bold;
     color: $red-color;
     letter-spacing: 1.2px;
-    @include fluid-attr("letter-spacing", rem(0), rem(1.2px), $responsive-min, $responsive-max);
-    @include fluid-attr("line-height", rem(37px), rem(50px), $responsive-min, $responsive-max);
+    @include fluid-attr("letter-spacing", rem(0), rem(1.2px));
+    @include fluid-attr("line-height", rem(37px), rem(50px));
     @include fluid-type(31px, 43px, $responsive-min, $responsive-max);
   }
 

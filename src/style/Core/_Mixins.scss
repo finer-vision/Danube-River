@@ -1,4 +1,4 @@
-@mixin fluid-attr($attr, $min-attr: 12px, $max-attr: 21px, $lower-range: 420px, $upper-range: 900px) {
+@mixin fluid-attr($attr, $min-attr: 12px, $max-attr: 21px, $lower-range: $responsive-min, $upper-range: $responsive-max) {
   #{$attr}: calc(#{$min-attr} + #{(($max-attr / ($max-attr * 0 + 1)) - ($min-attr / ($min-attr * 0 + 1)))} * ((100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
 
   @media screen and (max-width: $lower-range) {

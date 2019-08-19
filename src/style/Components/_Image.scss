@@ -1,6 +1,6 @@
 .Image {
-  @include fluid-attr("padding-left", 10px, 90px, $responsive-min, $responsive-max);
-  @include fluid-attr("padding-right", 10px, 90px, $responsive-min, $responsive-max);
+  @include fluid-attr("padding-left", 10px, 90px);
+  @include fluid-attr("padding-right", 10px, 90px);
   @include mobile {
     padding: 0;
   }

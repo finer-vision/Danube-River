@@ -1,5 +1,5 @@
 .Paragraph {
-  @include fluid-attr("max-width", 500px, 815px, $responsive-min, $responsive-max);
+  @include fluid-attr("max-width", 500px, 815px);
   margin-left: auto;
   margin-right: auto;
   height: auto !important;

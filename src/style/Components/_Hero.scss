@@ -3,7 +3,7 @@
   flex-direction: column;
   background-size: cover;
   background-position: 50% 100%;
-  @include fluid-attr("padding", 15px, 60px, $responsive-min, $responsive-max);
+  @include fluid-attr("padding", 15px, 60px);
 
   &__title {
     z-index: 10;
@@ -12,7 +12,7 @@
   &__logo {
     display: flex;
     justify-content: flex-end;
-    @include fluid-attr("margin-bottom", 15px, 40px, $responsive-min, $responsive-max);
+    @include fluid-attr("margin-bottom", 15px, 40px);
 
     @include mobile {
       justify-content: center;
@@ -20,7 +20,7 @@
 
     img {
       width: 100%;
-      @include fluid-attr("max-width", 100px, 139px, $responsive-min, $responsive-max);
+      @include fluid-attr("max-width", 100px, 139px);
     }
   }
 

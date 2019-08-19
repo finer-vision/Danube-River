@@ -1,11 +1,18 @@
 .Footer {
+  $mobile-break-point: 820px;
   background-image: url("./assets/img/footer.png");
   background-size: cover;
   background-position: 50% 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 2rem;
+  @include fluid-attr("padding-top", 30px, 10px);
+
+  &__section {
+    @media (max-width: $mobile-break-point) {
+      height: auto;
+    }
+  }
 
   &__title {
     display: flex;
@@ -22,21 +29,40 @@
   }
 
   &__articles {
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: $mobile-break-point) {
+      flex-direction: column;
+      margin-bottom: 16vh;
+    }
   }
 
   &__article {
     background-color: #fff;
     margin-right: 1rem;
     text-align: center;
-    @include fluid-attr("padding-top", 13px, 18px, $responsive-min, $responsive-max);
-    @include fluid-attr("padding-bottom", 5px, 10px, $responsive-min, $responsive-max);
-    @include fluid-attr("padding-left", 15px, 30px, $responsive-min, $responsive-max);
-    @include fluid-attr("padding-right", 15px, 30px, $responsive-min, $responsive-max);
+    @include fluid-attr("padding-top", 13px, 18px);
+    @include fluid-attr("padding-bottom", 5px, 10px);
+    @include fluid-attr("padding-left", 15px, 30px);
+    @include fluid-attr("padding-right", 15px, 30px);
     cursor: pointer;
     transition: all 0.6s ease;
+    white-space: nowrap;
+
+    @media (max-width: $mobile-break-point) {
+      width: calc(100% - 30px);
+      margin-right: 0;
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.7);
@@ -58,6 +84,8 @@
 
   &__wave {
     position: relative;
+    @include fluid-attr("padding-left", 15px, 30px);
+    @include fluid-attr("padding-right", 15px, 30px);
 
     &-top, &-bottom {
       background-repeat: no-repeat;
@@ -71,10 +99,44 @@
 
     &-top {
       z-index: 1;
+      background-image: url("/assets/img/wave-top.png");
+
+      @media (max-width: $mobile-break-point) {
+        background-image: url("/assets/img/mobile-wave-top.png");
+
+        &:before, &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: $secondary;
+          width: calc(50% - 160px);
+          top: 0;
+        }
+
+        &:before {
+          $height: 11px;
+          height: calc(100% - #{$height});
+          margin-top: $height;
+          left: 0;
+        }
+
+        &:after {
+          $height: 5px;
+          height: calc(100% - #{$height});
+          margin-top: $height;
+          right: 0;
+        }
+      }
     }
 
     &-bottom {
       top: -15%;
+      background-image: url("/assets/img/wave-bottom.png");
+
+      @media (max-width: $mobile-break-point) {
+        top: -25%;
+        background-image: url("/assets/img/mobile-wave-bottom.png");
+      }
     }
   }
 
@@ -89,6 +151,17 @@
     width: 287px;
     margin-left: 50%;
     transform: translate(53%, 0);
+
+    @media (max-width: 940px) {
+      transform: translate(15vw, 0);
+    }
+
+    @media (max-width: $mobile-break-point) {
+      transform: none;
+      margin-top: -10vh;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     .type-tag {
       font-weight: lighter;
@@ -116,10 +189,26 @@
     &-main {
       padding-top: 3rem;
       padding-bottom: 5rem;
+
+      @include fluid-attr("padding-top", 14px, 48px);
+      @include fluid-attr("padding-bottom", 16px, 82px);
+
+      @media (max-width: $mobile-break-point) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 
   &__info {
+    @media (max-width: $mobile-break-point) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
     .type-h4 {
       color: $primary;
     }
@@ -143,6 +232,16 @@
     justify-content: space-between;
     color: #fff;
 
+    @media (max-width: $mobile-break-point) {
+      flex-direction: column;
+      justify-content: center;
+
+      .type-p {
+        text-align: center;
+        margin-top: 1em;
+      }
+    }
+
     &-links {
       display: flex;
 
@@ -151,6 +250,15 @@
 
         &:first-child {
           padding-left: 0;
+        }
+      }
+
+      @media (max-width: $mobile-break-point) {
+        flex-direction: column;
+        text-align: center;
+
+        div {
+          padding: 0.5em 0;
         }
       }
     }
