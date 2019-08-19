@@ -45,3 +45,31 @@ Setup ownership of the public directories to NGINX's `www-data` user and group.
 ```bash
 chown www-data:www-data -R build
 ```
+
+### Useful
+
+**Expected Article Content Modules:**
+
+- Images (Left, Right, Full-width)
+- Pull-out Quotes
+- Video (Inline, full screen)
+- Stats/Infographics (varied designs/graphs)
+- 360 Video (Including GUI options)
+- Image Carousel
+- Audio Player
+- Maps (2D/3D)
+
+**Liked Examples:**
+
+**Landing Page Examples:**
+
+- Scrolling map: https://www.nationalgeographic.com/magazine/2016/05/yellowstone-national-parks-bears-video/
+- Page Scroll: https://californiacalling.cc/
+
+**Article Page Examples:**
+
+- General Page Layout: https://emergencemagazine.org/story/language-keepers/#/chapter/wukchumni
+- Stats on Scroll: https://news.sky.com/state-of-the-nation
+- Progress Bar: https://intern-mag.com/rewriting-the-future/
+- Page Parralax: https://www.thinkful.com/blog/what-is-data-science/
+- Interactive Graph: http://mediaelection.com
