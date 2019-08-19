@@ -41,7 +41,7 @@ export default class ArticleScreen extends BaseScreen {
         <div className="Section__waves-blur">
         </div>
       </Section>
-      <Section classes="Section--blue Section--auto-height">
+      <Section className="Section--blue Section--auto-height">
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-185px">
@@ -71,7 +71,7 @@ export default class ArticleScreen extends BaseScreen {
           </div>
         </div>
       </Section>
-      <Section classes="Section--blue-and-dark-blue Section--auto-height">
+      <Section className="Section--blue-and-dark-blue Section--auto-height">
         <div className="Image mt-50px">
           <img src={`assets/img/img1-plastic.png`}
                ref={el => this.containerReference = el}
@@ -79,7 +79,7 @@ export default class ArticleScreen extends BaseScreen {
                className="Image__element"/>
         </div>
       </Section>
-      <Section classes="Section--dark-blue Section--auto-height">
+      <Section className="Section--dark-blue Section--auto-height">
         <div className="Section__container mt-110px">
           <div className="max-width-1257 Section--flex">
             <div className="Section__column Section__column--desktop-50">
@@ -128,7 +128,7 @@ export default class ArticleScreen extends BaseScreen {
           <img src={`assets/img/map.png`} className="d-none d-mobile-block img-fluid"/>
         </div>
       </Section>
-      <Section classes="Section--dark-blue-and-white_85 Section--auto-height">
+      <Section className="Section--dark-blue-and-white_85 Section--auto-height">
         <div className="Image">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/img2-player.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
@@ -136,7 +136,7 @@ export default class ArticleScreen extends BaseScreen {
           />
         </div>
       </Section>
-      <Section classes="Section--auto-height">
+      <Section className="Section--auto-height">
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mt-80px mb-30px">
@@ -207,7 +207,7 @@ export default class ArticleScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section classes="Section--dark-blue Section--auto-height">
+      <Section className="Section--dark-blue Section--auto-height">
         <div className="Section__container">
           <div className="max-width-760">
             <h4 className="type-h4 type-weight-500 mt-80px mb-80px">
@@ -254,7 +254,7 @@ export default class ArticleScreen extends BaseScreen {
 
         </div>
       </Section>
-      <Section classes="Section--dark-blue-and-white Section--auto-height">
+      <Section className="Section--dark-blue-and-white Section--auto-height">
         <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/img3-plastic.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
@@ -262,7 +262,7 @@ export default class ArticleScreen extends BaseScreen {
           />
         </div>
       </Section>
-      <Section classes="Section--auto-height">
+      <Section className="Section--auto-height">
         <div className="Section__container mt-80px">
           <div className="max-width-760 Section--flex">
             <div className="Section__column Section__column--desktop-50">
@@ -316,7 +316,7 @@ export default class ArticleScreen extends BaseScreen {
           </div>
         </div>
       </Section>
-      <Section classes="Section--white-and-blue-and-lightseagreen Section--auto-height">
+      <Section className="Section--white-and-blue-and-lightseagreen Section--auto-height">
         <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/img4-fishing.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
@@ -324,7 +324,7 @@ export default class ArticleScreen extends BaseScreen {
           />
         </div>
       </Section>
-      <Section classes="Section--light-sea-green Section--auto-height">
+      <Section className="Section--light-sea-green Section--auto-height">
         <div className="Section__container">
           <div className="Paragraph mt-80px mb-80px">
             <div className="Paragraph__content Paragraph--default-letter-spacing">

@@ -5,10 +5,12 @@ export default class Section extends Component {
 
   static propTypes = {
     show: PropTypes.bool,
+    className: PropTypes.string,
   };
 
   static defaultProps = {
     show: true,
+    className: '',
   };
 
   render() {
@@ -16,7 +18,7 @@ export default class Section extends Component {
       return null;
     }
     return (
-      <div className={"Section " + (this.props.classes || "")}>
+      <div className={`Section ${this.props.className}`}>
         {this.props.children}
       </div>
     );
