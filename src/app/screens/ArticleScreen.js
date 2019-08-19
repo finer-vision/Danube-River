@@ -14,14 +14,18 @@ export default class ArticleScreen extends BaseScreen {
 
     componentDidMount() {
         window.addEventListener("resize", () => {
-            this.handleSize(this.containerReference.width);
+            if(this.containerReference.width !== null){
+                this.handleSize(this.containerReference.width);
+            }
         });
     }
 
     handleSize(image) {
         var elements = document.getElementsByClassName("Section__container");
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].style.width=(image+"px");
+        if(elements.length > 0){
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.width=(image+"px");
+            }
         }
     }
     render = () => (
