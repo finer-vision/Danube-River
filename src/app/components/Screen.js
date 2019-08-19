@@ -6,16 +6,17 @@ import {AppContext} from "../context/AppContext";
 @AppContext
 @withRouter
 export default class Screen extends Component {
-  static defaultProps = {
-    name: '',
+  static propTypes = {
+    lockSections: PropTypes.bool,
   };
 
-  static propTypes = {
-    name: PropTypes.string,
+  static defaultProps = {
+    name: '',
+    lockSections: false,
   };
 
   render = () => (
-    <div className={`Screen Screen--${this.props.name}`}>
+    <div className={`Screen Screen--${this.props.name} ${this.props.lockSections ? 'Section--lock-sections' : ''}`}>
       {this.props.children}
     </div>
   );
