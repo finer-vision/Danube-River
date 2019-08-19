@@ -8,10 +8,13 @@ export default class Hero extends Component {
     tag: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     background: PropTypes.string.isRequired,
+    pageTitleType: PropTypes.oneOf(['type-hero','type-single-page']),
+    className: PropTypes.string
   };
 
 static defaultProps = {
     pageTitleType: "type-hero",
+    className: ''
 };
 
   displayPageTitle() {
