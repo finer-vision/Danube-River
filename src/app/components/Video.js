@@ -12,7 +12,7 @@ export default class Video extends Component {
 
   static defaultProps = {
     showMuteButton: true,
-    autoPlay: false,
+    autoPlay: true,
   };
 
   #container = createRef();

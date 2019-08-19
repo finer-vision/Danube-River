@@ -126,7 +126,7 @@ export default class ArticleScreen extends BaseScreen {
             </Section>
             <Section classes="Section--dark-blue-and-white_85 Section--auto-height">
                 <div className="Image">
-                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img2-player.png`}
+                    <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/img2-player.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                            className="Video--max-width-1257 Image--move-down Video--cursor-pointer"
                     />
@@ -165,7 +165,7 @@ export default class ArticleScreen extends BaseScreen {
                     </div>
                 </div>
                 <div className="Image mt-65px">
-                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img3-plastic.png`}
+                    <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/img3-plastic.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                            className="Video--max-width-942 Video--cursor-pointer"
                     />
@@ -252,7 +252,7 @@ export default class ArticleScreen extends BaseScreen {
             </Section>
             <Section classes="Section--dark-blue-and-white Section--auto-height">
                 <div className="Image mt-80px">
-                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img3-plastic.png`}
+                    <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/img3-plastic.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                            className="Video--max-width-942 Video--cursor-pointer"
                     />
@@ -294,7 +294,7 @@ export default class ArticleScreen extends BaseScreen {
                     </div>
                 </div>
                 <div className="Image mt-80px">
-                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img2-player.png`}
+                    <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/img2-player.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                            className="Video--max-width-1257 Video--cursor-pointer"
                     />
@@ -314,7 +314,7 @@ export default class ArticleScreen extends BaseScreen {
             </Section>
             <Section classes="Section--white-and-blue-and-lightseagreen Section--auto-height">
                 <div className="Image mt-80px">
-                    <Video showMuteButton={false} showPlayButton={true} poster={`assets/img/img4-fishing.png`}
+                    <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/img4-fishing.png`}
                            sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                            ClassName="Video--max-width-1257 Video--cursor-pointer"
                     />
