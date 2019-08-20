@@ -1,11 +1,15 @@
 import {MAP, MAP_SEGMENT, SEGMENT_COORDINATES} from "./consts";
 
+export const getScale = (screenWidth, screenHeight) => {
+  const segmentWidth = MAP.width * MAP_SEGMENT.width;
+  const segmentHeight = MAP.height * MAP_SEGMENT.height;
+  return Math.min(screenWidth / segmentWidth, screenHeight / segmentHeight);
+};
+
 // Get the scaled map.
 // This will scale the map to match the screen's size
 export const getScaledMap = (screenWidth, screenHeight) => {
-  const segmentWidth = MAP.width * MAP_SEGMENT.width;
-  const segmentHeight = MAP.height * MAP_SEGMENT.height;
-  const scale = Math.min(screenWidth / segmentWidth, screenHeight / segmentHeight);
+  const scale = getScale(screenWidth, screenHeight);
   return {
     width: MAP.width * scale,
     height: MAP.height * scale,

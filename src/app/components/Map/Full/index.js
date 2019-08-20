@@ -3,8 +3,9 @@ import Nav from "./Nav";
 import config from "../../../core/config";
 import {MapContext} from "../../../context/MapContext";
 import Popup from "./Popup";
+import {getScale, getSegmentCoordinate} from "../utils";
 import {asset} from "../../../core/utils";
-import {getScaledMap, getSegmentCoordinate} from "../utils";
+import {MAP, TILE_COORDINATES} from "../consts";
 
 @MapContext
 export default class MapFull extends Component {
@@ -38,7 +39,7 @@ export default class MapFull extends Component {
       getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 4),
     ];
 
-    const scaledMap = getScaledMap(this.state.screen.width, this.state.screen.height);
+    const scale = getScale(this.state.screen.width, this.state.screen.height);
     const activeCoordinate = segmentCoordinates[this.props.map.activeItem.id - 1];
 
     return (
@@ -49,15 +50,27 @@ export default class MapFull extends Component {
         </div>
 
         <div className="MapFull__map">
-          <img
-            src={asset('./assets/img/map-full.jpg')}
-            onDragStart={event => event.preventDefault()}
+          <div
+            className="MapFull__map-container"
             style={{
-              transform: `translate(${activeCoordinate.x}px, ${activeCoordinate.y}px)`,
-              width: `${scaledMap.width}px`,
-              height: `${scaledMap.height}px`,
+              transform: `translate(${activeCoordinate.x}px, ${activeCoordinate.y}px) scale(${scale})`,
+              width: `${MAP.width}px`,
+              height: `${MAP.height}px`,
             }}
-          />
+          >
+            {[1, 2, 3, 4, 5].map((segment, index) => (
+              <img
+                key={`map-segment-${segment}`}
+                src={asset(`/assets/img/segments/${segment}.jpg`)}
+                className={`MapFull__map-segment MapFull__map-segment--${segment}`}
+                style={{
+                  zIndex: 5 - segment,
+                  top: `${100 * TILE_COORDINATES[index].y}%`,
+                  left: `${100 * TILE_COORDINATES[index].x}%`,
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
     );
