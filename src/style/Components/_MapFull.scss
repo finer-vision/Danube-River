@@ -92,7 +92,12 @@
     animation-delay: 1s;
 
     &--2 {
-      //
+      transform: translate(27vw, 12vh);
+
+      .MapFull__popup-img {
+        transform: translate(50%, -35%);
+        right: 65%;
+      }
     }
 
     @keyframes fade-in {
