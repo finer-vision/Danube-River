@@ -56,7 +56,6 @@ export default class MapFull extends Component {
               transform: `translate(${activeCoordinate.x}px, ${activeCoordinate.y}px)`,
               width: `${scaledMap.width}px`,
               height: `${scaledMap.height}px`,
-              transition: 'transform 1s ease',
             }}
           />
         </div>
