@@ -5,6 +5,7 @@ import Popup from "./Popup";
 import Country from "./Country";
 import HotSpot from "./HotSpot";
 import {MapContext} from "../../../context/MapContext";
+import config from "../../../core/config";
 
 const MAP = {
   width: 1440,
@@ -21,11 +22,11 @@ export default class MapZoomed extends Component {
 
   state = {
     hotSpots: [
-      {active: false, x: 269, y: 214, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
-      {active: false, x: 499, y: 267, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
-      {active: false, x: 909, y: 620, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
-      {active: false, x: 1240, y: 591, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
-      {active: false, x: 1320, y: 561, tag: 'Sturgeons', title: 'The ‘Danube dinosaur’ facing extinction'},
+      {active: false, x: 269, y: 214, tag: config.articles[0].title, title: config.articles[0].intro},
+      {active: false, x: 499, y: 267, tag: config.articles[1].title, title: config.articles[1].intro},
+      {active: false, x: 909, y: 620, tag: config.articles[2].title, title: config.articles[2].intro},
+      {active: false, x: 1240, y: 591, tag: config.articles[3].title, title: config.articles[3].intro},
+      {active: false, x: 1320, y: 561, tag: config.articles[4].title, title: config.articles[4].intro},
     ],
     popupPosition: {x: 0, y: 0},
   };
