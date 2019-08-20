@@ -13,7 +13,7 @@ import Map from "../components/Map/index";
 export default class LandingScreen extends BaseScreen {
   render = () => (
     <Screen name="Landing" lockSections>
-      <Section show={false}>
+      <Section show={true}>
         <Hero
           tag="Life of a River"
           title="The Danube"
@@ -21,7 +21,7 @@ export default class LandingScreen extends BaseScreen {
         />
       </Section>
 
-      <Section show={false}>
+      <Section show={true}>
         <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
       </Section>
 
@@ -29,7 +29,7 @@ export default class LandingScreen extends BaseScreen {
         <Map/>
       </Section>
 
-      <Section show={false} className="Footer__section">
+      <Section show={true} className="Footer__section">
         <Footer/>
       </Section>
     </Screen>
