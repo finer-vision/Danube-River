@@ -19,11 +19,11 @@
     top: 0;
     left: 0;
     overflow: hidden;
+    background-color: #12551b;
 
     &-container {
       transform-origin: 0 0;
       transition: transform 1s linear;
-      background-color: #12551b;
     }
 
     &-segment {
