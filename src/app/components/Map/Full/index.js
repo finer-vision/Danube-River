@@ -32,6 +32,10 @@ export default class MapFull extends Component {
   render() {
     const segmentCoordinates = [
       getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 0),
+      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 1),
+      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 2),
+      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 3),
+      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 4),
     ];
 
     const scaledMap = getScaledMap(this.state.screen.width, this.state.screen.height);
@@ -52,6 +56,7 @@ export default class MapFull extends Component {
               transform: `translate(${activeCoordinate.x}px, ${activeCoordinate.y}px)`,
               width: `${scaledMap.width}px`,
               height: `${scaledMap.height}px`,
+              transition: 'transform 1s ease',
             }}
           />
         </div>
