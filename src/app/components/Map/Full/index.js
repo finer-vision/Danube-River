@@ -13,7 +13,6 @@ export default class MapFull extends Component {
   };
 
   state = {
-    section: 0,
     screen: {
       width: window.innerWidth,
       height: window.innerHeight,
@@ -36,7 +35,7 @@ export default class MapFull extends Component {
     ];
 
     const scaledMap = getScaledMap(this.state.screen.width, this.state.screen.height);
-    const activeCoordinate = segmentCoordinates[this.state.section];
+    const activeCoordinate = segmentCoordinates[this.props.map.activeItem.id - 1];
 
     return (
       <div className="MapFull">
