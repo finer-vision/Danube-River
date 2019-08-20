@@ -3,23 +3,8 @@ import Nav from "./Nav";
 import config from "../../../core/config";
 import {MapContext} from "../../../context/MapContext";
 import Popup from "./Popup";
-import {asset, map} from "../../../core/utils";
-
-const MAP = {
-  width: 12000,
-  height: 5483,
-};
-
-// 1923x1209
-const MAP_SEGMENT = {
-  width: 0.16025,
-  height: 0.22049972642713841,
-};
-
-const getCoordinate = (x, y) => ({
-  x: (1 / MAP.width) * x,
-  y: (1 / MAP.height) * y,
-});
+import {asset} from "../../../core/utils";
+import {getScaledMap, getSegmentCoordinate} from "../utils";
 
 @MapContext
 export default class MapFull extends Component {
@@ -29,12 +14,29 @@ export default class MapFull extends Component {
 
   state = {
     section: 0,
+    screen: {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    },
   };
 
+  componentDidMount() {
+    window.addEventListener('resize', this.#setScreen);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.#setScreen);
+  }
+
+  #setScreen = () => this.setState({screen: {width: window.innerWidth, height: window.innerHeight}});
+
   render() {
-    const coordinates = [
-      getCoordinate(1224, 866),
+    const segmentCoordinates = [
+      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 0),
     ];
+
+    const scaledMap = getScaledMap(this.state.screen.width, this.state.screen.height);
+    const activeCoordinate = segmentCoordinates[this.state.section];
 
     return (
       <div className="MapFull">
@@ -48,7 +50,9 @@ export default class MapFull extends Component {
             src={asset('./assets/img/map-full.jpg')}
             onDragStart={event => event.preventDefault()}
             style={{
-              transform: `translate(-${coordinates[this.state.section].x}%, -${coordinates[this.state.section].y}%)`,
+              transform: `translate(${activeCoordinate.x}px, ${activeCoordinate.y}px)`,
+              width: `${scaledMap.width}px`,
+              height: `${scaledMap.height}px`,
             }}
           />
         </div>
