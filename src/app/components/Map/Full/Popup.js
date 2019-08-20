@@ -57,7 +57,7 @@ export default class Popup extends Component {
 
         <div className="MapFull__popup-img">
           <img
-            src={asset(`/assets/img/${this.props.map.activeItem.id}.png`)}
+            src={asset(`/assets/img/articles/${this.props.map.activeItem.id}.png`)}
             alt={this.props.map.activeItem.title}
             style={this.#getImageSize()}
           />

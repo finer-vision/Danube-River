@@ -61,7 +61,7 @@ export default class MapFull extends Component {
             {[1, 2, 3, 4, 5].map((segment, index) => (
               <img
                 key={`map-segment-${segment}`}
-                src={asset(`/assets/img/segments/${segment}.jpg`)}
+                src={asset(`/assets/img/map/segments/${segment}.jpg`)}
                 className={`MapFull__map-segment MapFull__map-segment--${segment}`}
                 style={{
                   zIndex: 5 - segment,
