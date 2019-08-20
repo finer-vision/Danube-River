@@ -91,6 +91,10 @@
     animation: fade-in 1s ease-out forwards;
     animation-delay: 1s;
 
+    &--2 {
+      //
+    }
+
     @keyframes fade-in {
       100% {
         opacity: 1;

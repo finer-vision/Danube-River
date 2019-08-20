@@ -16,7 +16,8 @@ export default class Map extends Component {
     // activeMap: 'zoomed',
     activeMap: 'full',
     showCloudsAnimation: false,
-    activeItem: {...config.menu[0]},
+    activeItem: {...config.articles[1]},
+    // activeItem: {...config.articles[0]},
   };
 
   componentWillUnmount() {
@@ -48,7 +49,7 @@ export default class Map extends Component {
   };
 
   #handleHotSpotClick = async index => {
-    await this.setState({activeItem: {...config.menu[index]}});
+    await this.setState({activeItem: {...config.articles[index]}});
     this.#setActiveMap('full');
   };
 

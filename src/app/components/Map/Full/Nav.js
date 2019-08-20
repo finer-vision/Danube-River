@@ -17,20 +17,20 @@ export default class Nav extends Component {
   render() {
     return (
       <div className="MapFull__nav">
-        {config.menu.map(item => (
+        {config.articles.map(article => (
           <div
-            key={`menu-item-${item.id}`}
-            className={`MapFull__nav-item ${item.id === this.props.map.activeItem.id ? 'MapFull__nav-item--active' : ''}`}
-            onClick={this.#handleClick(item)}
+            key={`menu-item-${article.id}`}
+            className={`MapFull__nav-item ${article.id === this.props.map.activeItem.id ? 'MapFull__nav-item--active' : ''}`}
+            onClick={this.#handleClick(article)}
           >
-            {item.id === this.props.map.activeItem.id && (
+            {article.id === this.props.map.activeItem.id && (
               <div className="type-p">
                 Read about
               </div>
             )}
-            <div className={`type-${item.id === this.props.map.activeItem.id ? 'h4' : 'tag'}`}>
-              {item.title} {item.id === this.props.map.activeItem.id &&
-            <img src={asset('/assets/img/arrow.svg')} alt={`Read about ${item.title}`}/>}
+            <div className={`type-${article.id === this.props.map.activeItem.id ? 'h4' : 'tag'}`}>
+              {article.title} {article.id === this.props.map.activeItem.id &&
+            <img src={asset('/assets/img/arrow.svg')} alt={`Read about ${article.title}`}/>}
             </div>
           </div>
         ))}

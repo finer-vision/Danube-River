@@ -32,7 +32,7 @@ export default class Popup extends Component {
 
   render() {
     return (
-      <div className="MapFull__popup">
+      <div className={`MapFull__popup MapFull__popup--${this.props.map.activeItem.id}`}>
         <div className="MapFull__popup-id type-hero">
           {String(this.props.map.activeItem.id).padStart(2, '0')}
         </div>

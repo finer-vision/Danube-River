@@ -10,7 +10,7 @@ import {MAP, TILE_COORDINATES} from "../consts";
 @MapContext
 export default class MapFull extends Component {
   static defaultProps = {
-    activeItem: {...config.menu[0]},
+    activeItem: {...config.articles[0]},
   };
 
   state = {
