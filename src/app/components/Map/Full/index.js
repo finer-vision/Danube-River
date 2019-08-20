@@ -3,21 +3,22 @@ import Nav from "./Nav";
 import config from "../../../core/config";
 import {MapContext} from "../../../context/MapContext";
 import Popup from "./Popup";
-import {asset} from "../../../core/utils";
+import {asset, map} from "../../../core/utils";
 
 const MAP = {
   width: 12000,
   height: 5483,
 };
 
-const SCREEN_RATIO = {
-  width: 16.025,
-  height: 22.04997264271384,
+// 1923x1209
+const MAP_SEGMENT = {
+  width: 0.16025,
+  height: 0.22049972642713841,
 };
 
 const getCoordinate = (x, y) => ({
-  x: (100 / MAP.width) * x,
-  y: (100 / MAP.height) * y,
+  x: (1 / MAP.width) * x,
+  y: (1 / MAP.height) * y,
 });
 
 @MapContext
