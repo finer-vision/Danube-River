@@ -46,6 +46,12 @@ Setup ownership of the public directories to NGINX's `www-data` user and group.
 chown www-data:www-data -R build
 ```
 
+When adding new assets, be sure to update the preloading file. This script will do that for you:
+
+```bash
+node bin/generateAssetsPreload.js
+```
+
 ### Useful
 
 **Expected Article Content Modules:**
