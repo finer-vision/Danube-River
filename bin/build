@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+node bin/generateAssetsPreload.js
+
 if [ "$APP_ENV" = "local" ]
 then
     npm run watch
