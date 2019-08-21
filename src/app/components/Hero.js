@@ -13,14 +13,14 @@ export default class Hero extends Component {
   };
 
   static defaultProps = {
-    pageTitleType: "type-hero",
+    pageTitleType: 'type-hero',
     className: ''
   };
 
   displayPageTitle() {
-    if (this.props.pageTitleType === "type-hero") {
+    if (this.props.pageTitleType === 'type-hero') {
       return (
-        <div className="type-hero">
+        <div className="type-hero animation-fade-in-from-bottom">
           {this.props.title}
         </div>
       );
@@ -39,9 +39,11 @@ export default class Hero extends Component {
       </div>
 
       <div className="Hero__title">
-        <Tilde/>
-        <div className="type-h4">
-          {this.props.tag}
+        <div className="animation-fade-in-from-left">
+          <Tilde/>
+          <div className="type-h4">
+            {this.props.tag}
+          </div>
         </div>
         {this.displayPageTitle()}
       </div>
