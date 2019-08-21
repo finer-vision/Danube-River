@@ -1,3 +1,5 @@
+import assets from "../../assets.json";
+
 export const url = pathname => {
   return pathname;
 };
@@ -16,3 +18,20 @@ export const getOffset = element => {
     left: bound.left + window.pageXOffset - html.clientLeft
   };
 };
+
+export const preloadAssets = () => new Promise(resolve => {
+  const processed = [];
+  const processImage = img => {
+    processed.push(img);
+    if (processed.length === assets.length) {
+      resolve();
+    }
+  };
+  for (let i = 0; i < assets.length; i++) {
+    const img = new Image();
+    img.onload = () => processImage(img);
+    img.onerror = () => processImage(img);
+    img.ontimeout = () => processImage(img);
+    img.src = assets[i];
+  }
+});

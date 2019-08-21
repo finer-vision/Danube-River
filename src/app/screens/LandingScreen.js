@@ -2,36 +2,52 @@ import React from "react";
 import BaseScreen from "./BaseScreen";
 import Screen from "../components/Screen";
 import {AppContext} from "../context/AppContext";
-import {asset} from "../core/utils";
+import {asset, preloadAssets} from "../core/utils";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Video from "../components/Video";
 import Section from "../components/Section";
 import Map from "../components/Map/index";
+import Loading from "../components/Loading";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
-  render = () => (
-    <Screen name="Landing" lockSections>
-      <Section show={true}>
-        <Hero
-          tag="Life of a River"
-          title="The Danube"
-          background={asset('assets/img/landing-screen-hero.png')}
-        />
-      </Section>
+  state = {
+    loading: true,
+  };
 
-      <Section show={true}>
-        <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
-      </Section>
+  async componentDidMount() {
+    await preloadAssets();
+    this.setState({loading: false});
+  }
 
-      <Section show={true}>
-        <Map/>
-      </Section>
+  render() {
+    if (this.state.loading) {
+      return <Loading/>;
+    }
 
-      <Section show={true} className="Footer__section">
-        <Footer/>
-      </Section>
-    </Screen>
-  );
+    return (
+      <Screen name="Landing" lockSections>
+        <Section show={true}>
+          <Hero
+            tag="Life of a River"
+            title="The Danube"
+            background={asset('assets/img/landing-screen-hero.png')}
+          />
+        </Section>
+
+        <Section show={true}>
+          <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
+        </Section>
+
+        <Section show={true}>
+          <Map/>
+        </Section>
+
+        <Section show={true} className="Footer__section">
+          <Footer/>
+        </Section>
+      </Screen>
+    );
+  }
 }
