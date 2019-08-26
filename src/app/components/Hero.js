@@ -35,17 +35,23 @@ export default class Hero extends Component {
   render = () => (
     <div className="Hero" style={{backgroundImage: `url(${this.props.background})`}}>
       <div className="Hero__logo">
-        <img src={asset('assets/img/cgtn-logo.png')} alt="CGTN Logo"/>
+        <img src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
       </div>
 
       <div className="Hero__title">
         <div className="animation-fade-in-from-left">
-          <Tilde/>
-          <div className="type-h4">
+          <div className="type-h2">
             {this.props.tag}
           </div>
         </div>
         {this.displayPageTitle()}
+      </div>
+
+      <div className="ScrollDownButton text-center">
+        <img src={asset('assets/img/curbe-yellow.svg')}/>
+        <div className="ScrollDownButton__text">
+          Scroll down
+        </div>
       </div>
     </div>
   );

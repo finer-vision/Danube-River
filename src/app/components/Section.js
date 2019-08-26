@@ -6,11 +6,13 @@ export default class Section extends Component {
   static propTypes = {
     show: PropTypes.bool,
     className: PropTypes.string,
+    backgroundImg: PropTypes.string,
   };
 
   static defaultProps = {
     show: true,
     className: '',
+    backgroundImg: 'none',
   };
 
   render() {
@@ -18,7 +20,9 @@ export default class Section extends Component {
       return null;
     }
     return (
-      <div className={`Section ${this.props.className}`}>
+      <div className={`Section ${this.props.className}`}
+           style={{ backgroundImage: (this.props.backgroundImg !=='none')?'url(' + this.props.backgroundImg + ')':this.props.backgroundImg}}
+      >
         {this.props.children}
       </div>
     );

@@ -86,7 +86,11 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.max-width-970 {
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .max-width-1257 {
   max-width: 1257px;
   margin-left: auto;
@@ -119,7 +123,7 @@
   font-family: "Aktiv Grotesk Ex Trial", sans-serif;
   letter-spacing: 1.2px;
   line-height: rem(121px);
-  color: red;
+  color: $dark-blue-color;
 }
 
 .quote-open-type-2 {
@@ -129,7 +133,7 @@
   font-family: "Aktiv Grotesk Ex Trial", sans-serif;
   letter-spacing: 1.2px;
   line-height: rem(68px);
-  color: red;
+  color: $dark-blue-color;
   font-weight: 500;
 }
 
@@ -138,7 +142,7 @@
   line-height: rem(29px);
   letter-spacing: rem(2px);
   font-weight: 500;
-  color: $red-color;
+  color: $dark-blue-color;
   text-transform: uppercase;
   font-family: "Aktiv Grotesk Ex Trial", sans-serif;
 
@@ -198,4 +202,8 @@
 
 .d-none {
   display: none;
+}
+.px-50 {
+  padding-left: 50px;
+  padding-right: 50px;
 }
