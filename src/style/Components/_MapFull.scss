@@ -19,7 +19,17 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    background-color: #12551b;
+    background-color: #2d4e1c;
+
+    &-river {
+      position: absolute;
+      top: 10.86383495145631%;
+      left: 0;
+      width: 90.32937784185428%;
+      height: auto;
+      pointer-events: none;
+      z-index: 5;
+    }
 
     &-container {
       transform-origin: 0 0;
@@ -67,7 +77,8 @@
       }
 
       &--active {
-        background-color: $primary;
+        background-color: $yellow-color;
+        color: $secondary;
         border-bottom: none;
         width: auto;
         @include fluid-attr("padding-top", 12px, 24px);
@@ -76,7 +87,7 @@
         @include fluid-attr("padding-left", 12px, 24px);
 
         &:hover {
-          background-color: lighten($primary, 5%);
+          background-color: lighten($yellow-color, 5%);
         }
       }
     }
@@ -84,19 +95,111 @@
 
   &__popup {
     position: relative;
-    @include fluid-attr("max-width", 400px, 750px);
-    @include fluid-attr("padding-right", 25px, 40px);
-    @include fluid-attr("padding-left", 25px, 40px);
+    @include fluid-attr("max-width", 380px, 710px);
     opacity: 0;
     animation: fade-in 1s ease-out forwards;
     animation-delay: 1s;
 
+    &--1 {
+      transform: translate(4vw, 17vh);
+    }
+
     &--2 {
-      transform: translate(27vw, 12vh);
+      transform: translate(4vw, 30vh);
 
       .MapFull__popup-img {
-        transform: translate(50%, -35%);
-        right: 65%;
+        transform: translate(40%, -50%);
+        animation: pop-in-img-2 1s ease-out forwards;
+        animation-delay: 1s;
+        opacity: 0;
+
+        @keyframes pop-in-img-2 {
+          0%, 100% {
+            opacity: 1;
+          }
+
+          100% {
+            transform: translate(40%, -25%);
+          }
+        }
+      }
+    }
+
+    &--3 {
+      transform: translate(26vw, 30vh);
+
+      .MapFull__popup-img {
+        right: auto;
+        left: 0;
+        max-width: 356px;
+        width: 100%;
+        transform: translate(-90%, 50%);
+        animation: pop-in-img-3 1s ease-out forwards;
+        animation-delay: 1s;
+        opacity: 0;
+
+        @keyframes pop-in-img-3 {
+          0%, 100% {
+            opacity: 1;
+          }
+
+          100% {
+            transform: translate(-90%, 5%);
+          }
+        }
+      }
+    }
+
+    &--4 {
+      transform: translate(10vw, 26vh);
+
+      .MapFull__popup-img {
+        transform: translate(39%, 50%);
+        animation: pop-in-img-4 1s ease-out forwards;
+        animation-delay: 1s;
+        opacity: 0;
+
+        @keyframes pop-in-img-4 {
+          0%, 100% {
+            opacity: 1;
+          }
+
+          100% {
+            transform: translate(39%, -14%);
+          }
+        }
+      }
+    }
+
+    &--5 {
+      transform: translate(36vw, 10vh);
+
+      .MapFull__popup-img {
+        right: auto;
+        left: 0;
+        position: relative;
+        @include fluid-attr("max-width", 300px, 460px);
+        transform: translate(-105%, 50%);
+        animation: pop-in-img-5 1s ease-out forwards;
+        animation-delay: 1s;
+        opacity: 0;
+
+        @keyframes pop-in-img-5 {
+          0%, 100% {
+            opacity: 1;
+          }
+
+          100% {
+            transform: translate(-105%, -14%);
+          }
+        }
+
+        img:last-child {
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(30%, 23%);
+        }
       }
     }
 
@@ -106,40 +209,46 @@
       }
     }
 
-    &-tag {
-      transform: translate(-6%, 0);
-
-      img {
-        transform: translate(0, -40%);
-      }
-
-      .type-p {
-        @include fluid-attr("padding", 8px, 16px);
-        color: $primary;
-        font-weight: 500;
-      }
-    }
-
-    &-id {
-      font-family: "Aktiv Grotesk Ex Trial", sans-serif;
-      font-weight: bold;
-      line-height: 1;
-      color: $primary;
-      transform: translate(-5%, 0);
-    }
-
     &-background {
       position: relative;
       z-index: 1;
       @include fluid-attr("padding", 16px, 24px);
       background-color: rgba(255, 255, 255, 0.9);
-      transform: translate(0, 50%);
+      transform: translate(0%, 50%);
       animation: pop-in-background 1s ease-out forwards;
       animation-delay: 1s;
 
       @keyframes pop-in-background {
         100% {
-          transform: translate(0, -10%);
+          transform: translate(0%, 0%);
+        }
+      }
+    }
+
+    &-label {
+      position: absolute;
+      left: 5%;
+      transform: translate(-50%, -25%);
+      animation: pop-in-label 1s ease-out forwards;
+      animation-delay: 1s;
+      background-color: $yellow-color;
+      @include fluid-attr("padding-top", 15px, 30px);
+      @include fluid-attr("padding-right", 10px, 20px);
+      @include fluid-attr("padding-left", 10px, 20px);
+      @include fluid-attr("padding-bottom", 2px, 5px);
+
+      .type-h4 {
+        color: $secondary;
+        @include fluid-attr("margin-right", 5px, 10px);
+      }
+
+      img {
+        transform: translate(0%, -48%);
+      }
+
+      @keyframes pop-in-label {
+        100% {
+          transform: translate(0%, -25%);
         }
       }
     }
@@ -147,13 +256,13 @@
     &-img {
       position: absolute;
       right: 0;
-      transform: translate(50%, -35%);
+      transform: translate(30%, -50%);
       animation: pop-in-img 1s ease-out forwards;
       animation-delay: 1s;
 
       @keyframes pop-in-img {
         100% {
-          transform: translate(20%, -35%);
+          transform: translate(30%, -15%);
         }
       }
     }
@@ -169,6 +278,25 @@
 
       .type-p {
         color: $gray-300;
+      }
+    }
+
+    &-tag {
+      &-line {
+        width: 80px;
+        height: 4px;
+        background-color: $yellow-color;
+        @include fluid-attr("margin-bottom", 6px, 10px);
+        transform: translate(-73%, 0%);
+      }
+
+      img {
+        transform: translate(0, -40%);
+      }
+
+      .type-p {
+        color: $secondary;
+        font-weight: 500;
       }
     }
   }

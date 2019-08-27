@@ -2,7 +2,7 @@ import React from "react";
 import BaseScreen from "./BaseScreen";
 import Screen from "../components/Screen";
 import {AppContext} from "../context/AppContext";
-import {asset, preloadAssets} from "../core/utils";
+import {asset, map, preloadAssets} from "../core/utils";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Video from "../components/Video";
@@ -12,14 +12,27 @@ import Loading from "../components/Loading";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
+  #screen = null;
+
   state = {
     loading: true,
+    scrollY: 0,
   };
 
   async componentDidMount() {
     await preloadAssets();
-    this.setState({loading: false});
+    await this.setState({loading: false});
+    this.#screen = document.querySelector('.Screen');
+    this.#screen.addEventListener('scroll', this.#handleScroll);
   }
+
+  componentWillUnmount() {
+    this.#screen.removeEventListener('scroll', this.#handleScroll);
+  }
+
+  #handleScroll = () => {
+    this.setState({scrollY: this.#screen.scrollTop});
+  };
 
   render() {
     if (this.state.loading) {
@@ -30,9 +43,13 @@ export default class LandingScreen extends BaseScreen {
       <Screen name="Landing" lockSections>
         <Section show={true}>
           <Hero
+            parallax
             tag="The Danube"
             title="Life of a River"
             background={asset('assets/img/landing-screen-hero.png')}
+            style={{
+              backgroundPosition: `50% ${map(this.state.scrollY, 0, window.innerHeight, 100, 0)}%`,
+            }}
           />
         </Section>
 

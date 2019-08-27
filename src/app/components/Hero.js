@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import {asset} from "../core/utils";
+import {asset, map} from "../core/utils";
 import Nav from './Nav';
 
 export default class Hero extends Component {
@@ -10,13 +10,36 @@ export default class Hero extends Component {
     background: PropTypes.string.isRequired,
     pageTitleType: PropTypes.oneOf(['type-hero', 'type-single-page']),
     pageTagType: PropTypes.oneOf(['type-hero', 'type-single-page']),
-    className: PropTypes.string
+    className: PropTypes.string,
+    style: PropTypes.object,
+    parallax: PropTypes.bool,
   };
 
   static defaultProps = {
     pageTitleType: 'type-hero',
     pageTagType: 'type-hero',
-    className: ''
+    className: '',
+    style: {},
+    parallax: false,
+  };
+
+  #screen = null;
+
+  state = {
+    scrollY: 0,
+  };
+
+  componentDidMount() {
+    this.#screen = document.querySelector('.Screen');
+    this.#screen.addEventListener('scroll', this.#handleScroll);
+  }
+
+  componentWillUnmount() {
+    this.#screen.removeEventListener('scroll', this.#handleScroll);
+  }
+
+  #handleScroll = () => {
+    this.setState({scrollY: this.#screen.scrollTop});
   };
 
   displayPageTag() {
@@ -54,13 +77,16 @@ export default class Hero extends Component {
   }
 
   render = () => (
-    <div className="Hero" style={{backgroundImage: `url(${this.props.background})`}}>
+    <div className="Hero" style={{backgroundImage: `url(${this.props.background})`, ...this.props.style}}>
       <Nav />
       <div className="Hero__logo">
         <img src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
       </div>
 
-      <div className="Hero__title">
+      <div className="Hero__title" style={!this.props.parallax ? {} : {
+        position: 'relative',
+        transform: `translate(0%, ${map(this.state.scrollY, 0, window.innerHeight * 0.5, 0, 100)}%)`,
+      }}>
         {this.displayPageTag()}
         {this.displayPageSubTitle()}
       </div>

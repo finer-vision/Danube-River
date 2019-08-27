@@ -58,6 +58,7 @@ export default class MapFull extends Component {
               height: `${MAP.height}px`,
             }}
           >
+            <img src={asset('/assets/img/map/river.svg')} className="MapFull__map-river"/>
             {[1, 2, 3, 4, 5].map((segment, index) => (
               <img
                 key={`map-segment-${segment}`}
