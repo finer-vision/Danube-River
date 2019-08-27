@@ -13,7 +13,7 @@ export default class Footer extends Component {
   render = () => (
     <div className="Footer">
       <div className="Footer__title">
-        <Tilde color={config.color.secondary}/>
+        <Tilde color="#fff"/>
         <div className="type-h2">
           Dive in Deeper
         </div>
@@ -55,12 +55,12 @@ export default class Footer extends Component {
         <div className="Footer__bottom">
           <div className="Footer__bottom-main flex align-center justify-between">
             <div className="Footer__info">
-              <Tilde/>
+              <Tilde color={config.color.yellow}/>
               <div className="type-h4">
-                LIFE OF A RIVER
+                THE DANUBE
               </div>
               <div className="type-h1">
-                The Danube
+                Life of a River
               </div>
             </div>
 

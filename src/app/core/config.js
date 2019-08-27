@@ -2,6 +2,7 @@ export default {
   color: {
     primary: '#EB4535',
     secondary: '#1C1264',
+    yellow: '#F0CD57',
   },
   articles: [
     {
