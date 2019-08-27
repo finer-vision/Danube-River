@@ -30,7 +30,7 @@ export default class MicroPlasticScreen extends BaseScreen {
   }
 
   render = () => (
-    <Screen name="ArticleScreen">
+    <Screen name="Article">
 
       <Section>
         <Hero

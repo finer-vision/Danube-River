@@ -29,7 +29,7 @@ export default class ArticleScreen extends BaseScreen {
   }
 
   render = () => (
-    <Screen name="ArticleScreen">
+    <Screen name="Article">
 
       <Section>
         <Hero
