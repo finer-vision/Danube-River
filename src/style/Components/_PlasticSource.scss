@@ -1,0 +1,75 @@
+.PlasticSource {
+  display: flex;
+  margin-bottom: 120px;
+
+  @include mobile {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    align-self: center;
+    font-size: rem(18px);
+    line-height: rem(27px);
+    font-family: "DIN", Arial, sans-serif;
+    max-width: 480px;
+    padding-left: 20px;
+    z-index: 10;
+    @include mobile {
+      padding-left: 0;
+    }
+  }
+
+  &__decoration-line {
+    height: 4px;
+    width: 80px;
+    background-color: $yellow-color;
+    margin-bottom: 10px;
+    margin-left: -35px;
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &--decoration-line-right {
+    margin-left: auto;
+    float: none;
+    margin-right: -45px;
+  }
+
+  &--margin-left-160 {
+    margin-left: 160px;
+    @include mobile {
+      margin-left: 0;
+    }
+  }
+
+  &--margin-right-160 {
+    margin-right: 160px;
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &--margin-right-80 {
+    margin-right: 80px;
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &--align-right {
+    float: right;
+
+    .PlasticSource__text {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+  }
+}

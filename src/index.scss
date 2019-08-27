@@ -7,6 +7,8 @@
 @import "style/Core/Helpers";
 @import "style/Core/Utils";
 @import "style/Core/Animations";
+@import "style/Core/Slick";
+@import "style/Core/SlickTheme";
 @import "style/Components/Screen";
 @import "style/Components/Section";
 @import "style/Components/Hero";
@@ -17,3 +19,9 @@
 @import "style/Components/MapFull";
 @import "style/Components/Footer";
 @import "style/Components/Clouds";
+@import "style/Components/CirclesGrid";
+@import "style/Components/PlasticSource";
+@import "style/Components/Stats";
+@import "style/Components/Quote";
+@import "style/Screens/Landing";
+@import "style/Screens/Article";

@@ -1,0 +1,27 @@
+.CirclesGrid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__element {
+    flex: 1 0 18%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__title {
+    padding: 5px;
+    font-size: rem(24px);
+    line-height: rem(29px);
+    font-weight: 500;
+    color: $dark-blue-color;
+  }
+
+  &__sub_title {
+    padding: 5px;
+    font-size: rem(14px);
+    line-height: rem(15px);
+  }
+}

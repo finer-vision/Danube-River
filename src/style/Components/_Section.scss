@@ -26,6 +26,14 @@
       width: 50%;
     }
 
+    &--desktop-65 {
+      width: 65%;
+    }
+
+    &--desktop-35 {
+      width: 35%;
+    }
+
     &--desktop-50-custom {
       position: absolute;
       right: -100px;
@@ -52,7 +60,10 @@
     @include fluid-attr("width", 100%, 400px);
     max-width: 100%;
   }
-
+  &--width-550px {
+    @include fluid-attr("width", 100%, 550px);
+    max-width: 100%;
+  }
   &__container {
     margin-left: auto;
     margin-right: auto;
@@ -75,13 +86,21 @@
     border-bottom: 1px solid $dark-blue-color;
     color: $white-color;
     background-color: $dark-blue-color;
+    .type-h4 {
+      font-weight: 500;
+    }
   }
 
-  &--dark-blue-and-white {
-    background: repeating-linear-gradient($dark-blue-color, $dark-blue-color 50%, $white-color 50%, $white-color 100%);
+  &--light-blue {
+    background-color: $light-blue-color;
+    color: $white-color;
+  }
 
-    &_85 {
-      background: repeating-linear-gradient($dark-blue-color, $dark-blue-color 85%, $white-color 50%, $white-color 100%);
+  &--white-and-blue {
+    background: repeating-linear-gradient($white-color, $white-color 50%, $light-blue-color 50%, $light-blue-color 100%) !important;
+    color: $white-color;
+    @include mobile {
+      background: $light-blue-color !important;
     }
   }
 
@@ -129,5 +148,26 @@
     filter: blur(10px);
     transition: filter .5s ease;
     backface-visibility: hidden;
+  }
+
+  &--background-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__background-img-flex {
+    height: 100%;
+    text-align: center;
+    color: $white-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Editor", serif;
+    font-weight: 500;
+  }
+
+  &--height-480 {
+    height: 480px;
   }
 }
