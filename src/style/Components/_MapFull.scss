@@ -21,6 +21,16 @@
     overflow: hidden;
     background-color: #2d4e1c;
 
+    &-river {
+      position: absolute;
+      top: 10.86383495145631%;
+      left: 0;
+      width: 90.32937784185428%;
+      height: auto;
+      pointer-events: none;
+      z-index: 5;
+    }
+
     &-container {
       transform-origin: 0 0;
       transition: transform 1s linear;
