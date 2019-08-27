@@ -18,7 +18,7 @@ export default {
     },
     {
       id: 3,
-      title: 'Dammed',
+      title: 'Hydro-power',
       intro: 'The great hydro conundrum',
       description: 'There are 62 dams along the length of the Danube, which turn the kinetic energy of water pounding off the Alps into electricity. While this is lauded by some power companies and governments as an ideal antidote to CO2 emissions, environmental campaigners argue no more should be built – and some should be removed. They claim the dams stop fish reaching spawning grounds, cause build-up of polluted sediment, damage vital wetlands, destroy ecosystems, displace communities and they aren’t cost-effective.',
     },

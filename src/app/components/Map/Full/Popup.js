@@ -57,13 +57,37 @@ export default class Popup extends Component {
           <img src={asset('/assets/img/arrow.svg')} alt={`Read about ${this.props.map.activeItem.title}`}/>
         </div>
 
-        <div className="MapFull__popup-img">
-          <img
-            src={asset(`/assets/img/articles/${this.props.map.activeItem.id}.png`)}
-            alt={this.props.map.activeItem.title}
-            style={this.#getImageSize()}
-          />
-        </div>
+        {this.props.map.activeItem.id === 3 && (
+          <div className="MapFull__popup-img">
+            <img
+              src={asset('/assets/img/articles/facts.svg')}
+              alt={this.props.map.activeItem.title}
+            />
+          </div>
+        )}
+
+        {this.props.map.activeItem.id === 5 && (
+          <div className="MapFull__popup-img">
+            <img
+              src={asset('/assets/img/articles/5-1.png')}
+              alt={this.props.map.activeItem.title}
+            />
+            <img
+              src={asset('/assets/img/articles/5-2.png')}
+              alt={this.props.map.activeItem.title}
+            />
+          </div>
+        )}
+
+        {[1, 2, 4].includes(this.props.map.activeItem.id) && (
+          <div className="MapFull__popup-img">
+            <img
+              src={asset(`/assets/img/articles/${this.props.map.activeItem.id}.png`)}
+              alt={this.props.map.activeItem.title}
+              style={this.#getImageSize()}
+            />
+          </div>
+        )}
       </div>
     );
   }
