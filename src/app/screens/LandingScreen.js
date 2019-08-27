@@ -32,7 +32,7 @@ export default class LandingScreen extends BaseScreen {
           <Hero
             tag="The Danube"
             title="Life of a River"
-            background={asset('assets/img/landing-screen-hero-v2.png')}
+            background={asset('assets/img/landing-screen-hero.png')}
           />
         </Section>
 
