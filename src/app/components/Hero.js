@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import {asset} from "../core/utils";
+import {asset, map} from "../core/utils";
 
 export default class Hero extends Component {
   static propTypes = {
@@ -18,6 +18,25 @@ export default class Hero extends Component {
     pageTagType: 'type-hero',
     className: '',
     style: {},
+  };
+
+  #screen = null;
+
+  state = {
+    scrollY: 0,
+  };
+
+  componentDidMount() {
+    this.#screen = document.querySelector('.Screen');
+    this.#screen.addEventListener('scroll', this.#handleScroll);
+  }
+
+  componentWillUnmount() {
+    this.#screen.removeEventListener('scroll', this.#handleScroll);
+  }
+
+  #handleScroll = () => {
+    this.setState({scrollY: this.#screen.scrollTop});
   };
 
   displayPageTag() {
@@ -60,7 +79,10 @@ export default class Hero extends Component {
         <img src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
       </div>
 
-      <div className="Hero__title">
+      <div className="Hero__title" style={{
+        position: 'relative',
+        transform: `translate(0%, ${map(this.state.scrollY, 0, window.innerHeight * 0.5, 0, 100)}%)`,
+      }}>
         {this.displayPageTag()}
         {this.displayPageSubTitle()}
       </div>
