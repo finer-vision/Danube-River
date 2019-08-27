@@ -91,6 +91,11 @@
     }
   }
 
+  &--light-blue {
+    background-color: $light-blue-color;
+    color: $white-color;
+  }
+
   &--white-and-blue {
     background: repeating-linear-gradient($white-color, $white-color 50%, $light-blue-color 50%, $light-blue-color 100%) !important;
     color: $white-color;

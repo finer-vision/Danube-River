@@ -452,6 +452,9 @@ export default class MicroPlasticScreen extends BaseScreen {
           Here’s Dilyana’s guide to what you can do
         </div>
         </div>
+      </Section>
+
+      <Section className="Section--light-blue">
         <div className="Section__container mt-80px">
           <div className="max-width-760">
             <div className="Paragraph mb-50px">
