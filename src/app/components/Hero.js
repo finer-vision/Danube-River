@@ -11,6 +11,7 @@ export default class Hero extends Component {
     pageTagType: PropTypes.oneOf(['type-hero', 'type-single-page']),
     className: PropTypes.string,
     style: PropTypes.object,
+    parallax: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -18,6 +19,7 @@ export default class Hero extends Component {
     pageTagType: 'type-hero',
     className: '',
     style: {},
+    parallax: false,
   };
 
   #screen = null;
@@ -79,7 +81,7 @@ export default class Hero extends Component {
         <img src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
       </div>
 
-      <div className="Hero__title" style={{
+      <div className="Hero__title" style={!this.props.parallax ? {} : {
         position: 'relative',
         transform: `translate(0%, ${map(this.state.scrollY, 0, window.innerHeight * 0.5, 0, 100)}%)`,
       }}>

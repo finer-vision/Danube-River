@@ -43,6 +43,7 @@ export default class LandingScreen extends BaseScreen {
       <Screen name="Landing" lockSections>
         <Section show={true}>
           <Hero
+            parallax
             tag="The Danube"
             title="Life of a River"
             background={asset('assets/img/landing-screen-hero.png')}
