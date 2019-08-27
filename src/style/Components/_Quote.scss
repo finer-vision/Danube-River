@@ -10,12 +10,20 @@
     position: relative;
     right: initial;
   }
+
   &--max-width-530 {
     max-width: 530px;
     margin-right: -130px;
 
     @include mobile {
       margin-right: 0;
+    }
+  }
+
+  .type-h2 {
+    @include mobile {
+      font-size: rem(25px);
+      line-height: rem(30px);
     }
   }
 }

@@ -158,13 +158,13 @@ export default class MicroPlasticScreen extends BaseScreen {
                  onLoad={() => this.handleSize(this.containerReference.width)}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-20px">
+          <div className="small-title text-center mt-20px dark-blue">
             Gabor Bordos of Wessling explains what sorts of microplastics were found.
           </div>
         </div>
 
         <div className="Section__container mt-50px">
-          <div className="max-width-1257 Section--flex px-50">
+          <div className="max-width-1257 Section--flex px-50 px-mobile-0">
 
             <div className="Section__column Section__column--desktop-65">
               <div className="Section--width-550px float-right pr-15">
@@ -239,6 +239,9 @@ export default class MicroPlasticScreen extends BaseScreen {
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-942 Video--cursor-pointer"
           />
+          <div className="small-title text-center mt-20px white">
+            Dilyana Mihaylova, Marine Plastics Project manager Fauna and Flora International –show and tell on microfibres
+          </div>
         </div>
 
         <div className="Section__container mt-80px">
@@ -445,6 +448,9 @@ export default class MicroPlasticScreen extends BaseScreen {
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
+          <div className="small-title text-center mt-20px">
+          Here’s Dilyana’s guide to what you can do
+        </div>
         </div>
         <div className="Section__container mt-80px">
           <div className="max-width-760">

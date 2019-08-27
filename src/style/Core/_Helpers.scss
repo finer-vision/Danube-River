@@ -5,9 +5,11 @@
 .mt-10px {
   @include fluid-attr("margin-top", 5px, 10px);
 }
+
 .mt-20px {
   @include fluid-attr("margin-top", 10px, 20px);
 }
+
 .mt-30px {
   @include fluid-attr("margin-top", 25px, 30px);
 }
@@ -76,6 +78,10 @@
   color: $gray-300;
 }
 
+.white {
+  color: $white-color;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -86,21 +92,25 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .max-width-1440 {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .max-width-960 {
   max-width: 960px !important;
   margin-left: auto;
   margin-right: auto;
 }
+
 .max-width-970 {
   max-width: 970px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .max-width-1257 {
   max-width: 1257px;
   margin-left: auto;
@@ -213,12 +223,19 @@
 .d-none {
   display: none;
 }
+
 .px-50 {
   padding-left: 50px;
   padding-right: 50px;
 }
 
+.px-mobile-0 {
+  @include mobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .small-title {
   font-size: rem(14px);
-  color: $dark-blue-color;
 }
