@@ -14,7 +14,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
   componentDidMount() {
     window.addEventListener("resize", () => {
-      if (this.containerReference.width !== null) {
+      if (this.containerReference !== null) {
         this.handleSize(this.containerReference.width);
       }
     });
