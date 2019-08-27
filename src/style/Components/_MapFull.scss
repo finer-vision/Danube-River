@@ -105,11 +105,16 @@
     }
 
     &--2 {
-      transform: translate(27vw, 12vh);
+      transform: translate(4vw, 28vh);
 
       .MapFull__popup-img {
-        transform: translate(50%, -35%);
-        right: 65%;
+        animation: pop-in-img-2 1s ease-out forwards;
+
+        @keyframes pop-in-img-2 {
+          100% {
+            transform: translate(40%, -25%);
+          }
+        }
       }
     }
 
