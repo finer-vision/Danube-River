@@ -111,8 +111,13 @@
         transform: translate(40%, -50%);
         animation: pop-in-img-2 1s ease-out forwards;
         animation-delay: 1s;
+        opacity: 0;
 
         @keyframes pop-in-img-2 {
+          0%, 100% {
+            opacity: 1;
+          }
+
           100% {
             transform: translate(40%, -25%);
           }
@@ -131,8 +136,13 @@
         transform: translate(-90%, 50%);
         animation: pop-in-img-3 1s ease-out forwards;
         animation-delay: 1s;
+        opacity: 0;
 
         @keyframes pop-in-img-3 {
+          0%, 100% {
+            opacity: 1;
+          }
+
           100% {
             transform: translate(-90%, 5%);
           }
@@ -147,8 +157,13 @@
         transform: translate(39%, 50%);
         animation: pop-in-img-4 1s ease-out forwards;
         animation-delay: 1s;
+        opacity: 0;
 
         @keyframes pop-in-img-4 {
+          0%, 100% {
+            opacity: 1;
+          }
+
           100% {
             transform: translate(39%, -14%);
           }
@@ -167,8 +182,13 @@
         transform: translate(-105%, 50%);
         animation: pop-in-img-5 1s ease-out forwards;
         animation-delay: 1s;
+        opacity: 0;
 
         @keyframes pop-in-img-5 {
+          0%, 100% {
+            opacity: 1;
+          }
+
           100% {
             transform: translate(-105%, -14%);
           }
