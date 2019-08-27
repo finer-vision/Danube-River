@@ -27,7 +27,7 @@ export default class LandingScreen extends BaseScreen {
     }
 
     return (
-      <Screen name="Landing" lockSections>
+      <Screen name="LandingScreen" lockSections>
         <Section show={true}>
           <Hero
             tag="The Danube"
