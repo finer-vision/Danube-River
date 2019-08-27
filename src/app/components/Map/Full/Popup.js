@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {asset} from "../../../core/utils";
 import {MapContext} from "../../../context/MapContext";
-import Tilde from "../../Tilde";
 
 @MapContext
 export default class Popup extends Component {
@@ -33,19 +32,15 @@ export default class Popup extends Component {
   render() {
     return (
       <div className={`MapFull__popup MapFull__popup--${this.props.map.activeItem.id}`}>
-        <div className="MapFull__popup-id type-hero">
-          {String(this.props.map.activeItem.id).padStart(2, '0')}
-        </div>
-
         <div className="MapFull__popup-background">
-          <div className="flex align-center MapFull__popup-tag">
-            <Tilde/>
-            <div className="type-p">
-              {this.props.map.activeItem.title.toUpperCase()}
-            </div>
-          </div>
-
           <div className="MapFull__popup-main">
+            <div className="MapFull__popup-tag">
+              <div className="type-p">
+                {this.props.map.activeItem.title.toUpperCase()}
+              </div>
+              <div className="MapFull__popup-tag-line"/>
+            </div>
+
             <div className="type-h2">
               {this.props.map.activeItem.intro}
             </div>
@@ -53,6 +48,13 @@ export default class Popup extends Component {
               {this.props.map.activeItem.description}
             </div>
           </div>
+        </div>
+
+        <div className="MapFull__popup-label flex align-center justify-center">
+          <div className="type-h4">
+            {this.props.map.activeItem.title}
+          </div>
+          <img src={asset('/assets/img/arrow.svg')} alt={`Read about ${this.props.map.activeItem.title}`}/>
         </div>
 
         <div className="MapFull__popup-img">
