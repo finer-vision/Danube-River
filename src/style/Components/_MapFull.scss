@@ -77,7 +77,8 @@
       }
 
       &--active {
-        background-color: $primary;
+        background-color: $yellow-color;
+        color: $secondary;
         border-bottom: none;
         width: auto;
         @include fluid-attr("padding-top", 12px, 24px);
@@ -86,7 +87,7 @@
         @include fluid-attr("padding-left", 12px, 24px);
 
         &:hover {
-          background-color: lighten($primary, 5%);
+          background-color: lighten($yellow-color, 5%);
         }
       }
     }
