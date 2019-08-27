@@ -3,7 +3,7 @@
   flex-direction: column;
   background-size: cover;
   background-position: 50% 100%;
-  @include fluid-attr("padding", 15px, 60px);
+  @include fluid-attr("padding", 15px, 40px);
 
   &__title {
     z-index: 10;
@@ -28,6 +28,13 @@
     color: $primary;
   }
 
+  .type-h2 {
+    font-weight: bold;
+    font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+    color: $dark-blue-color;
+    letter-spacing: 2px;
+  }
+
   .type-hero {
     font-family: "Editor", serif;
     font-weight: bold;
@@ -37,6 +44,6 @@
   .type-single-page {
     font-family: "Dark", serif;
     font-weight: bold;
-    color: $secondary;
+    color: $white-color;
   }
 }

@@ -31,3 +31,23 @@
     }
   }
 }
+
+.animation-fade-in {
+  opacity: 0;
+  animation: fade-in 2s ease forwards;
+  animation-delay: 0.2s;
+
+  @keyframes fade-in-from-left {
+    75%, 100% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(0, 0%);
+    }
+  }
+  &--delay-1s {
+    animation: fade-in 3s ease forwards;
+    animation-delay: 0.4s;
+  }
+}
