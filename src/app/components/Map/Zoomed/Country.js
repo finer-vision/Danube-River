@@ -12,11 +12,11 @@ export default class Country extends Component {
     <text
       fontFamily="Aktiv Grotesk Ex Trial"
       fontSize={14}
-      letterSpacing={2}
+      letterSpacing={1.2}
       fill="#FFF"
       transform={`translate(${this.props.x} ${this.props.y})`}
     >
-      <tspan x={2} y={14}>
+      <tspan x={12} y={14}>
         {this.props.name.toUpperCase()}
       </tspan>
     </text>
