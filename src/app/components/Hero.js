@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {asset} from "../core/utils";
-import Tilde from "./Tilde";
 
 export default class Hero extends Component {
   static propTypes = {
@@ -10,13 +9,15 @@ export default class Hero extends Component {
     background: PropTypes.string.isRequired,
     pageTitleType: PropTypes.oneOf(['type-hero', 'type-single-page']),
     pageTagType: PropTypes.oneOf(['type-hero', 'type-single-page']),
-    className: PropTypes.string
+    className: PropTypes.string,
+    style: PropTypes.object,
   };
 
   static defaultProps = {
     pageTitleType: 'type-hero',
     pageTagType: 'type-hero',
-    className: ''
+    className: '',
+    style: {},
   };
 
   displayPageTag() {
@@ -54,7 +55,7 @@ export default class Hero extends Component {
   }
 
   render = () => (
-    <div className="Hero" style={{backgroundImage: `url(${this.props.background})`}}>
+    <div className="Hero" style={{backgroundImage: `url(${this.props.background})`, ...this.props.style}}>
       <div className="Hero__logo">
         <img src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
       </div>
