@@ -31,6 +31,8 @@ export default class MicroPlasticScreen extends BaseScreen {
 
   render = () => (
     <Screen name="Article">
+      <Section className="Section--background-img" backgroundImg={`assets/img/microplastic_hero1.png`}>
+      </Section>
 
       <Section>
         <Hero
