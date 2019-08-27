@@ -7,7 +7,7 @@ import Tilde from "./Tilde";
 @withRouter
 export default class Footer extends Component {
   #goToArticle = article => () => {
-    this.props.history.push(`/article/${article.id}`);
+    this.props.history.push(`/article/microplastic`);
   };
 
   render = () => (
