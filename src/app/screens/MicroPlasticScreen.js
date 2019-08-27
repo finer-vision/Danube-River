@@ -7,6 +7,7 @@ import Hero from "../components/Hero";
 import {asset} from "../core/utils";
 import Footer from "../components/Footer";
 import Video from "../components/Video";
+import Carousel from "../components/Carousel";
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
@@ -36,6 +37,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           tag="MICROPLASTIC"
           title="Small thing, big problem"
           pageTitleType="type-single-page"
+          pageTagType="type-single-page"
           background={asset("assets/img/microplastic_hero.png")}
         />
       </Section>
@@ -43,7 +45,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-185px">
-              <h4 className="type-h4 mb-30px first-letter-big">
+              <h4 className="type-h4 mb-30px first-letter-big letter-spacing-normal gray">
                 As it winds thousands of kilometers through Europe, the Danube supplies freight, irrigation and energy
                 to
                 the millions who live along its banks. But it also carries away vast
@@ -67,9 +69,9 @@ export default class MicroPlasticScreen extends BaseScreen {
                 urgently need to know more about the health impact of microplastics because they are everywhere.”
               </div>
             </div>
-            <h4 className="type-h4 text-center dark-blue">Microplastics are pieces of plastic below 5mm</h4>
+            <h4 className="type-h4 text-center dark-blue mb-30px">Microplastics are pieces of plastic below 5mm</h4>
           </div>
-          <div className="max-width-1100">
+          <div className="max-width-1100 mb-30px">
             <div className="CirclesGrid">
               <div className="CirclesGrid__element">
                 <div className="CirclesGrid__img">
@@ -152,11 +154,16 @@ export default class MicroPlasticScreen extends BaseScreen {
         <div className="Image">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_1.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 ref={el => this.containerReference = el}
+                 onLoad={() => this.handleSize(this.containerReference.width)}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
+          <div className="small-title text-center mt-20px">
+            Gabor Bordos of Wessling explains what sorts of microplastics were found.
+          </div>
         </div>
 
-        <div className="Section__container mt-80px">
+        <div className="Section__container mt-50px">
           <div className="max-width-1257 Section--flex px-50">
 
             <div className="Section__column Section__column--desktop-65">
@@ -201,7 +208,8 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/chapter2.png`}>
+      <Section className="Section--background-img Section--height-480 mt-80px"
+               backgroundImg={`assets/img/chapter2.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div>Chapter 2</div>
@@ -218,7 +226,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               variety of sources.
             </h4>
             <div className="Paragraph mt-30px">
-              <div className="Paragraph__content Paragraph--default-letter-spacing">
+              <div className="Paragraph__content Paragraph--v2">
                 They can also be small bits of plastic waste from factories washed off products after moulding or
                 shaping. But they also include microbeads, which are found in cosmetic products such as shower gel or
                 some types of toothpaste.
@@ -233,7 +241,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           />
         </div>
 
-        <div className="Section__container mt-50px">
+        <div className="Section__container mt-80px">
 
           <div className="PlasticSource">
             <div className="PlasticSource__image">
@@ -313,12 +321,126 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section>
+      <Section className="Section--auto-height">
 
+        <div className="Section__container">
+          <div className="max-width-760 mb-80px">
+            <div className="Paragraph mt-80px">
+              <h4 className="type-h4 mb-30px text-center">If these tiny pieces are small enough for fish, or people, to
+                eat without noticing, are they really a problem?</h4>
+              <h4 className="type-h4 mb-30px text-center">The answer is yes.</h4>
+              <div className="Paragraph__content Paragraph--v2 mt-80px">
+                There are a growing number of scientific studies that agree on the issue.
+                <br/>
+                <br/>
+                Research conducted by Stephanie Wright, a fellow at King’s College London’s Centre for Environment and
+                Health, suggests that worms’ energy levels dropped by 50 percent and their feeding by 25 percent when
+                exposed to microplastics. Meanwhile, research from France suggests a lower reproductive rate in oysters
+                exposed to polystyrene microparticles.
+              </div>
+            </div>
+
+            <div className="Paragraph mt-30px">
+              <div className="Stats">
+                <div className="Stats__number">11,000</div>
+                <div className="Stats__text">Number of microplastics the</div>
+                <div className="Stats__text">average European shellfish</div>
+                <div className="Stats__text">consumer will ingest each year</div>
+              </div>
+              <div className="Paragraph__content Paragraph--v2 Paragraph--moved-to-right">
+                Wright, in a submission to the British House of Commons inquiry into the issue, says these findings
+                reflect the energy spent trying to digest indigestible plastic. And if you think it’s unlikely you have
+                eaten microplastics, think again. According to Wright: “It has been estimated that the average European
+                shellfish consumer will ingest up to 11,000 microplastics per year.”
+                <br/>
+                <br/>
+                And it is an ongoing problem – even if all production were ended tomorrow. A significant proportion of
+                microplastics in rivers and the oceans enter via
+              </div>
+            </div>
+
+            <div className="Paragraph">
+              <div className="Paragraph__content Paragraph--v2">
+                water-treatment plants and sewage works. Even if they don’t go straight back into the water system, they
+                can end up being used by farmers to irrigate or fertilize their land. They then get eaten directly by
+                insects and animals, or washed by rain into rivers and back into the food chain there. Once they are
+                created, they are around for hundreds of years, travelling an ecologically unappetizing circle of life.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-width-760 mt-80px">
+          <Carousel/>
+        </div>
+
+        <div className="Section__container">
+          <div className="max-width-760 mb-80px">
+            <div className="Paragraph mt-80px">
+              <div className="Paragraph__content Paragraph--v2">
+                But there is still much to learn about the overall impact on the Danube and a full-scale survey of
+                microplastics along the length of the river is under way. It is a multinational effort, with an aim to
+              </div>
+            </div>
+
+            <div className="Paragraph mt-30px">
+
+              <div className="Quote Quote--max-width-530">
+                <span className="quote-open-type-2">“</span>
+                <h2 className="type-h2 type-alert">
+                  It’s not as simple as<br className="br-desktop"/>
+                  spotting a discarded <br className="br-desktop"/>
+                  fast food wrapper.”
+                </h2>
+                <div className="quote-author quote-author-type-2 mt-10px">
+                  Philipp Hohenblum
+                </div>
+                <div className="quote-author-position quote-author-position-type-2 mt-10px">
+                  Professor
+                </div>
+              </div>
+
+              <div className="Paragraph__content Paragraph--v2 Paragraph--moved-to-left">
+                define the problem. It is hoped this will then inform the politicians taking decisions needed to
+                safeguard the river’s waters, which cut across more countries than any other in the world. Philipp
+                Hohenblum, a microplastics expert at the Environment Agency Austria and 35 of his colleagues have spent
+                every day for the past month collecting, testing and analyzing the Danube’s water. As he puts it: “It’s
+                not as simple as spotting a discarded fast-food wrapper.”
+                <br/>
+                <br/>
+                “Globally, around five to 13 million tons of macro and microplastics enter the oceans annually, of which
+                1.5
+              </div>
+            </div>
+
+            <div className="Paragraph">
+              <div className="Paragraph__content Paragraph--v2">
+                million ton are microplastics. In the European Union (EU) some 75,000 to 300,000 tons of microplastics
+                are emitted in the environment every year. Almost all of the microplastics come from land-based sources
+                by runoff or waste-water treatment, which end up in rivers and ultimately reach the oceans,” he says.
+              </div>
+            </div>
+
+            <div className="Stats Stats--v2 mt-50px">
+              <div className="Stats__number">75,000 -</div>
+              <div className="Stats__number Stats--big">300,000<span className="Stats--small">tons</span></div>
+            </div>
+            <h4 className="type-h4 dark-blue mt-30px mb-30px">of microplastics are emitted in the EU environment every
+              year.</h4>
+            <div className="Paragraph">
+              <div className="Paragraph__content Paragraph--v2">
+                So, some of the world’s brightest minds have been focusing on tackling the issue and pressure is growing
+                for governments to act. But on a more personal level, what can be done to tackle the problem? There’s an
+                obvious answer – buy fewer plastic products and avoid shower gels and washing detergents that have
+                microbeads in them.
+              </div>
+            </div>
+          </div>
+        </div>
       </Section>
 
       <Section className="Section--white-and-blue Section--auto-height">
-        <div className="Image mt-80px">
+        <div className="Image">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_2.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"
@@ -328,10 +450,16 @@ export default class MicroPlasticScreen extends BaseScreen {
           <div className="max-width-760">
             <div className="Paragraph mb-50px">
               <div className="Paragraph__content">
-                The challenge with the Danube is, there are different countries with different governments that have different priorities – which all need to work together to tackle the problem. Microbeads, for instance, are banned in cosmetics in the UK, France and Italy, but they are not yet outlawed across the whole EU and other countries through which the Danube flows.
+                The challenge with the Danube is, there are different countries with different governments that have
+                different priorities – which all need to work together to tackle the problem. Microbeads, for instance,
+                are banned in cosmetics in the UK, France and Italy, but they are not yet outlawed across the whole EU
+                and other countries through which the Danube flows.
                 <br/>
                 <br/>
-                What is clear, is there is a huge amount of goodwill and multinational effort, as shown by the work of the International Commission for the Protection of the Danube River (ICPDR) and several regional environmental organizations, to identify and tackle what is the big problem caused by these very small things.
+                What is clear, is there is a huge amount of goodwill and multinational effort, as shown by the work of
+                the International Commission for the Protection of the Danube River (ICPDR) and several regional
+                environmental organizations, to identify and tackle what is the big problem caused by these very small
+                things.
               </div>
             </div>
           </div>
@@ -342,5 +470,5 @@ export default class MicroPlasticScreen extends BaseScreen {
         <Footer/>
       </Section>
     </Screen>
-);
+  );
 }

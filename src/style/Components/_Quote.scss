@@ -1,0 +1,21 @@
+.Quote {
+  position: absolute;
+  right: -100px;
+  color: $dark-blue-color;
+  font-size: rem(43px);
+  line-height: rem(50px);
+  letter-spacing: 1.2px;
+  font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+  @include mobile {
+    position: relative;
+    right: initial;
+  }
+  &--max-width-530 {
+    max-width: 530px;
+    margin-right: -130px;
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+}

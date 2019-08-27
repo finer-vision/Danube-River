@@ -3,6 +3,8 @@
   margin-left: auto;
   margin-right: auto;
   height: auto !important;
+  position: relative;
+
   @include mobile {
     max-width: 100%;
   }
@@ -11,7 +13,7 @@
     font-family: "DIN", sans-serif;
     font-size: rem(18px);
     line-height: rem(27px);
-    letter-spacing: rem(1px);
+    //letter-spacing: rem(1px);
     font-weight: 100;
     @include mobile {
       letter-spacing: 0;
@@ -22,7 +24,21 @@
     font-weight: 500;
   }
 
-  &--default-letter-spacing {
+  &--v2 {
     letter-spacing: normal;
+  }
+
+  &--moved-to-right {
+    padding-left: 160px;
+    @include mobile {
+      padding-left: 0;
+    }
+  }
+
+  &--moved-to-left {
+    padding-right: 320px;
+    @include mobile {
+      padding-right: 0;
+    }
   }
 }

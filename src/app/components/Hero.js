@@ -9,15 +9,36 @@ export default class Hero extends Component {
     title: PropTypes.string.isRequired,
     background: PropTypes.string.isRequired,
     pageTitleType: PropTypes.oneOf(['type-hero', 'type-single-page']),
+    pageTagType: PropTypes.oneOf(['type-hero', 'type-single-page']),
     className: PropTypes.string
   };
 
   static defaultProps = {
     pageTitleType: 'type-hero',
+    pageTagType: 'type-hero',
     className: ''
   };
 
-  displayPageTitle() {
+  displayPageTag() {
+    if (this.props.pageTagType === 'type-hero') {
+      return (
+        <div className="animation-fade-in-from-left">
+          <div className="type-h2">
+            {this.props.tag}
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div className="animation-fade-in">
+        <div className="type-h2">
+          {this.props.tag}
+        </div>
+      </div>
+    );
+  }
+
+  displayPageSubTitle() {
     if (this.props.pageTitleType === 'type-hero') {
       return (
         <div className="type-hero animation-fade-in-from-bottom">
@@ -26,7 +47,7 @@ export default class Hero extends Component {
       );
     }
     return (
-      <h1 className="type-h1 type-single-page">
+      <h1 className="type-h1 type-single-page animation-fade-in animation-fade-in--delay-1s">
         {this.props.title}
       </h1>
     );
@@ -39,12 +60,8 @@ export default class Hero extends Component {
       </div>
 
       <div className="Hero__title">
-        <div className="animation-fade-in-from-left">
-          <div className="type-h2">
-            {this.props.tag}
-          </div>
-        </div>
-        {this.displayPageTitle()}
+        {this.displayPageTag()}
+        {this.displayPageSubTitle()}
       </div>
 
       <div className="ScrollDownButton text-center">

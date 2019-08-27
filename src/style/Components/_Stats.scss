@@ -1,0 +1,71 @@
+.Stats {
+  position: absolute;
+  max-width: 350px;
+  margin-left: -220px;
+  font-weight: 500;
+
+  @include mobile {
+    position: relative;
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__number {
+    display: inline-block;
+    font-size: rem(57px);
+    line-height: rem(68px);
+    color: $yellow-color;
+    background-color: $dark-blue-color;
+    letter-spacing: 1.2px;
+    font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+  }
+
+  &__text {
+    display: inline-block;
+    color: $white-color;
+    background-color: $dark-blue-color;
+    font-size: rem(24px);
+    line-height: rem(36px);
+
+  }
+
+  &--v2 {
+    position: relative;
+    margin-left: initial;
+    @include mobile {
+      text-align: left;
+
+      .Stats__number {
+        font-size: rem(39px);
+        line-height: rem(39px);
+      }
+    }
+
+    .Stats--big {
+      @include mobile {
+        font-size: rem(61px);
+        line-height: rem(73px);
+      }
+    }
+
+    .Stats--small {
+      @include mobile {
+        text-transform: uppercase;
+        font-size: rem(20px);
+        line-height: rem(30px);
+        display: block;
+      }
+    }
+  }
+
+  &--big {
+    font-size: rem(135px);
+    line-height: rem(121px);
+  }
+
+  &--small {
+    font-size: rem(57px);
+    line-height: rem(68px);
+  }
+}
