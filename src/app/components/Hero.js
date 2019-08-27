@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {asset} from "../core/utils";
-import Tilde from "./Tilde";
+import Nav from './Nav';
 
 export default class Hero extends Component {
   static propTypes = {
@@ -55,6 +55,7 @@ export default class Hero extends Component {
 
   render = () => (
     <div className="Hero" style={{backgroundImage: `url(${this.props.background})`}}>
+      <Nav />
       <div className="Hero__logo">
         <img src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
       </div>
