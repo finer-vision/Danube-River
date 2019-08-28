@@ -100,11 +100,11 @@
     animation: fade-in 1s ease-out forwards;
     animation-delay: 1s;
 
-    &--1 {
+    &--0 {
       transform: translate(4vw, 17vh);
     }
 
-    &--2 {
+    &--1 {
       transform: translate(4vw, 30vh);
 
       .MapFull__popup-img {
@@ -125,7 +125,7 @@
       }
     }
 
-    &--3 {
+    &--2 {
       transform: translate(26vw, 30vh);
 
       .MapFull__popup-img {
@@ -150,7 +150,7 @@
       }
     }
 
-    &--4 {
+    &--3 {
       transform: translate(10vw, 26vh);
 
       .MapFull__popup-img {
@@ -171,7 +171,7 @@
       }
     }
 
-    &--5 {
+    &--4 {
       transform: translate(36vw, 10vh);
 
       .MapFull__popup-img {
