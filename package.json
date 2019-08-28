@@ -10,6 +10,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-slick": "^0.25.2",
+    "react-waypoint": "^9.0.2",
     "regenerator-runtime": "^0.13.2"
   },
   "devDependencies": {

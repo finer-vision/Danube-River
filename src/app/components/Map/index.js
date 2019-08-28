@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Waypoint} from "react-waypoint";
 import {MapContextProvider} from "../../context/MapContext";
 import Zoomed from "./Zoomed/index";
 import Full from "./Full/index";
@@ -23,6 +24,10 @@ export default class Map extends Component {
   componentWillUnmount() {
     this.#timeout !== null && clearTimeout(this.#timeout);
   }
+
+  #handleEntry = entries => {
+    console.log('entries', entries);
+  };
 
   #getContext = () => ({
     activeMap: this.state.activeMap,
@@ -53,9 +58,19 @@ export default class Map extends Component {
     this.#setActiveMap('full');
   };
 
+  #waypoint = visible => () => {
+    console.log('visible', visible);
+    this.setState({visible});
+  };
+
   render() {
     return (
       <MapContextProvider value={this.#getContext()}>
+        <Waypoint
+          onEnter={this.#waypoint(true)}
+          onLeave={this.#waypoint(false)}
+          topOffset={`-${window.innerHeight * 0.5}px`}
+        />
         <div className="Map">
           {this.state.showCloudsAnimation && <Clouds/>}
           {this.state.activeMap === 'zoomed' && <Zoomed onHotSpotClick={this.#handleHotSpotClick}/>}
