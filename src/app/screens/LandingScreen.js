@@ -41,7 +41,7 @@ export default class LandingScreen extends BaseScreen {
 
     return (
       <Screen name="Landing" lockSections>
-        <Section show={true}>
+        <Section show={false}>
           <Hero
             parallax
             tag="The Danube"
@@ -53,11 +53,11 @@ export default class LandingScreen extends BaseScreen {
           />
         </Section>
 
-        <Section show={true}>
+        <Section show={false}>
           <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
         </Section>
 
-        <Section show={true}>
+        <Section show={false}>
           <Map/>
         </Section>
 

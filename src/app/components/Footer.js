@@ -20,13 +20,21 @@ export default class Footer extends Component {
       </div>
 
       <div className="Footer__articles">
+        <div className="Footer__article" onClick={() => this.props.history.push('/')}>
+          <div className="type-tag text-center text-uppercase">
+            Introduction
+          </div>
+          <div className="type-h4 text-center">
+            About the Danube
+          </div>
+        </div>
         {config.articles.map(article => (
-          <div key={`footer-article-${article.id}`} className="Footer__article" onClick={this.#goToArticle(article)}>
-            <div className="type-tag">
-              {String(article.id).padStart(2, '0')}
-            </div>
-            <div className="type-h4">
+          <div key={`footer.article.${article.id}`} className="Footer__article" onClick={this.#goToArticle(article)}>
+            <div className="type-tag text-center text-uppercase">
               {article.title}
+            </div>
+            <div className="type-h4 text-center">
+              {article.intro}
             </div>
           </div>
         ))}
