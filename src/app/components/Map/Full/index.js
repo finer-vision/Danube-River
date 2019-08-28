@@ -40,7 +40,7 @@ export default class MapFull extends Component {
     ];
 
     const scale = getScale(this.state.screen.width, this.state.screen.height);
-    const activeCoordinate = segmentCoordinates[this.props.map.activeItem.id - 1];
+    const activeCoordinate = segmentCoordinates[this.props.map.activeItem.index];
 
     return (
       <div className="MapFull">
