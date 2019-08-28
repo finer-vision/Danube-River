@@ -31,7 +31,7 @@ export default class Popup extends Component {
 
   render() {
     return (
-      <div className={`MapFull__popup MapFull__popup--${this.props.map.activeItem.id}`}>
+      <div className={`MapFull__popup MapFull__popup--${this.props.map.activeItem.index}`}>
         <div className="MapFull__popup-background">
           <div className="MapFull__popup-main">
             <div className="MapFull__popup-tag">
@@ -57,7 +57,7 @@ export default class Popup extends Component {
           <img src={asset('/assets/img/arrow.svg')} alt={`Read about ${this.props.map.activeItem.title}`}/>
         </div>
 
-        {this.props.map.activeItem.id === 3 && (
+        {this.props.map.activeItem.index === 2 && (
           <div className="MapFull__popup-img">
             <img
               src={asset('/assets/img/articles/facts.svg')}
@@ -66,23 +66,23 @@ export default class Popup extends Component {
           </div>
         )}
 
-        {this.props.map.activeItem.id === 5 && (
+        {this.props.map.activeItem.index === 4 && (
           <div className="MapFull__popup-img">
             <img
-              src={asset('/assets/img/articles/5-1.png')}
+              src={asset('/assets/img/articles/4-1.png')}
               alt={this.props.map.activeItem.title}
             />
             <img
-              src={asset('/assets/img/articles/5-2.png')}
+              src={asset('/assets/img/articles/4-2.png')}
               alt={this.props.map.activeItem.title}
             />
           </div>
         )}
 
-        {[1, 2, 4].includes(this.props.map.activeItem.id) && (
+        {[0, 1, 3].includes(this.props.map.activeItem.index) && (
           <div className="MapFull__popup-img">
             <img
-              src={asset(`/assets/img/articles/${this.props.map.activeItem.id}.png`)}
+              src={asset(`/assets/img/articles/${this.props.map.activeItem.index}.png`)}
               alt={this.props.map.activeItem.title}
               style={this.#getImageSize()}
             />

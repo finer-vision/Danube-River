@@ -10,6 +10,10 @@
   &--lock-sections {
     scroll-snap-type: y mandatory;
 
+    @media (max-width: $mobile-screen-width) {
+      scroll-snap-type: none;
+    }
+
     .Section {
       scroll-snap-align: start;
     }
