@@ -41,7 +41,7 @@ export default class LandingScreen extends BaseScreen {
 
     return (
       <Screen name="Landing" lockSections>
-        <Section show={false}>
+        <Section show={true}>
           <Hero
             parallax
             tag="The Danube"
