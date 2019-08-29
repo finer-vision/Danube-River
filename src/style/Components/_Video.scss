@@ -1,14 +1,6 @@
 .Video {
   position: relative;
 
-  &__mute {
-    position: absolute;
-    cursor: pointer;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1;
-  }
-
   &__play-button {
     position: absolute;
     left: 50%;

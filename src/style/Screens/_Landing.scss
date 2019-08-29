@@ -9,4 +9,12 @@
     background-size: auto 120vh;
     background-repeat: no-repeat;
   }
+
+  .mute-videos {
+    position: absolute;
+    cursor: pointer;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+  }
 }
