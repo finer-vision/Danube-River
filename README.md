@@ -52,6 +52,14 @@ When adding new assets, be sure to update the preloading file. This script will 
 node bin/generateAssetsPreload.js
 ```
 
+### Building Static Files
+
+To generate the static files, run the following. This will create a build directory that contains all the static files.
+
+```bash
+docker-compose run app npm install && npm run build
+```
+
 ### Useful
 
 **Expected Article Content Modules:**
