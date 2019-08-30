@@ -65,7 +65,7 @@ export default class LandingScreen extends BaseScreen {
           </svg>
         </div>
 
-        <Section show={false}>
+        <Section show={true}>
           <Hero
             parallax
             tag="The Danube"
@@ -77,7 +77,7 @@ export default class LandingScreen extends BaseScreen {
           />
         </Section>
 
-        <Section show={false}>
+        <Section show={true}>
           <Video sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}/>
         </Section>
 

@@ -7,7 +7,7 @@ export default forwardRef((props, ref) => (
     onPointerEnter={props.onPointerEnter}
     onPointerLeave={props.onPointerLeave}
     onClick={props.onClick}
-    className="MapZoomed__hotSpot"
+    className={`MapZoomed__hotSpot MapZoomed__hotSpot--${props.index}`}
   >
     <ellipse fill="#F0CD57" cx={30} cy={29} rx={20} ry={19}/>
     <ellipse
