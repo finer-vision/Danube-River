@@ -7,6 +7,10 @@
 
   &__title {
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   &__logo {
@@ -29,16 +33,16 @@
   }
 
   .type-h2 {
-    font-weight: bold;
     font-family: "Aktiv Grotesk Ex Trial", sans-serif;
-    color: $dark-blue-color;
+    font-weight: bold;
+    color: $primary;
     letter-spacing: 2px;
   }
 
   .type-hero {
-    font-family: "Editor", serif;
-    font-weight: bold;
-    color: $secondary;
+    font-family: "Tungsten", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
   }
 
   .type-single-page {
