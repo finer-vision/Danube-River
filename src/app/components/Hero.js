@@ -81,19 +81,9 @@ export default class Hero extends Component {
         <img src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
       </div>
 
-      <div className="Hero__title" style={!this.props.parallax ? {} : {
-        position: 'relative',
-        transform: `translate(0%, ${map(this.state.scrollY, 0, window.innerHeight * 0.5, 0, 100)}%)`,
-      }}>
+      <div className="Hero__title">
         {this.displayPageTag()}
         {this.displayPageSubTitle()}
-      </div>
-
-      <div className="ScrollDownButton text-center">
-        <img src={asset('assets/img/curbe-yellow.svg')}/>
-        <div className="ScrollDownButton__text">
-          Scroll down
-        </div>
       </div>
     </div>
   );
