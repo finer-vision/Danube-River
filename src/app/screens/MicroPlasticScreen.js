@@ -12,23 +12,6 @@ import Carousel from "../components/Carousel";
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
 
-  componentDidMount() {
-    window.addEventListener("resize", () => {
-      if (this.containerReference !== null) {
-        this.handleSize(this.containerReference.width);
-      }
-    });
-  }
-
-  handleSize(image) {
-    let elements = document.getElementsByClassName("Section__container");
-    if (elements.length > 0) {
-      for (let i = 0; i < elements.length; i++) {
-        elements[i].style.width = (image + "px");
-      }
-    }
-  }
-
   render = () => (
     <Screen name="Article">
       <Section>
@@ -156,8 +139,6 @@ export default class MicroPlasticScreen extends BaseScreen {
         <div className="Image mt-50px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_1.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-            // ref={this.#containerReference}
-            // onLoad={() => this.handleSize(this.containerReference.width)}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-20px">
@@ -215,13 +196,13 @@ export default class MicroPlasticScreen extends BaseScreen {
                backgroundImg={`assets/img/chapter2.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div className="small-title-type2 primary">Chapter 2</div>
+            <div className="small-title-type2 primary mb-30px">Chapter 2</div>
             <h1 className="type-h1 big-title">But what are<br/>microplastics?</h1>
           </div>
         </div>
       </Section>
 
-      <Section className="Section--black Section--auto-height">
+      <Section className="Section--black Section--auto-height pb-160px">
         <div className="Section__container mb-80px">
           <div className="max-width-760 mb-80px">
             <h4 className="type-h4 mt-80px">
@@ -319,11 +300,11 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/chapter3.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/chapter2.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div className="small-title-type2 primary">Chapter 3</div>
-            <h1 className="type-h1 big-title">What’s the problem<br/> with microplastics?</h1>
+            <div className="small-title-type2 primary mb-30px">Chapter 3</div>
+            <h1 className="type-h1 big-title-type-2">What’s the problem with microplastics?</h1>
           </div>
         </div>
       </Section>

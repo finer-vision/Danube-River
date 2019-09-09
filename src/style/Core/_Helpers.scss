@@ -54,6 +54,10 @@
   @include fluid-attr("margin-bottom", 45px, 80px);
 }
 
+.pb-160px {
+  @include fluid-attr("padding-bottom", 45px, 160px);
+}
+
 .mt-11px {
   margin-top: 11px;
 }
@@ -73,6 +77,7 @@
 .white {
   color: white !important;
 }
+
 .red {
   color: $red-color;
 }
@@ -243,22 +248,31 @@
   font-size: rem(14px);
   font-weight: 400;
   letter-spacing: 2px;
-  font-family: "Helvetica",sans-serif;
+  font-family: "Helvetica", sans-serif;
   color: #031C26;
   text-align: center;
   line-height: rem(15px);
 }
+
 .small-title-type2 {
+  letter-spacing: rem(3px);
   font-size: rem(14px);
   text-transform: uppercase;
   font-family: "Aktiv Grotesk Ex Trial", sans-serif;
 }
+
 .big-title {
   text-transform: uppercase;
   font-family: "Lucida Grande", sans-serif;
   letter-spacing: rem(2px);
   line-height: rem(57px);
+}
 
-  //font-family: LucidaGrande-Bold;
-
+.big-title-type-2 {
+  text-transform: uppercase;
+  letter-spacing: rem(2px);
+  line-height: rem(68px);
+  font-family: "Tungsten", sans-serif;
+  font-size: rem(57px);
+  font-weight: 600;
 }

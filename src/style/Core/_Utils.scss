@@ -28,13 +28,14 @@
 
 .first-letter-big {
   &:first-letter {
-    font-family: "Editor", serif;
+    font-family: "Aktiv Grotesk Ex Trial", serif;
     float: left;
     font-weight: bold;
     color: $primary;
     font-size: rem(135px);
     line-height: rem(106px);
-    margin: 0;
+    margin-top: -7px;
+    margin-right: 10px;
   }
 }
 .primary {
