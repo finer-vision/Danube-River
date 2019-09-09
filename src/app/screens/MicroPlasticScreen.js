@@ -214,13 +214,13 @@ export default class MicroPlasticScreen extends BaseScreen {
                backgroundImg={`assets/img/chapter2.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div className="small-title-type2 primary">Chapter 2</div>
+            <div className="small-title-type2 primary mb-30px">Chapter 2</div>
             <h1 className="type-h1 big-title">But what are<br/>microplastics?</h1>
           </div>
         </div>
       </Section>
 
-      <Section className="Section--black Section--auto-height">
+      <Section className="Section--black Section--auto-height pb-160px">
         <div className="Section__container mb-80px">
           <div className="max-width-760 mb-80px">
             <h4 className="type-h4 mt-80px">
@@ -312,11 +312,11 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/chapter3.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/chapter2.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div className="small-title-type2 primary">Chapter 3</div>
-            <h1 className="type-h1 big-title">What’s the problem<br/> with microplastics?</h1>
+            <div className="small-title-type2 primary mb-30px">Chapter 3</div>
+            <h1 className="type-h1 big-title-type-2">What’s the problem with microplastics?</h1>
           </div>
         </div>
       </Section>
