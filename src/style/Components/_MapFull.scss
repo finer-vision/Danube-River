@@ -95,7 +95,7 @@
 
   &__popup {
     position: relative;
-    @include fluid-attr("max-width", 380px, 710px);
+    max-width: 48.611111111111114vw;
     opacity: 0;
     animation: fade-in 1s ease-out forwards;
     animation-delay: 1s;
@@ -105,10 +105,8 @@
     }
 
     &--1 {
-      transform: translate(4vw, 30vh);
-
       .MapFull__popup-img {
-        transform: translate(40%, -50%);
+        transform: translate(35%, -50%);
         animation: pop-in-img-2 1s ease-out forwards;
         animation-delay: 1s;
         opacity: 0;
@@ -119,21 +117,19 @@
           }
 
           100% {
-            transform: translate(40%, -25%);
+            transform: translate(35%, -25%);
           }
         }
       }
     }
 
     &--2 {
-      transform: translate(26vw, 30vh);
-
       .MapFull__popup-img {
         right: auto;
         left: 0;
-        max-width: 356px;
+        @include fluid-attr("max-width", 256px, 356px);
         width: 100%;
-        transform: translate(-90%, 50%);
+        transform: translate(-70%, 50%);
         animation: pop-in-img-3 1s ease-out forwards;
         animation-delay: 1s;
         opacity: 0;
@@ -144,15 +140,13 @@
           }
 
           100% {
-            transform: translate(-90%, 5%);
+            transform: translate(-70%, 5%);
           }
         }
       }
     }
 
     &--3 {
-      transform: translate(10vw, 26vh);
-
       .MapFull__popup-img {
         transform: translate(39%, 50%);
         animation: pop-in-img-4 1s ease-out forwards;
@@ -172,14 +166,12 @@
     }
 
     &--4 {
-      transform: translate(36vw, 10vh);
-
       .MapFull__popup-img {
         right: auto;
         left: 0;
         position: relative;
-        @include fluid-attr("max-width", 300px, 460px);
-        transform: translate(-105%, 50%);
+        @include fluid-attr("max-width", 317px, 417px);
+        transform: translate(-70%, 50%);
         animation: pop-in-img-5 1s ease-out forwards;
         animation-delay: 1s;
         opacity: 0;
@@ -190,15 +182,8 @@
           }
 
           100% {
-            transform: translate(-105%, -14%);
+            transform: translate(-70%, -25%);
           }
-        }
-
-        img:last-child {
-          position: absolute;
-          top: 0;
-          right: 0;
-          transform: translate(30%, 23%);
         }
       }
     }
@@ -213,7 +198,7 @@
       position: relative;
       z-index: 1;
       @include fluid-attr("padding", 16px, 24px);
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(2, 28, 38, 0.7);
       transform: translate(0%, 50%);
       animation: pop-in-background 1s ease-out forwards;
       animation-delay: 1s;
@@ -259,6 +244,7 @@
       transform: translate(30%, -50%);
       animation: pop-in-img 1s ease-out forwards;
       animation-delay: 1s;
+      z-index: -1;
 
       @keyframes pop-in-img {
         100% {
@@ -269,15 +255,16 @@
 
     &-main {
       .type-h2 {
-        font-family: Editor, serif;
+        font-family: Tungsten, sans-serif;
         font-weight: bold;
+        text-transform: uppercase;
         line-height: 1em;
-        color: $secondary;
+        color: #fff;
         margin-bottom: 0.8em;
       }
 
       .type-p {
-        color: $gray-300;
+        color: #fff;
       }
     }
 
@@ -295,7 +282,7 @@
       }
 
       .type-p {
-        color: $secondary;
+        color: $primary;
         font-weight: 500;
       }
     }

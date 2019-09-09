@@ -12,49 +12,76 @@
   background-position: 61.843645% 67.9749715585893%;
   background-size: 226.73611111111111%;
 
+  $river-length: 2202.6826171875;
   $river-animation-duration: 5s;
 
-  &__river {
-    $length: 2202.6826171875;
-    stroke-dasharray: $length;
-    animation: dash $river-animation-duration linear reverse forwards;
-    @keyframes dash {
-      100% {
-        stroke-dashoffset: $length;
-      }
-    }
+  &__info {
+    @include fluid-attr("padding-top", 10px, 20px);
+    @include fluid-attr("padding-bottom", 5px, 10px);
+    @include fluid-attr("padding-left", 10px, 20px);
+    @include fluid-attr("padding-right", 10px, 20px);
+    @include fluid-attr("margin-top", 40px, 80px);
+    max-width: 790px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    text-align: center;
+    line-height: 1.2;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: rgba(3, 28, 38, 0.7);
   }
 
-  @keyframes fade-in {
-    100% {
-      opacity: 1;
+  &__river {
+    stroke-dasharray: $river-length;
+  }
+
+  &--focused {
+    .MapZoomed__hotSpot {
+      @keyframes fade-in {
+        100% {
+          opacity: 1;
+        }
+      }
+
+      animation: fade-in 0.6s forwards;
+
+      &--0 {
+        animation-delay: $river-animation-duration * 0.14;
+      }
+
+      &--1 {
+        animation-delay: $river-animation-duration * 0.268;
+      }
+
+      &--2 {
+        animation-delay: $river-animation-duration * 0.676;
+      }
+
+      &--3 {
+        animation-delay: $river-animation-duration * 0.894;
+      }
+
+      &--4 {
+        animation-delay: $river-animation-duration * 0.968;
+      }
+    }
+
+    .MapZoomed__river {
+      animation: dash $river-animation-duration linear reverse forwards;
+      @keyframes dash {
+        100% {
+          stroke-dashoffset: $river-length;
+        }
+      }
     }
   }
 
   &__hotSpot {
     cursor: pointer;
     opacity: 0;
-    animation: fade-in 0.6s forwards;
-
-    &--0 {
-      animation-delay: $river-animation-duration * 0.14;
-    }
-
-    &--1 {
-      animation-delay: $river-animation-duration * 0.268;
-    }
-
-    &--2 {
-      animation-delay: $river-animation-duration * 0.676;
-    }
-
-    &--3 {
-      animation-delay: $river-animation-duration * 0.894;
-    }
-
-    &--4 {
-      animation-delay: $river-animation-duration * 0.968;
-    }
 
     &-orbit {
       rx: 30.5;
@@ -98,12 +125,14 @@
       font-family: "Aktiv Grotesk Ex Trial", sans-serif;
       font-weight: bold;
       text-transform: uppercase;
-      color: $secondary;
+      color: $primary;
     }
 
-    .type-h4 {
-      font-family: "Editor", serif;
+    .type-h3 {
+      font-family: Tungsten, sans-serif;
       font-weight: bold;
+      line-height: 1;
+      text-transform: uppercase;
       color: $secondary;
     }
   }

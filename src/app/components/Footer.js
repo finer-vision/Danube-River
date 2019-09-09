@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {withRouter} from "react-router-dom";
 import config from "../core/config";
 import {asset} from "../core/utils";
-import Tilde from "./Tilde";
 
 @withRouter
 export default class Footer extends Component {
@@ -13,7 +12,6 @@ export default class Footer extends Component {
   render = () => (
     <div className="Footer">
       <div className="Footer__title">
-        <Tilde color="#fff"/>
         <div className="type-h2">
           Dive in Deeper
         </div>
@@ -63,7 +61,6 @@ export default class Footer extends Component {
         <div className="Footer__bottom">
           <div className="Footer__bottom-main flex align-center justify-between">
             <div className="Footer__info">
-              <Tilde color={config.color.yellow}/>
               <div className="type-h4">
                 THE DANUBE
               </div>

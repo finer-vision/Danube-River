@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 356 266" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Landing-page-design" transform="translate(-90.000000, -5042.000000)">
-            <g id="Hydropower" transform="translate(0.000000, 4500.000000)">
+<svg viewBox="0 0 325 254" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Helvetica" font-weight="normal">
+        <g id="Landing-page-1440" transform="translate(-91.000000, -4805.000000)">
+            <g id="Hydropower" transform="translate(0.000000, 4248.000000)">
                 <g id="Content">
                     <g id="Group-27" transform="translate(90.000000, 542.000000)">
                         <g id="Group-29">
-                            <rect id="Rectangle" fill="#1C1264" x="0" y="0" width="283" height="68"></rect>
-                            <text id="62-dams" font-family="DIN, sans-serif" font-size="57" font-weight="normal" line-spacing="68" letter-spacing="1.2" fill="#F0CD57">
+                            <text id="62-dams" font-size="57" line-spacing="68" letter-spacing="2" fill="#EC8484">
                                 <tspan x="0" y="55">62 dams</tspan>
                             </text>
-                            <rect id="Rectangle" fill="#1C1264" x="0" y="67" width="268" height="31"></rect>
-                            <text id="in-total-along-the-r" font-family="Editor, serif" font-size="24" font-weight="bold" line-spacing="36" fill="#FFFFFF">
-                                <tspan x="0" y="89">in total along the river</tspan>
+                            <text id="in-total-along-the-r" font-size="24" line-spacing="36" fill="#FFFFFF">
+                                <tspan x="0" y="86">in total along the river</tspan>
                             </text>
                         </g>
                         <g id="Group-28" transform="translate(0.000000, 131.000000)">
-                            <rect id="Rectangle" fill="#1C1264" x="0" y="0" width="149" height="68"></rect>
-                            <text id="30%" font-family="DIN, sans-serif" font-size="57" font-weight="normal" line-spacing="68" letter-spacing="1.2" fill="#F0CD57">
+                            <text id="30%" font-size="57" line-spacing="68" letter-spacing="2" fill="#EC8484">
                                 <tspan x="0" y="55">30%</tspan>
                             </text>
-                            <rect id="Rectangle" fill="#1C1264" x="0" y="67" width="356" height="59"></rect>
-                            <text id="of-the-length-of-the" font-family="Editor, serif" font-size="24" font-weight="bold" line-spacing="36" fill="#FFFFFF">
-                                <tspan x="0" y="93">of the length of the Danube is </tspan>
-                                <tspan x="0" y="129">impounded for hydropower</tspan>
+                            <text id="of-the-length-of-the" font-size="24" line-spacing="36" fill="#FFFFFF">
+                                <tspan x="0" y="92">of the length of the Danube is </tspan>
+                                <tspan x="0" y="128">impounded for hydropower</tspan>
                             </text>
                         </g>
                     </g>

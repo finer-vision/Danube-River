@@ -6,6 +6,7 @@ import Country from "./Country";
 import HotSpot from "./HotSpot";
 import {MapContext} from "../../../context/MapContext";
 import config from "../../../core/config";
+import {Waypoint} from "react-waypoint";
 
 const MAP = {
   width: 1440,
@@ -29,6 +30,7 @@ export default class MapZoomed extends Component {
       {active: false, x: 1320, y: 561, tag: config.articles[4].title, title: config.articles[4].intro},
     ],
     popupPosition: {x: 0, y: 0},
+    focused: false,
   };
 
   componentDidMount() {
@@ -81,11 +83,18 @@ export default class MapZoomed extends Component {
     }
   };
 
+  #toggleFocused = focused => () => this.setState({focused});
+
   render() {
     const activeHotSpot = this.#getActiveHotSpot();
 
     return (
-      <div className="MapZoomed">
+      <div className={`MapZoomed ${this.state.focused ? 'MapZoomed--focused' : ''}`}>
+        <div className="MapZoomed__info type-h4">
+          Stretching more than 2,000 kilometers from the heart of Europe to its eastern extremity, the waters of the
+          Danube offer a living record of the balance between the needs of man and the resilience of nature.
+        </div>
+
         <svg viewBox={`0 0 ${MAP.width} ${MAP.height}`} style={{width: '100%'}} ref={this.#map}>
           <g fill="none" fillRule="evenodd">
             <path
@@ -134,6 +143,8 @@ export default class MapZoomed extends Component {
             y={this.state.popupPosition.y}
           />
         )}
+
+        <Waypoint onEnter={this.#toggleFocused(true)} onLeave={this.#toggleFocused(false)}/>
       </div>
     );
   }
