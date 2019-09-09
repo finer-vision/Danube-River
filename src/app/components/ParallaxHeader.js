@@ -20,7 +20,7 @@ const LAYERS = {
       y: getPercentage(0, 'y'),
       width: getPercentage(2048),
       height: getPercentage(1598, 'y'),
-      velocity: 10,
+      velocity: 20,
       direction: 1,
     },
     {
