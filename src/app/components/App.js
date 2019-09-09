@@ -10,7 +10,7 @@ const Screen = Component => props => <Component {...props}/>;
 
 export default class App extends Component {
   render = () => (
-    <Suspense fallback={<Loading>Loading</Loading>}>
+    <Suspense fallback={<Loading/>}>
       <Switch>
         <Route exact path="/" render={Screen(LandingScreen)}/>
         <Route exact path="/article/microplastic" render={Screen(MicroPlasticScreen)}/>
