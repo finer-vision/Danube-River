@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import get from "lodash/get";
 import {asset} from "../../../core/utils";
 import {MapContext} from "../../../context/MapContext";
 
@@ -21,24 +22,30 @@ export default class Popup extends Component {
 
   #handleResize = () => this.setState({screen: {width: window.innerWidth, height: window.innerHeight}});
 
-  #getImageSize = () => {
-    const originalWidth = 660;
-    const originalHeight = 389;
-    const aspectRatio = originalWidth / originalHeight;
-    const scale = 0.4;
-    return {width: (this.state.screen.height * scale) * aspectRatio, height: this.state.screen.height * scale};
+  #getContainerStyle = () => {
+    const maxWidth = 700;
+    const artwork = {width: 1440, height: 900};
+    const x = this.props.map.activeItem.x || 0;
+    const y = this.props.map.activeItem.y || 0;
+    return {
+      maxWidth: maxWidth,
+      width: `${(100 / artwork.width) * maxWidth}vw`,
+      transform: `translate(${window.innerWidth * ((1 / artwork.width) * x)}px, ${window.innerHeight * ((1 / artwork.height) * y)}px)`,
+    };
   };
 
   render() {
     return (
-      <div className={`MapFull__popup MapFull__popup--${this.props.map.activeItem.index}`}>
+      <div
+        className={`MapFull__popup MapFull__popup--${this.props.map.activeItem.index}`}
+        style={this.#getContainerStyle()}
+      >
         <div className="MapFull__popup-background">
           <div className="MapFull__popup-main">
             <div className="MapFull__popup-tag">
               <div className="type-p">
                 {this.props.map.activeItem.title.toUpperCase()}
               </div>
-              <div className="MapFull__popup-tag-line"/>
             </div>
 
             <div className="type-h2">
@@ -52,42 +59,16 @@ export default class Popup extends Component {
 
         <div className="MapFull__popup-label flex align-center justify-center">
           <div className="type-h4">
-            {this.props.map.activeItem.title}
+            Read more
           </div>
-          <img src={asset('/assets/img/arrow.svg')} alt={`Read about ${this.props.map.activeItem.title}`}/>
+          <img src={asset('/assets/img/arrow.svg')} alt="Read more"/>
         </div>
 
-        {this.props.map.activeItem.index === 2 && (
-          <div className="MapFull__popup-img">
-            <img
-              src={asset('/assets/img/articles/facts.svg')}
-              alt={this.props.map.activeItem.title}
-            />
+        {get(this.props.map.activeItem, 'images', []).map((image, index) => (
+          <div className="MapFull__popup-img" key={`${this.props.map.activeItem.index}.image.${index}`}>
+            <img src={image} alt={this.props.map.activeItem.title}/>
           </div>
-        )}
-
-        {this.props.map.activeItem.index === 4 && (
-          <div className="MapFull__popup-img">
-            <img
-              src={asset('/assets/img/articles/4-1.png')}
-              alt={this.props.map.activeItem.title}
-            />
-            <img
-              src={asset('/assets/img/articles/4-2.png')}
-              alt={this.props.map.activeItem.title}
-            />
-          </div>
-        )}
-
-        {[0, 1, 3].includes(this.props.map.activeItem.index) && (
-          <div className="MapFull__popup-img">
-            <img
-              src={asset(`/assets/img/articles/${this.props.map.activeItem.index}.png`)}
-              alt={this.props.map.activeItem.title}
-              style={this.#getImageSize()}
-            />
-          </div>
-        )}
+        ))}
       </div>
     );
   }
