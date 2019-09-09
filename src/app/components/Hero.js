@@ -1,12 +1,13 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
-import {asset, map} from "../core/utils";
+import { asset } from "../core/utils";
+import ParallaxHeader from "./ParallaxHeader";
 
 export default class Hero extends Component {
   static propTypes = {
     tag: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    background: PropTypes.string.isRequired,
+    parallaxHeaderId: PropTypes.string,
     pageTitleType: PropTypes.oneOf(['type-hero', 'type-single-page']),
     pageTagType: PropTypes.oneOf(['type-hero', 'type-single-page']),
     className: PropTypes.string,
@@ -28,12 +29,12 @@ export default class Hero extends Component {
     scrollY: 0,
   };
 
-  componentDidMount() {
+  componentDidMount () {
     this.#screen = document.querySelector('.Screen');
     this.#screen.addEventListener('scroll', this.#handleScroll);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.#screen.removeEventListener('scroll', this.#handleScroll);
   }
 
@@ -41,7 +42,7 @@ export default class Hero extends Component {
     this.setState({scrollY: this.#screen.scrollTop});
   };
 
-  displayPageTag() {
+  displayPageTag () {
     if (this.props.pageTagType === 'type-hero') {
       return (
         <div className="animation-fade-in-from-left">
@@ -60,7 +61,7 @@ export default class Hero extends Component {
     );
   }
 
-  displayPageSubTitle() {
+  displayPageSubTitle () {
     if (this.props.pageTitleType === 'type-hero') {
       return (
         <div className="type-hero animation-fade-in-from-bottom">
@@ -76,24 +77,16 @@ export default class Hero extends Component {
   }
 
   render = () => (
-    <div className="Hero" style={{backgroundImage: `url(${this.props.background})`, ...this.props.style}}>
+    <div className="Hero" style={this.props.style}>
+      <ParallaxHeader id={this.props.parallaxHeaderId}/>
+
       <div className="Hero__logo">
         <img src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
       </div>
 
-      <div className="Hero__title" style={!this.props.parallax ? {} : {
-        position: 'relative',
-        transform: `translate(0%, ${map(this.state.scrollY, 0, window.innerHeight * 0.5, 0, 100)}%)`,
-      }}>
+      <div className="Hero__title">
         {this.displayPageTag()}
         {this.displayPageSubTitle()}
-      </div>
-
-      <div className="ScrollDownButton text-center">
-        <img src={asset('assets/img/curbe-yellow.svg')}/>
-        <div className="ScrollDownButton__text">
-          Scroll down
-        </div>
       </div>
     </div>
   );
