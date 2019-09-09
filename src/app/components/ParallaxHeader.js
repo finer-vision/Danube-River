@@ -65,6 +65,57 @@ const LAYERS = {
       range: [0, -100],
     },
   ],
+  'microplastic': [
+    {
+      x: getPercentage(-312),
+      y: getPercentage(0, 'y'),
+      width: getPercentage(2048),
+      height: getPercentage(1598, 'y'),
+      range: [0, 30],
+    },
+    {
+      x: getPercentage(-303),
+      y: getPercentage(107, 'y'),
+      width: getPercentage(2050),
+      height: getPercentage(256, 'y'),
+      range: [0, 25],
+    },
+    {
+      x: getPercentage(-303),
+      y: getPercentage(139, 'y'),
+      width: getPercentage(1746),
+      height: getPercentage(1409, 'y'),
+      range: [0, 22],
+    },
+    {
+      x: getPercentage(-316),
+      y: getPercentage(145, 'y'),
+      width: getPercentage(1249),
+      height: getPercentage(682, 'y'),
+      range: [0, 10],
+    },
+    {
+      x: getPercentage(677),
+      y: getPercentage(95, 'y'),
+      width: getPercentage(1069),
+      height: getPercentage(805, 'y'),
+      range: [0, -10],
+    },
+    {
+      x: getPercentage(1),
+      y: getPercentage(346, 'y'),
+      width: getPercentage(1748),
+      height: getPercentage(1204, 'y'),
+      range: [0, -50],
+    },
+    {
+      x: getPercentage(-302),
+      y: getPercentage(790, 'y'),
+      width: getPercentage(2048),
+      height: getPercentage(811, 'y'),
+      range: [0, -100],
+    },
+  ],
 };
 
 export default class ParallaxHeader extends Component {
