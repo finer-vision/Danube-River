@@ -116,6 +116,57 @@ const LAYERS = {
       range: [0, -100],
     },
   ],
+  'island-people': [
+    {
+      x: getPercentage(0),
+      y: getPercentage(0, 'y'),
+      width: getPercentage(2563),
+      height: getPercentage(1661, 'y'),
+      range: [0, 30],
+    },
+    {
+      x: getPercentage(0),
+      y: getPercentage(545, 'y'),
+      width: getPercentage(2564),
+      height: getPercentage(98, 'y'),
+      range: [0, 25],
+    },
+    {
+      x: getPercentage(618),
+      y: getPercentage(223, 'y'),
+      width: getPercentage(1496),
+      height: getPercentage(363, 'y'),
+      range: [0, 22],
+    },
+    {
+      x: getPercentage(452),
+      y: getPercentage(318, 'y'),
+      width: getPercentage(1662),
+      height: getPercentage(696, 'y'),
+      range: [0, 10],
+    },
+    {
+      x: getPercentage(2005),
+      y: getPercentage(716, 'y'),
+      width: getPercentage(628),
+      height: getPercentage(150, 'y'),
+      range: [0, -10],
+    },
+    {
+      x: getPercentage(0),
+      y: getPercentage(950, 'y'),
+      width: getPercentage(2565),
+      height: getPercentage(650, 'y'),
+      range: [0, -50],
+    },
+    {
+      x: getPercentage(0),
+      y: getPercentage(685, 'y'),
+      width: getPercentage(2563),
+      height: getPercentage(915, 'y'),
+      range: [0, -100],
+    },
+  ],
 };
 
 export default class ParallaxHeader extends Component {
