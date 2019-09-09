@@ -1,8 +1,8 @@
 import React from "react";
 import BaseScreen from "./BaseScreen";
 import Screen from "../components/Screen";
-import { AppContext } from "../context/AppContext";
-import { asset, map, preloadAssets } from "../core/utils";
+import {AppContext} from "../context/AppContext";
+import {preloadAssets} from "../core/utils";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Section from "../components/Section";
@@ -18,14 +18,14 @@ export default class LandingScreen extends BaseScreen {
     scrollY: 0,
   };
 
-  async componentDidMount () {
+  async componentDidMount() {
     await preloadAssets();
     await this.setState({loading: false});
     this.#screen = document.querySelector('.Screen');
     this.#screen.addEventListener('scroll', this.#handleScroll);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.#screen.removeEventListener('scroll', this.#handleScroll);
   }
 
@@ -38,7 +38,7 @@ export default class LandingScreen extends BaseScreen {
     this.props.app.toggleMuteVideos(muteVideos);
   };
 
-  render () {
+  render() {
     if (this.state.loading) {
       return <Loading/>;
     }
@@ -81,9 +81,6 @@ export default class LandingScreen extends BaseScreen {
             tag="The Danube"
             title="Life of a River"
             parallaxHeaderId="landing"
-            style={{
-              backgroundPosition: `50% ${map(this.state.scrollY, 0, window.innerHeight, 100, 0)}%`,
-            }}
           />
         </Section>
 
