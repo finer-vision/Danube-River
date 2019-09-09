@@ -197,10 +197,10 @@ export default class MicroPlasticScreen extends BaseScreen {
 
           <div className="max-width-970">
             <span className="quote-open-type-2">“</span>
-            <h2 className="type-h2 type-quote color-light-pink">
+            <h2 className="type-h2 type-quote primary">
               Surface runoff and sewage treatment plants can be major sources of microplastics”
             </h2>
-            <div className="quote-author color-light-pink mt-30px">
+            <div className="quote-author primary mt-30px">
               Gabor Bordos
             </div>
             <div className="quote-author-position mt-10px">
@@ -214,7 +214,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                backgroundImg={`assets/img/chapter2.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div className="small-title-type2 color-light-pink">Chapter 2</div>
+            <div className="small-title-type2 primary">Chapter 2</div>
             <h1 className="type-h1 big-title">But what are<br/>microplastics?</h1>
           </div>
         </div>
@@ -309,7 +309,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/chapter3.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div className="small-title-type2 color-light-pink">Chapter 3</div>
+            <div className="small-title-type2 primary">Chapter 3</div>
             <h1 className="type-h1 big-title">What’s the problem<br/> with microplastics?</h1>
           </div>
         </div>
@@ -381,7 +381,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
               <div className="Quote Quote--max-width-530">
                 <span className="quote-open-type-2">“</span>
-                <h2 className="type-h2 type-alert color-light-pink">
+                <h2 className="type-h2 type-alert primary">
                   It’s not as simple as<br className="br-desktop"/>
                   spotting a discarded <br className="br-desktop"/>
                   fast food wrapper.”
