@@ -4,9 +4,16 @@ import App from "../components/App";
 import {AppContextProvider} from "../context/AppContext";
 
 export default class AppContainer extends Component {
+  state = {
+    muteVideos: true,
+  };
+
   #getContext = () => ({
-    //
+    muteVideos: this.state.muteVideos,
+    toggleMuteVideos: this.#toggleMuteVideos,
   });
+
+  #toggleMuteVideos = muteVideos => this.setState({muteVideos});
 
   render = () => (
     <Router>

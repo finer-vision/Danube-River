@@ -77,8 +77,8 @@
       }
 
       &--active {
-        background-color: $yellow-color;
-        color: $secondary;
+        background-color: $primary;
+        color: #fff;
         border-bottom: none;
         width: auto;
         @include fluid-attr("padding-top", 12px, 24px);
@@ -87,7 +87,7 @@
         @include fluid-attr("padding-left", 12px, 24px);
 
         &:hover {
-          background-color: lighten($yellow-color, 5%);
+          background-color: lighten($primary, 5%);
         }
       }
     }
@@ -231,14 +231,14 @@
       transform: translate(-50%, -25%);
       animation: pop-in-label 1s ease-out forwards;
       animation-delay: 1s;
-      background-color: $yellow-color;
+      background-color: $primary;
       @include fluid-attr("padding-top", 15px, 30px);
       @include fluid-attr("padding-right", 10px, 20px);
       @include fluid-attr("padding-left", 10px, 20px);
       @include fluid-attr("padding-bottom", 2px, 5px);
 
       .type-h4 {
-        color: $secondary;
+        color: #fff;
         @include fluid-attr("margin-right", 5px, 10px);
       }
 
@@ -285,7 +285,7 @@
       &-line {
         width: 80px;
         height: 4px;
-        background-color: $yellow-color;
+        background-color: $primary;
         @include fluid-attr("margin-bottom", 6px, 10px);
         transform: translate(-73%, 0%);
       }

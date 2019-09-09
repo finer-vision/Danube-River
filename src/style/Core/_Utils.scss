@@ -26,18 +26,7 @@
   }
 }
 
-.ScrollDownButton {
-  &__text {
-    color: $white-color;
-    font-weight: bold;
-    font-size: rem(14);
-    font-family: "Aktiv Grotesk Ex Trial", Arial, sans-serif;
-    margin-top: 6px;
-  }
-}
-
 .first-letter-big {
-
   &:first-letter {
     font-family: "Editor", serif;
     float: left;
