@@ -242,7 +242,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                  className="Video--max-width-942 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-20px white">
-            Dilyana Mihaylova, Marine Plastics Project manager Fauna and Flora International –show and tell on microfibres
+            Dilyana Mihaylova, Marine Plastics Project manager Fauna and Flora International –<br/>show and tell on microfibres
           </div>
         </div>
 
