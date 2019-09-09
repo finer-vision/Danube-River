@@ -1,25 +1,44 @@
 import React, {Component} from "react";
+import MobileDetect from "mobile-detect";
 import {HashRouter as Router} from "react-router-dom";
 import App from "../components/App";
 import {AppContextProvider} from "../context/AppContext";
+import Loading from "../components/Loading";
 
 export default class AppContainer extends Component {
   state = {
     muteVideos: true,
+    loading: true,
+    isMobile: false,
   };
 
   #getContext = () => ({
     muteVideos: this.state.muteVideos,
+    isMobile: this.state.isMobile,
     toggleMuteVideos: this.#toggleMuteVideos,
+    setIsMobile: this.#setIsMobile,
   });
 
   #toggleMuteVideos = muteVideos => this.setState({muteVideos});
 
-  render = () => (
-    <Router>
-      <AppContextProvider value={this.#getContext()}>
-        <App/>
-      </AppContextProvider>
-    </Router>
-  );
+  #setIsMobile = isMobile => this.setState({isMobile});
+
+  componentDidMount() {
+    const md = new MobileDetect(window.navigator.userAgent);
+    this.setState({loading: false, isMobile: md.mobile() !== null});
+  }
+
+  render() {
+    if (this.state.loading) {
+      return <Loading/>;
+    }
+
+    return (
+      <Router>
+        <AppContextProvider value={this.#getContext()}>
+          <App/>
+        </AppContextProvider>
+      </Router>
+    );
+  }
 }

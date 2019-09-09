@@ -19,7 +19,9 @@ export default class LandingScreen extends BaseScreen {
   };
 
   async componentDidMount() {
-    await preloadAssets();
+    if (!this.props.app.isMobile) {
+      await preloadAssets();
+    }
     await this.setState({loading: false});
     this.#screen = document.querySelector('.Screen');
     this.#screen.addEventListener('scroll', this.#handleScroll);
