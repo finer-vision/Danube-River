@@ -17,11 +17,14 @@
     line-height: rem(29px);
     font-weight: 500;
     color: $primary;
+    font-family: "Aktiv Grotesk Ex Trial",sans-serif;
   }
 
   &__sub_title {
     padding: 5px;
     font-size: rem(14px);
-    line-height: rem(15px);
+    line-height: rem(17px);
+    font-family: "Akkurat-Bold",sans-serif;
+    letter-spacing: rem(2px);
   }
 }
