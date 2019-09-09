@@ -84,7 +84,7 @@ export default class LandingScreen extends BaseScreen {
           />
         </Section>
 
-        <Section show={true}>
+        <Section show={false}>
           <Map/>
         </Section>
 
