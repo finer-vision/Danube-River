@@ -77,7 +77,7 @@ export default class LandingScreen extends BaseScreen {
           </svg>
         </div>
 
-        <Section show={true}>
+        <Section show={false}>
           <Hero
             parallax
             tag="The Danube"
@@ -86,7 +86,7 @@ export default class LandingScreen extends BaseScreen {
           />
         </Section>
 
-        <Section show={true}>
+        <Section show={false}>
           <Map/>
         </Section>
 
