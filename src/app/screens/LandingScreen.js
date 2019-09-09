@@ -80,7 +80,7 @@ export default class LandingScreen extends BaseScreen {
             parallax
             tag="The Danube"
             title="Life of a River"
-            background={asset('assets/img/landing-screen-hero.png')}
+            parallaxHeaderId="landing"
             style={{
               backgroundPosition: `50% ${map(this.state.scrollY, 0, window.innerHeight, 100, 0)}%`,
             }}
