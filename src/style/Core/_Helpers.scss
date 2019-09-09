@@ -70,6 +70,9 @@
   color: $dark-blue-color;
 }
 
+.white {
+  color: white !important;
+}
 .red {
   color: $red-color;
 }
@@ -153,7 +156,7 @@
   font-family: "Aktiv Grotesk Ex Trial", sans-serif;
   letter-spacing: 1.2px;
   line-height: rem(68px);
-  color: $dark-blue-color;
+  color: $light-pink-color;
   font-weight: 500;
 }
 
@@ -162,7 +165,7 @@
   line-height: rem(29px);
   letter-spacing: rem(2px);
   font-weight: 500;
-  color: $dark-blue-color;
+  color: $black-color;
   text-transform: uppercase;
   font-family: "Aktiv Grotesk Ex Trial", sans-serif;
 
@@ -178,7 +181,7 @@
   font-family: "Din", sans-serif;
 
   &-type-2 {
-    color: $dark-blue-color;
+    color: $black-color;
   }
 }
 
@@ -238,4 +241,24 @@
 
 .small-title {
   font-size: rem(14px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-family: "Helvetica",sans-serif;
+  color: #031C26;
+  text-align: center;
+  line-height: rem(15px);
+}
+.small-title-type2 {
+  font-size: rem(14px);
+  text-transform: uppercase;
+  font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+}
+.big-title {
+  text-transform: uppercase;
+  font-family: "Lucida Grande", sans-serif;
+  letter-spacing: rem(2px);
+  line-height: rem(57px);
+
+  //font-family: LucidaGrande-Bold;
+
 }

@@ -31,23 +31,21 @@ export default class MicroPlasticScreen extends BaseScreen {
 
   render = () => (
     <Screen name="Article">
-      <Section className="Section--background-img" backgroundImg={`assets/img/microplastic_hero1.png`}>
-      </Section>
 
-      <Section>
-        <Hero
-          tag="MICROPLASTIC"
-          title="Small thing, big problem"
-          pageTitleType="type-single-page"
-          pageTagType="type-single-page"
-          background={asset("assets/img/microplastic_hero.png")}
-        />
-      </Section>
-      <Section className="Section--auto-height">
+      {/*<Section>*/}
+      {/*  <Hero*/}
+      {/*    tag="MICROPLASTIC"*/}
+      {/*    title="Small thing, big problem"*/}
+      {/*    pageTitleType="type-single-page"*/}
+      {/*    pageTagType="type-single-page"*/}
+      {/*    background={asset("assets/img/microplastic_hero.png")}*/}
+      {/*  />*/}
+      {/*</Section>*/}
+      <Section className="Section--auto-height Section--black">
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-185px">
-              <h4 className="type-h4 mb-30px first-letter-big letter-spacing-normal gray">
+              <h4 className="type-h4 mb-30px first-letter-big letter-spacing-normal">
                 As it winds thousands of kilometers through Europe, the Danube supplies freight, irrigation and energy
                 to
                 the millions who live along its banks. But it also carries away vast
@@ -71,7 +69,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 urgently need to know more about the health impact of microplastics because they are everywhere.”
               </div>
             </div>
-            <h4 className="type-h4 text-center dark-blue mb-30px">Microplastics are pieces of plastic below 5mm</h4>
+            <h4 className="type-h4 text-center mb-30px">Microplastics are pieces of plastic below 5mm</h4>
           </div>
           <div className="max-width-1100 mb-30px">
             <div className="CirclesGrid">
@@ -152,19 +150,21 @@ export default class MicroPlasticScreen extends BaseScreen {
             </div>
           </div>
         </div>
-
-        <div className="Image">
+      </Section>
+      <Section className="Section--black-and-white Section--auto-height">
+        <div className="Image mt-50px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_1.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-                 ref={el => this.containerReference = el}
-                 onLoad={() => this.handleSize(this.containerReference.width)}
+            // ref={this.#containerReference}
+            // onLoad={() => this.handleSize(this.containerReference.width)}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-20px dark-blue">
+          <div className="small-title text-center mt-20px">
             Gabor Bordos of Wessling explains what sorts of microplastics were found.
           </div>
         </div>
-
+      </Section>
+      <Section className="Section--auto-height">
         <div className="Section__container mt-50px">
           <div className="max-width-1257 Section--flex px-50 px-mobile-0">
 
@@ -197,10 +197,10 @@ export default class MicroPlasticScreen extends BaseScreen {
 
           <div className="max-width-970">
             <span className="quote-open-type-2">“</span>
-            <h2 className="type-h2 type-quote">
+            <h2 className="type-h2 type-quote color-light-pink">
               Surface runoff and sewage treatment plants can be major sources of microplastics”
             </h2>
-            <div className="quote-author mt-30px">
+            <div className="quote-author color-light-pink mt-30px">
               Gabor Bordos
             </div>
             <div className="quote-author-position mt-10px">
@@ -214,14 +214,14 @@ export default class MicroPlasticScreen extends BaseScreen {
                backgroundImg={`assets/img/chapter2.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div>Chapter 2</div>
-            <h2 className="type-h2">But what are microplastics?</h2>
+            <div className="small-title-type2 color-light-pink">Chapter 2</div>
+            <h1 className="type-h1 big-title">But what are<br/>microplastics?</h1>
           </div>
         </div>
       </Section>
 
-      <Section className="Section--dark-blue Section--auto-height">
-        <div className="Section__container">
+      <Section className="Section--black Section--auto-height">
+        <div className="Section__container mb-80px">
           <div className="max-width-760 mb-80px">
             <h4 className="type-h4 mt-80px">
               It’s a term used to describe any piece of plastic that is less than 5mm wide and they can come from a
@@ -236,7 +236,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             </div>
           </div>
         </div>
-        <div className="Image">
+        <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_img2.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-942 Video--cursor-pointer"
@@ -253,9 +253,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               <img src={asset('assets/img/plastic_source_1.png')}/>
             </div>
             <div className="PlasticSource__text">
-              <div className="PlasticSource__decoration-line"></div>
-              Another source is from clothing made from artificial fabrics. Recent estimates suggest hundreds of
-              thousands of microscopic fibres can be shed from a single garment as it tumbles through a washing machine.
+              Domestic washing machines contribute significantly to the amount of microplastics in the environment. Hundreds of thousands of microscopic fibers can be shed from a single garment wash.
             </div>
           </div>
 
@@ -264,28 +262,23 @@ export default class MicroPlasticScreen extends BaseScreen {
               <img src={asset('assets/img/plastic_source_2.png')}/>
             </div>
             <div className="PlasticSource__text">
-              <div className="PlasticSource__decoration-line"></div>
               The fibers pass through the sewage system along with other waste material to reach filtration plans for
               treatment.
             </div>
           </div>
 
-          <div className="PlasticSource">
+          <div className="PlasticSource PlasticSource--margin-right-160 PlasticSource--align-right">
+            <div className="PlasticSource__text">
+              Despite the presence of an elaborate filtration process that includes physical, chemical and biological treatment, microfibers often slip through the net.
+            </div>
             <div className="PlasticSource__image">
               <img src={asset('assets/img/plastic_source_3.png')}/>
-            </div>
-            <div className="PlasticSource__text">
-              <div className="PlasticSource__decoration-line"></div>
-              Too small to be filtered out by the appliance or wastewater plants, they find their way into rivers and
-              then oceans.
             </div>
           </div>
 
           <div className="PlasticSource PlasticSource--align-right">
             <div className="PlasticSource__text">
-              <div className="PlasticSource__decoration-line PlasticSource--decoration-line-right"></div>
-              Traditionally, this waste had been disregarded as insignificant because the inert material was not shown
-              to be dangerous and posed no visible environmental impact.
+              Having successfully defied wastewater filtration, the tiny particles are flushed into rivers and allowed to flow downstream into the ocean.
             </div>
             <div className="PlasticSource__image">
               <img src={asset('assets/img/plastic_source_4.png')}/>
@@ -294,23 +287,19 @@ export default class MicroPlasticScreen extends BaseScreen {
 
           <div className="PlasticSource PlasticSource--margin-right-80 PlasticSource--align-right">
             <div className="PlasticSource__text">
-              <div className="PlasticSource__decoration-line PlasticSource--decoration-line-right"></div>
-              But the days when microplastics could be ignored are long gone and surveys are now specifically looking at
-              the risks these pollutants pose to marine life.
+              Microplastics pose a grave danger to aquatic habitats as they are often ingested by marine animals, both in river ecosystems and in oceans.
             </div>
             <div className="PlasticSource__image">
               <img src={asset('assets/img/plastic_source_5.png')}/>
             </div>
           </div>
 
-          <div className="PlasticSource PlasticSource--margin-right-160 PlasticSource--align-right">
-            <div className="PlasticSource__text">
-              <div className="PlasticSource__decoration-line PlasticSource--decoration-line-right"></div>
-              They often end up being consumed by fish and other marine animals, ultimately making their way through the
-              food chain and ending up on our plates and in our drinking water.
-            </div>
+          <div className="PlasticSource PlasticSource--margin-left-160 PlasticSource--align-left">
             <div className="PlasticSource__image">
               <img src={asset('assets/img/plastic_source_6.png')}/>
+            </div>
+            <div className="PlasticSource__text">
+              Having made its way into the food chain through fish and other aquatic animals, the tiny plastic fibers ultimately end up on our dinner plates.
             </div>
           </div>
 
@@ -320,8 +309,8 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/chapter3.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div>Chapter 3</div>
-            <h2 className="type-h2">What’s the problem with microplastics?</h2>
+            <div className="small-title-type2 color-light-pink">Chapter 3</div>
+            <h1 className="type-h1 big-title">What’s the problem<br/> with microplastics?</h1>
           </div>
         </div>
       </Section>
@@ -329,11 +318,11 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--auto-height">
 
         <div className="Section__container">
-          <div className="max-width-760 mb-80px">
+          <div className="max-width-760">
             <div className="Paragraph mt-80px">
-              <h4 className="type-h4 mb-30px text-center">If these tiny pieces are small enough for fish, or people, to
+              <h4 className="type-h4 mb-30px">If these tiny pieces are small enough for fish, or people, to
                 eat without noticing, are they really a problem?</h4>
-              <h4 className="type-h4 mb-30px text-center">The answer is yes.</h4>
+              <h4 className="type-h4 mb-30px">The answer is yes.</h4>
               <div className="Paragraph__content Paragraph--v2 mt-80px">
                 There are a growing number of scientific studies that agree on the issue.
                 <br/>
@@ -392,7 +381,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
               <div className="Quote Quote--max-width-530">
                 <span className="quote-open-type-2">“</span>
-                <h2 className="type-h2 type-alert">
+                <h2 className="type-h2 type-alert color-light-pink">
                   It’s not as simple as<br className="br-desktop"/>
                   spotting a discarded <br className="br-desktop"/>
                   fast food wrapper.”
@@ -430,7 +419,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               <div className="Stats__number">75,000 -</div>
               <div className="Stats__number Stats--big">300,000<span className="Stats--small">tons</span></div>
             </div>
-            <h4 className="type-h4 dark-blue mt-30px mb-30px">of microplastics are emitted in the EU environment every
+            <h4 className="type-h4 mt-30px mb-30px">of microplastics are emitted in the EU environment every
               year.</h4>
             <div className="Paragraph">
               <div className="Paragraph__content Paragraph--v2">
@@ -444,19 +433,19 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--white-and-blue Section--auto-height">
+      <Section className="Section--white-and-blue Section--auto-height mt-50px">
         <div className="Image">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_2.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-20px">
+          <div className="small-title text-center white mt-20px">
           Here’s Dilyana’s guide to what you can do
         </div>
         </div>
       </Section>
 
-      <Section className="Section--light-blue Section--auto-height">
+      <Section className="Section--blue Section--auto-height">
         <div className="Section__container mt-80px">
           <div className="max-width-760">
             <div className="Paragraph mb-50px">

@@ -31,9 +31,12 @@
     font-family: "Editor", serif;
     float: left;
     font-weight: bold;
-    color: $dark-blue-color;
+    color: $light-pink-color;
     font-size: rem(135px);
     line-height: rem(106px);
     margin: 0;
   }
+}
+.color-light-pink {
+  color: $light-pink-color;
 }
