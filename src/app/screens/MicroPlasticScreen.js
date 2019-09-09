@@ -249,18 +249,20 @@ export default class MicroPlasticScreen extends BaseScreen {
         <div className="Section__container mt-80px">
 
           <div className="PlasticSource">
-            <div className="PlasticSource__image">
-              <img src={asset('assets/img/plastic_source_1.png')}/>
-            </div>
+            <video autoPlay loop className="PlasticSource__video">
+              <source src={asset('assets/vid/01-WashingMachine_V03.mp4')} type="video/mp4"/>
+              Your browser does not support HTML5 video.
+            </video>
             <div className="PlasticSource__text">
               Domestic washing machines contribute significantly to the amount of microplastics in the environment. Hundreds of thousands of microscopic fibers can be shed from a single garment wash.
             </div>
           </div>
 
           <div className="PlasticSource PlasticSource--margin-left-160">
-            <div className="PlasticSource__image">
-              <img src={asset('assets/img/plastic_source_2.png')}/>
-            </div>
+            <video autoPlay loop className="PlasticSource__video">
+              <source src={asset('assets/vid/02-Pipe_V03.mp4')} type="video/mp4"/>
+              Your browser does not support HTML5 video.
+            </video>
             <div className="PlasticSource__text">
               The fibers pass through the sewage system along with other waste material to reach filtration plans for
               treatment.
@@ -271,33 +273,37 @@ export default class MicroPlasticScreen extends BaseScreen {
             <div className="PlasticSource__text">
               Despite the presence of an elaborate filtration process that includes physical, chemical and biological treatment, microfibers often slip through the net.
             </div>
-            <div className="PlasticSource__image">
-              <img src={asset('assets/img/plastic_source_3.png')}/>
-            </div>
+            <video autoPlay loop className="PlasticSource__video">
+              <source src={asset('assets/vid/03-filter_V03.mp4')} type="video/mp4"/>
+              Your browser does not support HTML5 video.
+            </video>
           </div>
 
           <div className="PlasticSource PlasticSource--align-right">
             <div className="PlasticSource__text">
               Having successfully defied wastewater filtration, the tiny particles are flushed into rivers and allowed to flow downstream into the ocean.
             </div>
-            <div className="PlasticSource__image">
-              <img src={asset('assets/img/plastic_source_4.png')}/>
-            </div>
+            <video autoPlay loop className="PlasticSource__video">
+              <source src={asset('assets/vid/04-RiverPipe_V03.mp4')} type="video/mp4"/>
+              Your browser does not support HTML5 video.
+            </video>
           </div>
 
           <div className="PlasticSource PlasticSource--margin-right-80 PlasticSource--align-right">
             <div className="PlasticSource__text">
               Microplastics pose a grave danger to aquatic habitats as they are often ingested by marine animals, both in river ecosystems and in oceans.
             </div>
-            <div className="PlasticSource__image">
-              <img src={asset('assets/img/plastic_source_5.png')}/>
-            </div>
+            <video autoPlay loop className="PlasticSource__video">
+              <source src={asset('assets/vid/05-fish_V03.mp4')} type="video/mp4"/>
+              Your browser does not support HTML5 video.
+            </video>
           </div>
 
           <div className="PlasticSource PlasticSource--margin-left-160 PlasticSource--align-left">
-            <div className="PlasticSource__image">
-              <img src={asset('assets/img/plastic_source_6.png')}/>
-            </div>
+            <video autoPlay loop className="PlasticSource__video">
+              <source src={asset('assets/vid/06-ChoppingBoard_V03.mp4')} type="video/mp4"/>
+              Your browser does not support HTML5 video.
+            </video>
             <div className="PlasticSource__text">
               Having made its way into the food chain through fish and other aquatic animals, the tiny plastic fibers ultimately end up on our dinner plates.
             </div>
