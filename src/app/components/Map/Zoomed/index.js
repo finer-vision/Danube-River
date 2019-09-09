@@ -90,6 +90,11 @@ export default class MapZoomed extends Component {
 
     return (
       <div className={`MapZoomed ${this.state.focused ? 'MapZoomed--focused' : ''}`}>
+        <div className="MapZoomed__info type-h4">
+          Stretching more than 2,000 kilometers from the heart of Europe to its eastern extremity, the waters of the
+          Danube offer a living record of the balance between the needs of man and the resilience of nature.
+        </div>
+
         <svg viewBox={`0 0 ${MAP.width} ${MAP.height}`} style={{width: '100%'}} ref={this.#map}>
           <g fill="none" fillRule="evenodd">
             <path

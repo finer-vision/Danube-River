@@ -15,6 +15,25 @@
   $river-length: 2202.6826171875;
   $river-animation-duration: 5s;
 
+  &__info {
+    @include fluid-attr("padding-top", 10px, 20px);
+    @include fluid-attr("padding-bottom", 5px, 10px);
+    @include fluid-attr("padding-left", 10px, 20px);
+    @include fluid-attr("padding-right", 10px, 20px);
+    @include fluid-attr("margin-top", 40px, 80px);
+    max-width: 790px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    text-align: center;
+    line-height: 1.2;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: rgba(3, 28, 38, 0.7);
+  }
+
   &__river {
     stroke-dasharray: $river-length;
   }
