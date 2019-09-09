@@ -15,7 +15,7 @@ export default class Popup extends Component {
       <div className="type-tag">
         {this.props.tag}
       </div>
-      <div className="type-h4">
+      <div className="type-h3">
         {this.props.title}
       </div>
     </div>

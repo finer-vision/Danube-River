@@ -125,12 +125,14 @@
       font-family: "Aktiv Grotesk Ex Trial", sans-serif;
       font-weight: bold;
       text-transform: uppercase;
-      color: $secondary;
+      color: $primary;
     }
 
-    .type-h4 {
-      font-family: "Editor", serif;
+    .type-h3 {
+      font-family: Tungsten, sans-serif;
       font-weight: bold;
+      line-height: 1;
+      text-transform: uppercase;
       color: $secondary;
     }
   }
