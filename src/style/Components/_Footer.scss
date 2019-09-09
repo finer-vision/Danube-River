@@ -45,6 +45,14 @@
     }
   }
 
+  $animation-duration: 0.7s;
+
+  &--visible {
+    .Footer__article {
+      animation: article-in $animation-duration ease-out forwards;
+    }
+  }
+
   &__article {
     $border: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
@@ -57,6 +65,24 @@
     font-weight: 500;
     max-width: 210px;
     transition: background-color 0.6s ease;
+    transform: translate(0%, 100%);
+    opacity: 0;
+
+    @keyframes article-in {
+      50%, 100% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(0%, 0%);
+      }
+    }
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation-delay: ($animation-duration / 2) * ($i - 1);
+      }
+    }
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.2);

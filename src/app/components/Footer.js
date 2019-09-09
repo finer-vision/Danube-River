@@ -2,15 +2,23 @@ import React, {Component} from "react";
 import {withRouter} from "react-router-dom";
 import config from "../core/config";
 import {asset} from "../core/utils";
+import {Waypoint} from "react-waypoint";
 
 @withRouter
 export default class Footer extends Component {
+  state = {
+    visible: false,
+  };
+
+  #toggleVisible = visible => () => this.setState({visible});
+
   #goToArticle = article => () => {
     this.props.history.push(`/article/microplastic`);
   };
 
   render = () => (
-    <div className="Footer">
+    <div className={`Footer ${this.state.visible ? 'Footer--visible' : ''}`}>
+      <Waypoint onEnter={this.#toggleVisible(true)} onLeave={this.#toggleVisible(false)}/>
       <div className="Footer__title">
         <div className="type-h2">
           Dive in Deeper
