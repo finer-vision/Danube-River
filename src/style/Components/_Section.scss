@@ -75,10 +75,10 @@
   }
 
   &--blue {
-    border-top: 1px solid $blue-color2;
-    border-bottom: 1px solid $blue-color2;
+    border-top: 1px solid $blue-color-100;
+    border-bottom: 1px solid $blue-color-100;
     color: $white-color;
-    background-color: $blue-color2;
+    background-color: $blue-color-100;
   }
 
   &--dark-blue {
@@ -97,10 +97,10 @@
   }
 
   &--white-and-blue {
-    background: repeating-linear-gradient($white-color, $white-color 50%, $blue-color2 50%, $blue-color2 100%) !important;
+    background: repeating-linear-gradient($white-color, $white-color 50%, $blue-color-100 50%, $blue-color-100 100%) !important;
     color: $white-color;
     @include mobile {
-      background: $blue-color2 !important;
+      background: $blue-color-100 !important;
     }
   }
 
