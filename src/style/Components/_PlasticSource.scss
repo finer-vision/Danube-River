@@ -1,6 +1,7 @@
 .PlasticSource {
   display: flex;
   margin-bottom: 120px;
+  width: 100%;
 
   @include mobile {
     flex-direction: column;
@@ -15,9 +16,10 @@
 
   &__text {
     align-self: center;
-    font-size: rem(18px);
-    line-height: rem(27px);
-    font-family: "DIN", Arial, sans-serif;
+    font-size: rem(24px);
+    line-height: rem(36px);
+    font-weight: 300;
+    font-family: "Aktiv Grotesk Ex Trial", sans-serif;
     max-width: 480px;
     padding-left: 20px;
     z-index: 10;
@@ -51,21 +53,21 @@
   }
 
   &--margin-right-160 {
-    margin-right: 160px;
+    padding-right: 160px;
     @include mobile {
       margin-right: 0;
     }
   }
 
   &--margin-right-80 {
-    margin-right: 80px;
+    padding-right: 80px;
     @include mobile {
       margin-right: 0;
     }
   }
 
   &--align-right {
-    float: right;
+    justify-content: flex-end;
 
     .PlasticSource__text {
       padding-left: 0;

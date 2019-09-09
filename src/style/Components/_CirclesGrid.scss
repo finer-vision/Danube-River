@@ -7,7 +7,7 @@
     flex-direction: column;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
   }
 
@@ -16,7 +16,7 @@
     font-size: rem(24px);
     line-height: rem(29px);
     font-weight: 500;
-    color: $dark-blue-color;
+    color: $primary;
   }
 
   &__sub_title {

@@ -41,7 +41,9 @@ export default class Video extends Component {
   componentWillUnmount() {
     this.#timeout !== null && clearTimeout(this.#timeout);
     if (!this.props.poster) {
-      this.#observer.unobserve(this.#container.current);
+      if(this.#observer !== null){
+        this.#observer.unobserve(this.#container.current);
+      }
     }
   }
 

@@ -15,16 +15,14 @@
     display: inline-block;
     font-size: rem(57px);
     line-height: rem(68px);
-    color: $yellow-color;
-    background-color: $dark-blue-color;
+    color: $primary;
     letter-spacing: 1.2px;
     font-family: "Aktiv Grotesk Ex Trial", sans-serif;
   }
 
   &__text {
     display: inline-block;
-    color: $white-color;
-    background-color: $dark-blue-color;
+    color: $black-color;
     font-size: rem(24px);
     line-height: rem(36px);
 

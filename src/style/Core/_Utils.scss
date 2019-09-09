@@ -31,9 +31,12 @@
     font-family: "Editor", serif;
     float: left;
     font-weight: bold;
-    color: $dark-blue-color;
+    color: $primary;
     font-size: rem(135px);
     line-height: rem(106px);
     margin: 0;
   }
+}
+.primary {
+  color: $primary;
 }
