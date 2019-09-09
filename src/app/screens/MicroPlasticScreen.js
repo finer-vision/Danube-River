@@ -12,35 +12,9 @@ import Carousel from "../components/Carousel";
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
 
-  componentDidMount() {
-    window.addEventListener("resize", () => {
-      if (this.containerReference !== null) {
-        this.handleSize(this.containerReference.width);
-      }
-    });
-  }
-
-  handleSize(image) {
-    let elements = document.getElementsByClassName("Section__container");
-    if (elements.length > 0) {
-      for (let i = 0; i < elements.length; i++) {
-        elements[i].style.width = (image + "px");
-      }
-    }
-  }
-
   render = () => (
     <Screen name="Article">
 
-      {/*<Section>*/}
-      {/*  <Hero*/}
-      {/*    tag="MICROPLASTIC"*/}
-      {/*    title="Small thing, big problem"*/}
-      {/*    pageTitleType="type-single-page"*/}
-      {/*    pageTagType="type-single-page"*/}
-      {/*    background={asset("assets/img/microplastic_hero.png")}*/}
-      {/*  />*/}
-      {/*</Section>*/}
       <Section className="Section--auto-height Section--black">
         <div className="Section__container">
           <div className="max-width-760">
@@ -155,8 +129,6 @@ export default class MicroPlasticScreen extends BaseScreen {
         <div className="Image mt-50px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_1.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-            // ref={this.#containerReference}
-            // onLoad={() => this.handleSize(this.containerReference.width)}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-20px">
