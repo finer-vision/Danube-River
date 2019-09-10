@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import {map} from "../core/utils";
 
 const ARTWORK = {
-  width: 1440,
-  height: 900,
+  width: 2560,
+  height: 1600,
 };
 
 const getPercentage = (value, axis = 'x') => {
