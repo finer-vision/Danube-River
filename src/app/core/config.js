@@ -59,4 +59,5 @@ export default {
       y: 100,
     },
   ],
+  mapInfo: 'Stretching more than 2,000 kilometers from the heart of Europe to its eastern extremity, the waters of the Danube offer a living record of the balance between the needs of man and the resilience of nature.',
 };
