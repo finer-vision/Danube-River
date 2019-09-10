@@ -7,12 +7,22 @@ import {asset} from "../core/utils";
 import Video from "../components/Video";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
 
   render = () => (
     <Screen name="Mila23">
+
+      <Section show={true}>
+        <Hero
+          parallax
+          tag="Mila 23"
+          title="Life of the island people"
+          parallaxHeaderId="mila-23"
+        />
+      </Section>
 
       <Section className="Section--black Section--auto-height">
 

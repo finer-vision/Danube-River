@@ -15,6 +15,15 @@ export default class MicroPlasticScreen extends BaseScreen {
   render = () => (
     <Screen name="HydroPower">
 
+      <Section show={true}>
+        <Hero
+          parallax
+          tag="Hydro Power"
+          title="Dam or be dammed"
+          parallaxHeaderId="hydropower"
+        />
+      </Section>
+
       <Section className="Section--auto-height Section--black">
         <div className="Section__container">
           <div className="max-width-760">

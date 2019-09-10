@@ -17,8 +17,8 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section>
         <Hero
           parallax
-          parallaxHeaderId="microplastic"
-          tag="MICROPLASTIC"
+          parallaxHeaderId="microplastics"
+          tag="Microplastics"
           title="Small thing, big problem"
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
