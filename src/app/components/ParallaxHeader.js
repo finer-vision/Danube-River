@@ -40,8 +40,13 @@ export default class ParallaxHeader extends Component {
 
   #getYPos = (layer, index) => {
     const value = layer.y + (layer.y * map(this.state.scrollY, 0, window.innerHeight, layer.range[0], layer.range[1]));
-    if (index < PARALLAX_LAYERS[this.props.id].length - 1 / 2) {
+    // Increase value of background layers
+    if (index < (PARALLAX_LAYERS[this.props.id].length - 1) / 2) {
       return value * BACKGROUND_VELOCITY;
+    }
+    // Prevent foreground from coming all the way into the canvas (stop at it's base)
+    if (index === PARALLAX_LAYERS[this.props.id].length - 1 && value < PARALLAX_ARTWORK.height - layer.height) {
+      return PARALLAX_ARTWORK.height - layer.height;
     }
     return value;
   };
