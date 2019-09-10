@@ -93,7 +93,7 @@
   }
 
   &__popup {
-    $color: rgba(255, 255, 255, 0.9);
+    $color: rgba(3, 28, 38, 0.8);
     position: absolute;
     text-align: center;
     background-color: $color;
@@ -128,7 +128,7 @@
       font-weight: bold;
       line-height: 1;
       text-transform: uppercase;
-      color: $secondary;
+      color: #fff;
     }
   }
 }
