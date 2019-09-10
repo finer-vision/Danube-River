@@ -20,7 +20,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           parallax
           tag="Mila 23"
           title="Life of the island people"
-          parallaxHeaderId="mila-23"
+          parallaxHeaderId="island-people"
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
         />
