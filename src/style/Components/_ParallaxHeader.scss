@@ -12,3 +12,10 @@
     left: 0;
   }
 }
+
+.Screen--mobile {
+  .ParallaxHeader {
+    background-size: cover;
+    background-position: 50%;
+  }
+}
