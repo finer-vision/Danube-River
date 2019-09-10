@@ -74,10 +74,6 @@
   color: $dark-blue-color;
 }
 
-.white {
-  color: white !important;
-}
-
 .red {
   color: $red-color;
 }
@@ -173,7 +169,6 @@
   font-family: "Aktiv Grotesk Ex Trial", sans-serif;
   letter-spacing: 1.2px;
   line-height: rem(68px);
-  color: $primary;
   font-weight: 500;
 }
 
@@ -182,11 +177,10 @@
   line-height: rem(29px);
   letter-spacing: rem(2px);
   font-weight: 500;
-  color: $black-color;
   text-transform: uppercase;
   font-family: "Aktiv Grotesk Ex Trial", sans-serif;
 
-  &-type-2 {
+  &--type-2 {
     text-transform: none;
   }
 }
@@ -196,10 +190,6 @@
   line-height: rem(15px);
   letter-spacing: initial;
   font-family: "Din", sans-serif;
-
-  &-type-2 {
-    color: $black-color;
-  }
 }
 
 .custom-text-styles {
@@ -287,4 +277,17 @@
   font-family: "Tungsten", sans-serif;
   font-size: rem(57px);
   font-weight: 600;
+}
+
+.mw-sm-100 {
+  @include mobile {
+    max-width: 100%;
+  }
+}
+.mw-300 {
+  max-width: 300px;
+}
+
+.black {
+  color: $black-color;
 }
