@@ -159,3 +159,5 @@ export const PARALLAX_LAYERS = {
     },
   ],
 };
+
+export const PRODUCTION_URL = 'https://www.cgtn.com/special/danube-life-of-a-river';
