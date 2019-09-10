@@ -11,6 +11,13 @@
     top: 0;
     left: 0;
   }
+
+  &__layers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+  }
 }
 
 .Screen--mobile {
