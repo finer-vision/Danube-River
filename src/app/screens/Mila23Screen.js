@@ -12,7 +12,8 @@ import Footer from "../components/Footer";
 export default class MicroPlasticScreen extends BaseScreen {
 
   render = () => (
-    <Screen name="Article">
+    <Screen name="Mila23">
+
       <Section className="Section--black Section--auto-height">
 
         <div className="Image mt-50px">

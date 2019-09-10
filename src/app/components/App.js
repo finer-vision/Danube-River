@@ -17,7 +17,7 @@ export default class App extends Component {
         <Route exact path="/" render={Screen(LandingScreen)}/>
         <Route exact path="/article/microplastics" render={Screen(MicroPlasticScreen)}/>
         <Route exact path="/article/mila-23" render={Screen(Mila23Screen)}/>
-        <Route exact path="/article/hydropower" render={Screen(HydroPowerScreen)}/>
+        <Route exact path="/article/hydro-power" render={Screen(HydroPowerScreen)}/>
         <Route render={Screen(NotFoundScreen)}/>
       </Switch>
     </Suspense>

@@ -13,7 +13,7 @@ import Carousel from "../components/Carousel";
 export default class MicroPlasticScreen extends BaseScreen {
 
   render = () => (
-    <Screen name="Article">
+    <Screen name="HydroPower">
       <Section>
         <Hero
           parallax

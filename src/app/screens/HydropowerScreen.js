@@ -7,12 +7,14 @@ import {asset} from "../core/utils";
 import Video from "../components/Video";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
 
   render = () => (
     <Screen name="HydroPower">
+
       <Section className="Section--auto-height Section--black">
         <div className="Section__container">
           <div className="max-width-760">
@@ -180,7 +182,8 @@ export default class MicroPlasticScreen extends BaseScreen {
           <div className="max-width-760 mb-80px">
             <div className="Paragraph mt-80px">
               <div className="Paragraph__content Paragraph--v2">
-                An urgent concern for environmentalists is plans for thousands of new dams, many of them small-scale, on tributaries in the Danube Basin.
+                An urgent concern for environmentalists is plans for thousands of new dams, many of them small-scale, on
+                tributaries in the Danube Basin.
               </div>
             </div>
           </div>
@@ -192,6 +195,134 @@ export default class MicroPlasticScreen extends BaseScreen {
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
             <h1 className="type-h1 big-title-type-2">DE-DAMMING</h1>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="Section--black Section--auto-height pb-110px">
+        <div className="Section__container">
+
+          <div className="max-width-760 mt-50px mb-50px">
+            <h4 className="type-h4">
+              However, Ulrich Eichelmann, CEO of environmental campaign group Riverwatch, says stopping the construction
+              of new dams is not enough:
+            </h4>
+          </div>
+
+          <div className="max-width-960">
+            <div className="Paragraph Paragraph--mw-100 mb-50px mt-80px">
+              <div className="Paragraph__content">
+                When asked why the Danube has been so conducive to producing successful sportsmen, Patzaichin says: “It
+                has given so many champions to Romania because, until recently, [sport] was the only chance children had
+                to escape the isolation of the Danube Delta and the limited number of options they had for personal
+                development.
+              </div>
+              <div className="Paragraph__content">
+                “Instead, we should remove a lot of old ones. That is a movement that comes from the US and is now also
+                hitting France, Spain, Sweden, Finland. They are removing old weirs and old dams because you realize it
+                puts stopping catastrophic climate change at the heart of its mission.”
+                <br/>
+                <br/>
+                In November 2018, the Energy Community, which brings together EU and neighboring nations to produce
+                common policies, issued a statement requiring small-scale hydroelectric projects to meet more stringent
+                conditions.
+                <br/>
+                <br/>
+                In 2001, a World Commission on Dams (WCD), set up by the World Bank and the UN, issued a set of
+                principles to which members should adhere: they include public consultation and consent as well as
+                ensuring a healthy flow to protect marine line.
+                <br/>
+                <br/>
+                The EU requires any dam to meet those conditions before the owners can sell carbon credits based on the
+                power generated.
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={`assets/img/img4.png`}>
+        <div className="Section__container">
+          <div className="Section__background-img-flex">
+            <div className="small-title-type2 primary mb-30px">Chapter 4</div>
+            <h1 className="type-h1 big-title-type-2">AN UNCERTAIN FUTURE</h1>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="Section--auto-height">
+        <div className="Section__container">
+          <div className="max-width-760 pb-40px">
+            <h4 className="type-h4 mt-50px">
+              The hydropower industry acknowledges dams can pose environmental, political and social challenges but
+              insists harnessing the power of rivers remains important.
+            </h4>
+
+            <div className="Paragraph mt-30px">
+              <div className="Paragraph__content Paragraph--v2">
+                “Hydropower is one of the cleanest forms of energy and plays a major role in meeting the rising demand
+                for electricity today. We appreciate that every dam is a physical barrier and keeping the issue in mind,
+                some of our projects have fish passes which ensure minimum disruption to marine life,” says Florian
+                Seidl a spokesman for Verbund, one of Europe’s largest producers of hydropower.
+                <br/>
+                <br/>
+                Pointing out a couple of barges anchored near the Freudenau power plant in Vienna, Seidl explains how
+                gravel and sediment are collected upstream by the vessels and deposited back on the other side of the
+                dam, allowing it to freely flow downstream. The movement of sediment serves to enrich the soil along
+                riverbanks and deltas.
+                <br/>
+                <br/>
+                Environmentalists, however, remain unconvinced of such measures and would rather see the dismantling of
+                some barriers, the deregulation of certain stretches of the river and robust protection of the few
+                remaining floodplains in the Danube basin.
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={`assets/img/img4.png`}>
+        <div className="Section__container">
+          <div className="Section__background-img-flex">
+            <div className="small-title-type2 primary mb-30px">Chapter 5</div>
+            <h1 className="type-h1 big-title-type-2">POWER POLITICS</h1>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="Section--auto-height">
+        <div className="Section__container">
+          <div className="max-width-760 pb-40px">
+            <h4 className="type-h4 mt-50px">
+              The Donau-Auen National Park is a case study for advocates of liberating the river’s flow. Saving it
+              changed Austrian politics.
+            </h4>
+
+            <div className="Paragraph mt-30px">
+              <div className="Paragraph__content Paragraph--v2">
+                In 1984, the riparian forest, was facing certain destruction as a result of the planned construction of
+                the Hainburg power plant, just downstream from Vienna. As news of the project spread, fierce nationwide
+                protests led to the occupation of the wetlands by thousands of people.
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="Section--auto-height">
+        <div className="max-width-760 mt-80px mb-80px">
+          <Carousel/>
+        </div>
+        <div className="Section__container">
+          <div className="max-width-760 pb-40px">
+            <div className="Paragraph mt-30px">
+              <div className="Paragraph__content Paragraph--v2">
+                Repeated attempts by the police and military to evict protesters succeeded only in provoking clashes and
+                the authorities agreed to suspend construction while the courts examined the issue. Following a series
+                of judicial reviews, the hydropower project was eventually scrapped and a proposal to open a national
+                park approved in 1996.
+              </div>
+            </div>
           </div>
         </div>
       </Section>
