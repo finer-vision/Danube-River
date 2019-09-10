@@ -15,9 +15,9 @@ export default class App extends Component {
     <Suspense fallback={<Loading/>}>
       <Switch>
         <Route exact path="/" render={Screen(LandingScreen)}/>
-        <Route exact path="/article/microplastics" render={Screen(MicroPlasticScreen)}/>
-        <Route exact path="/article/mila-23" render={Screen(Mila23Screen)}/>
-        <Route exact path="/article/hydro-power" render={Screen(HydroPowerScreen)}/>
+        <Route exact path="/article/1" render={Screen(MicroPlasticScreen)}/>
+        <Route exact path="/article/2" render={Screen(HydroPowerScreen)}/>
+        <Route exact path="/article/4" render={Screen(Mila23Screen)}/>
         <Route render={Screen(NotFoundScreen)}/>
       </Switch>
     </Suspense>
