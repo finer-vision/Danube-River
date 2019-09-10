@@ -39,15 +39,18 @@ export default class ParallaxHeader extends Component {
   };
 
   #getYPos = (layer, index) => {
-    const value = layer.y + (layer.y * map(this.state.scrollY, 0, window.innerHeight, layer.range[0], layer.range[1]));
+    const value = layer.y * map(this.state.scrollY, 0, window.innerHeight, layer.range[0], layer.range[1] * (layer.y < 0 ? -1 : 1));
+
     // Increase value of background layers
     if (index < (PARALLAX_LAYERS[this.props.id].length - 1) / 2) {
       return value * BACKGROUND_VELOCITY;
     }
+
     // Prevent foreground from coming all the way into the canvas (stop at it's base)
     if (index === PARALLAX_LAYERS[this.props.id].length - 1 && value < PARALLAX_ARTWORK.height - layer.height) {
       return PARALLAX_ARTWORK.height - layer.height;
     }
+
     return value;
   };
 
@@ -55,8 +58,14 @@ export default class ParallaxHeader extends Component {
     let scale = 1;
     if (this.state.screen.width < this.state.screen.height) {
       scale = (1 / PARALLAX_ARTWORK.height) * window.innerHeight;
+      if (PARALLAX_ARTWORK.width * scale < window.innerWidth) {
+        scale = (1 / PARALLAX_ARTWORK.width) * window.innerWidth;
+      }
     } else {
       scale = (1 / PARALLAX_ARTWORK.width) * window.innerWidth;
+      if (PARALLAX_ARTWORK.height * scale < window.innerHeight) {
+        scale = (1 / PARALLAX_ARTWORK.height) * window.innerHeight;
+      }
     }
     return scale + PARALLAX_SCALE_PADDING;
   };
@@ -65,9 +74,7 @@ export default class ParallaxHeader extends Component {
     if (!this.props.app.isMobile) {
       return {};
     }
-    return {
-      backgroundImage: `url(${asset(`/assets/img/parallax/${this.props.id}/mobile.jpg`)})`,
-    };
+    return {backgroundImage: `url(${asset(`/assets/img/parallax/${this.props.id}/mobile.jpg`)})`};
   };
 
   render() {
