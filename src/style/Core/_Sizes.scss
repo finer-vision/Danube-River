@@ -62,6 +62,14 @@
   @include fluid-attr("padding-bottom", 45px, 110px);
 }
 
+.pb-40px {
+  @include fluid-attr("padding-bottom", 45px, 40px);
+}
+
+.pb-80px {
+  @include fluid-attr("padding-bottom", 45px, 80px);
+}
+
 .mt-11px {
   margin-top: 11px;
 }
