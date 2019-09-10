@@ -89,7 +89,8 @@ export default class LandingScreen extends BaseScreen {
             title="Life of a River"
             // parallaxHeaderId="landing"
             // parallaxHeaderId="island-people"
-            parallaxHeaderId="hydro-power"
+            // parallaxHeaderId="hydro-power"
+            parallaxHeaderId="sturgeon"
           />
         </Section>
 
