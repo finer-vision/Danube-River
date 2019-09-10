@@ -1,0 +1,67 @@
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mt-10px {
+  @include fluid-attr("margin-top", 5px, 10px);
+}
+
+.mt-20px {
+  @include fluid-attr("margin-top", 10px, 20px);
+}
+
+.mt-30px {
+  @include fluid-attr("margin-top", 25px, 30px);
+}
+
+.mt-50px {
+  @include fluid-attr("margin-top", 25px, 50px);
+}
+
+.mt-65px {
+  @include fluid-attr("margin-top", 30px, 65px);
+}
+
+.mt-80px {
+  @include fluid-attr("margin-top", 45px, 80px);
+}
+
+.mt-110px {
+  @include fluid-attr("margin-top", 45px, 110px);
+}
+
+.mt-185px {
+  @include fluid-attr("margin-top", 45px, 185px);
+}
+
+.mb-30px {
+  @include fluid-attr("margin-bottom", 25px, 30px);
+}
+
+.mb-40px {
+  @include fluid-attr("margin-bottom", 40px, 40px);
+}
+
+.mb-50px {
+  @include fluid-attr("margin-bottom", 25px, 50px);
+}
+
+.mb-75px {
+  @include fluid-attr("margin-bottom", 45px, 75px);
+}
+
+.mb-80px {
+  @include fluid-attr("margin-bottom", 45px, 80px);
+}
+
+.pb-160px {
+  @include fluid-attr("padding-bottom", 45px, 160px);
+}
+
+.pb-110px {
+  @include fluid-attr("padding-bottom", 45px, 110px);
+}
+
+.mt-11px {
+  margin-top: 11px;
+}

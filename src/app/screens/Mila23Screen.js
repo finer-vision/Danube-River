@@ -20,14 +20,14 @@ export default class MicroPlasticScreen extends BaseScreen {
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-20px">
+          <div className="small-title text-center white mt-20px">
             Gabor Bordos of Wessling explains what sorts of microplastics were found.
           </div>
         </div>
 
         <div className="Section__container">
           <div className="max-width-760">
-            <div className="Paragraph mb-50px mt-185px">
+            <div className="Paragraph mb-50px mt-80px">
               <h4 className="type-h4 mb-30px first-letter-big letter-spacing-normal">
                 As the church bell rings shortly after sunrise, 77-year-old Vassili Kolesnik, an Old Believer, goes to
                 his daily prayer, continuing a centuries-old tradition.
@@ -53,7 +53,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
 
           <div className="max-width-760">
-            <div className="Paragraph mb-50px mt-80px">
+            <div className="Paragraph mb-50px mt-50px">
               <div className="Paragraph__content">
                 As Kolesnik answers the ancient summons of the church bell, other Mila 23 residents respond to more
                 modern economic demands: preparing breakfast and readying boats to service the daily influx of tourists
@@ -75,10 +75,10 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section>
+      <Section className="Section--auto-height">
         <div className="Section__container">
           <div className="max-width-760">
-            <div className="Paragraph mb-50px mt-80px">
+            <div className="Paragraph mb-50px mt-50px">
               <div className="Paragraph__content">
                 Widely known in the region as “Old Believers,” Lipovans are Orthodox Christians who fled from religious
                 persecution in Russia during the 17th century. Many went to Romania, while others were driven further
@@ -109,13 +109,13 @@ export default class MicroPlasticScreen extends BaseScreen {
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-20px">
+          <div className="small-title text-center">
             vassili, old believer
           </div>
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img1.png`}>
+      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={`assets/img/img1.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -124,10 +124,10 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--black Section--auto-height">
+      <Section className="Section--black Section--auto-height pb-110px">
         <div className="Section__container">
 
-          <div className="max-width-760">
+          <div className="max-width-760 mt-50px mb-50px">
             <h4 className="type-h4">
               It is here in Mila 23 where Ivan Patzaichin was born and would train to go on to win four gold Olympic
               medals for canoe sprint. Patzaichin, an Old Believer himself, is the most famous sports champion of the
@@ -164,7 +164,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           <div className="max-width-960">
             <div className="Paragraph Paragraph--mw-100 mb-50px mt-80px">
               <div className="Paragraph__content">
-                <img src={asset('/assets/img/ivan.png')} className="img-fluid float-right mw-sm-100 mw-300"/>
+                <img src={asset('/assets/img/ivan.png')} className="img-fluid float-right mw-sm-100 mw-300 mb-50px"/>
                 When asked why the Danube has been so conducive to producing successful sportsmen, Patzaichin says: “It
                 has given so many champions to Romania because, until recently, [sport] was the only chance children had
                 to escape the isolation of the Danube Delta and the limited number of options they had for personal
@@ -185,6 +185,9 @@ export default class MicroPlasticScreen extends BaseScreen {
                 “Practicing ecotourism as the main form of tourism benefits not only the nature and the locals, who have
                 a sustainable form of revenue, but also tourists, who can enjoy one-of-a-kind experiences by getting in
                 contact with traditions forged by the multiculturalism of the area,” he explains.
+                <br/>
+                <br/>
+                “Biodiversity is [the] Delta’s main asset and we can’t passively watch it being ruined.”
               </div>
             </div>
           </div>
@@ -203,14 +206,14 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--auto-height">
         <div className="Section__container">
           <div className="max-width-760">
-            <h4 className="type-h4">
+            <h4 className="type-h4 mt-50px">
               While known for its ecological significance and diverse wildlife, the Danube, once a place for the exiled,
               is also a sanctuary for minorities such as the Lipovans. But the refuge that isolation offered has come at
               a cost. Ion Barladeanu, a 44-year-old safari tour driver from Letea, another remote village in the Danube,
               says life is far from easy.
             </h4>
 
-            <div className="Paragraph mb-50px mt-80px">
+            <div className="Paragraph mb-50px mt-50px">
               <div className="Paragraph__content">
                 The ultimate compromise for life on the water is that with nature.
                 <br/>
@@ -239,13 +242,13 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
 
-        <div className="max-width-760 mt-80px">
+        <div className="max-width-760 mt-80px mb-80px">
           <Carousel/>
         </div>
 
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img2.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img3.png`}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -257,14 +260,14 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--auto-height">
         <div className="Section__container">
           <div className="max-width-760">
-            <h4 className="type-h4">
+            <h4 className="type-h4 mt-80px">
               Nowadays, Mila 23 has a minimarket and a bar, just metres from where fishermen still bring in the fish
               they have caught in their traditional tubular ‘fyke’ nets: carp, pike, perch and catfish. Bright
               blue-and-white traditional homes cluster along the dull-green river, captured on camera by tourists who
               come here for a piece of history.
             </h4>
 
-            <div className="Paragraph mb-50px mt-80px">
+            <div className="Paragraph mb-50px mt-50px">
               <div className="Paragraph__content">
                 Walk down to the post office in Mila 23 and a TV mast can be seen towering over it, the tallest
                 structure on the island. Erected in the 1990s, it represents the dawn of technological progress in this
@@ -297,7 +300,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--blue Section--auto-height">
+      <Section className="Section--blue Section--auto-height pb-160px">
         <div className="Section__container">
           <div className="max-width-760 mb-80px">
             <div className="Paragraph mt-80px">
