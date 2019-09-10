@@ -87,8 +87,9 @@ export default class LandingScreen extends BaseScreen {
             parallax
             tag="The Danube"
             title="Life of a River"
-            parallaxHeaderId="landing"
+            // parallaxHeaderId="landing"
             // parallaxHeaderId="island-people"
+            parallaxHeaderId="hydro-power"
           />
         </Section>
 

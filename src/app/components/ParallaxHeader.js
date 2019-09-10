@@ -39,6 +39,7 @@ export default class ParallaxHeader extends Component {
   };
 
   #getYPos = (layer, index) => {
+    layer.y = layer.y === 0 ? -1 : layer.y;
     const value = layer.y * map(this.state.scrollY, 0, window.innerHeight, layer.range[0], layer.range[1] * (layer.y < 0 ? -1 : 1));
 
     // Increase value of background layers
