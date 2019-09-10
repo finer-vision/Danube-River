@@ -135,6 +135,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
       </Section>
+
       <Section className="Section--black-and-white Section--auto-height">
         <div className="Image mt-50px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_1.png`}
@@ -146,6 +147,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
       </Section>
+
       <Section className="Section--auto-height">
         <div className="Section__container mt-50px">
           <div className="max-width-1257 Section--flex px-50px px-mobile-0">

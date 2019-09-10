@@ -258,7 +258,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               insists harnessing the power of rivers remains important.
             </h4>
 
-            <div className="Paragraph mt-30px">
+            <div className="Paragraph mt-30px mb-50px">
               <div className="Paragraph__content Paragraph--v2">
                 “Hydropower is one of the cleanest forms of energy and plays a major role in meeting the rising demand
                 for electricity today. We appreciate that every dam is a physical barrier and keeping the issue in mind,
@@ -276,6 +276,15 @@ export default class MicroPlasticScreen extends BaseScreen {
                 some barriers, the deregulation of certain stretches of the river and robust protection of the few
                 remaining floodplains in the Danube basin.
               </div>
+            </div>
+
+            <div className="Stats Stats--v3">
+              <div className="Stats__number">
+                <span className="Stats--big">30</span> of the river</div>
+            </div>
+
+            <div className="type-h4 mt-20px">
+              is impounded for hydropower
             </div>
           </div>
         </div>
@@ -321,6 +330,48 @@ export default class MicroPlasticScreen extends BaseScreen {
                 the authorities agreed to suspend construction while the courts examined the issue. Following a series
                 of judicial reviews, the hydropower project was eventually scrapped and a proposal to open a national
                 park approved in 1996.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="text-center">
+          <img src={asset('assets/img/img7.png')} className="img-fluid"/>
+        </div>
+        <div className="Section__container">
+          <div className="max-width-760 pb-40px">
+            <div className="Paragraph mt-30px">
+              <div className="Paragraph__content Paragraph--v2">
+                Today, Donau-Auen, covering 93 square kilometers in Lower Austria, is one of the last major intact
+                wetlands in Middle Europe and home to some unique flora and fauna. Blanketed with tranquil forests and
+                sweeping meadows, the park acts as the lungs of Vienna and Bratislava, attracting a steady stream of
+                city-dwellers to walk, cycle and picnic.
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="Section--white-and-blue Section--auto-height">
+        <div className="Image mt-50px">
+          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
+                 poster={`assets/img/player_poster_10.png`}
+                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 className="Video--max-width-1257 Video--cursor-pointer"
+          />
+          <div className="small-title white text-center mt-20px">
+            DONAU-AUEN PARK EXPLAINER
+          </div>
+        </div>
+
+        <div className="Section__container">
+          <div className="max-width-760 pb-40px">
+            <div className="Paragraph mt-30px">
+              <div className="Paragraph__content Paragraph--v2">
+                Three decades later, the debate is far from over.
+
+                But when WWF campaigner Deni Porej and his dam-building father reflect on the costs and benefits of
+                harnessing the river, it’s clear the urge to simply tame the Danube through concrete walls has been
+                replaced by a desire to find solutions less detrimental to nature.
               </div>
             </div>
           </div>
