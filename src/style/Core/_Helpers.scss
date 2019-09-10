@@ -10,6 +10,10 @@
   color: $dark-blue-color !important;
 }
 
+.black {
+  color: $black-color;
+}
+
 .red {
   color: $red-color !important;
 }
@@ -27,48 +31,6 @@
   height: auto;
 }
 
-.max-width-760 {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.max-width-1440 {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.max-width-1100 {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.max-width-944 {
-  max-width: 944px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.max-width-960 {
-  max-width: 960px !important;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.max-width-970 {
-  max-width: 970px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.max-width-1257 {
-  max-width: 1257px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .letter-spacing-1_2 {
   letter-spacing: 1.2px;
 }
@@ -79,13 +41,6 @@
 
 .font-grotesk {
   font-family: "Aktiv Grotesk Ex Trial", Arial, sans-serif;
-}
-
-.pr-15 {
-  padding-right: 15px;
-  @include mobile {
-    padding-right: 0;
-  }
 }
 
 .quote-open {
@@ -135,13 +90,6 @@
   font-weight: 100;
 }
 
-.ml-desktop-20px {
-  margin-left: 20px;
-  @include mobile {
-    margin-left: initial;
-  }
-}
-
 .br-desktop {
   @include mobile {
     display: none;
@@ -168,18 +116,6 @@
 
 .d-none {
   display: none;
-}
-
-.px-50 {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.px-mobile-0 {
-  @include mobile {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 .small-title {
@@ -213,18 +149,4 @@
   font-family: "Tungsten", sans-serif;
   font-size: rem(57px);
   font-weight: 600;
-}
-
-.mw-sm-100 {
-  @include mobile {
-    max-width: 100%;
-  }
-}
-
-.mw-300 {
-  max-width: 300px;
-}
-
-.black {
-  color: $black-color;
 }

@@ -138,10 +138,10 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
       <Section className="Section--auto-height">
         <div className="Section__container mt-50px">
-          <div className="max-width-1257 Section--flex px-50 px-mobile-0">
+          <div className="max-width-1257 Section--flex px-50px px-mobile-0">
 
             <div className="Section__column Section__column--desktop-65">
-              <div className="Section--width-550px float-right pr-15">
+              <div className="Section--width-550px float-right pr-15px">
                 <div className="Paragraph mb-40px">
                   <h4 className="type-h4">
                     Results from previous years suggest that within Hungary there are about 50 microplastic particles
