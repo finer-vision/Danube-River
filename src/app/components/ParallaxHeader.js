@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {asset, map} from "../core/utils";
-import {PARALLAX_ARTWORK, PARALLAX_LAYERS} from "../core/consts";
+import {BACKGROUND_VELOCITY, PARALLAX_ARTWORK, PARALLAX_LAYERS} from "../core/consts";
 import {AppContext} from "../context/AppContext";
 
 @AppContext
@@ -55,9 +55,8 @@ export default class ParallaxHeader extends Component {
   #getYPos = (layer, index) => {
     const y = this.#getPercentage(layer.y, 'y');
     const value = y + map(this.state.scrollY, 0, window.innerHeight, layer.range[0], layer.range[1]);
-    const max = Math.abs((layer.height + y) - 200);
-    if (index === PARALLAX_LAYERS[this.props.id].length - 1 && value <= max) {
-      return max;
+    if (index < PARALLAX_LAYERS[this.props.id].length - 1 / 2) {
+      return value * BACKGROUND_VELOCITY;
     }
     return value;
   };

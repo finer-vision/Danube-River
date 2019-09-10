@@ -7,10 +7,10 @@ export const PARALLAX_LAYERS = {
   // Background -> foreground
   'landing': [
     {
-      x: -1.65,
+      x: -2.65,
       y: -13,
-      width: 2564,
-      height: 1613,
+      width: 2565,
+      height: 1673,
       range: [0, 30],
     },
     {
@@ -21,9 +21,9 @@ export const PARALLAX_LAYERS = {
       range: [0, 25],
     },
     {
-      x: 415.35,
+      x: 533.35,
       y: 139,
-      width: 1746,
+      width: 1628,
       height: 1409,
       range: [0, 22],
     },
@@ -43,9 +43,9 @@ export const PARALLAX_LAYERS = {
     },
     {
       x: 812,
-      y: 346,
+      y: 301,
       width: 1748,
-      height: 1204,
+      height: 1249,
       range: [0, -50],
     },
     {
@@ -161,3 +161,5 @@ export const PARALLAX_LAYERS = {
 };
 
 export const PRODUCTION_URL = 'https://www.cgtn.com/special/danube-life-of-a-river';
+
+export const BACKGROUND_VELOCITY = 1.35;
