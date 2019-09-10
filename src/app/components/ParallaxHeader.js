@@ -48,7 +48,7 @@ export default class ParallaxHeader extends Component {
     }
 
     // Prevent foreground from coming all the way into the canvas (stop at it's base)
-    if (index === PARALLAX_LAYERS[this.props.id].length - 1 && value < PARALLAX_ARTWORK.height - layer.height) {
+    if (index === PARALLAX_LAYERS[this.props.id].length - 1 && layer.limitRange && value < PARALLAX_ARTWORK.height - layer.height) {
       return PARALLAX_ARTWORK.height - layer.height;
     }
 

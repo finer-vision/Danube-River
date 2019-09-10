@@ -90,7 +90,8 @@ export default class LandingScreen extends BaseScreen {
             // parallaxHeaderId="landing"
             // parallaxHeaderId="island-people"
             // parallaxHeaderId="hydro-power"
-            parallaxHeaderId="sturgeon"
+            // parallaxHeaderId="sturgeon"
+            parallaxHeaderId="microplastics"
           />
         </Section>
 
