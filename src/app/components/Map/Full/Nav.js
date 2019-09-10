@@ -9,7 +9,7 @@ import {MapContext} from "../../../context/MapContext";
 export default class Nav extends Component {
   #handleClick = item => () => {
     if (item.id === this.props.map.activeItem.id) {
-      return this.props.history.push(`/article/microplastic`);
+      return this.props.history.push(`/article/${item.id}`);
     }
     this.props.map.setActiveItem(item);
   };
