@@ -1,9 +1,11 @@
 import React, {Component} from "react";
 import get from "lodash/get";
+import {withRouter} from "react-router-dom";
 import {asset} from "../../../core/utils";
 import {MapContext} from "../../../context/MapContext";
 
 @MapContext
+@withRouter
 export default class Popup extends Component {
   state = {
     screen: {
@@ -34,6 +36,8 @@ export default class Popup extends Component {
     };
   };
 
+  #goToArticle = () => this.props.history.push(`/article/${this.props.map.activeItem.id}`);
+
   render() {
     return (
       <div
@@ -57,7 +61,7 @@ export default class Popup extends Component {
           </div>
         </div>
 
-        <div className="MapFull__popup-label flex align-center justify-center">
+        <div className="MapFull__popup-label flex align-center justify-center" onClick={this.#goToArticle}>
           <div className="type-h4">
             Read more
           </div>

@@ -1,4 +1,5 @@
 .Footer {
+  $wave-animation-duration: 3s;
   $mobile-break-point: 820px;
   background-image: url("./assets/img/footer.png");
   background-size: cover;
@@ -44,6 +45,14 @@
     }
   }
 
+  $animation-duration: 0.7s;
+
+  &--visible {
+    .Footer__article {
+      animation: article-in $animation-duration ease-out forwards;
+    }
+  }
+
   &__article {
     $border: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
@@ -56,6 +65,24 @@
     font-weight: 500;
     max-width: 210px;
     transition: background-color 0.6s ease;
+    transform: translate(0%, 100%);
+    opacity: 0;
+
+    @keyframes article-in {
+      50%, 100% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(0%, 0%);
+      }
+    }
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        animation-delay: ($animation-duration / 2) * ($i - 1);
+      }
+    }
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.2);
@@ -101,11 +128,22 @@
       height: 100%;
       top: 0;
       left: 0;
+
     }
 
     &-top {
       z-index: 1;
       background-image: url("/assets/img/wave-top.png");
+      animation: wave-top $wave-animation-duration linear infinite;
+
+      @keyframes wave-top {
+        25% {
+          background-position: 47% 0;
+        }
+        75% {
+          background-position: 53% 0;
+        }
+      }
 
       @media (max-width: $mobile-break-point) {
         background-image: url("/assets/img/mobile-wave-top.png");
@@ -138,6 +176,17 @@
     &-bottom {
       top: -15%;
       background-image: url("/assets/img/wave-bottom.png");
+      background-position: 70% 0;
+      animation: wave-bottom $wave-animation-duration linear infinite;
+
+      @keyframes wave-bottom {
+        25% {
+          background-position: 65% 0;
+        }
+        75% {
+          background-position: 75% 0;
+        }
+      }
 
       @media (max-width: $mobile-break-point) {
         top: -25%;

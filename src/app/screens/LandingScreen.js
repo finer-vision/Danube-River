@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createElement} from "react";
 import BaseScreen from "./BaseScreen";
 import Screen from "../components/Screen";
 import {AppContext} from "../context/AppContext";
@@ -6,7 +6,6 @@ import {preloadAssets} from "../core/utils";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Section from "../components/Section";
-import Map from "../components/Map/index";
 import Loading from "../components/Loading";
 
 @AppContext
@@ -16,11 +15,19 @@ export default class LandingScreen extends BaseScreen {
   state = {
     loading: true,
     scrollY: 0,
+    mapComponent: null,
   };
 
   async componentDidMount() {
-    await preloadAssets();
-    await this.setState({loading: false});
+    let mapComponent = null;
+    if (!this.props.app.isMobile) {
+      mapComponent = await import('../components/Map/index');
+      await preloadAssets();
+    } else {
+      mapComponent = await import('../components/MobileMap');
+    }
+
+    await this.setState({loading: false, mapComponent: mapComponent.default});
     this.#screen = document.querySelector('.Screen');
     this.#screen.addEventListener('scroll', this.#handleScroll);
   }
@@ -80,12 +87,14 @@ export default class LandingScreen extends BaseScreen {
             parallax
             tag="The Danube"
             title="Life of a River"
-            parallaxHeaderId="landing"
+            // parallaxHeaderId="landing"
+            // parallaxHeaderId="island-people"
+            parallaxHeaderId="hydro-power"
           />
         </Section>
 
         <Section show={true}>
-          <Map/>
+          {createElement(this.state.mapComponent)}
         </Section>
 
         <Section show={true} className="Footer__section">

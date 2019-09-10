@@ -15,6 +15,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
   }
 
   &__logo {
@@ -36,21 +37,22 @@
     color: $primary;
   }
 
-  .type-h2 {
-    font-family: "Aktiv Grotesk Ex Trial", sans-serif;
-    font-weight: bold;
-    color: $primary;
-    letter-spacing: 2px;
-  }
-
   .type-hero {
-    font-family: "Tungsten", sans-serif;
+    font-family: Tungsten, sans-serif;
     text-transform: uppercase;
     color: #fff;
   }
 
+  .type-h2 {
+    font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+    font-weight: bold;
+    color: $primary !important;
+    letter-spacing: 2px;
+  }
+
   .type-single-page {
-    font-family: "Dark", serif;
+    font-family: Tungsten, sans-serif;
+    text-transform: uppercase;
     font-weight: bold;
     color: $white-color;
   }

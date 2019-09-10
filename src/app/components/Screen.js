@@ -16,7 +16,12 @@ export default class Screen extends Component {
   };
 
   render = () => (
-    <div className={`Screen Screen--${this.props.name} ${this.props.lockSections ? 'Screen--lock-sections' : ''}`}>
+    <div className={`
+      Screen 
+      Screen--${this.props.name} 
+      ${this.props.lockSections && !this.props.app.isMobile ? 'Screen--lock-sections' : ''} 
+      ${this.props.app.isMobile ? 'Screen--mobile' : ''}
+    `}>
       {this.props.children}
     </div>
   );

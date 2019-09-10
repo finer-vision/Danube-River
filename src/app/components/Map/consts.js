@@ -28,10 +28,10 @@ export const SEGMENT_COORDINATES = [
 // Here is where the coordinates are defined.
 export const TILE_COORDINATES = [
   getCoordinatePercentage(MAP, 0, 0),
-  getCoordinatePercentage(MAP, 1693, 0),
-  getCoordinatePercentage(MAP, 3744, 2332),
-  getCoordinatePercentage(MAP, 5818, 2206),
-  getCoordinatePercentage(MAP, 7357, 2234),
+  getCoordinatePercentage(MAP, 1670, 0),
+  getCoordinatePercentage(MAP, 3248, 2335),
+  getCoordinatePercentage(MAP, 5787, 2184),
+  getCoordinatePercentage(MAP, 7354, 2208),
 ];
 
 // Percentage values of the segment in relation to the map.

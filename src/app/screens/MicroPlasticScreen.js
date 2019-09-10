@@ -14,6 +14,16 @@ export default class MicroPlasticScreen extends BaseScreen {
 
   render = () => (
     <Screen name="Article">
+      <Section>
+        <Hero
+          parallax
+          parallaxHeaderId="microplastic"
+          tag="MICROPLASTIC"
+          title="Small thing, big problem"
+          pageTitleType="type-single-page"
+          pageTagType="type-single-page"
+        />
+      </Section>
 
       <Section className="Section--auto-height Section--black">
         <div className="Section__container">
@@ -214,7 +224,8 @@ export default class MicroPlasticScreen extends BaseScreen {
                  className="Video--max-width-942 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-20px white">
-            Dilyana Mihaylova, Marine Plastics Project manager Fauna and Flora International –<br/>show and tell on microfibres
+            Dilyana Mihaylova, Marine Plastics Project manager Fauna and Flora International –<br/>show and tell on
+            microfibres
           </div>
         </div>
 
@@ -226,7 +237,8 @@ export default class MicroPlasticScreen extends BaseScreen {
               Your browser does not support HTML5 video.
             </video>
             <div className="PlasticSource__text">
-              Domestic washing machines contribute significantly to the amount of microplastics in the environment. Hundreds of thousands of microscopic fibers can be shed from a single garment wash.
+              Domestic washing machines contribute significantly to the amount of microplastics in the environment.
+              Hundreds of thousands of microscopic fibers can be shed from a single garment wash.
             </div>
           </div>
 
@@ -243,7 +255,8 @@ export default class MicroPlasticScreen extends BaseScreen {
 
           <div className="PlasticSource PlasticSource--margin-right-160 PlasticSource--align-right">
             <div className="PlasticSource__text">
-              Despite the presence of an elaborate filtration process that includes physical, chemical and biological treatment, microfibers often slip through the net.
+              Despite the presence of an elaborate filtration process that includes physical, chemical and biological
+              treatment, microfibers often slip through the net.
             </div>
             <video autoPlay loop className="PlasticSource__video">
               <source src={asset('assets/vid/03-filter_V03.mp4')} type="video/mp4"/>
@@ -253,7 +266,8 @@ export default class MicroPlasticScreen extends BaseScreen {
 
           <div className="PlasticSource PlasticSource--align-right">
             <div className="PlasticSource__text">
-              Having successfully defied wastewater filtration, the tiny particles are flushed into rivers and allowed to flow downstream into the ocean.
+              Having successfully defied wastewater filtration, the tiny particles are flushed into rivers and allowed
+              to flow downstream into the ocean.
             </div>
             <video autoPlay loop className="PlasticSource__video">
               <source src={asset('assets/vid/04-RiverPipe_V03.mp4')} type="video/mp4"/>
@@ -263,7 +277,8 @@ export default class MicroPlasticScreen extends BaseScreen {
 
           <div className="PlasticSource PlasticSource--margin-right-80 PlasticSource--align-right">
             <div className="PlasticSource__text">
-              Microplastics pose a grave danger to aquatic habitats as they are often ingested by marine animals, both in river ecosystems and in oceans.
+              Microplastics pose a grave danger to aquatic habitats as they are often ingested by marine animals, both
+              in river ecosystems and in oceans.
             </div>
             <video autoPlay loop className="PlasticSource__video">
               <source src={asset('assets/vid/05-fish_V03.mp4')} type="video/mp4"/>
@@ -277,7 +292,8 @@ export default class MicroPlasticScreen extends BaseScreen {
               Your browser does not support HTML5 video.
             </video>
             <div className="PlasticSource__text">
-              Having made its way into the food chain through fish and other aquatic animals, the tiny plastic fibers ultimately end up on our dinner plates.
+              Having made its way into the food chain through fish and other aquatic animals, the tiny plastic fibers
+              ultimately end up on our dinner plates.
             </div>
           </div>
 
@@ -418,8 +434,8 @@ export default class MicroPlasticScreen extends BaseScreen {
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center white mt-20px">
-          Here’s Dilyana’s guide to what you can do
-        </div>
+            Here’s Dilyana’s guide to what you can do
+          </div>
         </div>
       </Section>
 
