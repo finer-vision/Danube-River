@@ -2,7 +2,6 @@ import React, {Component, createRef} from "react";
 import PropTypes from "prop-types";
 import {map} from "../../../core/utils";
 import Popup from "./Popup";
-import Country from "./Country";
 import HotSpot from "./HotSpot";
 import {MapContext} from "../../../context/MapContext";
 import config from "../../../core/config";
@@ -105,21 +104,6 @@ export default class MapZoomed extends Component {
               strokeLinejoin="round"
               strokeWidth={4}
             />
-
-            <Country x={675} y={409} name="Hungary"/>
-            <Country x={687} y={243} name="Slovakia"/>
-            <Country x={1060} y={792} name="Bulgaria"/>
-            <Country x={1269} y={382} name="Moldova"/>
-            <Country x={1186} y={179} name="Ukraine"/>
-            <Country x={552} y={649} name="Bosnia & Herzagovina"/>
-            <Country x={797} y={715} name="Serbia"/>
-            <Country x={389} y={348} name="Austria"/>
-            <Country x={376} y={500} name="Slovenia"/>
-            <Country x={109} y={583} name="Italy"/>
-            <Country x={421} y={161} name="Czechia"/>
-            <Country x={1020} y={507} name="Romania"/>
-            <Country x={499} y={561} name="Croatia"/>
-            <Country x={61} y={85} name="Germany"/>
 
             {this.state.hotSpots.map((hotSpot, index) => (
               <HotSpot

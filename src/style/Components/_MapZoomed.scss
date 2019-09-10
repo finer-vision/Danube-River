@@ -9,17 +9,13 @@
   overflow: hidden;
   background-image: url("./assets/img/map/zoomed.jpg");
   background-repeat: no-repeat;
-  background-position: 61.843645% 67.9749715585893%;
+  background-position: 64.943645% 38.474972%;
   background-size: 226.73611111111111%;
 
   $river-length: 2202.6826171875;
   $river-animation-duration: 5s;
 
   &__info {
-    @include fluid-attr("padding-top", 10px, 20px);
-    @include fluid-attr("padding-bottom", 5px, 10px);
-    @include fluid-attr("padding-left", 10px, 20px);
-    @include fluid-attr("padding-right", 10px, 20px);
     @include fluid-attr("margin-top", 40px, 80px);
     max-width: 790px;
     margin-left: auto;
@@ -31,7 +27,6 @@
     left: 0;
     right: 0;
     color: #fff;
-    background-color: rgba(3, 28, 38, 0.7);
   }
 
   &__river {
