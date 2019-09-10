@@ -57,6 +57,38 @@
     }
   }
 
+  &--v3 {
+    position: relative;
+    margin-left: initial;
+    max-width: 100%;
+    font-weight: bold;
+
+    @include mobile {
+      text-align: left;
+
+      .Stats__number {
+        font-size: rem(39px);
+        line-height: rem(39px);
+      }
+    }
+
+    .Stats--big {
+      @include mobile {
+        font-size: rem(61px);
+        line-height: rem(73px);
+      }
+    }
+
+    .Stats--small {
+      @include mobile {
+        text-transform: uppercase;
+        font-size: rem(20px);
+        line-height: rem(30px);
+        display: block;
+      }
+    }
+  }
+
   &--big {
     font-size: rem(135px);
     line-height: rem(121px);

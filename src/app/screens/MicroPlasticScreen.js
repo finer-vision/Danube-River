@@ -13,7 +13,7 @@ import Carousel from "../components/Carousel";
 export default class MicroPlasticScreen extends BaseScreen {
 
   render = () => (
-    <Screen name="Article">
+    <Screen name="HydroPower">
       <Section>
         <Hero
           parallax
@@ -135,6 +135,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
       </Section>
+
       <Section className="Section--black-and-white Section--auto-height">
         <div className="Image mt-50px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_1.png`}
@@ -146,12 +147,13 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
       </Section>
+
       <Section className="Section--auto-height">
         <div className="Section__container mt-50px">
-          <div className="max-width-1257 Section--flex px-50 px-mobile-0">
+          <div className="max-width-1257 Section--flex px-50px px-mobile-0">
 
             <div className="Section__column Section__column--desktop-65">
-              <div className="Section--width-550px float-right pr-15">
+              <div className="Section--width-550px float-right pr-15px">
                 <div className="Paragraph mb-40px">
                   <h4 className="type-h4">
                     Results from previous years suggest that within Hungary there are about 50 microplastic particles
@@ -178,7 +180,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
 
           <div className="max-width-970">
-            <span className="quote-open-type-2">“</span>
+            <span className="quote-open-type-2 primary">“</span>
             <h2 className="type-h2 type-quote primary">
               Surface runoff and sewage treatment plants can be major sources of microplastics”
             </h2>
@@ -374,16 +376,16 @@ export default class MicroPlasticScreen extends BaseScreen {
             <div className="Paragraph mt-30px">
 
               <div className="Quote Quote--max-width-530">
-                <span className="quote-open-type-2">“</span>
+                <span className="quote-open-type-2 primary">“</span>
                 <h2 className="type-h2 type-alert primary">
                   It’s not as simple as<br className="br-desktop"/>
                   spotting a discarded <br className="br-desktop"/>
                   fast food wrapper.”
                 </h2>
-                <div className="quote-author quote-author-type-2 mt-10px">
+                <div className="quote-author quote-author--type-2 black mt-10px">
                   Philipp Hohenblum
                 </div>
-                <div className="quote-author-position quote-author-position-type-2 mt-10px">
+                <div className="quote-author-position black mt-10px">
                   Professor
                 </div>
               </div>
