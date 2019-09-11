@@ -38,8 +38,8 @@ export default class Section extends Component {
     }
     return (
       <div className={`Section ${this.props.className}`} style={this.#getStyle()}>
-        <Waypoint onEnter={this.#toggleVisible(true)} onLeave={this.#toggleVisible(false)}/>
         {this.props.children}
+        <Waypoint onEnter={this.#toggleVisible(true)} onLeave={this.#toggleVisible(false)}/>
       </div>
     );
   }

@@ -6,11 +6,15 @@ import {AppContextProvider} from "../context/AppContext";
 import Loading from "../components/Loading";
 
 export default class AppContainer extends Component {
+  #scrollIdleTimeout = null;
+  #scrollIdleDelay = 250;
+
   state = {
     muteVideos: true,
     loading: true,
     isMobile: false,
     lockScroll: false,
+    screen: null,
   };
 
   #getContext = () => ({
@@ -20,6 +24,7 @@ export default class AppContainer extends Component {
     toggleMuteVideos: this.#toggleMuteVideos,
     setIsMobile: this.#setIsMobile,
     toggleLockScroll: this.#toggleLockScroll,
+    setScreen: this.#setScreen,
   });
 
   #toggleMuteVideos = muteVideos => this.setState({muteVideos});
@@ -33,9 +38,39 @@ export default class AppContainer extends Component {
     this.setState({lockScroll});
   };
 
+  #setScreen = async screen => {
+    this.state.screen !== null && this.state.screen.removeEventListener('wheel', this.#handleScroll);
+    await this.setState({screen});
+    this.state.screen.addEventListener('wheel', this.#handleScroll);
+  };
+
+  #handleScroll = () => {
+    this.#clearScrollIdleTimeout();
+    this.#scrollIdleTimeout = setTimeout(this.#handleScrollIdleTimeout, this.#scrollIdleDelay);
+
+    const totalScroll = this.state.screen.scrollHeight - window.innerHeight;
+    console.log(totalScroll, this.state.screen.scrollTop);
+  };
+
+  #clearScrollIdleTimeout = () => {
+    this.#scrollIdleTimeout !== null && clearTimeout(this.#scrollIdleTimeout);
+    this.#scrollIdleTimeout = null;
+  };
+
+  #handleScrollIdleTimeout = () => {
+    if (this.state.screen === null) {
+      return;
+    }
+    console.log('ScrollIdleTimeout');
+  };
+
   componentDidMount() {
-    const md = new MobileDetect(window.navigator.userAgent);
-    this.setState({loading: false, isMobile: md.mobile() !== null});
+    this.setState({loading: false, isMobile: (new MobileDetect(window.navigator.userAgent)).mobile() !== null});
+  }
+
+  componentWillUnmount() {
+    this.state.screen !== null && this.state.screen.removeEventListener('wheel', this.#handleScroll);
+    this.#clearScrollIdleTimeout();
   }
 
   render() {
