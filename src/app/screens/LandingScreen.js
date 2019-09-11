@@ -59,7 +59,7 @@ export default class LandingScreen extends BaseScreen {
           />
         </Section>
 
-        <Section show={true}>
+        <Section show={true} name="map">
           {createElement(this.state.mapComponent)}
         </Section>
 
