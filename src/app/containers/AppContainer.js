@@ -31,7 +31,6 @@ export default class AppContainer extends Component {
       return;
     }
     this.setState({lockScroll});
-    console.log('AppContainer.#lockScroll->lockScroll', lockScroll);
   };
 
   componentDidMount() {
