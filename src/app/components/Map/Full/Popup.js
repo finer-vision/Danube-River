@@ -3,27 +3,12 @@ import get from "lodash/get";
 import {withRouter} from "react-router-dom";
 import {asset} from "../../../core/utils";
 import {MapContext} from "../../../context/MapContext";
+import {AppContext} from "../../../context/AppContext";
 
 @MapContext
 @withRouter
+@AppContext
 export default class Popup extends Component {
-  state = {
-    screen: {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    },
-  };
-
-  componentDidMount() {
-    window.addEventListener('resize', this.#handleResize);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.#handleResize);
-  }
-
-  #handleResize = () => this.setState({screen: {width: window.innerWidth, height: window.innerHeight}});
-
   #getContainerStyle = () => {
     const maxWidth = 700;
     const artwork = {width: 1440, height: 900};
@@ -32,7 +17,7 @@ export default class Popup extends Component {
     return {
       maxWidth: maxWidth,
       width: `${(100 / artwork.width) * maxWidth}vw`,
-      transform: `translate(${window.innerWidth * ((1 / artwork.width) * x)}px, ${window.innerHeight * ((1 / artwork.height) * y)}px)`,
+      transform: `translate(${this.props.app.screenW * ((1 / artwork.width) * x)}px, ${this.props.app.screenH * ((1 / artwork.height) * y)}px)`,
     };
   };
 

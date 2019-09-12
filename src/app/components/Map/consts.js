@@ -1,3 +1,5 @@
+import config from "../../core/config";
+
 export const getPercentage = (map, value, axis = 'x') => {
   const dimension = axis === 'x' ? map.width : map.height;
   return (1 / dimension) * value;
@@ -39,3 +41,8 @@ export const MAP_SEGMENT = {
   width: getPercentage(MAP, 1440, 'x'),
   height: getPercentage(MAP, 900, 'y'),
 };
+
+export const CLOUDS_ANIMATION_TIME = 3000 * 1.1;
+export const MAP_SWAP_AFTER_ANIMATION_PROGRESS = 0.3;
+export const SCROLL_THROTTLING = 2000;
+export const DEFAULT_ACTIVE_ITEM = {...config.articles[0]};

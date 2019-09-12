@@ -7,19 +7,14 @@ import Clouds from "./Clouds";
 import config from "../../core/config";
 import {clamp} from "../../core/utils";
 import {AppContext} from "../../context/AppContext";
-
-const CLOUDS_ANIMATION_TIME = 3000 * 1.1;
-const MAP_SWAP_AFTER_ANIMATION_PROGRESS = 0.3;
-const SCROLL_THROTTLING = 2000;
-const DEFAULT_ACTIVE_ITEM = {...config.articles[0]};
+import Services from "../../services";
+import {CLOUDS_ANIMATION_TIME, MAP_SWAP_AFTER_ANIMATION_PROGRESS, SCROLL_THROTTLING, DEFAULT_ACTIVE_ITEM} from "./consts";
 
 @AppContext
 export default class Map extends Component {
   #timeout = null;
   #waypointDelayTimeout = null;
   #waypointDelay = 250;
-  /** @type {Element} */
-  #scrollContainer = null;
   #lastScrollTime = 0;
 
   state = {
@@ -33,21 +28,15 @@ export default class Map extends Component {
   };
 
   componentDidMount() {
-    this.#scrollContainer = document.querySelector('.Screen');
-    this.#scrollContainer.addEventListener('wheel', this.#handleScroll, {passive: false});
+    Services.event.on('screen.scroll', this.#handleScroll);
   }
 
   componentWillUnmount() {
     this.#timeout !== null && clearTimeout(this.#timeout);
     this.#clearWaypointDelayTimeout();
-    this.#scrollContainer.removeEventListener('wheel', this.#handleScroll, {passive: false});
   }
 
   #handleScroll = event => {
-    if (this.props.app.lockScroll) {
-      event.preventDefault();
-    }
-
     // On "magic" mouse wheels that have "momentum" scrolling, this will stop this function being called excessively.
     // Also stop executing this function if the map is not visible.
     const now = Date.now();
@@ -145,8 +134,6 @@ export default class Map extends Component {
   };
 
   render() {
-    console.log(this.props.app.scrollY);
-
     return (
       <MapContextProvider value={this.#getContext()}>
         <div className="Map">

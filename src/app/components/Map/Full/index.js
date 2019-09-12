@@ -6,40 +6,25 @@ import Popup from "./Popup";
 import {getScale, getSegmentCoordinate} from "../utils";
 import {asset} from "../../../core/utils";
 import {MAP, TILE_COORDINATES} from "../consts";
+import {AppContext} from "../../../context/AppContext";
 
 @MapContext
+@AppContext
 export default class MapFull extends Component {
   static defaultProps = {
     activeItem: {...config.articles[0]},
   };
 
-  state = {
-    screen: {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    },
-  };
-
-  componentDidMount() {
-    window.addEventListener('resize', this.#setScreen);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.#setScreen);
-  }
-
-  #setScreen = () => this.setState({screen: {width: window.innerWidth, height: window.innerHeight}});
-
   render() {
     const segmentCoordinates = [
-      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 0),
-      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 1),
-      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 2),
-      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 3),
-      getSegmentCoordinate(this.state.screen.width, this.state.screen.height, 4),
+      getSegmentCoordinate(this.props.app.screenW, this.props.app.screenH, 0),
+      getSegmentCoordinate(this.props.app.screenW, this.props.app.screenH, 1),
+      getSegmentCoordinate(this.props.app.screenW, this.props.app.screenH, 2),
+      getSegmentCoordinate(this.props.app.screenW, this.props.app.screenH, 3),
+      getSegmentCoordinate(this.props.app.screenW, this.props.app.screenH, 4),
     ];
 
-    const scale = getScale(this.state.screen.width, this.state.screen.height);
+    const scale = getScale(this.props.app.screenW, this.props.app.screenH);
     const activeCoordinate = segmentCoordinates[this.props.map.activeItem.index];
 
     return (

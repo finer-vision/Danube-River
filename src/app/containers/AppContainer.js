@@ -4,6 +4,7 @@ import {HashRouter as Router} from "react-router-dom";
 import App from "../components/App";
 import {AppContextProvider} from "../context/AppContext";
 import Loading from "../components/Loading";
+import Services from "../services";
 
 export default class AppContainer extends Component {
   state = {
@@ -37,9 +38,22 @@ export default class AppContainer extends Component {
 
   #toggleLockScroll = lockScroll => !this.state.isMobile && this.setState({lockScroll});
 
-  #handleScroll = () => this.state.screen !== null && this.setState({scrollY: this.state.screen.scrollTop});
+  #handleScroll = async event => {
+    if (this.state.lockScroll) {
+      event.preventDefault();
+    }
 
-  #handleResize = () => this.setState({screenW: window.innerWidth, screenH: window.innerHeight});
+    if (this.state.screen !== null) {
+      await this.setState({scrollY: this.state.screen.scrollTop});
+    }
+
+    Services.event.emit('screen.scroll', event);
+  };
+
+  #handleResize = async event => {
+    await this.setState({screenW: window.innerWidth, screenH: window.innerHeight});
+    Services.event.emit('screen.resize', event);
+  };
 
   #setScreen = async screen => {
     this.#removeScrollListeners();

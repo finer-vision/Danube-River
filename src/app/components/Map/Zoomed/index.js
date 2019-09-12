@@ -6,6 +6,7 @@ import HotSpot from "./HotSpot";
 import {MapContext} from "../../../context/MapContext";
 import config from "../../../core/config";
 import {Waypoint} from "react-waypoint";
+import Services from "../../../services";
 
 const MAP = {
   width: 1440,
@@ -34,11 +35,11 @@ export default class MapZoomed extends Component {
 
   componentDidMount() {
     this.#setPopupPosition();
-    window.addEventListener('resize', this.#setPopupPosition);
+    Services.event.on('screen.resize', this.#setPopupPosition);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.#setPopupPosition);
+    Services.event.off('screen.resize', this.#setPopupPosition);
   }
 
   #setPopupPosition = () => {
