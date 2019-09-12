@@ -29,6 +29,7 @@ export default class AppContainer extends Component {
     setIsMobile: this.#setIsMobile,
     toggleLockScroll: this.#toggleLockScroll,
     setScreen: this.#setScreen,
+    resetScroll: this.#resetScroll,
   });
 
   #toggleMuteVideos = muteVideos => this.setState({muteVideos});
@@ -69,6 +70,13 @@ export default class AppContainer extends Component {
   #removeScrollListeners = () => {
     this.state.screen !== null && this.state.screen.removeEventListener('wheel', this.#handleWheel);
     this.state.screen !== null && this.state.screen.removeEventListener('scroll', this.#handleScroll);
+  };
+
+  #resetScroll = () => {
+    if (this.state.screen !== null) {
+      this.state.screen.scrollTop = 0;
+    }
+    this.setState({scrollY: 0});
   };
 
   componentDidMount() {

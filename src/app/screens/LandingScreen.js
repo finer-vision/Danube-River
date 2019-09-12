@@ -2,14 +2,12 @@ import React, {createElement} from "react";
 import BaseScreen from "./BaseScreen";
 import Screen from "../components/Screen";
 import {AppContext} from "../context/AppContext";
-import {preloadAssets} from "../core/utils";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Section from "../components/Section";
 import Loading from "../components/Loading";
 import MuteToggle from "../components/MuteToggle";
 import Services from "../services";
-import config from "../core/config";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
