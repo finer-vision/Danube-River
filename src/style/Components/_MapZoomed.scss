@@ -24,11 +24,20 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     color: #fff;
   }
 
   &__river {
-    stroke-dasharray: $river-length;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49.2%, -44.4%);
+
+    &-path {
+      stroke-dasharray: $river-length;
+    }
   }
 
   &--focused {
@@ -77,14 +86,17 @@
     opacity: 0;
 
     &-orbit {
-      rx: 30.5;
-      ry: 29.5;
+      $radius: 1.2;
+      $rx: 20;
+      $ry: 19;
+      rx: $rx;
+      ry: $ry;
       animation: orbit 2s ease infinite;
 
       @keyframes orbit {
         50% {
-          rx: 18.3;
-          ry: 17.7;
+          rx: $rx * $radius;
+          ry: $ry * $radius;
         }
       }
     }
@@ -100,7 +112,7 @@
     @include fluid-attr("padding-left", 12px, 20px);
     @include fluid-attr("padding-right", 12px, 20px);
     @include fluid-attr("width", 200px, 330px);
-    transform: translate(calc(-50% + 28px), 70px);
+    transform: translate(-50%, 40px);
 
     &-triangle {
       width: 0;

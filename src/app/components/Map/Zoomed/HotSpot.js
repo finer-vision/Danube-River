@@ -9,15 +9,17 @@ export default forwardRef((props, ref) => (
     onClick={props.onClick}
     className={`MapZoomed__hotSpot MapZoomed__hotSpot--${props.index}`}
   >
-    <ellipse fill="#EC8484" cx={30} cy={29} rx={20} ry={19}/>
+    <ellipse
+      fill="#EC8484"
+      rx={20}
+      ry={19}
+    />
     <ellipse
       className="MapZoomed__hotSpot-orbit"
       stroke="#EC8484"
       strokeWidth={2}
-      cx={30.5}
-      cy={29.5}
-      rx={30.5}
-      ry={29.5}
+      rx={20}
+      ry={19}
     />
   </g>
 ));
