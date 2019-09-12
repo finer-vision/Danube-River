@@ -42,12 +42,17 @@ export default class AppContainer extends Component {
     if (this.state.lockScroll) {
       event.preventDefault();
     }
-
     if (this.state.screen !== null) {
       await this.setState({scrollY: this.state.screen.scrollTop});
     }
-
     Services.event.emit('screen.scroll', event);
+  };
+
+  #handleWheel = event => {
+    if (this.state.lockScroll) {
+      event.preventDefault();
+    }
+    Services.event.emit('screen.wheel', event);
   };
 
   #handleResize = async event => {
@@ -58,12 +63,12 @@ export default class AppContainer extends Component {
   #setScreen = async screen => {
     this.#removeScrollListeners();
     await this.setState({screen});
-    this.state.screen.addEventListener('wheel', this.#handleScroll);
+    this.state.screen.addEventListener('wheel', this.#handleWheel);
     this.state.screen.addEventListener('scroll', this.#handleScroll);
   };
 
   #removeScrollListeners = () => {
-    this.state.screen !== null && this.state.screen.removeEventListener('wheel', this.#handleScroll);
+    this.state.screen !== null && this.state.screen.removeEventListener('wheel', this.#handleWheel);
     this.state.screen !== null && this.state.screen.removeEventListener('scroll', this.#handleScroll);
   };
 

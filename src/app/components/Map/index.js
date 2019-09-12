@@ -28,7 +28,7 @@ export default class Map extends Component {
   };
 
   componentDidMount() {
-    Services.event.on('screen.scroll', this.#handleScroll);
+    Services.event.on('screen.wheel', this.#handleWheel);
   }
 
   componentWillUnmount() {
@@ -36,7 +36,7 @@ export default class Map extends Component {
     this.#clearWaypointDelayTimeout();
   }
 
-  #handleScroll = event => {
+  #handleWheel = event => {
     // On "magic" mouse wheels that have "momentum" scrolling, this will stop this function being called excessively.
     // Also stop executing this function if the map is not visible.
     const now = Date.now();
