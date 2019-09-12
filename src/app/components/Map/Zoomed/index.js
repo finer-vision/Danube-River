@@ -150,6 +150,8 @@ export default class MapZoomed extends Component {
         className={`MapZoomed ${this.state.focused ? 'MapZoomed--focused' : ''}`}
         style={{backgroundSize: `${dimensions.map.width}px ${dimensions.map.height}px`}}
       >
+        <div className="MapZoomed__gradient"/>
+
         <div className="MapZoomed__info type-h4">
           {config.mapInfo}
         </div>
