@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {asset, map} from "../core/utils";
-import {BACKGROUND_VELOCITY, PARALLAX_ARTWORK, PARALLAX_LAYERS, PARALLAX_SCALE_PADDING} from "../core/consts";
+import {PARALLAX_ARTWORK, PARALLAX_LAYERS, PARALLAX_SCALE_PADDING} from "../core/consts";
 import {AppContext} from "../context/AppContext";
 
 @AppContext
@@ -10,54 +10,15 @@ export default class ParallaxHeader extends Component {
     id: PropTypes.string,
   };
 
-  #screen = null;
-
-  state = {
-    scrollY: 0,
-    screen: {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    },
-  };
-
-  async componentDidMount() {
-    this.#handleResize();
-    this.#screen = document.querySelector('.Screen');
-    this.#screen.addEventListener('scroll', this.#handleScroll);
-    window.addEventListener('resize', this.#handleResize);
-  }
-
-  componentWillUnmount() {
-    this.#screen.removeEventListener('scroll', this.#handleScroll);
-    window.removeEventListener('resize', this.#handleResize);
-  }
-
-  #handleResize = () => this.setState({screen: {width: window.innerWidth, height: window.innerHeight}});
-
-  #handleScroll = () => {
-    this.setState({scrollY: this.#screen.scrollTop});
-  };
-
-  #getYPos = (layer, index) => {
-    layer.y = layer.y === 0 ? -1 : layer.y;
-    const value = layer.y * map(this.state.scrollY, 0, window.innerHeight, layer.range[0], layer.range[1] * (layer.y < 0 ? -1 : 1));
-
-    // Increase value of background layers
-    if (index < (PARALLAX_LAYERS[this.props.id].length - 1) / 2) {
-      return value * BACKGROUND_VELOCITY;
-    }
-
-    // Prevent foreground from coming all the way into the canvas (stop at it's base)
-    if (index === PARALLAX_LAYERS[this.props.id].length - 1 && layer.limitRange && value < PARALLAX_ARTWORK.height - layer.height) {
-      return PARALLAX_ARTWORK.height - layer.height;
-    }
-
-    return value;
+  #getTransform = layer => {
+    const x = map(this.props.app.scrollY, 0, window.innerHeight, layer.x, layer.end.x);
+    const y = map(this.props.app.scrollY, 0, window.innerHeight, layer.y, layer.end.y);
+    return `translate(${x}px, ${y}px)`;
   };
 
   #getScale = () => {
     let scale = 1;
-    if (this.state.screen.width < this.state.screen.height) {
+    if (this.props.app.screenW < this.props.app.screenH) {
       scale = (1 / PARALLAX_ARTWORK.height) * window.innerHeight;
       if (PARALLAX_ARTWORK.width * scale < window.innerWidth) {
         scale = (1 / PARALLAX_ARTWORK.width) * window.innerWidth;
@@ -106,7 +67,7 @@ export default class ParallaxHeader extends Component {
                   style={{
                     top: '0px',
                     left: '0px',
-                    transform: `translate(${layer.x}px, ${this.#getYPos(layer, index)}px)`,
+                    transform: this.#getTransform(layer),
                     width: `${layer.width}px`,
                     height: `${layer.height}px`,
                   }}

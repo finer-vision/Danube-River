@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 import {withRouter} from "react-router-dom";
 import {asset} from "../core/utils";
 import ParallaxHeader from "./ParallaxHeader";
+import {AppContext} from "../context/AppContext";
 
 @withRouter
+@AppContext
 export default class Hero extends Component {
   static propTypes = {
     tag: PropTypes.string.isRequired,
@@ -23,25 +25,6 @@ export default class Hero extends Component {
     className: '',
     style: {},
     parallax: false,
-  };
-
-  #screen = null;
-
-  state = {
-    scrollY: 0,
-  };
-
-  componentDidMount() {
-    this.#screen = document.querySelector('.Screen');
-    this.#screen.addEventListener('scroll', this.#handleScroll);
-  }
-
-  componentWillUnmount() {
-    this.#screen.removeEventListener('scroll', this.#handleScroll);
-  }
-
-  #handleScroll = () => {
-    this.setState({scrollY: this.#screen.scrollTop});
   };
 
   displayPageTag() {

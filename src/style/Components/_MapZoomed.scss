@@ -1,19 +1,17 @@
 .MapZoomed {
+  $river-length: 2202.6826171875;
+  $river-animation-duration: 5s;
   width: 100vw;
   height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #13551B;
+  background-color: #13B9C5;
   overflow: hidden;
   background-image: url("./assets/img/map/zoomed.jpg");
   background-repeat: no-repeat;
-  background-position: 64.943645% 38.474972%;
-  background-size: 226.73611111111111%;
-
-  $river-length: 2202.6826171875;
-  $river-animation-duration: 5s;
+  background-position: 50%;
 
   &__info {
     @include fluid-attr("margin-top", 40px, 80px);
@@ -26,11 +24,20 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     color: #fff;
   }
 
   &__river {
-    stroke-dasharray: $river-length;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49.2%, -44.4%);
+
+    &-path {
+      stroke-dasharray: $river-length;
+    }
   }
 
   &--focused {
@@ -79,14 +86,17 @@
     opacity: 0;
 
     &-orbit {
-      rx: 30.5;
-      ry: 29.5;
+      $radius: 1.2;
+      $rx: 20;
+      $ry: 19;
+      rx: $rx;
+      ry: $ry;
       animation: orbit 2s ease infinite;
 
       @keyframes orbit {
         50% {
-          rx: 18.3;
-          ry: 17.7;
+          rx: $rx * $radius;
+          ry: $ry * $radius;
         }
       }
     }
@@ -102,7 +112,7 @@
     @include fluid-attr("padding-left", 12px, 20px);
     @include fluid-attr("padding-right", 12px, 20px);
     @include fluid-attr("width", 200px, 330px);
-    transform: translate(calc(-50% + 28px), 70px);
+    transform: translate(-50%, 40px);
 
     &-triangle {
       width: 0;

@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, createRef} from "react";
 import PropTypes from "prop-types";
 import {withRouter} from "react-router-dom";
 import {AppContext} from "../context/AppContext";
@@ -15,13 +15,22 @@ export default class Screen extends Component {
     lockSections: false,
   };
 
+  #screen = createRef();
+
+  componentDidMount() {
+    this.#screen.current !== null && this.props.app.setScreen(this.#screen.current);
+  }
+
   render = () => (
-    <div className={`
-      Screen 
-      Screen--${this.props.name} 
-      ${this.props.lockSections && !this.props.app.isMobile ? 'Screen--lock-sections' : ''} 
-      ${this.props.app.isMobile ? 'Screen--mobile' : ''}
-    `}>
+    <div
+      ref={this.#screen}
+      className={`
+        Screen 
+        Screen--${this.props.name} 
+        ${this.props.lockSections && !this.props.app.isMobile ? 'Screen--lock-sections' : ''} 
+        ${this.props.app.isMobile ? 'Screen--mobile' : ''}
+      `}
+    >
       {this.props.children}
     </div>
   );

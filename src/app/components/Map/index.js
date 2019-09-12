@@ -6,18 +6,15 @@ import Full from "./Full/index";
 import Clouds from "./Clouds";
 import config from "../../core/config";
 import {clamp} from "../../core/utils";
+import {AppContext} from "../../context/AppContext";
+import Services from "../../services";
+import {CLOUDS_ANIMATION_TIME, MAP_SWAP_AFTER_ANIMATION_PROGRESS, SCROLL_THROTTLING, DEFAULT_ACTIVE_ITEM} from "./consts";
 
-const CLOUDS_ANIMATION_TIME = 3000 * 1.1;
-const MAP_SWAP_AFTER_ANIMATION_PROGRESS = 0.3;
-const SCROLL_THROTTLING = 2000;
-const DEFAULT_ACTIVE_ITEM = {...config.articles[0]};
-
+@AppContext
 export default class Map extends Component {
   #timeout = null;
-
-  /** @type {Element} */
-  #scrollContainer = null;
-
+  #waypointDelayTimeout = null;
+  #waypointDelay = 250;
   #lastScrollTime = 0;
 
   state = {
@@ -27,25 +24,19 @@ export default class Map extends Component {
     activeMap: 'zoomed',
     activeItem: {...DEFAULT_ACTIVE_ITEM},
     showCloudsAnimation: false,
-    disableScroll: false,
     visible: false,
   };
 
   componentDidMount() {
-    this.#scrollContainer = document.querySelector('.Screen');
-    this.#scrollContainer.addEventListener('wheel', this.#handleScroll, {passive: false});
+    Services.event.on('screen.wheel', this.#handleWheel);
   }
 
   componentWillUnmount() {
     this.#timeout !== null && clearTimeout(this.#timeout);
-    this.#scrollContainer.removeEventListener('wheel', this.#handleScroll, {passive: false});
+    this.#clearWaypointDelayTimeout();
   }
 
-  #handleScroll = event => {
-    if (this.state.disableScroll) {
-      event.preventDefault();
-    }
-
+  #handleWheel = event => {
     // On "magic" mouse wheels that have "momentum" scrolling, this will stop this function being called excessively.
     // Also stop executing this function if the map is not visible.
     const now = Date.now();
@@ -66,7 +57,7 @@ export default class Map extends Component {
     // Handle the "zoomed" map behaviour.
     if (this.state.activeMap === 'zoomed') {
       // Allow user to scroll up and out of map when the map is in it's initial "zoomed" state.
-      direction === 'up' && this.setState({disableScroll: false});
+      direction === 'up' && this.props.app.toggleLockScroll(false);
 
       // When the user scrolls, zoom into the map and go to the first active item.
       if (direction === 'down') {
@@ -91,7 +82,7 @@ export default class Map extends Component {
 
       // Enable scrolling and reset the map when going to the next section.
       if (direction === 'down' && this.state.activeItem.index + 1 > config.articles.length - 1) {
-        this.setState({disableScroll: false});
+        this.props.app.toggleLockScroll(false);
         this.#setActiveMap('zoomed');
         this.setState({activeItem: {...DEFAULT_ACTIVE_ITEM}});
       }
@@ -129,8 +120,17 @@ export default class Map extends Component {
     this.#setActiveMap('full');
   };
 
+  #clearWaypointDelayTimeout = () => {
+    this.#waypointDelayTimeout !== null && clearTimeout(this.#waypointDelayTimeout);
+    this.#waypointDelayTimeout = null;
+  };
+
   #waypoint = visible => () => {
-    this.setState({disableScroll: visible, visible: visible});
+    this.#clearWaypointDelayTimeout();
+    this.#waypointDelayTimeout = setTimeout(() => {
+      this.props.app.toggleLockScroll(visible);
+      this.setState({visible: visible});
+    }, this.#waypointDelay);
   };
 
   render() {
