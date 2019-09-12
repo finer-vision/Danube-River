@@ -7,13 +7,11 @@ import {MapContext} from "../../../context/MapContext";
 import config from "../../../core/config";
 import {Waypoint} from "react-waypoint";
 import Services from "../../../services";
-
-const MAP = {
-  width: 1440,
-  height: 900,
-};
+import {ZOOMED_MAP} from "../consts";
+import {AppContext} from "../../../context/AppContext";
 
 @MapContext
+@AppContext
 export default class MapZoomed extends Component {
   static propTypes = {
     onHotSpotClick: PropTypes.func,
@@ -49,8 +47,8 @@ export default class MapZoomed extends Component {
     }
     const rect = this.#map.current.getBoundingClientRect();
     const popupPosition = {
-      x: map(activeHotSpot.x, 0, MAP.width, 0, rect.width) + rect.left,
-      y: map(activeHotSpot.y, 0, MAP.height, 0, rect.height) + rect.top,
+      x: map(activeHotSpot.x, 0, ZOOMED_MAP.width, 0, rect.width) + rect.left,
+      y: map(activeHotSpot.y, 0, ZOOMED_MAP.height, 0, rect.height) + rect.top,
     };
     this.setState({popupPosition});
   };
@@ -85,16 +83,39 @@ export default class MapZoomed extends Component {
 
   #toggleFocused = focused => () => this.setState({focused});
 
+  #getStyle = () => {
+    const ratioW = ZOOMED_MAP.outerWidth / ZOOMED_MAP.outerHeight;
+    const ratioH = ZOOMED_MAP.outerHeight / ZOOMED_MAP.outerWidth;
+    const scaleW = (1 / ZOOMED_MAP.width) * ZOOMED_MAP.outerWidth;
+    const scaleH = (1 / ZOOMED_MAP.height) * ZOOMED_MAP.outerHeight;
+
+    let w = this.props.app.screenW;
+    let h = this.props.app.screenH;
+
+    if (this.props.app.screenW > this.props.app.screenH) {
+      h = this.props.app.screenH * scaleH;
+      w = h * ratioW;
+    } else {
+      w = this.props.app.screenW * scaleW;
+      h = w * ratioH;
+    }
+
+    return {backgroundSize: `${w}px ${h}px`};
+  };
+
   render() {
     const activeHotSpot = this.#getActiveHotSpot();
 
     return (
-      <div className={`MapZoomed ${this.state.focused ? 'MapZoomed--focused' : ''}`}>
+      <div
+        className={`MapZoomed ${this.state.focused ? 'MapZoomed--focused' : ''}`}
+        style={this.#getStyle()}
+      >
         <div className="MapZoomed__info type-h4">
           {config.mapInfo}
         </div>
 
-        <svg viewBox={`0 0 ${MAP.width} ${MAP.height}`} style={{width: '100%'}} ref={this.#map}>
+        <svg viewBox={`0 0 ${ZOOMED_MAP.width} ${ZOOMED_MAP.height}`} style={{width: '100%'}} ref={this.#map}>
           <g fill="none" fillRule="evenodd">
             <path
               className="MapZoomed__river"

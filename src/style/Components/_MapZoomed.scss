@@ -1,19 +1,17 @@
 .MapZoomed {
+  $river-length: 2202.6826171875;
+  $river-animation-duration: 5s;
   width: 100vw;
   height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #13551B;
+  background-color: #13B9C5;
   overflow: hidden;
   background-image: url("./assets/img/map/zoomed.jpg");
   background-repeat: no-repeat;
-  background-position: 64.943645% 38.474972%;
-  background-size: 226.73611111111111%;
-
-  $river-length: 2202.6826171875;
-  $river-animation-duration: 5s;
+  background-position: 50%;
 
   &__info {
     @include fluid-attr("margin-top", 40px, 80px);

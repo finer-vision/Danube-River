@@ -16,6 +16,15 @@ export const MAP = {
   height: 4120,
 };
 
+export const ZOOMED_MAP = {
+  outerWidth: 2560,
+  outerHeight: 1440,
+  width: 1440,
+  height: 900,
+  x: 560,
+  y: 270,
+};
+
 // These are the x,y coordinates for each segment.
 // They are percentage values taken from the top left of the original map.
 export const SEGMENT_COORDINATES = [
@@ -43,6 +52,9 @@ export const MAP_SEGMENT = {
 };
 
 export const CLOUDS_ANIMATION_TIME = 3000 * 1.1;
+
 export const MAP_SWAP_AFTER_ANIMATION_PROGRESS = 0.3;
+
 export const SCROLL_THROTTLING = 2000;
+
 export const DEFAULT_ACTIVE_ITEM = {...config.articles[0]};

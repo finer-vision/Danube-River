@@ -24,14 +24,7 @@ export default class LandingScreen extends BaseScreen {
 
   async componentDidMount() {
     Services.event.on('screen.scroll', this.#handleScroll);
-
-    let mapComponent = null;
-    if (!this.props.app.isMobile) {
-      mapComponent = await import('../components/Map/index');
-      await preloadAssets();
-    } else {
-      mapComponent = await import('../components/MobileMap');
-    }
+    const mapComponent = await import(`../components/${this.props.app.isMobile ? 'MobileMap' : 'Map/index'}`);
     this.setState({loading: false, mapComponent: mapComponent.default});
   }
 
@@ -48,7 +41,7 @@ export default class LandingScreen extends BaseScreen {
       <Screen name="Landing" lockSections={this.state.lockSections}>
         <MuteToggle/>
 
-        <Section show={true}>
+        <Section show={false}>
           <Hero
             parallax
             tag="The Danube"
