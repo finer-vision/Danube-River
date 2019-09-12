@@ -145,6 +145,8 @@ export default class Map extends Component {
   };
 
   render() {
+    console.log(this.props.app.scrollY);
+
     return (
       <MapContextProvider value={this.#getContext()}>
         <div className="Map">

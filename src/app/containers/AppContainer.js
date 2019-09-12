@@ -6,21 +6,25 @@ import {AppContextProvider} from "../context/AppContext";
 import Loading from "../components/Loading";
 
 export default class AppContainer extends Component {
-  #scrollIdleTimeout = null;
-  #scrollIdleDelay = 250;
-
   state = {
     muteVideos: true,
     loading: true,
     isMobile: false,
     lockScroll: false,
     screen: null,
+    scrollY: 0,
+    screenW: window.innerWidth,
+    screenH: window.innerHeight,
   };
 
   #getContext = () => ({
     muteVideos: this.state.muteVideos,
     isMobile: this.state.isMobile,
     lockScroll: this.state.lockScroll,
+    screen: this.state.screen,
+    scrollY: this.state.scrollY,
+    screenW: this.state.screenW,
+    screenH: this.state.screenH,
     toggleMuteVideos: this.#toggleMuteVideos,
     setIsMobile: this.#setIsMobile,
     toggleLockScroll: this.#toggleLockScroll,
@@ -31,46 +35,32 @@ export default class AppContainer extends Component {
 
   #setIsMobile = isMobile => this.setState({isMobile});
 
-  #toggleLockScroll = lockScroll => {
-    if (this.state.isMobile) {
-      return;
-    }
-    this.setState({lockScroll});
-  };
+  #toggleLockScroll = lockScroll => !this.state.isMobile && this.setState({lockScroll});
+
+  #handleScroll = () => this.state.screen !== null && this.setState({scrollY: this.state.screen.scrollTop});
+
+  #handleResize = () => this.setState({screenW: window.innerWidth, screenH: window.innerHeight});
 
   #setScreen = async screen => {
-    this.state.screen !== null && this.state.screen.removeEventListener('wheel', this.#handleScroll);
+    this.#removeScrollListeners();
     await this.setState({screen});
     this.state.screen.addEventListener('wheel', this.#handleScroll);
+    this.state.screen.addEventListener('scroll', this.#handleScroll);
   };
 
-  #handleScroll = () => {
-    this.#clearScrollIdleTimeout();
-    this.#scrollIdleTimeout = setTimeout(this.#handleScrollIdleTimeout, this.#scrollIdleDelay);
-
-    const totalScroll = this.state.screen.scrollHeight - window.innerHeight;
-    console.log(totalScroll, this.state.screen.scrollTop);
-  };
-
-  #clearScrollIdleTimeout = () => {
-    this.#scrollIdleTimeout !== null && clearTimeout(this.#scrollIdleTimeout);
-    this.#scrollIdleTimeout = null;
-  };
-
-  #handleScrollIdleTimeout = () => {
-    if (this.state.screen === null) {
-      return;
-    }
-    console.log('ScrollIdleTimeout');
+  #removeScrollListeners = () => {
+    this.state.screen !== null && this.state.screen.removeEventListener('wheel', this.#handleScroll);
+    this.state.screen !== null && this.state.screen.removeEventListener('scroll', this.#handleScroll);
   };
 
   componentDidMount() {
     this.setState({loading: false, isMobile: (new MobileDetect(window.navigator.userAgent)).mobile() !== null});
+    window.addEventListener('resize', this.#handleResize);
   }
 
   componentWillUnmount() {
-    this.state.screen !== null && this.state.screen.removeEventListener('wheel', this.#handleScroll);
-    this.#clearScrollIdleTimeout();
+    this.#removeScrollListeners();
+    window.removeEventListener('resize', this.#handleResize);
   }
 
   render() {

@@ -22,21 +22,14 @@ export default class ParallaxHeader extends Component {
 
   async componentDidMount() {
     this.#handleResize();
-    this.#screen = document.querySelector('.Screen');
-    this.#screen.addEventListener('scroll', this.#handleScroll);
     window.addEventListener('resize', this.#handleResize);
   }
 
   componentWillUnmount() {
-    this.#screen.removeEventListener('scroll', this.#handleScroll);
     window.removeEventListener('resize', this.#handleResize);
   }
 
   #handleResize = () => this.setState({screen: {width: window.innerWidth, height: window.innerHeight}});
-
-  #handleScroll = () => {
-    this.setState({scrollY: this.#screen.scrollTop});
-  };
 
   #getYPos = (layer, index) => {
     layer.y = layer.y === 0 ? -1 : layer.y;

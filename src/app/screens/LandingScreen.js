@@ -11,11 +11,8 @@ import MuteToggle from "../components/MuteToggle";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
-  #screen = null;
-
   state = {
     loading: true,
-    scrollY: 0,
     mapComponent: null,
   };
 
@@ -28,18 +25,8 @@ export default class LandingScreen extends BaseScreen {
       mapComponent = await import('../components/MobileMap');
     }
 
-    await this.setState({loading: false, mapComponent: mapComponent.default});
-    this.#screen = document.querySelector('.Screen');
-    this.#screen.addEventListener('scroll', this.#handleScroll);
+    this.setState({loading: false, mapComponent: mapComponent.default});
   }
-
-  componentWillUnmount() {
-    this.#screen.removeEventListener('scroll', this.#handleScroll);
-  }
-
-  #handleScroll = () => {
-    this.setState({scrollY: this.#screen.scrollTop});
-  };
 
   render() {
     if (this.state.loading) {
