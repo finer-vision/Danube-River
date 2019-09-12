@@ -403,6 +403,4 @@ export const PARALLAX_LAYERS = {
   ],
 };
 
-export const BACKGROUND_VELOCITY = 1.35;
-
 export const PARALLAX_SCALE_PADDING = 0.05;
