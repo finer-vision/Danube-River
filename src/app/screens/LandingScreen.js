@@ -9,6 +9,7 @@ import Section from "../components/Section";
 import Loading from "../components/Loading";
 import MuteToggle from "../components/MuteToggle";
 import Services from "../services";
+import config from "../core/config";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
