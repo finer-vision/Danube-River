@@ -22,7 +22,6 @@ export default class AppContainer extends Component {
     muteVideos: this.state.muteVideos,
     isMobile: this.state.isMobile,
     lockScroll: this.state.lockScroll,
-    screen: this.state.screen,
     scrollY: this.state.scrollY,
     screenW: this.state.screenW,
     screenH: this.state.screenH,
