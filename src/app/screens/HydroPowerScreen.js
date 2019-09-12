@@ -291,7 +291,8 @@ export default class MicroPlasticScreen extends BaseScreen {
 
             <div className="Stats Stats--v3">
               <div className="Stats__number">
-                <span className="Stats--big">30</span> of the river</div>
+                <span className="Stats--big">30</span> of the river
+              </div>
             </div>
 
             <div className="type-h4 mt-20px">
@@ -363,7 +364,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
 
       <Section className="Section--white-and-blue Section--auto-height">
-        <div className="Image mt-50px">
+        <div className="Image">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
                  poster={`assets/img/player_poster_10.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}

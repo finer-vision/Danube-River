@@ -61,9 +61,11 @@ export default class MicroPlasticScreen extends BaseScreen {
             </div>
           </div>
 
-          <div className="max-width-944">
-            <img src={asset('assets/img/mila23.png')}/>
-          </div>
+        </div>
+        <div className="text-center mt-30px">
+          <img src={asset('assets/img/mila23.png')} className="img-fluid"/>
+        </div>
+        <div className="Section__container">
 
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-50px">
@@ -79,6 +81,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
             </div>
           </div>
+
         </div>
       </Section>
 
@@ -177,11 +180,14 @@ export default class MicroPlasticScreen extends BaseScreen {
           <div className="max-width-960">
             <div className="Paragraph Paragraph--mw-100 mb-50px mt-80px">
               <div className="Paragraph__content">
-                <img src={asset('/assets/img/ivan.png')} className="img-fluid float-right mw-sm-100 mw-300 mb-50px"/>
+
                 When asked why the Danube has been so conducive to producing successful sportsmen, Patzaichin says: “It
                 has given so many champions to Romania because, until recently, [sport] was the only chance children had
                 to escape the isolation of the Danube Delta and the limited number of options they had for personal
                 development.
+                <img src={asset('/assets/img/ivan.png')} className="img-fluid float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px"/>
+                <br/>
+                <br/>
               </div>
               <div className="Paragraph__content">
                 “Also, in order to become a champion, you need to be determined – and living in the waters of the Danube
@@ -270,7 +276,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--auto-height">
+      <Section className="Section--auto-height pb-40px">
         <div className="Section__container">
           <div className="max-width-760">
             <h4 className="type-h4 mt-80px">
@@ -302,7 +308,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--white-and-blue Section--auto-height">
 
-        <div className="Image mt-50px">
+        <div className="Image">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_3.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"

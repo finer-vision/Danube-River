@@ -6,6 +6,13 @@
   float: right;
 }
 
+.float-md-right {
+  float: right;
+  @include mobile {
+    float: none;
+  }
+}
+
 .dark-blue {
   color: $dark-blue-color !important;
 }
@@ -149,4 +156,8 @@
   font-family: "Tungsten", sans-serif;
   font-size: rem(57px);
   font-weight: 600;
+}
+
+.mw-100 {
+  max-width: 100% !important;
 }

@@ -5,12 +5,14 @@
 
   @include mobile {
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   &__video {
     width: 620px;
     max-width: 100%;
+    order: 0;
+
   }
 
   &__image {
@@ -20,6 +22,7 @@
   }
 
   &__text {
+    order: 1;
     align-self: center;
     font-size: rem(24px);
     line-height: rem(36px);
@@ -29,7 +32,11 @@
     padding-left: 20px;
     z-index: 10;
     @include mobile {
+      font-family: "Akkurat", sans-serif;
+      font-size: rem(16px);
+      line-height: rem(27px);
       padding-left: 0;
+      margin: 20px 0;
     }
   }
 
@@ -60,14 +67,14 @@
   &--margin-right-160 {
     padding-right: 160px;
     @include mobile {
-      margin-right: 0;
+      padding-right: 0;
     }
   }
 
   &--margin-right-80 {
     padding-right: 80px;
     @include mobile {
-      margin-right: 0;
+      padding-right: 0;
     }
   }
 
@@ -75,8 +82,18 @@
     justify-content: flex-end;
 
     .PlasticSource__text {
-      padding-left: 0;
+      padding-left: 20px;
       padding-right: 20px;
+
+      @include mobile {
+        order: 1;
+      }
+    }
+
+    .PlasticSource__video {
+      @include mobile {
+        order: 0;
+      }
     }
   }
 }
