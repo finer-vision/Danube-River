@@ -44,9 +44,12 @@ export default class ParallaxHeader extends Component {
     return {backgroundImage: `url(${asset(`/assets/img/parallax/${this.props.id}/mobile.jpg`)})`};
   };
 
-  #handleResize = () => this.setState({scale: this.#getScale()});
+  #handleResize = () => this.#setScale();
+
+  #setScale = () => this.setState({scale: this.#getScale()});
 
   componentDidMount() {
+    this.#setScale()
     Services.event.on('screen.resize', this.#handleResize);
   }
 
