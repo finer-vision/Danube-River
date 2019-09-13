@@ -5,7 +5,6 @@ import {AppContext} from "../context/AppContext";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Section from "../components/Section";
-import Loading from "../components/Loading";
 import MuteToggle from "../components/MuteToggle";
 import Services from "../services";
 
