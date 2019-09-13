@@ -146,7 +146,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showMuteButton={false}
             showPlayButton={true}
             autoPlay={false}
-            poster={asset('assets/img/player_poster_1.png')}
+            poster={asset('assets/img/player_poster_1.jpg')}
             src={ARTICLE.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
@@ -181,7 +181,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             </div>
 
             <div className="Section__column Section__column--desktop-35 text-right">
-              <LazyImage src={`assets/img/microplastic_graph.png`}
+              <LazyImage src={asset('assets/img/microplastic_graph.png')}
                          className="Image__element float-right mb-30px"/>
             </div>
 
@@ -203,7 +203,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
 
       <Section className="Section--background-img Section--height-480 mt-80px"
-               backgroundImg={`assets/img/chapter2.png`}>
+               backgroundImg={asset('assets/img/chapter2.png')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -314,7 +314,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/chapter2.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/chapter2.png')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -447,7 +447,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showMuteButton={false}
             showPlayButton={true}
             autoPlay={false}
-            poster={asset('assets/img/player_poster_2.png')}
+            poster={asset('assets/img/player_poster_2.jpg')}
             src={ARTICLE.videos[2]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />

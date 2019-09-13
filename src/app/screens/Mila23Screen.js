@@ -10,12 +10,6 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
 import LazyImage from "../components/LazyImage";
-import player_poster_4 from "../../assets/img/player_poster_4.png";
-import player_poster_5 from "../../assets/img/player_poster_5.png";
-import player_poster_3 from "../../assets/img/player_poster_3.png";
-import img1 from "../../assets/img/img1.png";
-import img2 from "../../assets/img/img2.png";
-import img3 from "../../assets/img/img3.png";
 
 const ARTICLE = config.articles.find(article => article.id === 'mila-23');
 
@@ -41,7 +35,7 @@ export default class Mila23Screen extends BaseScreen {
             showMuteButton={false}
             showPlayButton={true}
             autoPlay={false}
-            poster={player_poster_4}
+            poster={asset('assets/img/player_poster_4.jpg')}
             src={ARTICLE.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
@@ -137,7 +131,7 @@ export default class Mila23Screen extends BaseScreen {
             showMuteButton={false}
             showPlayButton={true}
             autoPlay={false}
-            poster={player_poster_5}
+            poster={asset('assets/img/player_poster_5.jpg')}
             src={ARTICLE.videos[1]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
@@ -147,7 +141,7 @@ export default class Mila23Screen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={img1}>
+      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={asset('assets/img/img1.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -229,7 +223,7 @@ export default class Mila23Screen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={img2}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img2.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -283,7 +277,7 @@ export default class Mila23Screen extends BaseScreen {
 
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={img3}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img3.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -329,7 +323,7 @@ export default class Mila23Screen extends BaseScreen {
             showMuteButton={false}
             showPlayButton={true}
             autoPlay={false}
-            poster={player_poster_3}
+            poster={asset('assets/img/player_poster_3.jpg')}
             src={ARTICLE.videos[2]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />

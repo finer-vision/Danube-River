@@ -156,20 +156,6 @@
     font-weight: 500;
   }
 
-  &__waves-blur {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-image: url("./assets/img/article-screen-hero.svg");
-    height: 196px !important;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(10px);
-    transition: filter .5s ease;
-    backface-visibility: hidden;
-  }
-
   &--background-img {
     background-position: center;
     background-size: cover;

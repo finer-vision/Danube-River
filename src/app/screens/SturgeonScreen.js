@@ -201,10 +201,13 @@ export default class SturgeonScreen extends BaseScreen {
           </div>
         </div>
         <div className="Image mt-80px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster12.jpg`}
-                 src={ARTICLE.videos[0]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster12.jpg')}
+            src={ARTICLE.videos[0]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px">
             sturgeon farm
@@ -271,10 +274,13 @@ export default class SturgeonScreen extends BaseScreen {
           </div>
         </div>
         <div className="Image mt-80px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster_13.jpg`}
-                 src={ARTICLE.videos[1]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_13.jpg')}
+            src={ARTICLE.videos[1]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px">
             Danube enforcement interview
@@ -326,10 +332,13 @@ export default class SturgeonScreen extends BaseScreen {
         </div>
 
         <div className="Image mt-80px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster_14.jpg`}
-                 src={ARTICLE.videos[2]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_14.jpg')}
+            src={ARTICLE.videos[2]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px">
             Danube enforcement interview
@@ -354,10 +363,13 @@ export default class SturgeonScreen extends BaseScreen {
         </div>
 
         <div className="Image mt-80px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster_15.jpg`}
-                 src={ARTICLE.videos[3]}
-                 className="Video--max-width-942 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_15.jpg')}
+            src={ARTICLE.videos[3]}
+            className="Video--max-width-942 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px white">
             UGC from coast guard
@@ -405,10 +417,13 @@ export default class SturgeonScreen extends BaseScreen {
         </div>
 
         <div className="Image mt-110pxx">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster_16.jpg`}
-                 src={ARTICLE.videos[4]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_16.jpg')}
+            src={ARTICLE.videos[4]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px">
             interview with Jutta providing solutions

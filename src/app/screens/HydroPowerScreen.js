@@ -61,9 +61,13 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--black Section--auto-height pb-80px">
 
         <div className="Image mt-50px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_6.png`}
-                 src={ARTICLE.videos[0]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_6.jpg')}
+            src={ARTICLE.videos[0]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center white mt-20px">
             DAMS IRON GATES DEBATE
@@ -86,10 +90,13 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="Image mt-80px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster_7.png`}
-                 src={ARTICLE.videos[1]}
-                 className="Video--max-width-942 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_7.jpg')}
+            src={ARTICLE.videos[1]}
+            className="Video--max-width-942 Video--cursor-pointer"
           />
         </div>
         <div className="Section__container">
@@ -99,7 +106,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img4.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img4.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -133,7 +140,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="max-width-1257 text-center">
-          <LazyImage src={asset('assets/img/62dams.png')} className="img-fluid"/>
+          <LazyImage src={asset('assets/img/62dams.jpg')} className="img-fluid"/>
         </div>
         <div className="Section__container">
 
@@ -194,10 +201,13 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="Image mt-80px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster_9.png`}
-                 src={ARTICLE.videos[2]}
-                 className="Video--max-width-942 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_9.jpg')}
+            src={ARTICLE.videos[2]}
+            className="Video--max-width-942 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-20px">
             Hidroelectrica CEO Bogdan Badea NILAY
@@ -216,7 +226,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={`assets/img/img4.png`}>
+      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={asset('assets/img/img4.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -238,7 +248,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               <div className="Paragraph__content">
 
                 <div className="float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px">
-                  <LazyImage src={asset('assets/img/ivan.png')} className="img-fluid"/>
+                  <LazyImage src={asset('assets/img/ivan.jpg')} className="img-fluid"/>
 
                   <div className="small-title text-left mt-10px white">Ulrich Eichelmann, CEO of environmental campaign
                     group Riverwatch
@@ -269,7 +279,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img4.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img4.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 4</div>
@@ -319,7 +329,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={`assets/img/img4.png`}>
+      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={asset('assets/img/img4.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 5</div>
@@ -364,7 +374,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="text-center">
-          <LazyImage src={asset('assets/img/img7.png')} className="img-fluid"/>
+          <LazyImage src={asset('assets/img/img7.jpg')} className="img-fluid"/>
         </div>
         <div className="Section__container">
           <div className="max-width-760 pb-40px">
@@ -382,10 +392,13 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--white-and-blue Section--auto-height">
         <div className="Image">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster_10.png`}
-                 src={ARTICLE.videos[3]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_10.jpg')}
+            src={ARTICLE.videos[3]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title white text-center mt-20px">
             DONAU-AUEN PARK EXPLAINER

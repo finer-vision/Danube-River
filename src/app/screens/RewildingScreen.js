@@ -57,7 +57,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--black Section--auto-height pb-80px">
 
         <div className="text-center">
-          <LazyImage src={asset('assets/img/img8.png')} className="img-fluid mt-50px"/>
+          <LazyImage src={asset('assets/img/img8.jpg')} className="img-fluid mt-50px"/>
         </div>
 
         <div className="Section__container">
@@ -130,7 +130,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img9.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img9.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -141,10 +141,13 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--auto-height">
         <div className="Image mt-80px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster_11.png`}
-                 src={ARTICLE.videos[0]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_11.jpg')}
+            src={ARTICLE.videos[0]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center">
             Cave painting animation
@@ -181,8 +184,8 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="text-center d-inline-block">
-          <LazyImage src={asset('assets/img/img10.png')} className="img-fluid mw-sm-50 sm-float-left"/>
-          <LazyImage src={asset('assets/img/img11.png')} className="img-fluid mw-sm-50 sm-float-left"/>
+          <LazyImage src={asset('assets/img/img10.jpg')} className="img-fluid mw-sm-50 sm-float-left"/>
+          <LazyImage src={asset('assets/img/img11.jpg')} className="img-fluid mw-sm-50 sm-float-left"/>
         </div>
         <div className="Section__container">
           <div className="max-width-760 mb-80px">
@@ -217,7 +220,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img12.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img12.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -263,10 +266,13 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="Image mt-50px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                 poster={`assets/img/player_poster_33.jpg`}
-                 src={ARTICLE.videos[1]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_33.jpg')}
+            src={ARTICLE.videos[1]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title white text-center mt-20px">
             Lost beavers of the Danube Delta
@@ -274,7 +280,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img13.jpg`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img13.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 4</div>
@@ -344,7 +350,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img14.jpg`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img14.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 4</div>

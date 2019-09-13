@@ -27,7 +27,7 @@ export default class Video extends Component {
   };
 
   componentDidMount() {
-    if (Hls.isSupported() && this.#video.current) {
+    if (Hls.isSupported() && this.#video.current && this.props.src) {
       const hls = new Hls();
       hls.loadSource(this.props.src);
       hls.attachMedia(this.#video.current);
