@@ -31,7 +31,7 @@ export default class LandingScreen extends BaseScreen {
       <Screen name="Landing" lockSections={this.state.lockSections}>
         <MuteToggle/>
 
-        <Section show={true}>
+        <Section show={true} className="Section__landing-hero">
           <Hero
             parallax
             tag="The Danube"

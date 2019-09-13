@@ -203,5 +203,9 @@
 .Screen--mobile {
   .Section {
     height: auto;
+
+    &__landing-hero {
+      height: 100vh;
+    }
   }
 }
