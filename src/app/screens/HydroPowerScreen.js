@@ -24,7 +24,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           parallax
           tag="Hydro Power"
           title="Dam or be dammed"
-          parallaxHeaderId="hydro-power"
+          parallaxHeaderId={ARTICLE.id}
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
         />

@@ -22,7 +22,7 @@ export default class SturgeonScreen extends BaseScreen {
           parallax
           tag="Sturgeon"
           title="Caviar mafia vs Danube dinosaur"
-          parallaxHeaderId="sturgeon"
+          parallaxHeaderId={ARTICLE.id}
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
         />

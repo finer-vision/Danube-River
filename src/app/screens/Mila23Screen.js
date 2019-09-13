@@ -10,21 +10,25 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
 import LazyImage from "../components/LazyImage";
+import player_poster_4 from "../../assets/img/player_poster_4.png";
+import player_poster_5 from "../../assets/img/player_poster_5.png";
+import player_poster_3 from "../../assets/img/player_poster_3.png";
+import img1 from "../../assets/img/img1.png";
+import img2 from "../../assets/img/img2.png";
+import img3 from "../../assets/img/img3.png";
 
 const ARTICLE = config.articles.find(article => article.id === 'mila-23');
 
 @AppContext
-export default class MicroPlasticScreen extends BaseScreen {
-
+export default class Mila23Screen extends BaseScreen {
   render = () => (
     <Screen name="Mila23">
-
       <Section show={true}>
         <Hero
           parallax
           tag="Mila 23"
           title="Life of the island people"
-          parallaxHeaderId="island-people"
+          parallaxHeaderId={ARTICLE.id}
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
         />
@@ -33,9 +37,13 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--black Section--auto-height pt-lg-50px">
 
         <div className="Image">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_4.png`}
-                 src={ARTICLE.videos[0]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={player_poster_4}
+            src={ARTICLE.videos[0]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center white mt-20px">
             vassili
@@ -125,9 +133,13 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--auto-height">
         <div className="Image mt-50px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_5.png`}
-                 src={ARTICLE.videos[1]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={player_poster_5}
+            src={ARTICLE.videos[1]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-20px">
             vassili, old believer
@@ -135,7 +147,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={`assets/img/img1.png`}>
+      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={img1}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -189,7 +201,8 @@ export default class MicroPlasticScreen extends BaseScreen {
                 has given so many champions to Romania because, until recently, [sport] was the only chance children had
                 to escape the isolation of the Danube Delta and the limited number of options they had for personal
                 development.
-                <LazyImage src={asset('assets/img/ivan.png')} className="img-fluid float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px"/>
+                <LazyImage src={asset('assets/img/ivan.png')}
+                           className="img-fluid float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px"/>
 
               </div>
               <div className="Paragraph__content">
@@ -216,7 +229,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img2.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={img2}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -270,7 +283,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={`assets/img/img3.png`}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={img3}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -312,9 +325,13 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--white-and-blue Section--auto-height">
 
         <div className="Image">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_3.png`}
-                 src={ARTICLE.videos[2]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={player_poster_3}
+            src={ARTICLE.videos[2]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title white text-center mt-20px">
             tourism/ tv mast

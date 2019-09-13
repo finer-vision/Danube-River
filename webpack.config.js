@@ -10,12 +10,10 @@ const SRC_DIR = path.resolve(__dirname, 'src');
 const BUILD_DIR = path.resolve(__dirname, 'build');
 
 const plugins = [
-  new CopyPlugin([
-    {
-      from: path.join(SRC_DIR, 'assets'),
-      to: path.join(BUILD_DIR, 'assets'),
-    },
-  ]),
+  new CopyPlugin([{
+    from: path.join(SRC_DIR, 'assets'),
+    to: path.join(BUILD_DIR, 'assets'),
+  }]),
   new MiniCssExtractPlugin({
     filename: 'index.css',
     path: BUILD_DIR,
@@ -104,5 +102,5 @@ module.exports = {
     ],
   },
   plugins,
-  devtool: 'source-map',
+  devtool: ENV === 'production' ? false : 'source-map',
 };

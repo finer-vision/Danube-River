@@ -24,7 +24,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           parallax
           tag="Rewilding"
           title="Back from the dead"
-          parallaxHeaderId="rewilding"
+          parallaxHeaderId={ARTICLE.id}
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
         />
