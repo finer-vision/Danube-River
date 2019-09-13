@@ -8,6 +8,9 @@ import {asset} from "../core/utils";
 import Footer from "../components/Footer";
 import Video from "../components/Video";
 import Carousel from "../components/Carousel";
+import config from "../core/config";
+
+const ARTICLE = config.articles.find(article => article.id === 'microplastics');
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
@@ -139,7 +142,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--black-and-white Section--auto-height">
         <div className="Image mt-50px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_1.png`}
-                 src="assets/vid/landing-screen-intro.mp4"
+                 src={ARTICLE.videos[0]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -222,7 +225,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
         <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_img2.png`}
-                 src="assets/vid/landing-screen-intro.mp4"
+                 src={ARTICLE.videos[1]}
                  className="Video--max-width-942 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-20px white">
@@ -432,7 +435,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--white-and-blue Section--auto-height mt-50px">
         <div className="Image">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_2.png`}
-                 src="assets/vid/landing-screen-intro.mp4"
+                 src={ARTICLE.videos[2]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center white mt-20px">

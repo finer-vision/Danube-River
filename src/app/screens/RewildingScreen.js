@@ -8,6 +8,9 @@ import Video from "../components/Video";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
+import config from "../core/config";
+
+const ARTICLE = config.articles.find(article => article.id === 'rewilding');
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
@@ -139,7 +142,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
                  poster={`assets/img/player_poster_11.png`}
-                 src="assets/vid/landing-screen-intro.mp4"
+                 src={ARTICLE.videos[0]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center">
@@ -261,7 +264,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         <div className="Image mt-50px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
                  poster={`assets/img/player_poster_33.jpg`}
-                 src="assets/vid/landing-screen-intro.mp4"
+                 src={ARTICLE.videos[1]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title white text-center mt-20px">
