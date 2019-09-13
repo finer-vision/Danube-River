@@ -25,11 +25,11 @@ export default class Video extends Component {
   };
 
   componentDidMount() {
-    if (Hls.isSupported() && this.#video.current) {
-      const hls = new Hls();
-      hls.loadSource(this.props.src);
-      hls.attachMedia(this.#video.current);
-    }
+    // if (Hls.isSupported() && this.#video.current) {
+    //   const hls = new Hls();
+    //   hls.loadSource(this.props.src);
+    //   hls.attachMedia(this.#video.current);
+    // }
 
     if (!this.props.poster) {
       this.#timeout = setTimeout(() => {
