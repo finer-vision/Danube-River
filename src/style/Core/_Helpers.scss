@@ -33,6 +33,12 @@
   color: $white-color !important;
 }
 
+.white-sm {
+  @include mobile {
+    color: $white-color !important;
+  }
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -123,6 +129,10 @@
 
 .d-none {
   display: none;
+}
+
+.d-flex {
+  display: flex;
 }
 
 .small-title {

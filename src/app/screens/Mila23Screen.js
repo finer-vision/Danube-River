@@ -26,15 +26,15 @@ export default class MicroPlasticScreen extends BaseScreen {
         />
       </Section>
 
-      <Section className="Section--black Section--auto-height">
+      <Section className="Section--black Section--auto-height pt-lg-50px">
 
-        <div className="Image mt-50px">
+        <div className="Image">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_4.png`}
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center white mt-20px">
-            Gabor Bordos of Wessling explains what sorts of microplastics were found.
+            vassili
           </div>
         </div>
 
@@ -87,7 +87,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--black-and-white Section--auto-height">
         <div className="max-width-1100 mt-50px">
-          <img src={asset('assets/img/birds.png')}/>
+          <img src={asset('assets/img/birds.png')} className="img-fluid"/>
         </div>
       </Section>
 
@@ -125,7 +125,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center">
+          <div className="small-title text-center mt-20px">
             vassili, old believer
           </div>
         </div>
@@ -157,7 +157,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               To become a champion you need to be determined – and living in the waters of the Danube Delta trains your
               determination, because here you have only yourself to rely on.”
             </h2>
-            <div className="quote-author primary mt-30px">
+            <div className="quote-author primary white-sm mt-30px">
               Ivan Patzaichin
             </div>
             <div className="quote-author-position mt-10px">
@@ -173,7 +173,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
             </div>
           </div>
-          <div className="text-center">
+          <div className="text-center d-flex">
             <img src={asset('/assets/img/ivan.png')} className="img-fluid"/>
           </div>
 
@@ -186,8 +186,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 to escape the isolation of the Danube Delta and the limited number of options they had for personal
                 development.
                 <img src={asset('/assets/img/ivan.png')} className="img-fluid float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px"/>
-                <br/>
-                <br/>
+
               </div>
               <div className="Paragraph__content">
                 “Also, in order to become a champion, you need to be determined – and living in the waters of the Danube

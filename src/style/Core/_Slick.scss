@@ -98,6 +98,9 @@
 .slideWrapper {
   padding: 40px;
   width: 780px;
+  @include mobile {
+    padding: 5px;
+  }
 }
 
 .slideImage {
@@ -111,6 +114,9 @@
 .center .slick-slide.slick-center {
   transform: scale(1.3);
   z-index: 2;
+  @include mobile {
+    transform: none;
+  }
 }
 .slick-slider {
   width: 200%;
