@@ -1,5 +1,9 @@
 .text-right {
-  text-align: right;
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
 }
 
 .float-right {
@@ -124,6 +128,13 @@
 .d-desktop-block {
   @include mobile {
     display: none !important;
+  }
+}
+
+.d-desktop-none {
+  display: none;
+  @include mobile {
+    display: block;
   }
 }
 

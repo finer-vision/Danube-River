@@ -173,7 +173,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
             </div>
           </div>
-          <div className="text-center d-flex">
+          <div className="text-center">
             <img src={asset('/assets/img/ivan.png')} className="img-fluid"/>
           </div>
 

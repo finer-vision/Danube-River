@@ -61,7 +61,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center white">
+          <div className="small-title text-center white mt-20px">
             DAMS IRON GATES DEBATE
           </div>
         </div>
@@ -80,18 +80,18 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
             </div>
           </div>
-
-          <div className="Image mt-80px">
-            <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                   poster={`assets/img/player_poster_7.png`}
-                   sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-                   className="Video--max-width-942 Video--cursor-pointer"
-            />
-            <div className="small-title text-center white">
-              Gyorgy Vero WWF activist - explaining the main issues with dams
-            </div>
+        </div>
+        <div className="Image mt-80px">
+          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
+                 poster={`assets/img/player_poster_7.png`}
+                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 className="Video--max-width-942 Video--cursor-pointer"
+          />
+        </div>
+        <div className="Section__container">
+          <div className="small-title text-center white">
+            Gyorgy Vero WWF activist - explaining the main issues with dams
           </div>
-
         </div>
       </Section>
 
@@ -127,10 +127,19 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
             </div>
           </div>
+        </div>
+        <div className="max-width-1257 text-center">
           <img src={asset('assets/img/62dams.png')} className="img-fluid"/>
+        </div>
+        <div className="Section__container">
 
           <div className="max-width-760 mb-80px">
             <div className="Paragraph mt-80px">
+              <div className="Stats d-desktop-none text-left">
+                <div className="Stats__number">62<span className="Stats--small-type-2">dams</span></div>
+                <div className="Stats__text">There is an average of one dam</div>
+                <div className="Stats__text">every 16km along the Danube</div>
+              </div>
               <div className="Paragraph__content Paragraph--v2">
                 Those are the last two dams on the Danube proper before it winds across the Romanian and Bulgarian plain
                 and diffuses into the delta, where it meets the Black Sea.
@@ -160,7 +169,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 </div>
               </div>
 
-              <div className="Paragraph__content Paragraph--v2 Paragraph--moved-to-left">
+              <div className="Paragraph__content Paragraph--v2 Paragraph--moved-to-left mt-30px">
                 “Very few stretches can still be characterized as free-flowing,” is the bleak assessment of the
                 International Commission for the Protection of the Danube River, the multi-country body set up by treaty
                 to look after the waterway.
@@ -179,16 +188,18 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
             </div>
           </div>
-          <div className="Image mt-80px">
-            <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
-                   poster={`assets/img/player_poster_9.png`}
-                   sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
-                   className="Video--max-width-942 Video--cursor-pointer"
-            />
-            <div className="small-title text-center white">
-              Hidroelectrica CEO Bogdan Badea NILAY
-            </div>
+        </div>
+        <div className="Image mt-80px">
+          <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
+                 poster={`assets/img/player_poster_9.png`}
+                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 className="Video--max-width-942 Video--cursor-pointer"
+          />
+          <div className="small-title text-center mt-20px">
+            Hidroelectrica CEO Bogdan Badea NILAY
           </div>
+        </div>
+        <div className="Section__container">
 
           <div className="max-width-760 mb-80px">
             <div className="Paragraph mt-80px">
@@ -213,20 +224,22 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--black Section--auto-height pb-110px">
         <div className="Section__container">
 
-          <div className="max-width-760 mt-50px mb-50px">
-            <h4 className="type-h4">
-              However, Ulrich Eichelmann, CEO of environmental campaign group Riverwatch, says stopping the construction
-              of new dams is not enough:
-            </h4>
-          </div>
-
-          <div className="max-width-960">
-            <div className="Paragraph Paragraph--mw-100 mb-50px mt-80px">
+          <div className="max-width-960 mt-80px">
+            <div className="Paragraph Paragraph--mw-100 mb-50px mt-30px">
+              <h4 className="type-h4 mb-30px">
+                However, Ulrich Eichelmann, CEO of environmental campaign group Riverwatch, says stopping the
+                construction
+                of new dams is not enough:
+              </h4>
               <div className="Paragraph__content">
-                When asked why the Danube has been so conducive to producing successful sportsmen, Patzaichin says: “It
-                has given so many champions to Romania because, until recently, [sport] was the only chance children had
-                to escape the isolation of the Danube Delta and the limited number of options they had for personal
-                development.
+
+                <div className="float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px">
+                  <img src={asset('/assets/img/ivan.png')} className="img-fluid"/>
+
+                  <div className="small-title text-left mt-10px white">Ulrich Eichelmann, CEO of environmental campaign
+                    group Riverwatch
+                  </div>
+                </div>
               </div>
               <div className="Paragraph__content">
                 “Instead, we should remove a lot of old ones. That is a movement that comes from the US and is now also
@@ -291,7 +304,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
             <div className="Stats Stats--v3">
               <div className="Stats__number">
-                <span className="Stats--big">30</span> of the river
+                <span className="Stats--big">30</span> <span className="Stats--small-type-2">% of the river</span>
               </div>
             </div>
 
