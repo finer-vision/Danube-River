@@ -34,6 +34,7 @@ export default class Map extends Component {
   componentWillUnmount() {
     this.#timeout !== null && clearTimeout(this.#timeout);
     this.#clearWaypointDelayTimeout();
+    Services.event.off('screen.wheel', this.#handleWheel);
   }
 
   #handleWheel = event => {

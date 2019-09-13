@@ -1,6 +1,7 @@
 import React, {Component, lazy, Suspense} from "react";
-import {Route, Switch} from "react-router-dom";
+import {Route, Switch, withRouter} from "react-router-dom";
 import Loading from "./Loading";
+import {AppContext} from "../context/AppContext";
 
 const LandingScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "LandingScreen" */ "../screens/LandingScreen"));
 const NotFoundScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "NotFoundScreen" */ "../screens/NotFoundScreen"));
@@ -12,7 +13,19 @@ const SturgeonScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkN
 
 const Screen = Component => props => <Component {...props}/>;
 
+@withRouter
+@AppContext
 export default class App extends Component {
+  #historyListener = null;
+
+  componentDidMount() {
+    this.#historyListener = this.props.history.listen(this.props.app.resetScroll);
+  }
+
+  componentWillUnmount() {
+    this.#historyListener !== null && this.#historyListener();
+  }
+
   render = () => (
     <Suspense fallback={<Loading/>}>
       <Switch>

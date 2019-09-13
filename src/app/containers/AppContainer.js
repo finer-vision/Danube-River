@@ -5,6 +5,7 @@ import App from "../components/App";
 import {AppContextProvider} from "../context/AppContext";
 import Loading from "../components/Loading";
 import Services from "../services";
+import {preloadAssets} from "../core/utils";
 
 export default class AppContainer extends Component {
   state = {
@@ -12,13 +13,16 @@ export default class AppContainer extends Component {
     loading: true,
     isMobile: false,
     lockScroll: false,
+    mapComponent: null,
     screen: null,
+    loadingProgress: 0,
     scrollY: 0,
     screenW: window.innerWidth,
     screenH: window.innerHeight,
   };
 
   #getContext = () => ({
+    mapComponent: this.state.mapComponent,
     muteVideos: this.state.muteVideos,
     isMobile: this.state.isMobile,
     lockScroll: this.state.lockScroll,
@@ -29,6 +33,7 @@ export default class AppContainer extends Component {
     setIsMobile: this.#setIsMobile,
     toggleLockScroll: this.#toggleLockScroll,
     setScreen: this.#setScreen,
+    resetScroll: this.#resetScroll,
   });
 
   #toggleMuteVideos = muteVideos => this.setState({muteVideos});
@@ -38,19 +43,13 @@ export default class AppContainer extends Component {
   #toggleLockScroll = lockScroll => !this.state.isMobile && this.setState({lockScroll});
 
   #handleScroll = async event => {
-    if (this.state.lockScroll) {
-      event.preventDefault();
-    }
-    if (this.state.screen !== null) {
-      await this.setState({scrollY: this.state.screen.scrollTop});
-    }
+    this.state.lockScroll && event.preventDefault();
+    this.state.screen !== null && await this.setState({scrollY: this.state.screen.scrollTop});
     Services.event.emit('screen.scroll', event);
   };
 
   #handleWheel = event => {
-    if (this.state.lockScroll) {
-      event.preventDefault();
-    }
+    this.state.lockScroll && event.preventDefault();
     Services.event.emit('screen.wheel', event);
   };
 
@@ -71,8 +70,18 @@ export default class AppContainer extends Component {
     this.state.screen !== null && this.state.screen.removeEventListener('scroll', this.#handleScroll);
   };
 
-  componentDidMount() {
-    this.setState({loading: false, isMobile: (new MobileDetect(window.navigator.userAgent)).mobile() !== null});
+  #resetScroll = () => {
+    if (this.state.screen !== null) {
+      this.state.screen.scrollTop = 0;
+    }
+    this.setState({scrollY: 0});
+  };
+
+  async componentDidMount() {
+    const isMobile = (new MobileDetect(window.navigator.userAgent)).mobile() !== null;
+    !isMobile && await preloadAssets(progress => this.setState({loadingProgress: Math.ceil(progress)}));
+    const mapComponent = await import(`../components/${isMobile ? 'MobileMap' : 'Map/index'}`);
+    this.setState({loading: false, isMobile, mapComponent: mapComponent.default});
     window.addEventListener('resize', this.#handleResize);
   }
 
@@ -83,7 +92,7 @@ export default class AppContainer extends Component {
 
   render() {
     if (this.state.loading) {
-      return <Loading/>;
+      return <Loading progress={this.state.loadingProgress} type="preload"/>;
     }
 
     return (

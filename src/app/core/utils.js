@@ -10,19 +10,11 @@ export const asset = pathname => {
 
 export const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2;
 
-export const getOffset = element => {
-  const bound = element.getBoundingClientRect();
-  const html = document.documentElement;
-  return {
-    top: bound.top + window.pageYOffset - html.clientTop,
-    left: bound.left + window.pageXOffset - html.clientLeft
-  };
-};
-
-export const preloadAssets = () => new Promise(resolve => {
+export const preloadAssets = fn => new Promise(resolve => {
   const processed = [];
   const processImage = img => {
     processed.push(img);
+    fn && fn((100 / assets.length) * processed.length);
     if (processed.length === assets.length) {
       resolve();
     }

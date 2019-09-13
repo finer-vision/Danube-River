@@ -1,6 +1,94 @@
 .MobileMap {
+  background-color: $blue-color-100;
+
   &__info {
     background-color: #175256;
+    color: #fff;
     padding: 30px 15px;
+  }
+
+  &__intro {
+    background-image: url("./assets/img/map/mobile-zoomed.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 100% auto;
+  }
+
+  &__articles {
+    padding: 50% 15px 30px 15px;
+
+    &-article {
+      text-align: center;
+      background-color: rgba(3, 28, 38, 0.8);
+      color: #fff;
+      padding: 1em;
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .type-tag {
+        color: $primary;
+      }
+
+      .type-h3 {
+        font-family: Tungsten, sans-serif;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__map {
+    z-index: 1;
+
+    &-article {
+      background-color: rgba(3, 28, 38, 0.8);
+      padding: 1em;
+      color: #fff;
+      margin-bottom: 30px;
+      position: relative;
+
+      &-container {
+        padding: 55% 15px 90px;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: 100% auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .type-tag {
+        color: $primary;
+      }
+
+      .type-h2 {
+        font-family: Tungsten, sans-serif;
+        margin-bottom: 0.5em;
+        letter-spacing: 2px;
+        line-height: 1;
+        @include fluid-type(35px, 55px, $responsive-min, $responsive-max);
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $primary;
+        width: 68.4375vw;
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: -15px;
+        transform: translate(0%, 70%);
+        padding: 2.5em 1em 0.5em 1em;
+        color: $secondary;
+        font-weight: bold;
+      }
+    }
   }
 }

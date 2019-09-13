@@ -1,0 +1,39 @@
+.Loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $primary;
+  font-weight: bold;
+  background-color: $black-color;
+
+  &--screen {
+    .Loading__progress, .Loading__progress-message {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  &__hero {
+    margin-top: auto;
+
+    &-title {
+      @include fluid-attr("width", 288px, 585px);
+    }
+  }
+
+  &__progress {
+    margin-top: auto;
+  }
+
+  &__progress-message {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 15px;
+    margin-bottom: 3vh;
+  }
+}

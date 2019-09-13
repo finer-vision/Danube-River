@@ -4,11 +4,15 @@
   background-image: url("./assets/img/footer.png");
   background-size: cover;
   background-position: 50% 100%;
-  background-color: #13B9C5;
+  background-color: $blue-color-100;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   @include fluid-attr("padding-top", 10px, 30px);
+
+  @media (max-width: $mobile-break-point) {
+    background-image: none;
+  }
 
   &__section {
     @media (max-width: $mobile-break-point) {
@@ -41,7 +45,7 @@
 
     @media (max-width: $mobile-break-point) {
       flex-direction: column;
-      margin-bottom: 16vh;
+      margin-bottom: 45px;
     }
   }
 
@@ -147,29 +151,8 @@
 
       @media (max-width: $mobile-break-point) {
         background-image: url("/assets/img/mobile-wave-top.png");
-
-        &:before, &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          background-color: $secondary;
-          width: calc(50% - 160px);
-          top: 0;
-        }
-
-        &:before {
-          $height: 11px;
-          height: calc(100% - #{$height});
-          margin-top: $height;
-          left: 0;
-        }
-
-        &:after {
-          $height: 5px;
-          height: calc(100% - #{$height});
-          margin-top: $height;
-          right: 0;
-        }
+        background-size: 100vw auto;
+        top: -5%;
       }
     }
 
@@ -189,8 +172,22 @@
       }
 
       @media (max-width: $mobile-break-point) {
-        top: -25%;
+        $background-y: 0.25;
         background-image: url("/assets/img/mobile-wave-bottom.png");
+        background-size: 100vw auto;
+        top: auto;
+        bottom: 0;
+        background-position: 50% calc(100vw * #{$background-y});
+
+        &:after {
+          content: "";
+          background-color: $black-color;
+          position: absolute;
+          top: calc((100vw * #{$background-y}) + (100vw * (39 / 320)));
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -213,7 +210,7 @@
 
     @media (max-width: $mobile-break-point) {
       transform: none;
-      margin-top: -10vh;
+      margin-bottom: 60px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -262,6 +259,7 @@
       margin-right: auto;
       margin-bottom: 1rem;
       display: block;
+      text-align: center;
     }
 
     .type-h4 {
@@ -317,5 +315,15 @@
         }
       }
     }
+  }
+}
+
+.Screen--mobile {
+  .Footer__article, .Footer__wave-top, .Footer__wave-bottom {
+    animation: none;
+  }
+  .Footer__article {
+    opacity: 1;
+    transform: none;
   }
 }
