@@ -7,6 +7,7 @@ export default {
     primary: domElementStyle && domElementStyle.getPropertyValue('--color-primary'),
     secondary: domElementStyle && domElementStyle.getPropertyValue('--color-secondary'),
     yellow: domElementStyle && domElementStyle.getPropertyValue('--color-yellow'),
+    'blue-100': domElementStyle && domElementStyle.getPropertyValue('--color-blue-100'),
   },
   articles: [
     {

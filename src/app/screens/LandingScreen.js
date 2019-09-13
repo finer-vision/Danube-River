@@ -12,7 +12,6 @@ import Services from "../services";
 @AppContext
 export default class LandingScreen extends BaseScreen {
   state = {
-    loading: true,
     mapComponent: null,
     lockSections: false,
   };
@@ -20,10 +19,8 @@ export default class LandingScreen extends BaseScreen {
   // Don't lock sections until halfway past the header section, to allow for more of an impactful parallax effect.
   #handleScroll = () => this.setState({lockSections: this.props.app.scrollY >= window.innerHeight * 0.6});
 
-  async componentDidMount() {
+  componentDidMount() {
     Services.event.on('screen.scroll', this.#handleScroll);
-    const mapComponent = await import(`../components/${this.props.app.isMobile ? 'MobileMap' : 'Map/index'}`);
-    this.setState({loading: false, mapComponent: mapComponent.default});
   }
 
   componentWillUnmount() {
@@ -31,10 +28,6 @@ export default class LandingScreen extends BaseScreen {
   }
 
   render() {
-    if (this.state.loading) {
-      return <Loading/>;
-    }
-
     return (
       <Screen name="Landing" lockSections={this.state.lockSections}>
         <MuteToggle/>
@@ -49,7 +42,7 @@ export default class LandingScreen extends BaseScreen {
         </Section>
 
         <Section show={true} name="map">
-          {createElement(this.state.mapComponent)}
+          {createElement(this.props.app.mapComponent)}
         </Section>
 
         <Section show={true} className="Footer__section">

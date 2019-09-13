@@ -19,10 +19,11 @@ export const getOffset = element => {
   };
 };
 
-export const preloadAssets = () => new Promise(resolve => {
+export const preloadAssets = fn => new Promise(resolve => {
   const processed = [];
   const processImage = img => {
     processed.push(img);
+    fn && fn((100 / assets.length) * processed.length);
     if (processed.length === assets.length) {
       resolve();
     }
