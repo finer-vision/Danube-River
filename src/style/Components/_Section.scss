@@ -189,6 +189,9 @@
 
   &--height-480 {
     height: 480px;
+    @include mobile {
+      height: 180px;
+    }
   }
 
   &--black {
