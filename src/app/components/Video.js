@@ -1,14 +1,12 @@
 import React, {Component, createRef} from "react";
 import PropTypes from "prop-types";
+import Hls from "hls.js";
 import {AppContext} from "../context/AppContext";
 
 @AppContext
 export default class Video extends Component {
   static propTypes = {
-    sources: PropTypes.arrayOf(PropTypes.shape({
-      src: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-    })).isRequired,
+    src: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
@@ -20,12 +18,19 @@ export default class Video extends Component {
   #video = createRef();
   #observer = null;
   #timeout = null;
+
   state = {
     playing: false,
     showPlayButton: this.props.showPlayButton
   };
 
   componentDidMount() {
+    if (Hls.isSupported() && this.#video.current) {
+      const hls = new Hls();
+      hls.loadSource(this.props.src);
+      hls.attachMedia(this.#video.current);
+    }
+
     if (!this.props.poster) {
       this.#timeout = setTimeout(() => {
         this.#observer = new IntersectionObserver(this.#handleEntry, {
@@ -41,7 +46,7 @@ export default class Video extends Component {
   componentWillUnmount() {
     this.#timeout !== null && clearTimeout(this.#timeout);
     if (!this.props.poster) {
-      if(this.#observer !== null){
+      if (this.#observer !== null) {
         this.#observer.unobserve(this.#container.current);
       }
     }
@@ -81,14 +86,14 @@ export default class Video extends Component {
       <div className={`Video ${this.props.className}`} ref={this.#container}>
         {this.displayPlayButton()}
 
-        <video ref={this.#video} playsInline autoPlay={this.props.autoPlay} muted={this.props.app.muteVideos}
-               onClick={this.#playVideo}
-               poster={this.props.poster}
-        >
-          {this.props.sources.map((source, index) => (
-            <source key={`video-source-${index}`} src={source.src} type={source.type}/>
-          ))}
-        </video>
+        <video
+          ref={this.#video} src={this.props.src}
+          playsInline
+          autoPlay={this.props.autoPlay}
+          muted={this.props.app.muteVideos}
+          onClick={this.#playVideo}
+          poster={this.props.poster}
+        />
       </div>
     );
   }

@@ -8,13 +8,14 @@ import Video from "../components/Video";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
+import config from "../core/config";
+
+const ARTICLE = config.articles.find(article => article.id === 'sturgeon');
 
 @AppContext
 export default class SturgeonScreen extends BaseScreen {
-
   render = () => (
     <Screen name="Rewilding">
-
       <Section show={true}>
         <Hero
           parallax
@@ -48,7 +49,6 @@ export default class SturgeonScreen extends BaseScreen {
             </div>
 
             <div className="Paragraph mt-30px">
-
               <div className="Stats">
                 <div className="Stats__number">100<span className="Stats--small Stats--sm-small-type-2">years old</span>
                 </div>
@@ -62,7 +62,6 @@ export default class SturgeonScreen extends BaseScreen {
               </div>
             </div>
           </div>
-
         </div>
         <div className="text-center">
           <img src={asset('assets/img/img15.jpg')} className="img-fluid mt-80px"/>
@@ -91,7 +90,6 @@ export default class SturgeonScreen extends BaseScreen {
               Sturgeon have been in our waters for 200 million years, their fossils have been traced back to the
               Triassic period.
             </h4>
-
           </div>
         </div>
       </Section>
@@ -112,7 +110,6 @@ export default class SturgeonScreen extends BaseScreen {
                 (IUCN) Red List, which means they are under threat of extinction.
               </div>
             </div>
-
 
             <div className="Paragraph mt-30px">
               <div className="Stats">
@@ -205,7 +202,7 @@ export default class SturgeonScreen extends BaseScreen {
         <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
                  poster={`assets/img/player_poster12.jpg`}
-                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 src={ARTICLE.videos[0]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px">
@@ -223,12 +220,9 @@ export default class SturgeonScreen extends BaseScreen {
           </div>
 
           <div className="Paragraph mt-30px">
-
             <div className="Quote Quote--max-width-530">
               <span className="quote-open-type-2 primary">“</span>
               <h2 className="type-h2 type-alert primary">
-                {/*<br className="br-desktop"/>*/}
-
                 In the caviar trade, there is an illegal part and a legal part and it is very hard to distinguish
                 between the two.”
               </h2>
@@ -278,7 +272,7 @@ export default class SturgeonScreen extends BaseScreen {
         <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
                  poster={`assets/img/player_poster_13.jpg`}
-                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 src={ARTICLE.videos[1]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px">
@@ -333,7 +327,7 @@ export default class SturgeonScreen extends BaseScreen {
         <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
                  poster={`assets/img/player_poster_14.jpg`}
-                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 src={ARTICLE.videos[2]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px">
@@ -361,7 +355,7 @@ export default class SturgeonScreen extends BaseScreen {
         <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
                  poster={`assets/img/player_poster_15.jpg`}
-                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 src={ARTICLE.videos[3]}
                  className="Video--max-width-942 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px white">
@@ -379,7 +373,6 @@ export default class SturgeonScreen extends BaseScreen {
             </div>
 
             <div className="Paragraph mt-30px">
-
               <div className="Quote Quote--max-width-530">
                 <span className="quote-open-type-2 primary">“</span>
                 <h2 className="type-h2 type-alert primary">
@@ -407,15 +400,13 @@ export default class SturgeonScreen extends BaseScreen {
                 stops at the border between Romania and Ukraine.
               </div>
             </div>
-
-
           </div>
         </div>
 
         <div className="Image mt-110pxx">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false}
                  poster={`assets/img/player_poster_16.jpg`}
-                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 src={ARTICLE.videos[4]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-10px">
@@ -442,7 +433,6 @@ export default class SturgeonScreen extends BaseScreen {
         </div>
       </Section>
 
-
       <Section className="Section--white-and-blue Section--auto-height">
         <div className="max-width-760">
           <div className="text-center">
@@ -454,7 +444,6 @@ export default class SturgeonScreen extends BaseScreen {
 
       <Section className="Section--blue Section--auto-height">
         <div className="Section__container">
-
           <div className="max-width-760 pb-160px">
             <div className="Paragraph mt-80px">
               <div className="Paragraph__content Paragraph--v2">
@@ -464,7 +453,6 @@ export default class SturgeonScreen extends BaseScreen {
               </div>
             </div>
           </div>
-
         </div>
       </Section>
 

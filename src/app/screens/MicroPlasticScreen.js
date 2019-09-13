@@ -139,7 +139,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--black-and-white Section--auto-height">
         <div className="Image mt-50px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_1.png`}
-                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 src="assets/vid/landing-screen-intro.mp4"
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -222,7 +222,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
         <div className="Image mt-80px">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_img2.png`}
-                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 src="assets/vid/landing-screen-intro.mp4"
                  className="Video--max-width-942 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-20px white">
@@ -432,7 +432,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--white-and-blue Section--auto-height mt-50px">
         <div className="Image">
           <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_2.png`}
-                 sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
+                 src="assets/vid/landing-screen-intro.mp4"
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center white mt-20px">
