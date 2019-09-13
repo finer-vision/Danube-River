@@ -4,6 +4,7 @@ import {asset, map} from "../core/utils";
 import {PARALLAX_ARTWORK, PARALLAX_LAYERS, PARALLAX_SCALE_PADDING} from "../core/consts";
 import {AppContext} from "../context/AppContext";
 import Services from "../services";
+import LazyImage from "./LazyImage";
 
 @AppContext
 export default class ParallaxHeader extends Component {
@@ -41,7 +42,7 @@ export default class ParallaxHeader extends Component {
     if (!this.props.app.isMobile) {
       return {};
     }
-    return {backgroundImage: `url(${asset(`/assets/img/parallax/${this.props.id}/mobile.jpg`)})`};
+    return {backgroundImage: `url(${asset(`assets/img/parallax/${this.props.id}/mobile.jpg`)})`};
   };
 
   #handleResize = () => this.#setScale();
@@ -49,7 +50,7 @@ export default class ParallaxHeader extends Component {
   #setScale = () => this.setState({scale: this.#getScale()});
 
   componentDidMount() {
-    this.#setScale()
+    this.#setScale();
     Services.event.on('screen.resize', this.#handleResize);
   }
 
@@ -72,9 +73,9 @@ export default class ParallaxHeader extends Component {
             {PARALLAX_LAYERS[this.props.id].map((layer, index) => {
               const layerId = PARALLAX_LAYERS[this.props.id].length - (index + 1);
               return (
-                <img
+                <LazyImage
                   key={`layer-${layerId}`}
-                  src={`/assets/img/parallax/${this.props.id}/${layerId}.png`}
+                  src={asset(`assets/img/parallax/${this.props.id}/${layerId}.png`)}
                   className={`layer layer--${layerId}`}
                   style={{transform: this.#getTransform(layer)}}
                 />

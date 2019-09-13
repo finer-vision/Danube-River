@@ -9,6 +9,7 @@ import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
+import LazyImage from "../components/LazyImage";
 
 const ARTICLE = config.articles.find(article => article.id === 'rewilding');
 
@@ -56,7 +57,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--black Section--auto-height pb-80px">
 
         <div className="text-center">
-          <img src={asset('assets/img/img8.png')} className="img-fluid mt-50px"/>
+          <LazyImage src={asset('assets/img/img8.png')} className="img-fluid mt-50px"/>
         </div>
 
         <div className="Section__container">
@@ -180,8 +181,8 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="text-center d-inline-block">
-          <img src={asset('assets/img/img10.png')} className="img-fluid mw-sm-50 sm-float-left"/>
-          <img src={asset('assets/img/img11.png')} className="img-fluid mw-sm-50 sm-float-left"/>
+          <LazyImage src={asset('assets/img/img10.png')} className="img-fluid mw-sm-50 sm-float-left"/>
+          <LazyImage src={asset('assets/img/img11.png')} className="img-fluid mw-sm-50 sm-float-left"/>
         </div>
         <div className="Section__container">
           <div className="max-width-760 mb-80px">
@@ -339,7 +340,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
         </div>
         <div className="text-center mt-50px">
-          <img src={asset('assets/img/frog.jpg')} className="img-fluid"/>
+          <LazyImage src={asset('assets/img/frog.jpg')} className="img-fluid"/>
         </div>
       </Section>
 

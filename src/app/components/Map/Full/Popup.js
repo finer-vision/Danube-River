@@ -4,6 +4,7 @@ import {withRouter} from "react-router-dom";
 import {asset} from "../../../core/utils";
 import {MapContext} from "../../../context/MapContext";
 import {AppContext} from "../../../context/AppContext";
+import LazyImage from "../../LazyImage";
 
 @MapContext
 @withRouter
@@ -50,12 +51,12 @@ export default class Popup extends Component {
           <div className="type-h4">
             Read more
           </div>
-          <img src={asset('/assets/img/arrow.svg')} alt="Read more"/>
+          <LazyImage src={asset('assets/img/arrow.svg')} alt="Read more"/>
         </div>
 
         {get(this.props.map.activeItem, 'images', []).map((image, index) => (
           <div className="MapFull__popup-img" key={`${this.props.map.activeItem.index}.image.${index}`}>
-            <img src={image} alt={this.props.map.activeItem.title}/>
+            <LazyImage src={image} alt={this.props.map.activeItem.title}/>
           </div>
         ))}
       </div>

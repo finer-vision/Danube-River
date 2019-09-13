@@ -2,6 +2,8 @@ import React, {Component, createRef} from "react";
 import PropTypes from "prop-types";
 import Hls from "hls.js";
 import {AppContext} from "../context/AppContext";
+import LazyImage from "./LazyImage";
+import {asset} from "../core/utils";
 
 @AppContext
 export default class Video extends Component {
@@ -25,11 +27,11 @@ export default class Video extends Component {
   };
 
   componentDidMount() {
-    // if (Hls.isSupported() && this.#video.current) {
-    //   const hls = new Hls();
-    //   hls.loadSource(this.props.src);
-    //   hls.attachMedia(this.#video.current);
-    // }
+    if (Hls.isSupported() && this.#video.current) {
+      // const hls = new Hls();
+      // hls.loadSource(this.props.src);
+      // hls.attachMedia(this.#video.current);
+    }
 
     if (!this.props.poster) {
       this.#timeout = setTimeout(() => {
@@ -75,7 +77,7 @@ export default class Video extends Component {
     if (this.state.showPlayButton) {
       return (
         <div className="Video__play-button">
-          <img src={`assets/img/play-button.svg`}/>
+          <LazyImage src={asset('assets/img/play-button.svg')}/>
         </div>
       );
     }

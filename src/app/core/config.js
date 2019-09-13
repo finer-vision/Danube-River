@@ -48,7 +48,7 @@ export default {
       x: 410,
       y: 146,
       images: [
-        asset('/assets/img/articles/facts.svg'),
+        asset('assets/img/articles/facts.svg'),
       ],
       videos: [
         'https://video.cgtn.com/public/2019-09-12/public/video/6358f3e8140a4a0794f5cfb6cf32fa33/6358f3e8140a4a0794f5cfb6cf32fa33.m3u8',
@@ -77,7 +77,7 @@ export default {
       intro: 'Life of the island people',
       description: 'While known for its wildlife and biodiversity, the Danube is also sanctuary to a mosaic of minorities who escaped from neighboring countries for fear of persecution centuries ago. Notable to the region are the Lipovans from Russia, who live in almost isolation and whose villages can only be accessed by boat. They are expert fishermen and canoeists, but these traditions are being threatened by environmental changes and a growing tourism sector. In an increasingly connected world, the livelihood of the Danube\'s river people is contingent on their ability to adapt to modern changes, while living in harmony with nature.',
       images: [
-        asset('/assets/img/articles/4.png'),
+        asset('assets/img/articles/4.png'),
       ],
       x: 570,
       y: 100,

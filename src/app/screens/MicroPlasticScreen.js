@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import Video from "../components/Video";
 import Carousel from "../components/Carousel";
 import config from "../core/config";
+import LazyImage from "../components/LazyImage";
 
 const ARTICLE = config.articles.find(article => article.id === 'microplastics');
 
@@ -62,7 +63,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             <div className="CirclesGrid">
               <div className="CirclesGrid__element">
                 <div className="CirclesGrid__img">
-                  <img src={asset('assets/img/circle_1.png')}/>
+                  <LazyImage src={asset('assets/img/circle_1.png')}/>
                 </div>
                 <div className="CirclesGrid__title">
                   Fragments
@@ -73,7 +74,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
               <div className="CirclesGrid__element">
                 <div className="CirclesGrid__img">
-                  <img src={asset('assets/img/circle_2.png')}/>
+                  <LazyImage src={asset('assets/img/circle_2.png')}/>
                 </div>
                 <div className="CirclesGrid__title">
                   Fibres
@@ -84,7 +85,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
               <div className="CirclesGrid__element">
                 <div className="CirclesGrid__img">
-                  <img src={asset('assets/img/circle_3.png')}/>
+                  <LazyImage src={asset('assets/img/circle_3.png')}/>
                 </div>
                 <div className="CirclesGrid__title">
                   Foam
@@ -95,7 +96,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
               <div className="CirclesGrid__element">
                 <div className="CirclesGrid__img">
-                  <img src={asset('assets/img/circle_4.png')}/>
+                  <LazyImage src={asset('assets/img/circle_4.png')}/>
                 </div>
                 <div className="CirclesGrid__title">
                   Nurdles
@@ -106,7 +107,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
               <div className="CirclesGrid__element">
                 <div className="CirclesGrid__img">
-                  <img src={asset('assets/img/circle_5.png')}/>
+                  <LazyImage src={asset('assets/img/circle_5.png')}/>
                 </div>
                 <div className="CirclesGrid__title">
                   Microbeads
@@ -141,9 +142,13 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--black-and-white Section--auto-height">
         <div className="Image mt-50px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_1.png`}
-                 src={ARTICLE.videos[0]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_1.png')}
+            src={ARTICLE.videos[0]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
       </Section>
@@ -176,8 +181,8 @@ export default class MicroPlasticScreen extends BaseScreen {
             </div>
 
             <div className="Section__column Section__column--desktop-35 text-right">
-              <img src={`assets/img/microplastic_graph.png`}
-                   className="Image__element float-right mb-30px"/>
+              <LazyImage src={`assets/img/microplastic_graph.png`}
+                         className="Image__element float-right mb-30px"/>
             </div>
 
           </div>
@@ -224,9 +229,13 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="Image mt-80px">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_img2.png`}
-                 src={ARTICLE.videos[1]}
-                 className="Video--max-width-942 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_img2.png')}
+            src={ARTICLE.videos[1]}
+            className="Video--max-width-942 Video--cursor-pointer"
           />
           <div className="small-title text-center mt-20px white">
             Dilyana Mihaylova, Marine Plastics Project manager Fauna and Flora International –<br/>show and tell on
@@ -434,9 +443,13 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--white-and-blue Section--auto-height mt-50px">
         <div className="Image">
-          <Video showMuteButton={false} showPlayButton={true} autoPlay={false} poster={`assets/img/player_poster_2.png`}
-                 src={ARTICLE.videos[2]}
-                 className="Video--max-width-1257 Video--cursor-pointer"
+          <Video
+            showMuteButton={false}
+            showPlayButton={true}
+            autoPlay={false}
+            poster={asset('assets/img/player_poster_2.png')}
+            src={ARTICLE.videos[2]}
+            className="Video--max-width-1257 Video--cursor-pointer"
           />
           <div className="small-title text-center white mt-20px">
             Here’s Dilyana’s guide to what you can do

@@ -9,6 +9,7 @@ import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
+import LazyImage from "../components/LazyImage";
 
 const ARTICLE = config.articles.find(article => article.id === 'hydro-power');
 
@@ -132,7 +133,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="max-width-1257 text-center">
-          <img src={asset('assets/img/62dams.png')} className="img-fluid"/>
+          <LazyImage src={asset('assets/img/62dams.png')} className="img-fluid"/>
         </div>
         <div className="Section__container">
 
@@ -237,7 +238,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               <div className="Paragraph__content">
 
                 <div className="float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px">
-                  <img src={asset('/assets/img/ivan.png')} className="img-fluid"/>
+                  <LazyImage src={asset('assets/img/ivan.png')} className="img-fluid"/>
 
                   <div className="small-title text-left mt-10px white">Ulrich Eichelmann, CEO of environmental campaign
                     group Riverwatch
@@ -363,7 +364,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
         <div className="text-center">
-          <img src={asset('assets/img/img7.png')} className="img-fluid"/>
+          <LazyImage src={asset('assets/img/img7.png')} className="img-fluid"/>
         </div>
         <div className="Section__container">
           <div className="max-width-760 pb-40px">

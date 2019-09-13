@@ -3,6 +3,7 @@ import {withRouter} from "react-router-dom";
 import config from "../core/config";
 import {asset} from "../core/utils";
 import {Waypoint} from "react-waypoint";
+import LazyImage from "./LazyImage";
 
 @withRouter
 export default class Footer extends Component {
@@ -58,11 +59,11 @@ export default class Footer extends Component {
             #LifeofaRiver
           </div>
           <div className="Footer__social-links">
-            <img src={asset('/assets/img/social/link.svg')} alt="Share Link"/>
-            <img src={asset('/assets/img/social/instagram.svg')} alt="Share on Instagram"/>
-            <img src={asset('/assets/img/social/twitter.svg')} alt="Share on Twitter"/>
-            <img src={asset('/assets/img/social/facebook.svg')} alt="Share on Facebook"/>
-            <img src={asset('/assets/img/social/chat.png')} alt="Share on Chat"/>
+            <LazyImage src={asset('assets/img/social/link.svg')} alt="Share Link"/>
+            <LazyImage src={asset('assets/img/social/instagram.svg')} alt="Share on Instagram"/>
+            <LazyImage src={asset('assets/img/social/twitter.svg')} alt="Share on Twitter"/>
+            <LazyImage src={asset('assets/img/social/facebook.svg')} alt="Share on Facebook"/>
+            <LazyImage src={asset('assets/img/social/chat.png')} alt="Share on Chat"/>
           </div>
         </div>
 
@@ -78,7 +79,7 @@ export default class Footer extends Component {
             </div>
 
             <div className="Footer__logo">
-              <img src={asset('/assets/img/cgtn-logo-white.png')} alt="CGTN Logo"/>
+              <LazyImage src={asset('assets/img/cgtn-logo-white.png')} alt="CGTN Logo"/>
             </div>
           </div>
 

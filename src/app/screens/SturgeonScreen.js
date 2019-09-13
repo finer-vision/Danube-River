@@ -9,6 +9,7 @@ import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
+import LazyImage from "../components/LazyImage";
 
 const ARTICLE = config.articles.find(article => article.id === 'sturgeon');
 
@@ -64,7 +65,7 @@ export default class SturgeonScreen extends BaseScreen {
           </div>
         </div>
         <div className="text-center">
-          <img src={asset('assets/img/img15.jpg')} className="img-fluid mt-80px"/>
+          <LazyImage src={asset('assets/img/img15.jpg')} className="img-fluid mt-80px"/>
         </div>
         <div className="Section__container">
 
@@ -143,7 +144,7 @@ export default class SturgeonScreen extends BaseScreen {
             </div>
           </div>
           <div className="text-center">
-            <img src={asset('assets/img/fish.png')} className="img-fluid"/>
+            <LazyImage src={asset('assets/img/fish.png')} className="img-fluid"/>
           </div>
 
           <div className="max-width-760">
@@ -313,7 +314,7 @@ export default class SturgeonScreen extends BaseScreen {
 
             <div className="Paragraph mt-50px mb-50px">
               <div className="text-center">
-                <img src={asset('assets/img/img16.jpg')} className="img-fluid"/>
+                <LazyImage src={asset('assets/img/img16.jpg')} className="img-fluid"/>
               </div>
               <div className="Paragraph__content Paragraph--v2 mt-50px">
                 Away from the river, the mafia has a variety of methods to “ethically wash” their wares. A common tactic
@@ -436,7 +437,7 @@ export default class SturgeonScreen extends BaseScreen {
       <Section className="Section--white-and-blue Section--auto-height">
         <div className="max-width-760">
           <div className="text-center">
-            <img src={asset('assets/img/img17.jpg')} className="img-fluid"/>
+            <LazyImage src={asset('assets/img/img17.jpg')} className="img-fluid"/>
           </div>
         </div>
 

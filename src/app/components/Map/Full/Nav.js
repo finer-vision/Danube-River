@@ -3,6 +3,7 @@ import {asset} from "../../../core/utils";
 import {withRouter} from "react-router-dom";
 import config from "../../../core/config";
 import {MapContext} from "../../../context/MapContext";
+import LazyImage from "../../LazyImage";
 
 @withRouter
 @MapContext
@@ -30,7 +31,7 @@ export default class Nav extends Component {
             )}
             <div className={`type-${article.id === this.props.map.activeItem.id ? 'h4' : 'tag'}`}>
               {article.title} {article.id === this.props.map.activeItem.id &&
-            <img src={asset('/assets/img/arrow.svg')} alt={`Read about ${article.title}`}/>}
+            <LazyImage src={asset('assets/img/arrow.svg')} alt={`Read about ${article.title}`}/>}
             </div>
           </div>
         ))}

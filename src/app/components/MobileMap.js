@@ -2,6 +2,7 @@ import React, {Component, createRef} from "react";
 import {withRouter} from "react-router-dom";
 import config from "../core/config";
 import {asset} from "../core/utils";
+import LazyImage from "./LazyImage";
 
 @withRouter
 export default class MobileMap extends Component {
@@ -43,7 +44,7 @@ export default class MobileMap extends Component {
               key={`map.article.${article.id}`}
               ref={this.#articles[index]}
               className="MobileMap__map-article-container"
-              style={{backgroundImage: `url(${asset(`/assets/img/map/segments/mobile/${article.id}.jpg`)})`}}
+              style={{backgroundImage: `url(${asset(`assets/img/map/segments/mobile/${article.id}.jpg`)})`}}
             >
               <div className="MobileMap__map-article">
                 <div className="type-tag">{article.title}</div>
@@ -51,7 +52,7 @@ export default class MobileMap extends Component {
                 <p className="type-p">{article.description}</p>
                 <div className="button" onClick={this.#goToArticle(article)}>
                   <div className="type-h4">{article.title}</div>
-                  <img src={asset('/assets/img/arrow-blue.svg')} alt="Read more"/>
+                  <LazyImage src={asset('assets/img/arrow-blue.svg')} alt="Read more"/>
                 </div>
               </div>
             </div>

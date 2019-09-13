@@ -9,6 +9,7 @@ import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
+import LazyImage from "../components/LazyImage";
 
 const ARTICLE = config.articles.find(article => article.id === 'mila-23');
 
@@ -66,7 +67,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
         </div>
         <div className="text-center mt-30px">
-          <img src={asset('assets/img/mila23.png')} className="img-fluid"/>
+          <LazyImage src={asset('assets/img/mila23.png')} className="img-fluid"/>
         </div>
         <div className="Section__container">
 
@@ -90,7 +91,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--black-and-white Section--auto-height">
         <div className="max-width-1100 mt-50px">
-          <img src={asset('assets/img/birds.png')} className="img-fluid"/>
+          <LazyImage src={asset('assets/img/birds.png')} className="img-fluid"/>
         </div>
       </Section>
 
@@ -177,7 +178,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             </div>
           </div>
           <div className="text-center">
-            <img src={asset('/assets/img/ivan.png')} className="img-fluid"/>
+            <LazyImage src={asset('assets/img/ivan.png')} className="img-fluid"/>
           </div>
 
           <div className="max-width-960">
@@ -188,7 +189,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 has given so many champions to Romania because, until recently, [sport] was the only chance children had
                 to escape the isolation of the Danube Delta and the limited number of options they had for personal
                 development.
-                <img src={asset('/assets/img/ivan.png')} className="img-fluid float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px"/>
+                <LazyImage src={asset('assets/img/ivan.png')} className="img-fluid float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px"/>
 
               </div>
               <div className="Paragraph__content">

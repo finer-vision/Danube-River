@@ -7,6 +7,7 @@ import {getScale, getSegmentCoordinate} from "../utils";
 import {asset} from "../../../core/utils";
 import {MAP, TILE_COORDINATES} from "../consts";
 import {AppContext} from "../../../context/AppContext";
+import LazyImage from "../../LazyImage";
 
 @MapContext
 @AppContext
@@ -44,9 +45,9 @@ export default class MapFull extends Component {
             }}
           >
             {[1, 2, 3, 4, 5].map((segment, index) => (
-              <img
+              <LazyImage
                 key={`map-segment-${segment}`}
-                src={asset(`/assets/img/map/segments/${segment}.jpg`)}
+                src={asset(`assets/img/map/segments/${segment}.jpg`)}
                 className={`MapFull__map-segment MapFull__map-segment--${segment}`}
                 style={{
                   zIndex: 5 - segment,

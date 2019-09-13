@@ -29,5 +29,13 @@ recursive(path.join(srcDirectory, 'assets'), allowedExtensions, (err, files) => 
 
     assets.push(files[i]);
   }
-  fs.writeFileSync(path.join(srcDirectory, 'assets.json'), JSON.stringify(assets, null, 2));
+
+  // Compile JS string
+  let sources = '';
+  for (let i = 0; i < assets.length; i++) {
+    const src = assets[i].replace(/^\//, '');
+    sources += `  '${src}': import('./${src}'),${i < assets.length - 1 ? '\n' : ''}`;
+  }
+
+  fs.writeFileSync(path.join(srcDirectory, 'assets.js'), `export default {\n${sources}\n};\n`);
 });

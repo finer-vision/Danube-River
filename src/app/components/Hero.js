@@ -4,6 +4,7 @@ import {withRouter} from "react-router-dom";
 import {asset} from "../core/utils";
 import ParallaxHeader from "./ParallaxHeader";
 import {AppContext} from "../context/AppContext";
+import LazyImage from "./LazyImage";
 
 @withRouter
 @AppContext
@@ -66,7 +67,7 @@ export default class Hero extends Component {
       <ParallaxHeader id={this.props.parallaxHeaderId}/>
 
       <div className="Hero__logo" onClick={() => this.props.history.push('/')}>
-        <img src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
+        <LazyImage src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
       </div>
 
       <div className="Hero__title">

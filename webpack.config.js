@@ -93,6 +93,12 @@ module.exports = {
           {
             loader: 'file-loader',
           },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: true,
+            },
+          },
         ],
       },
     ],
