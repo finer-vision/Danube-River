@@ -103,4 +103,12 @@
     font-size: rem(25px);
     line-height: rem(30px);
   }
+
+  &--sm-small-type-2 {
+
+    @include mobile {
+      font-size: rem(25px);
+      line-height: rem(30px);
+    }
+  }
 }

@@ -50,7 +50,8 @@ export default class SturgeonScreen extends BaseScreen {
             <div className="Paragraph mt-30px">
 
               <div className="Stats">
-                <div className="Stats__number">100<span className="Stats--small">years old</span></div>
+                <div className="Stats__number">100<span className="Stats--small Stats--sm-small-type-2">years old</span>
+                </div>
                 <div className="Stats__text white">
                   Sturgeon can live to more than 100-years-old
                 </div>
@@ -62,9 +63,11 @@ export default class SturgeonScreen extends BaseScreen {
             </div>
           </div>
 
-          <div className="text-center">
-            <img src={asset('assets/img/img15.jpg')} className="img-fluid mt-80px"/>
-          </div>
+        </div>
+        <div className="text-center">
+          <img src={asset('assets/img/img15.jpg')} className="img-fluid mt-80px"/>
+        </div>
+        <div className="Section__container">
 
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-50px">
@@ -455,7 +458,9 @@ export default class SturgeonScreen extends BaseScreen {
           <div className="max-width-760 pb-160px">
             <div className="Paragraph mt-80px">
               <div className="Paragraph__content Paragraph--v2">
-                Can the sturgeon survive, Maereanu thinks so. With a smile she explains how her team has put tens of thousands of sturgeon back into the Danube – some of which have been found in the Black Sea, confirming their survival.
+                Can the sturgeon survive, Maereanu thinks so. With a smile she explains how her team has put tens of
+                thousands of sturgeon back into the Danube – some of which have been found in the Black Sea, confirming
+                their survival.
               </div>
             </div>
           </div>
