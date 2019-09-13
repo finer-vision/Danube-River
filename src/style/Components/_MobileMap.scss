@@ -1,6 +1,41 @@
 .MobileMap {
+  background-color: $blue-color-100;
+
   &__info {
     background-color: #175256;
+    color: #fff;
     padding: 30px 15px;
+  }
+
+  &__map {
+    background-image: url("./assets/img/map/mobile-zoomed.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 100% auto;
+  }
+
+  &__articles {
+    padding: 50% 15px 30px 15px;
+
+    &-article {
+      text-align: center;
+      background-color: rgba(3, 28, 38, 0.8);
+      color: #fff;
+      padding: 1em;
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .type-tag {
+        color: $primary;
+      }
+
+      .type-h3 {
+        font-family: Tungsten, sans-serif;
+        text-transform: uppercase;
+      }
+    }
   }
 }

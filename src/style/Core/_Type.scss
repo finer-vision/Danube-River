@@ -20,11 +20,11 @@
   }
 
   &-p {
-    @include fluid-type(12px, 16px, $responsive-min, $responsive-max);
+    @include fluid-type(14px, 16px, $responsive-min, $responsive-max);
   }
 
   &-tag {
-    @include fluid-type(10px, 14px, $responsive-min, $responsive-max);
+    font-size: 14px;
   }
 
   &-quote {
