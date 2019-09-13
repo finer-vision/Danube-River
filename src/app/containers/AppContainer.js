@@ -79,7 +79,7 @@ export default class AppContainer extends Component {
 
   async componentDidMount() {
     const isMobile = (new MobileDetect(window.navigator.userAgent)).mobile() !== null;
-    // !isMobile && await preloadAssets(progress => this.setState({loadingProgress: Math.ceil(progress)}));
+    !isMobile && await preloadAssets(progress => this.setState({loadingProgress: Math.ceil(progress)}));
     const mapComponent = await import(`../components/${isMobile ? 'MobileMap' : 'Map/index'}`);
     this.setState({loading: false, isMobile, mapComponent: mapComponent.default});
     window.addEventListener('resize', this.#handleResize);
