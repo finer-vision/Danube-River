@@ -142,14 +142,14 @@ export default class MicroPlasticScreen extends BaseScreen {
                  sources={[{src: asset('assets/vid/landing-screen-intro.mp4'), type: 'video/mp4'}]}
                  className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-20px">
-            Gabor Bordos of Wessling explains what sorts of microplastics were found.
-          </div>
         </div>
       </Section>
 
       <Section className="Section--auto-height">
-        <div className="Section__container mt-50px">
+        <div className="Section__container ">
+          <div className="small-title text-center mt-20px mb-50px">
+            Gabor Bordos of Wessling explains what sorts of microplastics were found.
+          </div>
           <div className="max-width-1257 Section--flex px-50px px-mobile-0">
 
             <div className="Section__column Section__column--desktop-65">
@@ -174,7 +174,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
             <div className="Section__column Section__column--desktop-35 text-right">
               <img src={`assets/img/microplastic_graph.png`}
-                   className="Image__element d-mobile-none float-right mb-30px"/>
+                   className="Image__element float-right mb-30px"/>
             </div>
 
           </div>

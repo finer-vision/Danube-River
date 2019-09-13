@@ -23,7 +23,7 @@
 }
 
 .mt-80px {
-  @include fluid-attr("margin-top", 45px, 80px);
+  @include fluid-attr("margin-top", 35px, 80px);
 }
 
 .mt-110px {
@@ -35,7 +35,7 @@
 }
 
 .mb-30px {
-  @include fluid-attr("margin-bottom", 25px, 30px);
+  @include fluid-attr("margin-bottom", 5px, 30px);
 }
 
 .mb-40px {
@@ -64,6 +64,13 @@
 
 .pb-40px {
   @include fluid-attr("padding-bottom", 45px, 40px);
+}
+
+.pt-lg-50px {
+  padding-top: 50px;
+  @include mobile {
+    padding-top: 0;
+  }
 }
 
 .pb-80px {

@@ -1,7 +1,9 @@
 .text-center {
   text-align: center;
 }
-
+.text-left {
+  text-align: left;
+}
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -36,6 +38,11 @@
     line-height: rem(106px);
     margin-top: -7px;
     margin-right: 10px;
+    @include mobile {
+      font-size: rem(61px);
+      line-height: rem(73px);
+      margin-top: -14px;
+    }
   }
 }
 .primary {
