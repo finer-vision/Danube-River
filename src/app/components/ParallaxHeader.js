@@ -16,22 +16,22 @@ export default class ParallaxHeader extends Component {
   };
 
   #getTransform = layer => {
-    const x = map(this.props.app.scrollY, 0, window.innerHeight, layer.x, layer.end.x);
-    const y = map(this.props.app.scrollY, 0, window.innerHeight, layer.y, layer.end.y);
+    const x = map(this.props.app.scrollY, 0, this.props.app.screenH, layer.x, layer.end.x);
+    const y = map(this.props.app.scrollY, 0, this.props.app.screenH, layer.y, layer.end.y);
     return `translate(${x}px, ${y}px)`;
   };
 
   #getScale = () => {
     let scale = 1;
     if (this.props.app.screenW < this.props.app.screenH) {
-      scale = (1 / PARALLAX_ARTWORK.height) * window.innerHeight;
-      if (PARALLAX_ARTWORK.width * scale < window.innerWidth) {
-        scale = (1 / PARALLAX_ARTWORK.width) * window.innerWidth;
+      scale = (1 / PARALLAX_ARTWORK.height) * this.props.app.screenH;
+      if (PARALLAX_ARTWORK.width * scale < this.props.app.screenW) {
+        scale = (1 / PARALLAX_ARTWORK.width) * this.props.app.screenW;
       }
     } else {
-      scale = (1 / PARALLAX_ARTWORK.width) * window.innerWidth;
-      if (PARALLAX_ARTWORK.height * scale < window.innerHeight) {
-        scale = (1 / PARALLAX_ARTWORK.height) * window.innerHeight;
+      scale = (1 / PARALLAX_ARTWORK.width) * this.props.app.screenW;
+      if (PARALLAX_ARTWORK.height * scale < this.props.app.screenH) {
+        scale = (1 / PARALLAX_ARTWORK.height) * this.props.app.screenH;
       }
     }
     return scale + PARALLAX_SCALE_PADDING;
@@ -64,13 +64,7 @@ export default class ParallaxHeader extends Component {
         {!this.props.app.isMobile && (
           <div
             className="ParallaxHeader__layers"
-            style={{
-              width: `${PARALLAX_ARTWORK.width}px`,
-              height: `${PARALLAX_ARTWORK.height}px`,
-              top: '0px',
-              left: '50%',
-              transform: `scale(${this.state.scale}) translate(-50%, 0%)`,
-            }}
+            style={{transform: `scale(${this.state.scale}) translate(-50%, 0%)`}}
           >
             {PARALLAX_LAYERS[this.props.id].map((layer, index) => {
               const layerId = PARALLAX_LAYERS[this.props.id].length - (index + 1);

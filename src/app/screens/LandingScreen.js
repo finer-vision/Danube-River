@@ -16,7 +16,7 @@ export default class LandingScreen extends BaseScreen {
   };
 
   // Don't lock sections until halfway past the header section, to allow for more of an impactful parallax effect.
-  #handleScroll = () => this.setState({lockSections: this.props.app.scrollY >= window.innerHeight * 0.6});
+  #handleScroll = () => this.setState({lockSections: this.props.app.scrollY >= this.props.app.screenH * 0.6});
 
   componentDidMount() {
     Services.event.on('screen.scroll', this.#handleScroll);
