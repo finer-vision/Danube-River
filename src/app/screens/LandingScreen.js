@@ -5,7 +5,6 @@ import {AppContext} from "../context/AppContext";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Section from "../components/Section";
-import MuteToggle from "../components/MuteToggle";
 import Services from "../services";
 
 @AppContext
@@ -29,8 +28,6 @@ export default class LandingScreen extends BaseScreen {
   render() {
     return (
       <Screen name="Landing" lockSections={this.state.lockSections}>
-        <MuteToggle/>
-
         <Section show={true} className="Section__landing-hero">
           <Hero
             parallax

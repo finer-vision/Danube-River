@@ -9,7 +9,7 @@ import {preloadAssets} from "../core/utils";
 
 export default class AppContainer extends Component {
   state = {
-    muteVideos: true,
+    muteVideos: false,
     loading: true,
     isMobile: false,
     lockScroll: false,
