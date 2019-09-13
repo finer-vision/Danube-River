@@ -24,8 +24,7 @@ export default class AppContainer extends Component {
   #getContext = () => ({
     mapComponent: this.state.mapComponent,
     muteVideos: this.state.muteVideos,
-    // isMobile: this.state.isMobile,
-    isMobile: false,
+    isMobile: this.state.isMobile,
     lockScroll: this.state.lockScroll,
     scrollY: this.state.scrollY,
     screenW: this.state.screenW,
