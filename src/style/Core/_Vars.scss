@@ -14,3 +14,9 @@ $red-color: #EB4535;
 $white-color: #FFF;
 $yellow-color: #F0CD57;
 $black-color: #031C26;
+
+:root {
+  --color-primary: #{$primary};
+  --color-secondary: #{$secondary};
+  --color-yellow: #{$yellow-color};
+}

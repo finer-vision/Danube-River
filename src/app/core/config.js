@@ -1,10 +1,12 @@
 import {asset} from "./utils";
 
+const domElementStyle = getComputedStyle(document.documentElement);
+
 export default {
   color: {
-    primary: '#EB4535',
-    secondary: '#1C1264',
-    yellow: '#F0CD57',
+    primary: domElementStyle && domElementStyle.getPropertyValue('--color-primary'),
+    secondary: domElementStyle && domElementStyle.getPropertyValue('--color-secondary'),
+    yellow: domElementStyle && domElementStyle.getPropertyValue('--color-yellow'),
   },
   articles: [
     {
