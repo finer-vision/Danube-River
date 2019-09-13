@@ -3,11 +3,16 @@ import PropTypes from "prop-types";
 import {asset, map} from "../core/utils";
 import {PARALLAX_ARTWORK, PARALLAX_LAYERS, PARALLAX_SCALE_PADDING} from "../core/consts";
 import {AppContext} from "../context/AppContext";
+import Services from "../services";
 
 @AppContext
 export default class ParallaxHeader extends Component {
   static propTypes = {
     id: PropTypes.string,
+  };
+
+  state = {
+    scale: 1,
   };
 
   #getTransform = layer => {
@@ -39,6 +44,16 @@ export default class ParallaxHeader extends Component {
     return {backgroundImage: `url(${asset(`/assets/img/parallax/${this.props.id}/mobile.jpg`)})`};
   };
 
+  #handleResize = () => this.setState({scale: this.#getScale()});
+
+  componentDidMount() {
+    Services.event.on('screen.resize', this.#handleResize);
+  }
+
+  componentWillUnmount() {
+    Services.event.off('screen.resize', this.#handleResize);
+  }
+
   render() {
     if (!PARALLAX_LAYERS.hasOwnProperty(this.props.id)) {
       return null;
@@ -54,7 +69,7 @@ export default class ParallaxHeader extends Component {
               height: `${PARALLAX_ARTWORK.height}px`,
               top: '0px',
               left: '50%',
-              transform: `scale(${this.#getScale()}) translate(-50%, 0%)`,
+              transform: `scale(${this.state.scale}) translate(-50%, 0%)`,
             }}
           >
             {PARALLAX_LAYERS[this.props.id].map((layer, index) => {
@@ -64,13 +79,7 @@ export default class ParallaxHeader extends Component {
                   key={`layer-${layerId}`}
                   src={`/assets/img/parallax/${this.props.id}/${layerId}.png`}
                   className={`layer layer--${layerId}`}
-                  style={{
-                    top: '0px',
-                    left: '0px',
-                    transform: this.#getTransform(layer),
-                    width: `${layer.width}px`,
-                    height: `${layer.height}px`,
-                  }}
+                  style={{transform: this.#getTransform(layer)}}
                 />
               );
             })}
