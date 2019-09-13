@@ -13,7 +13,7 @@ export default class Footer extends Component {
   #toggleVisible = visible => () => this.setState({visible});
 
   #goToArticle = article => () => {
-    this.props.history.push(`/article/microplastic`);
+    this.props.history.push(`/article/${article.id}`);
   };
 
   render = () => (
