@@ -18,3 +18,9 @@
     @content
   }
 }
+
+@mixin desktop {
+  @media (min-width: $mobile-screen-width + 1) {
+    @content
+  }
+}

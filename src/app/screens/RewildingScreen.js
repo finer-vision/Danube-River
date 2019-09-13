@@ -76,9 +76,9 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
             </div>
 
-            <div className="Paragraph mt-30px">
+            <div className="Paragraph mt-30px d-flex flex-sm-direction-column">
 
-              <div className="Quote Quote--max-width-530">
+              <div className="Quote Quote--max-width-530 flex-order-2 flex-order-lg-1">
                 <span className="quote-open-type-2 primary">“</span>
                 <h2 className="type-h2 type-alert primary">
                   In a normal ecosystem, you have a species above the jackal and that species is the wolf. Nobody likes
@@ -92,7 +92,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 </div>
               </div>
 
-              <div className="Paragraph__content Paragraph--v2 Paragraph--moved-to-left">
+              <div className="Paragraph__content Paragraph--v2 Paragraph--moved-to-left flex-order-1 flex-order-lg-2">
                 Rewilding Europe has chosen the delta as a showcase for its work. Despite being located between three
                 countries with very different governments and various communities, Saavedra believes they can create a
                 complete ecosystem that can be resistant to climate change.
@@ -104,9 +104,22 @@ export default class MicroPlasticScreen extends BaseScreen {
                 land – mining, fracking, whatever – so we have to avoid this.”
                 <br/>
                 <br/>
-                Rewilding is not without its problems, however, some projects such as the return of Jackals have alarmed
-                locals. But Saavedra argues: “In a normal ecosystem, you have a species above the jackal and that
-                species is the wolf. Nobody likes the wolf, but the wolf will be controlling the jackals.”
+                <div className="d-desktop-block d-mobile-none">
+                  Rewilding is not without its problems, however, some projects such as the return of Jackals have
+                  alarmed
+                  locals. But Saavedra argues: “In a normal ecosystem, you have a species above the jackal and that
+                  species is the wolf. Nobody likes the wolf, but the wolf will be controlling the jackals.”
+                </div>
+              </div>
+            </div>
+            <div className="Paragraph">
+              <div className="Paragraph__content Paragraph--v2">
+                <div className="d-mobile-block d-desktop-none">
+                  Rewilding is not without its problems, however, some projects such as the return of Jackals have
+                  alarmed
+                  locals. But Saavedra argues: “In a normal ecosystem, you have a species above the jackal and that
+                  species is the wolf. Nobody likes the wolf, but the wolf will be controlling the jackals.”
+                </div>
               </div>
             </div>
           </div>
@@ -162,10 +175,12 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
             </div>
           </div>
-          <div className="text-center">
-            <img src={asset('assets/img/img10.png')} className="img-fluid"/>
-            <img src={asset('assets/img/img11.png')} className="img-fluid"/>
-          </div>
+        </div>
+        <div className="text-center d-inline-block">
+          <img src={asset('assets/img/img10.png')} className="img-fluid mw-sm-50 sm-float-left"/>
+          <img src={asset('assets/img/img11.png')} className="img-fluid mw-sm-50 sm-float-left"/>
+        </div>
+        <div className="Section__container">
           <div className="max-width-760 mb-80px">
             <div className="Paragraph mt-80px">
               <div className="Paragraph__content Paragraph--v2">
@@ -318,9 +333,10 @@ export default class MicroPlasticScreen extends BaseScreen {
               </div>
             </div>
           </div>
-          <div className="text-center">
-            <img src={asset('assets/img/frog.jpg')} className="img-fluid"/>
-          </div>
+
+        </div>
+        <div className="text-center mt-50px">
+          <img src={asset('assets/img/frog.jpg')} className="img-fluid"/>
         </div>
       </Section>
 

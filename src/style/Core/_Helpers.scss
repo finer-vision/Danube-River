@@ -193,3 +193,46 @@
 .mw-100 {
   max-width: 100% !important;
 }
+
+.flex-sm-direction-column {
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.flex-order-1 {
+  @include mobile {
+    order: 1;
+  }
+}
+
+.flex-order-2 {
+  @include mobile {
+    order: 2;
+  }
+}
+
+.flex-order-lg-1 {
+  @include desktop {
+    order: 1;
+  }
+}
+
+.flex-order-lg-2 {
+  @include desktop {
+    order: 2;
+  }
+}
+.mw-sm-50 {
+  @include mobile {
+    max-width: 50%;
+  }
+}
+.sm-float-left {
+  @include mobile {
+    float: left;
+  }
+}
+.d-inline-block {
+  display: inline-block;
+}
