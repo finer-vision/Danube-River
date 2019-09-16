@@ -22,7 +22,7 @@ export default class Video extends Component {
   };
 
   static defaultProps = {
-    autoPlay: true,
+    autoPlay: false,
     controls: true,
     muted: false,
   };
