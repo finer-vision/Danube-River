@@ -19,10 +19,10 @@ export default class Map extends Component {
 
   state = {
     // @todo replace when finished development
-    activeMap: 'full',
-    activeItem: {...config.articles[0]},
-    // activeMap: 'zoomed',
-    // activeItem: {...DEFAULT_ACTIVE_ITEM},
+    // activeMap: 'full',
+    // activeItem: {...config.articles[0]},
+    activeMap: 'zoomed',
+    activeItem: {...DEFAULT_ACTIVE_ITEM},
     showCloudsAnimation: false,
     visible: false,
   };
