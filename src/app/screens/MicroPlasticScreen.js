@@ -448,9 +448,6 @@ export default class MicroPlasticScreen extends BaseScreen {
             src={ARTICLE.videos[1]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center white mt-20px">
-            Here’s Dilyana’s guide to what you can do
-          </div>
         </div>
       </Section>
 

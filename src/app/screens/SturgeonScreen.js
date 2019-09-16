@@ -209,9 +209,6 @@ export default class SturgeonScreen extends BaseScreen {
             src={ARTICLE.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-10px">
-            sturgeon farm
-          </div>
         </div>
 
         <div className="max-width-760 mb-80px">
@@ -282,9 +279,6 @@ export default class SturgeonScreen extends BaseScreen {
             src={ARTICLE.videos[1]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-10px">
-            Danube enforcement interview
-          </div>
         </div>
 
         <div className="Section__container">
@@ -340,9 +334,6 @@ export default class SturgeonScreen extends BaseScreen {
             src={ARTICLE.videos[2]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-10px">
-            Danube enforcement interview
-          </div>
         </div>
 
         <div className="max-width-760">
@@ -371,9 +362,6 @@ export default class SturgeonScreen extends BaseScreen {
             src={ARTICLE.videos[3]}
             className="Video--max-width-942 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-10px white">
-            UGC from coast guard
-          </div>
         </div>
 
         <div className="Section__container">
@@ -425,9 +413,6 @@ export default class SturgeonScreen extends BaseScreen {
             src={ARTICLE.videos[4]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-10px">
-            interview with Jutta providing solutions
-          </div>
         </div>
 
         <div className="Section__container">
