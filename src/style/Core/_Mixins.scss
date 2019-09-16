@@ -9,10 +9,6 @@
   }
 }
 
-@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
-  @include fluid-attr('font-size', $min-font-size, $max-font-size, $lower-range, $upper-range);
-}
-
 @mixin mobile {
   @media (max-width: $mobile-screen-width) {
     @content

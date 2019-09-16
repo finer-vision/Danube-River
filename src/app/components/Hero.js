@@ -5,6 +5,7 @@ import {asset} from "../core/utils";
 import ParallaxHeader from "./ParallaxHeader";
 import {AppContext} from "../context/AppContext";
 import LazyImage from "./LazyImage";
+import Navigation from "./Navigation";
 
 @withRouter
 @AppContext
@@ -66,9 +67,7 @@ export default class Hero extends Component {
     <div className="Hero" style={this.props.style}>
       <ParallaxHeader id={this.props.parallaxHeaderId}/>
 
-      <div className="Hero__logo" onClick={() => this.props.history.push('/')}>
-        <LazyImage src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
-      </div>
+      <Navigation/>
 
       <div className="Hero__title">
         {this.displayPageTag()}

@@ -67,11 +67,11 @@
       }
 
       .type-h2 {
+        @include fluid-attr("font-size", 35px, 55px);
         font-family: Tungsten, sans-serif;
         margin-bottom: 0.5em;
         letter-spacing: 2px;
         line-height: 1;
-        @include fluid-type(35px, 55px, $responsive-min, $responsive-max);
       }
 
       .button {

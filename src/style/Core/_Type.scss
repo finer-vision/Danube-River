@@ -1,26 +1,26 @@
 .type {
   &-hero {
-    @include fluid-type(50px, 135px, $responsive-min, $responsive-max);
+    @include fluid-attr("font-size", 50px, 135px);
   }
 
   &-h1 {
-    @include fluid-type(25px, 57px, $responsive-min, $responsive-max);
+    @include fluid-attr("font-size", 25px, 57px);
   }
 
   &-h2 {
-    @include fluid-type(20px, 43px, $responsive-min, $responsive-max);
+    @include fluid-attr("font-size", 20px, 43px);
   }
 
   &-h3 {
-    @include fluid-type(25px, 32px, $responsive-min, $responsive-max);
+    @include fluid-attr("font-size", 25px, 32px);
   }
 
   &-h4 {
-    @include fluid-type(20px, 24px, $responsive-min, $responsive-max);
+    @include fluid-attr("font-size", 20px, 24px);
   }
 
   &-p {
-    @include fluid-type(14px, 16px, $responsive-min, $responsive-max);
+    @include fluid-attr("font-size", 14px, 16px);
   }
 
   &-tag {
@@ -34,7 +34,7 @@
     letter-spacing: 1.2px;
     @include fluid-attr("letter-spacing", rem(0), rem(1.2px));
     @include fluid-attr("line-height", rem(37px), rem(50px));
-    @include fluid-type(31px, 43px, $responsive-min, $responsive-max);
+    @include fluid-attr("font-size", 31px, 43px);
   }
 
   &-weight-500 {

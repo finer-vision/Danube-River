@@ -1,0 +1,36 @@
+.Navigation {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em;
+
+  &__items, &__logo {
+    margin-left: auto;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    $color: #fff;
+    @include fluid-attr("font-size", 14px, 16px);
+    font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+    padding: 0.5em;
+
+    &, &:hover, &:focus, &:visited {
+      color: $color;
+      text-decoration: none;
+    }
+
+    &:hover, &--active {
+      background-color: rgba($color, 0.4);
+    }
+  }
+}
