@@ -23,7 +23,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         <Hero
           parallax
           tag="Hydro Power"
-          title="Dam or be dammed"
+          title="The Dam Danube"
           parallaxHeaderId={ARTICLE.id}
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
@@ -69,9 +69,6 @@ export default class MicroPlasticScreen extends BaseScreen {
             src={ARTICLE.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center white mt-20px">
-            DAMS IRON GATES DEBATE
-          </div>
         </div>
 
         <div className="Section__container">
@@ -89,7 +86,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             </div>
           </div>
         </div>
-        <div className="Image mt-80px">
+        <div className="Image mt-30px">
           <Video
             showMuteButton={false}
             showPlayButton={true}
@@ -98,11 +95,6 @@ export default class MicroPlasticScreen extends BaseScreen {
             src={ARTICLE.videos[1]}
             className="Video--max-width-942 Video--cursor-pointer"
           />
-        </div>
-        <div className="Section__container">
-          <div className="small-title text-center white">
-            Gyorgy Vero WWF activist - explaining the main issues with dams
-          </div>
         </div>
       </Section>
 
@@ -189,13 +181,8 @@ export default class MicroPlasticScreen extends BaseScreen {
                 Added to this, there are 700 more dams and weirs on the main tributaries of the Danube. Romania is home
                 to 400 of them and state-owned energy company Hidroelectrica, which provides 30 percent of the country’s
                 energy, has reiterated the importance of hydroelectric power. Indeed, it is fighting retrospective legal
-                action to halt construction of a new dam in the
-              </div>
-            </div>
-
-            <div className="Paragraph">
-              <div className="Paragraph__content Paragraph--v2">
-                Defileul Jiului national park, after campaigners convinced Romainian Courts to stop work on the project.
+                action to halt construction of a new dam in the Defileul Jiului national park, after campaigners
+                convinced Romainian Courts to stop work on the project.
               </div>
             </div>
           </div>
@@ -209,9 +196,6 @@ export default class MicroPlasticScreen extends BaseScreen {
             src={ARTICLE.videos[2]}
             className="Video--max-width-942 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-20px">
-            Hidroelectrica CEO Bogdan Badea NILAY
-          </div>
         </div>
         <div className="Section__container">
 
@@ -226,7 +210,8 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={asset('assets/img/img4.jpg')}>
+      <Section className="Section--background-img Section--height-480 mt-80px"
+               backgroundImg={asset('assets/img/img4.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -329,7 +314,8 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={asset('assets/img/img4.jpg')}>
+      <Section className="Section--background-img Section--height-480 mt-80px"
+               backgroundImg={asset('assets/img/img4.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 5</div>
@@ -400,9 +386,6 @@ export default class MicroPlasticScreen extends BaseScreen {
             src={ARTICLE.videos[3]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title white text-center mt-20px">
-            DONAU-AUEN PARK EXPLAINER
-          </div>
         </div>
 
         <div className="Section__container">
@@ -410,7 +393,8 @@ export default class MicroPlasticScreen extends BaseScreen {
             <div className="Paragraph mt-30px">
               <div className="Paragraph__content Paragraph--v2">
                 Three decades later, the debate is far from over.
-
+                <br/>
+                <br/>
                 But when WWF campaigner Deni Porej and his dam-building father reflect on the costs and benefits of
                 harnessing the river, it’s clear the urge to simply tame the Danube through concrete walls has been
                 replaced by a desire to find solutions less detrimental to nature.

@@ -15,7 +15,6 @@ const ARTICLE = config.articles.find(article => article.id === 'rewilding');
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
-
   render = () => (
     <Screen name="Rewilding">
 
@@ -149,9 +148,6 @@ export default class MicroPlasticScreen extends BaseScreen {
             src={ARTICLE.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center">
-            Cave painting animation
-          </div>
         </div>
         <div className="Section__container">
           <div className="max-width-760 pb-40px">
@@ -197,6 +193,8 @@ export default class MicroPlasticScreen extends BaseScreen {
                 <br/>
                 In the settlement of Letea a procession of safari trucks laden with tourists bumps along sandy tracks
                 past herds of black and bay horses, which are, strictly speaking, feral rather than wild.
+                <br/>
+                <br/>
                 They have lived here for hundreds of years but their numbers bloomed after the closure of communist-era
                 collective farms and a fierce debate has raged about the need to cull or remove some to prevent
                 overgrazing.
@@ -242,25 +240,22 @@ export default class MicroPlasticScreen extends BaseScreen {
           <div className="max-width-760">
             <div className="Paragraph Paragraph--mw-100 mb-50px mt-30px">
               <div className="Paragraph__content">
-                When asked why the Danube has been so conducive to producing successful sportsmen, Patzaichin says: “It
-                has given so many champions to Romania because, until recently, [sport] was the only chance children had
-                to escape the isolation of the Danube Delta and the limited number of options they had for personal
-                development.
-              </div>
-              <div className="Paragraph__content">
-                Their absence was a blow to the ecosystem as other animals thrive as a result of their damming. In 1998,
-                beavers were successfully reintroduced along the Olt River in Romania and from there, they slowly made
-                their way to other rivers in the country’s Covasna county.
+                Their absence was a blow to the ecosystem as other animals thrive as a result of
+                their damming. In 1998, beavers were successfully reintroduced along the Olt River in
+                Romania and from there, they slowly made their way to other rivers in the country’s
+                Covasna county.
                 <br/>
                 <br/>
-                In 2014, the animals were confirmed to have reached the Danube Delta. The number of beavers is believed
-                to be rising as conservationists dismantle dams and flood forests in the area. This creates the perfect
-                conditions for more beavers to arrive and settle in the delta. There are no official figures for beaver
-                numbers since 2014, so the Rewilding Europe team must uncover evidence for themselves.
+                In 2014, the animals were confirmed to have reached the Danube Delta. The number
+                of beavers is believed to be rising as conservationists dismantle dams and flood
+                forests in the area. This creates the perfect conditions for more beavers to arrive and
+                settle in the delta. There are no official figures for beaver numbers since 2014, so the
+                Rewilding Europe team must uncover evidence for themselves.
                 <br/>
                 <br/>
-                Saavedra and Ion set out on a journey to a remotest part of the delta to hunt for clues about the
-                beavers’ return and to find out how successful they have been on their return to the area.
+                Saavedra and Ion set out on a journey to a remotest part of the delta to hunt for
+                clues about the beavers’ return and to find out how successful they have been on
+                their return to the area.
               </div>
             </div>
           </div>
@@ -274,9 +269,6 @@ export default class MicroPlasticScreen extends BaseScreen {
             src={ARTICLE.videos[1]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title white text-center mt-20px">
-            Lost beavers of the Danube Delta
-          </div>
         </div>
       </Section>
 

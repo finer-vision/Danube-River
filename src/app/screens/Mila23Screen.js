@@ -39,9 +39,6 @@ export default class Mila23Screen extends BaseScreen {
             src={ARTICLE.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center white mt-20px">
-            vassili
-          </div>
         </div>
 
         <div className="Section__container">
@@ -135,9 +132,6 @@ export default class Mila23Screen extends BaseScreen {
             src={ARTICLE.videos[1]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title text-center mt-20px">
-            vassili, old believer
-          </div>
         </div>
       </Section>
 
@@ -198,6 +192,8 @@ export default class Mila23Screen extends BaseScreen {
                 <LazyImage src={asset('assets/img/ivan.png')}
                            className="img-fluid float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px"/>
 
+                 <br/>
+                 <br/>
               </div>
               <div className="Paragraph__content">
                 “Also, in order to become a champion, you need to be determined – and living in the waters of the Danube
@@ -327,9 +323,6 @@ export default class Mila23Screen extends BaseScreen {
             src={ARTICLE.videos[2]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
-          <div className="small-title white text-center mt-20px">
-            tourism/ tv mast
-          </div>
         </div>
       </Section>
 
@@ -382,7 +375,6 @@ export default class Mila23Screen extends BaseScreen {
 
             <div className="Paragraph">
               <div className="Paragraph__content Paragraph--v2">
-                <br/>
                 <br/>
                 Wearing a white cap and green apron, Dobri says he’s been fishing for 36 years, and out of his seven
                 children, none will follow his path – all went to Italy to escape poverty. “It’s hard work, it gets cold
