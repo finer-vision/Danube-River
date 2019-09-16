@@ -166,11 +166,12 @@
   text-transform: uppercase;
   letter-spacing: rem(2px);
   line-height: rem(57px);
+  font-family: "Tungsten", sans-serif;
+
   @include mobile {
     font-size: rem(31px);
     line-height: rem(37px);
     letter-spacing: rem(2px);
-    font-family: "Tungsten", sans-serif;
     font-weight: 600;
   }
 }

@@ -297,8 +297,11 @@
     &-links {
       display: flex;
 
-      div {
+      a {
+        color: #fff;
+        text-decoration: none;
         padding: 0 1rem;
+        display: block;
 
         &:first-child {
           padding-left: 0;
@@ -309,7 +312,7 @@
         flex-direction: column;
         text-align: center;
 
-        div {
+        a {
           padding: 0.5em 0;
         }
       }

@@ -59,11 +59,21 @@ export default class Footer extends Component {
             #LifeofaRiver
           </div>
           <div className="Footer__social-links">
-            <LazyImage src={asset('assets/img/social/link.svg')} alt="Share Link"/>
-            <LazyImage src={asset('assets/img/social/instagram.svg')} alt="Share on Instagram"/>
-            <LazyImage src={asset('assets/img/social/twitter.svg')} alt="Share on Twitter"/>
-            <LazyImage src={asset('assets/img/social/facebook.svg')} alt="Share on Facebook"/>
-            <LazyImage src={asset('assets/img/social/chat.png')} alt="Share on Chat"/>
+            <a href="/" target="_blank">
+              <LazyImage src={asset('assets/img/social/link.svg')} alt="Share Link"/>
+            </a>
+            <a href="https://www.instagram.com/cgtn.europe/" target="_blank">
+              <LazyImage src={asset('assets/img/social/instagram.svg')} alt="Share on Instagram"/>
+            </a>
+            <a href="https://twitter.com/CGTNEurope" target="_blank">
+              <LazyImage src={asset('assets/img/social/twitter.svg')} alt="Share on Twitter"/>
+            </a>
+            <a href="https://www.facebook.com/CGTNEurope-1798882800328461/?ref=bookmarks" target="_blank">
+              <LazyImage src={asset('assets/img/social/facebook.svg')} alt="Share on Facebook"/>
+            </a>
+            <a href="https://www.youtube.com/channel/UCj0TppyxzQWm9JbMg3CP8Rg?view_as=subscriber" target="_blank">
+              <LazyImage src={asset('assets/img/social/youtube.svg')} alt="Share on YouTube"/>
+            </a>
           </div>
         </div>
 
@@ -85,15 +95,15 @@ export default class Footer extends Component {
 
           <div className="Footer__small">
             <div className="Footer__small-links type-p">
-              <div>
+              <a href="https://www.cgtn.com/privacy" target="_blank">
                 Terms of use
-              </div>
-              <div>
+              </a>
+              <a href="https://www.cgtn.com/terms-of-use" target="_blank">
                 Copyright
-              </div>
-              <div>
+              </a>
+              <a href="https://www.cgtn.com/copyright" target="_blank">
                 Privacy policy
-              </div>
+              </a>
             </div>
 
             <div className="type-p">
