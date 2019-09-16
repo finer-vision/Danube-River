@@ -69,7 +69,7 @@ export default class Mila23Screen extends BaseScreen {
 
         </div>
         <div className="text-center mt-30px">
-          <LazyImage src={asset('assets/img/mila23.png')} className="img-fluid"/>
+          <LazyImage src={asset('assets/img/mila23.jpg')} className="img-fluid"/>
         </div>
         <div className="Section__container">
 
@@ -93,7 +93,7 @@ export default class Mila23Screen extends BaseScreen {
 
       <Section className="Section--black-and-white Section--auto-height">
         <div className="max-width-1100 mt-50px">
-          <LazyImage src={asset('assets/img/birds.png')} className="img-fluid"/>
+          <LazyImage src={asset('assets/img/birds.jpg')} className="img-fluid"/>
         </div>
       </Section>
 

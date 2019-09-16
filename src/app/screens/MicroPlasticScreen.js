@@ -203,7 +203,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
 
       <Section className="Section--background-img Section--height-480 mt-80px"
-               backgroundImg={asset('assets/img/chapter2.png')}>
+               backgroundImg={asset('assets/img/chapter2.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -314,7 +314,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/chapter2.png')}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/chapter2.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
