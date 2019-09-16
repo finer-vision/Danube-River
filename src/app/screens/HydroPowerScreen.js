@@ -11,7 +11,7 @@ import Hero from "../components/Hero";
 import config from "../core/config";
 import LazyImage from "../components/LazyImage";
 
-const ARTICLE = config.articles.find(article => article.id === 'hydro-power');
+const ARTICLE = config.articles.find(article => article.id === 'hydropower');
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {

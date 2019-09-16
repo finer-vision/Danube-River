@@ -209,7 +209,7 @@ export const PARALLAX_LAYERS = {
       },
     }),
   ],
-  'hydro-power': [
+  'hydropower': [
     layerFactory({
       width: 1800,
       height: 1969,
