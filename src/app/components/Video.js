@@ -1,6 +1,6 @@
-import React, {Component, createRef} from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
-import Hls from "hls.js";
+import ReactPlayer from "react-player";
 import {AppContext} from "../context/AppContext";
 import LazyImage from "./LazyImage";
 import {asset} from "../core/utils";
@@ -14,87 +14,53 @@ export default class Video extends Component {
   static defaultProps = {
     showMuteButton: true,
     autoPlay: true,
+    controls: true,
+    muted: false,
   };
-
-  #container = createRef();
-  #video = createRef();
-  #observer = null;
-  #timeout = null;
 
   state = {
+    initial: true,
     playing: false,
-    showPlayButton: this.props.showPlayButton
+    showPlayButton: this.props.showPlayButton,
   };
 
-  componentDidMount() {
-    if (Hls.isSupported() && this.#video.current && this.props.src) {
-      const hls = new Hls();
-      hls.loadSource(this.props.src);
-      hls.attachMedia(this.#video.current);
+  #togglePlayVideo = () => {
+    if (!this.state.initial) {
+      return;
     }
-
-    if (!this.props.poster) {
-      this.#timeout = setTimeout(() => {
-        this.#observer = new IntersectionObserver(this.#handleEntry, {
-          root: document.querySelector('.Screen'),
-          rootMargin: '0px',
-          threshold: 0.01,
-        });
-        this.#observer.observe(this.#container.current);
-      }, 2000);
-    }
-  }
-
-  componentWillUnmount() {
-    this.#timeout !== null && clearTimeout(this.#timeout);
-    if (!this.props.poster) {
-      if (this.#observer !== null) {
-        this.#observer.unobserve(this.#container.current);
-      }
-    }
-  }
-
-  #handleEntry = async entries => {
-    if (this.props.showMuteButton) {
-      await this.#video.current[entries[0].isIntersecting ? 'play' : 'pause']();
-    }
-    this.#video.current.currentTime = 0;
-  };
-
-  #playVideo = () => {
-    if (this.state.playing && this.props.showPlayButton) {
-
-      this.#video.current.pause();
-      this.setState({playing: false, showPlayButton: true});
-    } else {
-
-      this.#video.current.play();
-      this.setState({playing: true, showPlayButton: false});
-    }
+    this.setState({initial: false, playing: !this.state.playing});
   };
 
   displayPlayButton() {
-    if (this.state.showPlayButton) {
-      return (
-        <div className="Video__play-button">
-          <LazyImage src={asset('assets/img/play-button.svg')}/>
-        </div>
-      );
+    if (!this.state.showPlayButton || !this.state.initial) {
+      return null;
     }
+    if (this.state.playing) {
+      return null;
+    }
+    return (
+      <div className="Video__play-button">
+        <LazyImage src={asset('assets/img/play-button.svg')}/>
+      </div>
+    );
   }
 
   render() {
     return (
-      <div className={`Video ${this.props.className}`} ref={this.#container}>
+      <div className={`Video ${this.props.className}`}>
         {this.displayPlayButton()}
 
-        <video
-          ref={this.#video} src={this.props.src}
-          playsInline
+        <ReactPlayer
+          url={this.props.src}
+          muted={this.props.muted}
+          controls={this.props.controls}
           autoPlay={this.props.autoPlay}
-          muted={this.props.app.muteVideos}
-          onClick={this.#playVideo}
-          poster={this.props.poster}
+          playing={this.state.playing}
+          onPlay={() => this.setState({playing: true})}
+          onPause={() => this.setState({playing: false})}
+          onClick={this.#togglePlayVideo}
+          width="100%"
+          height="100%"
         />
       </div>
     );
