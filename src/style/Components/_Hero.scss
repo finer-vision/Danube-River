@@ -1,9 +1,10 @@
 .Hero {
+  @include fluid-attr("padding", 15px, 40px);
   display: flex;
   flex-direction: column;
   background-size: cover;
   background-position: 50% 100%;
-  @include fluid-attr("padding", 15px, 40px);
+  height: 100vh !important;
 
   &__title {
     z-index: 10;
