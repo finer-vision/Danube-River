@@ -57,14 +57,14 @@
 }
 
 .font-grotesk {
-  font-family: "Aktiv Grotesk Ex Trial", Arial, sans-serif;
+  font-family: "Aktiv GroteskEx Bd", Arial, sans-serif;
 }
 
 .quote-open {
   display: block;
   margin-bottom: -40px;
   font-size: rem(135);
-  font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+  font-family: "Aktiv GroteskEx Bd", sans-serif;
   letter-spacing: 1.2px;
   line-height: rem(121px);
   color: $dark-blue-color;
@@ -74,7 +74,7 @@
   display: block;
   margin-bottom: -20px;
   font-size: rem(57px);
-  font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+  font-family: "Aktiv GroteskEx Bd", sans-serif;
   letter-spacing: 1.2px;
   line-height: rem(68px);
   font-weight: 500;
@@ -86,7 +86,7 @@
   letter-spacing: rem(2px);
   font-weight: 500;
   text-transform: uppercase;
-  font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+  font-family: "Aktiv GroteskEx Bd", sans-serif;
 
   &--type-2 {
     text-transform: none;
@@ -97,7 +97,6 @@
   font-size: rem(14px);
   line-height: rem(15px);
   letter-spacing: initial;
-  font-family: "Din", sans-serif;
 }
 
 .custom-text-styles {
@@ -150,7 +149,7 @@
   font-size: rem(14px);
   font-weight: 400;
   letter-spacing: 2px;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Aktiv GroteskEx Bd", sans-serif;
   color: #031C26;
   text-align: center;
   line-height: rem(15px);
@@ -160,12 +159,11 @@
   letter-spacing: rem(3px);
   font-size: rem(14px);
   text-transform: uppercase;
-  font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+  font-family: "Aktiv GroteskEx Bd", sans-serif;
 }
 
 .big-title {
   text-transform: uppercase;
-  font-family: "Lucida Grande", sans-serif;
   letter-spacing: rem(2px);
   line-height: rem(57px);
   @include mobile {

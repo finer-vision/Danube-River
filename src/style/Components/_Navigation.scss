@@ -24,7 +24,7 @@ $padding: 2em;
   &__item {
     $color: #fff;
     @include fluid-attr("font-size", 14px, 16px);
-    font-family: "Aktiv Grotesk Ex Trial", sans-serif;
+    font-family: "Aktiv GroteskEx Bd", sans-serif;
     padding: 0.5em;
 
     &, &:hover, &:focus, &:visited {
