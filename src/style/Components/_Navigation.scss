@@ -1,3 +1,5 @@
+$padding: 2em;
+
 .Navigation {
   position: absolute;
   display: flex;
@@ -6,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2em;
+  padding: $padding;
   z-index: $z-index-navigation;
 
   &__items, &__logo {
@@ -32,6 +34,47 @@
 
     &:hover, &--active {
       background-color: rgba($color, 0.4);
+    }
+  }
+}
+
+.Screen--mobile {
+  .Navigation {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    &--open {
+      height: 100vh;
+      background-color: $blue-color;
+
+      .Navigation__items {
+        display: flex;
+      }
+    }
+
+    &__toggle {
+      position: absolute;
+      cursor: pointer;
+      top: $padding;
+      left: $padding;
+    }
+
+    &__items, &__logo {
+      margin-left: 0;
+    }
+
+    &__items {
+      display: none;
+      flex-direction: column;
+      margin-top: auto;
+      margin-bottom: auto;
+      height: 100%;
+      justify-content: space-evenly;
+      max-height: 400px;
+    }
+
+    &__logo {
+      margin-bottom: 1em;
     }
   }
 }
