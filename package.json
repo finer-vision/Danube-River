@@ -17,7 +17,8 @@
     "react-slick": "^0.25.2",
     "react-waypoint": "^9.0.2",
     "recursive-readdir": "^2.2.2",
-    "regenerator-runtime": "^0.13.2"
+    "regenerator-runtime": "^0.13.2",
+    "video-react": "^0.14.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",

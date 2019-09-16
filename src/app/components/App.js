@@ -10,6 +10,7 @@ const Mila23Screen = lazy(() => import(/* webpackPrefetch: true, webpackChunkNam
 const HydroPowerScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "HydroPowerScreen" */ "../screens/HydroPowerScreen"));
 const RewildingScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "RewildingScreen" */ "../screens/RewildingScreen"));
 const SturgeonScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "SturgeonScreen" */ "../screens/SturgeonScreen"));
+const AboutScreen = lazy(() => import(/* webpackPrefetch: true, webpackChunkName: "AboutScreen" */ "../screens/AboutScreen"));
 
 const Screen = Component => props => <Component {...props}/>;
 
@@ -35,6 +36,7 @@ export default class App extends Component {
         <Route exact path="/article/hydro-power" render={Screen(HydroPowerScreen)}/>
         <Route exact path="/article/rewilding" render={Screen(RewildingScreen)}/>
         <Route exact path="/article/sturgeon" render={Screen(SturgeonScreen)}/>
+        <Route exact path="/about" render={Screen(AboutScreen)}/>
         <Route render={Screen(NotFoundScreen)}/>
       </Switch>
     </Suspense>

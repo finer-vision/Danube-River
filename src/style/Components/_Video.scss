@@ -1,13 +1,28 @@
 .Video {
   position: relative;
 
-  &__play-button {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    @include mobile {
-      transform: translate(-50%, -50%) scale(0.6);
+  .video-react-big-play-button {
+    $size: 148px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border: none;
+    border-radius: 0;
+    background-image: url("./assets/img/play-button.svg");
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+    background-position: 50%;
+    width: $size;
+    height: $size;
+
+    &:before {
+      display: none;
+
+      .video-react-control-text {
+        display: none;
+      }
     }
   }
 
