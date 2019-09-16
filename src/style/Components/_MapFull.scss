@@ -101,6 +101,7 @@
     animation: fade-in 1s ease-out forwards;
     animation-delay: 1s;
 
+
     &--0 {
       transform: translate(4vw, 17vh);
     }
@@ -213,6 +214,7 @@
 
     &-label {
       position: absolute;
+      cursor: pointer;
       left: 5%;
       transform: translate(-50%, -25%);
       animation: pop-in-label 1s ease-out forwards;
@@ -222,6 +224,10 @@
       @include fluid-attr("padding-right", 10px, 20px);
       @include fluid-attr("padding-left", 10px, 20px);
       @include fluid-attr("padding-bottom", 2px, 5px);
+
+      &:hover {
+        background-color: lighten($primary, 5%);
+      }
 
       .type-h4 {
         color: #fff;

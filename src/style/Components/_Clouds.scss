@@ -6,7 +6,7 @@
   left: 0;
   z-index: 5;
   filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
-  background-color: rgba(89, 169, 255, 1);
+  background-color: $clouds-color;
   opacity: 0;
   animation: clouds 3s linear forwards;
 
@@ -16,11 +16,11 @@
     }
 
     35% {
-      background-color: rgba(89, 169, 255, 1);
+      background-color: rgba($clouds-color, 1);
     }
 
     75%, 100% {
-      background-color: rgba(89, 169, 255, 0);
+      background-color: rgba($clouds-color, 0);
     }
   }
 
