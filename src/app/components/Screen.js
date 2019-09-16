@@ -2,6 +2,7 @@ import React, {Component, createRef} from "react";
 import PropTypes from "prop-types";
 import {withRouter} from "react-router-dom";
 import {AppContext} from "../context/AppContext";
+import Navigation from "./Navigation";
 
 @AppContext
 @withRouter
@@ -31,6 +32,7 @@ export default class Screen extends Component {
         ${this.props.app.isMobile ? 'Screen--mobile' : ''}
       `}
     >
+      <Navigation/>
       {this.props.children}
     </div>
   );

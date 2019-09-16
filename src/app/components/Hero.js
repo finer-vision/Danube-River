@@ -1,11 +1,8 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {withRouter} from "react-router-dom";
-import {asset} from "../core/utils";
 import ParallaxHeader from "./ParallaxHeader";
 import {AppContext} from "../context/AppContext";
-import LazyImage from "./LazyImage";
-import Navigation from "./Navigation";
 
 @withRouter
 @AppContext
@@ -66,8 +63,6 @@ export default class Hero extends Component {
   render = () => (
     <div className="Hero" style={this.props.style}>
       <ParallaxHeader id={this.props.parallaxHeaderId}/>
-
-      <Navigation/>
 
       <div className="Hero__title">
         {this.displayPageTag()}

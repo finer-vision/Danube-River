@@ -7,6 +7,7 @@
   left: 0;
   width: 100%;
   padding: 2em;
+  z-index: $z-index-navigation;
 
   &__items, &__logo {
     margin-left: auto;

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Full-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation-mobile-closed" transform="translate(-264.000000, -16.000000)">
+            <g id="Group-10" transform="translate(264.000000, 16.000000)">
+                <rect id="Rectangle" fill-opacity="0.4" fill="#FFFFFF" x="0" y="0" width="40" height="40" rx="2"></rect>
+                <g id="Group-8" transform="translate(9.000000, 10.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                    <path d="M0,3.5 C2.19671398,5.83333333 4.21829626,7 6.06474685,7 C7.91119743,7 9.64267103,5.83333333 11.2591677,3.5 C12.9206862,1.16666667 14.6521598,-4.4408921e-16 16.4535885,-4.4408921e-16 C18.2550171,-4.4408921e-16 20.103821,1.16666667 22,3.5" id="Line-4"></path>
+                    <path d="M0,16.5 C2.19671398,18.8333333 4.21829626,20 6.06474685,20 C7.91119743,20 9.64267103,18.8333333 11.2591677,16.5 C12.9206862,14.1666667 14.6521598,13 16.4535885,13 C18.2550171,13 20.103821,14.1666667 22,16.5" id="Line-4-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

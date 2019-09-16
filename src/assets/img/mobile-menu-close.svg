@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Full-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation-mobile-open" transform="translate(-264.000000, -16.000000)">
+            <g id="Group-10" transform="translate(264.000000, 16.000000)">
+                <rect id="Rectangle" fill-opacity="0.4" fill="#FFFFFF" x="0" y="0" width="40" height="40" rx="2"></rect>
+                <path d="M8,8 L31.3345238,31.3345238" id="Line" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M8,8 L31.3345238,31.3345238" id="Line" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(19.667262, 19.667262) rotate(-270.000000) translate(-19.667262, -19.667262) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
