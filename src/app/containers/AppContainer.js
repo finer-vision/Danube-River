@@ -13,6 +13,7 @@ export default class AppContainer extends Component {
     loading: true,
     isMobile: false,
     lockScroll: false,
+    debug: window.location.search === '?debug/',
     mapComponent: null,
     screen: null,
     loadingProgress: 0,
@@ -26,6 +27,7 @@ export default class AppContainer extends Component {
     muteVideos: this.state.muteVideos,
     isMobile: this.state.isMobile,
     lockScroll: this.state.lockScroll,
+    debug: this.state.debug,
     scrollY: this.state.scrollY,
     screenW: this.state.screenW,
     screenH: this.state.screenH,
@@ -79,7 +81,7 @@ export default class AppContainer extends Component {
 
   async componentDidMount() {
     const isMobile = (new MobileDetect(window.navigator.userAgent)).mobile() !== null;
-    // !isMobile && await preloadAssets(progress => this.setState({loadingProgress: Math.ceil(progress)}));
+    !this.state.debug && !isMobile && await preloadAssets(progress => this.setState({loadingProgress: Math.ceil(progress)}));
     const mapComponent = await import(`../components/${isMobile ? 'MobileMap' : 'Map/index'}`);
     this.setState({loading: false, isMobile, mapComponent: mapComponent.default});
     window.addEventListener('resize', this.#handleResize);

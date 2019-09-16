@@ -28,7 +28,7 @@ export default class LandingScreen extends BaseScreen {
   render() {
     return (
       <Screen name="Landing" lockSections={this.state.lockSections}>
-        <Section show={true} className="Section__landing-hero">
+        <Section show={false} className="Section__landing-hero">
           <Hero
             parallax
             tag="The Danube"

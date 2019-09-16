@@ -30,13 +30,19 @@ export default class MapZoomed extends Component {
 
   #map = createRef();
 
+// <ellipse id="Mila23" cx="849" cy="313" rx="20" ry="19"></ellipse>
+// <ellipse id="Rewilding" cx="761" cy="343" rx="20" ry="19"></ellipse>
+// <ellipse id="Hydropower" cx="430" cy="372" rx="20" ry="19"></ellipse>
+// <ellipse id="Microplastics" cx="196" cy="107" rx="20" ry="19"></ellipse>
+// <ellipse id="Sturgeon" cx="20" cy="19" rx="20" ry="19"></ellipse>
+
   state = {
     hotSpots: [
-      {active: false, x: 20 + HOT_SPOT_OFFSET_X, y: 25, tag: config.articles[0].title, title: config.articles[0].intro},
+      {active: false, x: 250 + HOT_SPOT_OFFSET_X, y: 72, tag: config.articles[0].title, title: config.articles[0].intro},
       {
         active: false,
-        x: 250 + HOT_SPOT_OFFSET_X,
-        y: 72,
+        x: 430 + HOT_SPOT_OFFSET_X,
+        y: 170,
         tag: config.articles[1].title,
         title: config.articles[1].intro
       },
