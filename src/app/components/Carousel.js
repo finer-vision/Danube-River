@@ -63,7 +63,6 @@ export default class Carousel extends React.Component {
   };
 
   render() {
-    console.log(this.state.activeIndex);
     return (
       <div className="container">
         <Slider {...this.state.settings} beforeChange={this.#handleBeforeChange}>

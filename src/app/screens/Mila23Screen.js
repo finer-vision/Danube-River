@@ -194,13 +194,13 @@ export default class Mila23Screen extends BaseScreen {
               showMuteButton={false}
               showPlayButton={true}
               autoPlay={false}
-              poster={asset('assets/img/player_poster_3.jpg')}
+              poster={asset('assets/img/How the Danube shaped a champion.jpg')}
               src={ARTICLE.videos[2]}
               className="Video--max-width-1257 Video--cursor-pointer"
             />
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-30px">
             <LazyImage src={asset('assets/img/ivan.png')} className="img-fluid"/>
           </div>
 

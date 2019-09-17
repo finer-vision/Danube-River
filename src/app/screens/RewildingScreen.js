@@ -9,7 +9,7 @@ import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
-import LazyImage from "../components/LazyImage";
+import LazyImage from "../components/LazyImage"
 import CarouselContent from "../components/CarouselContent";
 
 const ARTICLE = config.articles.find(article => article.id === 'rewilding');

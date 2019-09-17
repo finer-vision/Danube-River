@@ -88,7 +88,6 @@ export default {
       videos: [
         'https://video.cgtn.com/public/2019-09-17/public/video/5a2d3b1200c44283b03b9bd5de6e9f4a/5a2d3b1200c44283b03b9bd5de6e9f4a.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/e6e2676fdebd4147bc3cb3d1e9a5a7be/e6e2676fdebd4147bc3cb3d1e9a5a7be.m3u8',
-        'https://video.cgtn.com/public/2019-09-12/public/video/ a4b6a2f482b24e7d8104d2bc3e8201f9/ a4b6a2f482b24e7d8104d2bc3e8201f9.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/a4b6a2f482b24e7d8104d2bc3e8201f9/a4b6a2f482b24e7d8104d2bc3e8201f9.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/026cadc79a70427fb6a2d7bebdda53a5/026cadc79a70427fb6a2d7bebdda53a5.m3u8',
       ],
