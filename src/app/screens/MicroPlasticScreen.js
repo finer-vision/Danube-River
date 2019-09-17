@@ -7,7 +7,6 @@ import Hero from "../components/Hero";
 import {asset} from "../core/utils";
 import Footer from "../components/Footer";
 import Video from "../components/Video";
-import Carousel from "../components/Carousel";
 import config from "../core/config";
 import LazyImage from "../components/LazyImage";
 
@@ -15,13 +14,14 @@ const ARTICLE = config.articles.find(article => article.id === 'microplastics');
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
+  article = ARTICLE;
 
   render = () => (
     <Screen name="HydroPower">
       <Section>
         <Hero
           parallax
-          parallaxHeaderId={ARTICLE.id}
+          parallaxHeaderId={this.article.id}
           tag="Microplastics"
           title="Small thing, big problem"
           pageTitleType="type-single-page"
@@ -147,7 +147,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_1.jpg')}
-            src={ARTICLE.videos[0]}
+            src={this.article.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -432,7 +432,8 @@ export default class MicroPlasticScreen extends BaseScreen {
             <div className="Stats Stats--v2 mt-50px">
               <div className="Stats__number Stats--big">300,000<span className="Stats--small">tons</span></div>
             </div>
-            <h4 className="type-h4 mt-30px mb-30px">Up to this amount of microplastics are emitted in the EU every year’</h4>
+            <h4 className="type-h4 mt-30px mb-30px">Up to this amount of microplastics are emitted in the EU every
+              year’</h4>
             <div className="Paragraph">
               <div className="Paragraph__content Paragraph--v2">
                 So, some of the world’s brightest minds have been focusing on tackling the issue and pressure is growing
@@ -452,7 +453,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_2.jpg')}
-            src={ARTICLE.videos[1]}
+            src={this.article.videos[1]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>

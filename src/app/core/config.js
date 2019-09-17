@@ -26,6 +26,16 @@ export default {
         'https://video.cgtn.com/public/2019-09-12/public/video/8cb9d39dc24c40d4865569ab98d5a780/8cb9d39dc24c40d4865569ab98d5a780.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/0a90386da3484e0186ce67bfdf1a6a13/0a90386da3484e0186ce67bfdf1a6a13.m3u8',
       ],
+      metaData: [
+        {
+          type: 'title',
+          content: 'Danube dinosaur: Sturgeon facing extinction from caviar mafia',
+        },
+        {
+          type: 'description',
+          content: 'The Danube river had one of the largest populations of the fish, but it is now under threat from dams, pollution and overfishing.',
+        },
+      ],
     },
     {
       index: 1,
@@ -38,6 +48,16 @@ export default {
       videos: [
         'https://video.cgtn.com/public/2019-09-12/public/video/a3318b17e0dc4e9d8190e5e21d4fb1b8/a3318b17e0dc4e9d8190e5e21d4fb1b8.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/002bef0fa18e4cc689dee77c306d340e/002bef0fa18e4cc689dee77c306d340e.m3u8',
+      ],
+      metaData: [
+        {
+          type: 'title',
+          content: 'Microplastics: Invisible pollution in the Danube river',
+        },
+        {
+          type: 'description',
+          content: 'A battle is on to combat the waste caused by tiny plastic particles.',
+        },
       ],
     },
     {
@@ -57,6 +77,16 @@ export default {
         'https://video.cgtn.com/public/2019-09-12/public/video/ddd33b5fd6bf42099b0105f0094c539d/ddd33b5fd6bf42099b0105f0094c539d.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/1828475facf44114884956a3f95832ca/1828475facf44114884956a3f95832ca.m3u8',
       ],
+      metaData: [
+        {
+          type: 'title',
+          content: 'Dams on the Danube: Good or bad?',
+        },
+        {
+          type: 'description',
+          content: 'There are 62 dams along the Danube, which affect fish, birds, soil quality and water pollution.',
+        },
+      ],
     },
     {
       index: 3,
@@ -72,6 +102,16 @@ export default {
       videos: [
         'https://video.cgtn.com/public/2019-09-12/public/video/2c466686708d4652a0b423ff92ad0666/2c466686708d4652a0b423ff92ad0666.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/ea022371bcf14fb793461e94a3fce863/ea022371bcf14fb793461e94a3fce863.m3u8',
+      ],
+      metaData: [
+        {
+          type: 'title',
+          content: 'Rewilding: Bringing back animal species to the Danube',
+        },
+        {
+          type: 'description',
+          content: 'Where the Danube flows into the Black Sea lies Europe’s largest wetland. Here, animals are being reintroduced by scientists to restore a balanced ecosystem.',
+        },
       ],
     },
     {
@@ -90,6 +130,16 @@ export default {
         'https://video.cgtn.com/public/2019-09-12/public/video/e6e2676fdebd4147bc3cb3d1e9a5a7be/e6e2676fdebd4147bc3cb3d1e9a5a7be.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/a4b6a2f482b24e7d8104d2bc3e8201f9/a4b6a2f482b24e7d8104d2bc3e8201f9.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/026cadc79a70427fb6a2d7bebdda53a5/026cadc79a70427fb6a2d7bebdda53a5.m3u8',
+      ],
+      metaData: [
+        {
+          type: 'title',
+          content: 'Mila 23: Changing life of the Danube’s river people',
+        },
+        {
+          type: 'description',
+          content: 'The Danube is sanctuary to persecuted minorities who escaped from neighboring countries, notably Russia’s Lipovans, who are expert fishermen and canoeists.',
+        },
       ],
     },
   ],

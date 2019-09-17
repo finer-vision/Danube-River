@@ -5,7 +5,6 @@ import {AppContext} from "../context/AppContext";
 import Section from "../components/Section";
 import {asset} from "../core/utils";
 import Video from "../components/Video";
-import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
@@ -15,6 +14,7 @@ const ARTICLE = config.articles.find(article => article.id === 'hydropower');
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
+  article = ARTICLE;
 
   render = () => (
     <Screen name="HydroPower">
@@ -24,7 +24,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           parallax
           tag="Hydropower"
           title="The Dam Danube"
-          parallaxHeaderId={ARTICLE.id}
+          parallaxHeaderId={this.article.id}
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
         />
@@ -66,7 +66,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_6.jpg')}
-            src={ARTICLE.videos[0]}
+            src={this.article.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -92,7 +92,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_7.jpg')}
-            src={ARTICLE.videos[1]}
+            src={this.article.videos[1]}
             className="Video--max-width-942 Video--cursor-pointer"
           />
         </div>
@@ -200,7 +200,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_9.jpg')}
-            src={ARTICLE.videos[2]}
+            src={this.article.videos[2]}
             className="Video--max-width-942 Video--cursor-pointer"
           />
         </div>
@@ -406,7 +406,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_10.jpg')}
-            src={ARTICLE.videos[3]}
+            src={this.article.videos[3]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>

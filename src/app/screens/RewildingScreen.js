@@ -16,6 +16,8 @@ const ARTICLE = config.articles.find(article => article.id === 'rewilding');
 
 @AppContext
 export default class MicroPlasticScreen extends BaseScreen {
+  article = ARTICLE;
+
   render = () => (
     <Screen name="Rewilding">
 
@@ -24,7 +26,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           parallax
           tag="Rewilding"
           title="Back from the dead"
-          parallaxHeaderId={ARTICLE.id}
+          parallaxHeaderId={this.article.id}
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
         />
@@ -153,7 +155,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_11.jpg')}
-            src={ARTICLE.videos[0]}
+            src={this.article.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -309,7 +311,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_33.jpg')}
-            src={ARTICLE.videos[1]}
+            src={this.article.videos[1]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>

@@ -24,6 +24,11 @@ export default class LandingScreen extends BaseScreen {
   #handleMapChange = activeMap => this.setState({activeMap});
 
   componentDidMount() {
+    document.title = 'Danube River';
+    const metaDescriptionTag = document.querySelector('meta[name="description"]');
+    if (metaDescriptionTag) {
+      metaDescriptionTag.content = "Explore the story of the Danube – Europe's second longest river, after the Volga.";
+    }
     Services.event.on('screen.scroll', this.#handleScroll);
     Services.event.on('map.section.change', this.#handleMapSectionChange);
     Services.event.on('map.change', this.#handleMapChange);

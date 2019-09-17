@@ -15,6 +15,8 @@ const ARTICLE = config.articles.find(article => article.id === 'sturgeon');
 
 @AppContext
 export default class SturgeonScreen extends BaseScreen {
+  article = ARTICLE;
+
   render = () => (
     <Screen name="Rewilding">
       <Section>
@@ -22,7 +24,7 @@ export default class SturgeonScreen extends BaseScreen {
           parallax
           tag="Sturgeon"
           title="Caviar mafia vs Danube dinosaur"
-          parallaxHeaderId={ARTICLE.id}
+          parallaxHeaderId={this.article.id}
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
         />
@@ -236,7 +238,7 @@ export default class SturgeonScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster12.jpg')}
-            src={ARTICLE.videos[0]}
+            src={this.article.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -305,7 +307,7 @@ export default class SturgeonScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_13.jpg')}
-            src={ARTICLE.videos[1]}
+            src={this.article.videos[1]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -373,7 +375,7 @@ export default class SturgeonScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_16.jpg')}
-            src={ARTICLE.videos[2]}
+            src={this.article.videos[2]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -441,7 +443,7 @@ export default class SturgeonScreen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_14.jpg')}
-            src={ARTICLE.videos[3]}
+            src={this.article.videos[3]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>

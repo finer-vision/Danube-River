@@ -15,6 +15,8 @@ const ARTICLE = config.articles.find(article => article.id === 'mila-23');
 
 @AppContext
 export default class Mila23Screen extends BaseScreen {
+  article = ARTICLE;
+
   render = () => (
     <Screen name="Mila23">
       <Section show={true}>
@@ -22,7 +24,7 @@ export default class Mila23Screen extends BaseScreen {
           parallax
           tag="Mila 23"
           title="Life of the island people"
-          parallaxHeaderId={ARTICLE.id}
+          parallaxHeaderId={this.article.id}
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
         />
@@ -36,7 +38,7 @@ export default class Mila23Screen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_4.jpg')}
-            src={ARTICLE.videos[0]}
+            src={this.article.videos[0]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -139,7 +141,7 @@ export default class Mila23Screen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_5.jpg')}
-            src={ARTICLE.videos[1]}
+            src={this.article.videos[1]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
@@ -201,7 +203,7 @@ export default class Mila23Screen extends BaseScreen {
               showPlayButton={true}
               autoPlay={false}
               poster={asset('assets/img/How the Danube shaped a champion.jpg')}
-              src={ARTICLE.videos[2]}
+              src={this.article.videos[2]}
               className="Video--max-width-1257 Video--cursor-pointer"
             />
           </div>
@@ -373,7 +375,7 @@ export default class Mila23Screen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_3.jpg')}
-            src={ARTICLE.videos[3]}
+            src={this.article.videos[3]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
