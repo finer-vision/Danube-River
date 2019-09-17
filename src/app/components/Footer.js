@@ -85,7 +85,7 @@ export default class Footer extends Component {
             </div>
 
             <div className="Footer__logo">
-              <LazyImage src={asset('assets/img/cgtn-logo-white.png')} alt="CGTN Logo"/>
+              <LazyImage src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
             </div>
           </div>
 

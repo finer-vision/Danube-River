@@ -34,7 +34,10 @@ export default class LandingScreen extends BaseScreen {
   render() {
     return (
       <Screen name="Landing" lockSections={this.state.lockSections}>
-        <Section show={this.state.mapSection === 'zoomed'} className="Section__landing-hero">
+        <Section
+          show={this.state.mapSection === 'zoomed'}
+          className="Section__landing-hero"
+        >
           <Hero
             parallax
             tag="The Danube"
@@ -43,7 +46,7 @@ export default class LandingScreen extends BaseScreen {
           />
         </Section>
 
-        <Section show={true} name="map">
+        <Section name="map">
           {createElement(this.props.app.mapComponent)}
         </Section>
 

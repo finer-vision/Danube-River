@@ -72,6 +72,7 @@
     transform: translate(0%, 100%);
     opacity: 0;
     text-decoration: none;
+    height: 100%;
 
     @keyframes article-in {
       50%, 100% {
@@ -268,6 +269,8 @@
     }
 
     .type-h1 {
+      font-family: Tungsten, sans-serif;
+      text-transform: uppercase;
       font-weight: bold;
       color: #fff;
     }
@@ -328,5 +331,6 @@
   .Footer__article {
     opacity: 1;
     transform: none;
+    height: auto;
   }
 }
