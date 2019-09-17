@@ -25,10 +25,10 @@ export default class Footer extends Component {
       <div className="Footer__articles">
         <Link className="Footer__article" to="/about">
           <div className="type-tag text-center text-uppercase">
-            Introduction
+            The river
           </div>
           <div className="type-h4 text-center">
-            About the Danube
+            More on the Danube
           </div>
         </Link>
         {config.articles.map(article => (
