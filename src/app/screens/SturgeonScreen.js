@@ -95,8 +95,11 @@ export default class SturgeonScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480"
-               backgroundImg={asset('assets/img/Sturgeon-chapter2.jpg')}>
+      <Section
+        className="Section--background-img Section--height-480"
+        backgroundImg={asset('assets/img/Sturgeon-chapter2.jpg')}
+
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -148,7 +151,7 @@ export default class SturgeonScreen extends BaseScreen {
               <div className="Paragraph__content Paragraph--v2">
                 so plentiful farmers would use it as pig feed and mothers gave it to their sick children as medicine.
               </div>
-              <h4 className="type-h4 mt-65px mb-30px">
+              <h4 className="type-h4 mt-30px">
                 Biggest sturgeon ever caught was 1,571 kg (3,463 lb) and 7.2 m (24 ft) long.
               </h4>
             </div>
@@ -272,17 +275,16 @@ export default class SturgeonScreen extends BaseScreen {
               <br/>
               <br/>
               While aquacultural farms were initially hailed as a solution for the industry, some are reportedly
-              providing
+              providing cover for the caviar mafia. TRAFFIC, the wildlife trade monitoring network, produced a report on
+              caviar, which notes that certain farms work with poachers “informing them when the restocking takes place
+              and when not to poach to be able to prove restocking has occurred.”
+              <br/>
+              <br/>
             </div>
           </div>
 
           <div className="Paragraph">
             <div className="Paragraph__content Paragraph--v2">
-              cover for the caviar mafia. TRAFFIC, the wildlife trade monitoring network, produced a report on caviar,
-              which notes that certain farms work with poachers “informing them when the restocking takes place and when
-              not to poach to be able to prove restocking has occurred.”
-              <br/>
-              <br/>
               Poaching along the Danube takes many forms – often those involved are far from mafiosi, but rather
               impoverished or opportunistic locals who have for generations lived off the sturgeon and its eggs.
               <br/>
@@ -307,6 +309,19 @@ export default class SturgeonScreen extends BaseScreen {
 
         <div className="Section__container">
           <div className="max-width-760">
+            <div className="Quote Quote--relative">
+              <span className="quote-open-type-2 primary">“</span>
+              <h2 className="type-h2 type-alert primary">
+                Traditional fishermen are impoverished, and many poach to sustain themselves
+              </h2>
+              <div className="quote-author quote-author--type-2 primary mt-10px">
+                IVAN JARIC
+              </div>
+              <div className="quote-author-position black mt-10px">
+                Sturgeon conservation researcher
+              </div>
+            </div>
+
             <div className="Paragraph mt-80px">
               <div className="Paragraph__content Paragraph--v2 mt-50px">
                 “Due to the decline of sturgeon fishing and catch of many other species, traditional fishermen [in the
@@ -354,7 +369,7 @@ export default class SturgeonScreen extends BaseScreen {
             showMuteButton={false}
             showPlayButton={true}
             autoPlay={false}
-            poster={asset('assets/img/player_poster_14.jpg')}
+            poster={asset('assets/img/player_poster_16.jpg')}
             src={ARTICLE.videos[2]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
@@ -377,20 +392,9 @@ export default class SturgeonScreen extends BaseScreen {
           </div>
         </div>
 
-        <div className="Image mt-80px">
-          <Video
-            showMuteButton={false}
-            showPlayButton={true}
-            autoPlay={false}
-            poster={asset('assets/img/player_poster_15.jpg')}
-            src={ARTICLE.videos[3]}
-            className="Video--max-width-942 Video--cursor-pointer"
-          />
-        </div>
-
         <div className="Section__container">
           <div className="max-width-760 mb-80px">
-            <div className="Paragraph mt-80px">
+            <div className="Paragraph mt-30px">
               <div className="Paragraph__content Paragraph--v2">
                 Caviar trafficking doesn’t occur in isolation – the same gangs that smuggle caviar have also been linked
                 to weapons and drugs smuggling.
@@ -433,8 +437,8 @@ export default class SturgeonScreen extends BaseScreen {
             showMuteButton={false}
             showPlayButton={true}
             autoPlay={false}
-            poster={asset('assets/img/player_poster_16.jpg')}
-            src={ARTICLE.videos[4]}
+            poster={asset('assets/img/player_poster_14.jpg')}
+            src={ARTICLE.videos[3]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
