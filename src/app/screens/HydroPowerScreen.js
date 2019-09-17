@@ -210,8 +210,10 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px"
-               backgroundImg={asset('assets/img/img4.jpg')}>
+      <Section
+        className="Section--background-img Section--height-480 mt-80px"
+        backgroundImg={asset('assets/img/4_2.jpg')}
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -233,7 +235,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               <div className="Paragraph__content">
 
                 <div className="float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px">
-                  <LazyImage src={asset('assets/img/ivan.jpg')} className="img-fluid"/>
+                  <LazyImage src={asset('assets/img/Ulrich.jpg')} className="img-fluid"/>
 
                   <div className="small-title text-left mt-10px white">Ulrich Eichelmann, CEO of environmental campaign
                     group Riverwatch
@@ -264,7 +266,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img4.jpg')}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/4_3.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 4</div>
