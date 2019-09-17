@@ -245,14 +245,6 @@ export default class MicroPlasticScreen extends BaseScreen {
               content: <CarouselContent {...config.carouselContent.rewilding[6]}/>,
             },
           ]}/>
-          <div className="Paragraph mt-80px">
-            <div className="Paragraph__content Paragraph--v2 text-center">
-              There are 18 grazing near Sfantu Gheorghe on the Romanian side of the delta.
-              Benefits to the ecosystem: Through their grazing, the growing number of Tauros in the delta are gradually
-              creating a biodiversity-rich mosaic landscape that benefits other species such as wild boar, golden jackal
-              and various rodents.
-            </div>
-          </div>
         </div>
       </Section>
 
