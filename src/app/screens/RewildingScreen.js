@@ -19,7 +19,7 @@ export default class MicroPlasticScreen extends BaseScreen {
   render = () => (
     <Screen name="Rewilding">
 
-      <Section show={false}>
+      <Section>
         <Hero
           parallax
           tag="Rewilding"
@@ -30,7 +30,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         />
       </Section>
 
-      <Section className="Section--auto-height Section--black" show={false}>
+      <Section className="Section--auto-height Section--black">
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-185px">
@@ -54,7 +54,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--black Section--auto-height pb-80px" show={false}>
+      <Section className="Section--black Section--auto-height pb-80px">
 
         <div className="text-center">
           <LazyImage src={asset('assets/img/img8.jpg')} className="img-fluid mt-50px"/>
@@ -131,7 +131,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
 
       <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img9.jpg')}
-               show={false}>
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>

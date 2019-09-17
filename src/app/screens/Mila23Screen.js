@@ -126,7 +126,8 @@ export default class Mila23Screen extends BaseScreen {
         <div className="Image mt-50px">
           <div className="max-width-760">
             <div className="Paragraph__content">
-              That has not be welcomed news for all. As Vassili puts it, there are now too many people for too few fish.
+              That has not been welcomed news for all. As Vassili puts it, there are now too many people for too few
+              fish.
             </div>
           </div>
 
@@ -187,6 +188,18 @@ export default class Mila23Screen extends BaseScreen {
               </div>
             </div>
           </div>
+
+          <div className="Image">
+            <Video
+              showMuteButton={false}
+              showPlayButton={true}
+              autoPlay={false}
+              poster={asset('assets/img/player_poster_3.jpg')}
+              src={ARTICLE.videos[2]}
+              className="Video--max-width-1257 Video--cursor-pointer"
+            />
+          </div>
+
           <div className="text-center">
             <LazyImage src={asset('assets/img/ivan.png')} className="img-fluid"/>
           </div>
@@ -340,7 +353,7 @@ export default class Mila23Screen extends BaseScreen {
             showPlayButton={true}
             autoPlay={false}
             poster={asset('assets/img/player_poster_3.jpg')}
-            src={ARTICLE.videos[2]}
+            src={ARTICLE.videos[3]}
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
