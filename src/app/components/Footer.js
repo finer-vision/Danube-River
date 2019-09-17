@@ -23,14 +23,6 @@ export default class Footer extends Component {
       </div>
 
       <div className="Footer__articles">
-        <Link className="Footer__article" to="/about">
-          <div className="type-tag text-center text-uppercase">
-            The river
-          </div>
-          <div className="type-h4 text-center">
-            More on the Danube
-          </div>
-        </Link>
         {config.articles.map(article => (
           <Link key={`footer.article.${article.id}`} className="Footer__article" to={`/article/${article.id}`}>
             <div className="type-tag text-center text-uppercase">
@@ -41,6 +33,14 @@ export default class Footer extends Component {
             </div>
           </Link>
         ))}
+        <Link className="Footer__article" to="/about">
+          <div className="type-tag text-center text-uppercase">
+            The river
+          </div>
+          <div className="type-h4 text-center">
+            More on the Danube
+          </div>
+        </Link>
       </div>
 
       <div className="Footer__wave">
