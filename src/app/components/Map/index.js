@@ -110,7 +110,7 @@ export default class Map extends Component {
     this.setState({showCloudsAnimation: true});
     this.#timeout = setTimeout(() => {
       this.setState({activeMap});
-
+      Services.event.emit('map.section.change', activeMap === 'zoomed' ? 'zoomed' : config.articles[0].id);
       this.#timeout = setTimeout(() => {
         this.setState({showCloudsAnimation: false});
       }, CLOUDS_ANIMATION_TIME * (1 - MAP_SWAP_AFTER_ANIMATION_PROGRESS));

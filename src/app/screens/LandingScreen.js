@@ -11,7 +11,7 @@ import config from "../core/config";
 @AppContext
 export default class LandingScreen extends BaseScreen {
   state = {
-    mapSection: config.articles[0].id,
+    mapSection: 'zoomed',
     mapComponent: null,
     lockSections: false,
   };
@@ -34,7 +34,7 @@ export default class LandingScreen extends BaseScreen {
   render() {
     return (
       <Screen name="Landing" lockSections={this.state.lockSections}>
-        <Section show={true} className="Section__landing-hero">
+        <Section show={this.state.mapSection === 'zoomed'} className="Section__landing-hero">
           <Hero
             parallax
             tag="The Danube"
