@@ -66,6 +66,10 @@
   @include fluid-attr("padding-bottom", 45px, 40px);
 }
 
+.pt-40px {
+  @include fluid-attr("padding-top", 45px, 40px);
+}
+
 .pt-lg-50px {
   padding-top: 50px;
   @include mobile {
@@ -75,6 +79,10 @@
 
 .pb-80px {
   @include fluid-attr("padding-bottom", 45px, 80px);
+}
+
+.pt-80px {
+  @include fluid-attr("padding-top", 45px, 80px);
 }
 
 .pt-40px {

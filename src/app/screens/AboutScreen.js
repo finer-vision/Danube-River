@@ -27,7 +27,7 @@ export default class AboutScreen extends BaseScreen {
         />
       </Section>
 
-      <Section className="Section--auto-height Section--black pb-80px">
+      <Section className="Section--auto-height Section--black pb-40px">
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-185px">
@@ -118,6 +118,15 @@ export default class AboutScreen extends BaseScreen {
                 Danube River, committed to managing it sustainably and equitably.
               </div>
             </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="Section--auto-height Section--blue-100 pb-40px">
+        <div className="max-width-760 pt-40px">
+          <div className="Paragraph__content">
+            One of the world's great rivers, loved, exploited, powerful but vulnerable, is a test case for our ability
+            to cooperate and to nurture, rather than destroy our natural environment.
           </div>
         </div>
       </Section>
