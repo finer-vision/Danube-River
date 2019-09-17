@@ -124,6 +124,15 @@ export default class Mila23Screen extends BaseScreen {
 
       <Section className="Section--auto-height">
         <div className="Image mt-50px">
+          <div className="max-width-760">
+            <div className="Paragraph__content">
+              That has not be welcomed news for all. As Vassili puts it, there are now too many people for too few fish.
+            </div>
+          </div>
+          
+          <br/>
+          <br/>
+
           <Video
             showMuteButton={false}
             showPlayButton={true}
@@ -284,7 +293,7 @@ export default class Mila23Screen extends BaseScreen {
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
-            <h1 className="type-h1 big-title-type-2">REMOTE GLOBALIZATION</h1>
+            <h1 className="type-h1 big-title-type-2">AN UNCERTAIN FUTURE</h1>
           </div>
         </div>
       </Section>
@@ -293,7 +302,11 @@ export default class Mila23Screen extends BaseScreen {
         <div className="Section__container">
           <div className="max-width-760">
             <h4 className="type-h4 mt-80px">
-              Nowadays, Mila 23 has a minimarket and a bar, just metres from where fishermen still bring in the fish
+              The tourism industry is booming, but that has created tensions with the traditional way of life in this
+              remote corner of Romania.
+              <br/>
+              <br/>
+              Nowadays, Mila 23 has a minimarket and a bar, just meters from where fishermen still bring in the fish
               they have caught in their traditional tubular ‘fyke’ nets: carp, pike, perch and catfish. Bright
               blue-and-white traditional homes cluster along the dull-green river, captured on camera by tourists who
               come here for a piece of history.
