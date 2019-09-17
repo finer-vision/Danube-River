@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="148px" height="148px" viewBox="0 0 148 148" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <circle id="path-1" cx="36" cy="36" r="36"></circle>
+    <filter x="-83.3%" y="-83.3%" width="266.7%" height="266.7%" filterUnits="objectBoundingBox" id="filter-2">
+      <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+      <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+      <feColorMatrix values="0 0 0 0 0.0117647059   0 0 0 0 0.109803922   0 0 0 0 0.149019608  0 0 0 0.4 0"
+                     type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+    </filter>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Carousel-design" transform="translate(-52.000000, -226.000000)">
+      <g id="Group-36" transform="translate(-314.000000, 80.000000)">
+        <g id="Group-Copy" transform="translate(404.000000, 184.000000)">
+          <g id="Group-11">
+            <g id="Oval">
+              <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+              <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+          </g>
+          <g id="Glyph-/-arrows-/-action-/-black" transform="translate(26.000000, 29.000000)" fill="#000000"
+             fill-rule="nonzero">
+            <path
+              d="M13.5457505,0.300403301 L19.6995967,6.45424946 C20.1001344,6.85478719 20.1001344,7.50418717 19.6995967,7.9047249 L19.6995967,7.9047249 L13.5457505,14.0585711 C13.1452128,14.4591088 12.4958128,14.4591088 12.0952751,14.0585711 C11.6947374,13.6580333 11.6947374,13.0086333 12.0952751,12.6080956 L12.0952751,12.6080956 L16.498,8.205 L1.02564103,8.20512821 C0.459195128,8.20512821 0,7.74593308 0,7.17948718 C0,6.61304128 0.459195128,6.15384615 1.02564103,6.15384615 L16.498,6.153 L12.0952751,1.75087875 C11.6947374,1.35034101 11.6947374,0.700941036 12.0952751,0.300403301 C12.4958128,-0.100134434 13.1452128,-0.100134434 13.5457505,0.300403301 Z"
+              id="Combined-Shape"
+              transform="translate(10.000000, 7.179487) scale(-1, 1) translate(-10.000000, -7.179487) "></path>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

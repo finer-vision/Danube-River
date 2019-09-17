@@ -7,20 +7,20 @@ import {asset} from "../core/utils";
 const NextArrow = props => (
   <div
     className={props.className}
-    style={{...props.style, display: "block", background: "red"}}
+    style={{...props.style}}
     onClick={props.onClick}
   >
-    <LazyImage src={'assets/img/right_arrow.svg'}/>
+    <LazyImage src={'assets/img/carousel_arrow.svg'}/>
   </div>
 );
 
 const PrevArrow = props => (
   <div
     className={props.className}
-    style={{...props.style, display: "block", background: "green"}}
+    style={{...props.style}}
     onClick={props.onClick}
   >
-    <LazyImage src={'assets/img/left_arrow.svg'}/>
+    <LazyImage src={'assets/img/carousel_arrow.svg'}/>
   </div>
 );
 

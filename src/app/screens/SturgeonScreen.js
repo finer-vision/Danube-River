@@ -17,7 +17,7 @@ const ARTICLE = config.articles.find(article => article.id === 'sturgeon');
 export default class SturgeonScreen extends BaseScreen {
   render = () => (
     <Screen name="Rewilding">
-      <Section show={true}>
+      <Section show={false}>
         <Hero
           parallax
           tag="Sturgeon"
@@ -28,7 +28,7 @@ export default class SturgeonScreen extends BaseScreen {
         />
       </Section>
 
-      <Section className="Section--auto-height Section--black pb-80px">
+      <Section className="Section--auto-height Section--black pb-80px" show={false}>
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-185px">
@@ -94,8 +94,8 @@ export default class SturgeonScreen extends BaseScreen {
           </div>
         </div>
       </Section>
-      
-      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/Sturgeon-chapter2.jpg')}>
+
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/Sturgeon-chapter2.jpg')} show={false}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -106,6 +106,7 @@ export default class SturgeonScreen extends BaseScreen {
 
       <Section className="Section--auto-height pb-80px">
         <div className="Section__container">
+          {/*
           <div className="max-width-760">
             <div className="Paragraph mt-80px">
               <h4 className="type-h4 mb-30px">
@@ -155,8 +156,10 @@ export default class SturgeonScreen extends BaseScreen {
           <div className="text-center">
             <LazyImage src={asset('assets/img/fish.png')} className="img-fluid"/>
           </div>
+          */}
 
           <div className="max-width-760">
+            {/*
             <div className="Paragraph mb-50px mt-50px">
               <div className="Paragraph__content">
                 It was only in the early 20th century, due to pollution and dams, that the sturgeon population began to
@@ -173,6 +176,14 @@ export default class SturgeonScreen extends BaseScreen {
                 mafia” had been born.
               </div>
             </div>
+            */}
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
 
             <Carousel imagesData={[
               {imgUrl: asset('assets/img/Sturgeon in Odessa_s Privoz_ market - S.Bushuev_WWF Ukraine(2).jpg'), imgTitle: 'image01'},
