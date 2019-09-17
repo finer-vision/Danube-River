@@ -135,7 +135,8 @@ export default class Mila23Screen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px" backgroundImg={asset('assets/img/img1.jpg')}>
+      <Section className="Section--background-img Section--height-480 mt-80px"
+               backgroundImg={asset('assets/img/img1.jpg')}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -189,11 +190,12 @@ export default class Mila23Screen extends BaseScreen {
                 has given so many champions to Romania because, until recently, [sport] was the only chance children had
                 to escape the isolation of the Danube Delta and the limited number of options they had for personal
                 development.
-                <LazyImage src={asset('assets/img/ivan.png')}
-                           className="img-fluid float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px"/>
-
-                 <br/>
-                 <br/>
+                <LazyImage
+                  src={asset('assets/img/ivan_2.jpg')}
+                  className="img-fluid float-md-right mw-sm-100 mw-md-300 mb-50px mt-30px ml-20px"
+                />
+                <br/>
+                <br/>
               </div>
               <div className="Paragraph__content">
                 “Also, in order to become a champion, you need to be determined – and living in the waters of the Danube

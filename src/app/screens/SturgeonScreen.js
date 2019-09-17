@@ -94,6 +94,15 @@ export default class SturgeonScreen extends BaseScreen {
           </div>
         </div>
       </Section>
+      
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/Sturgeon-chapter2.jpg')}>
+        <div className="Section__container">
+          <div className="Section__background-img-flex">
+            <div className="small-title-type2 primary mb-30px">Chapter 2</div>
+            <h1 className="type-h1 big-title-type-2">CAVIAR MAFIA</h1>
+          </div>
+        </div>
+      </Section>
 
       <Section className="Section--auto-height pb-80px">
         <div className="Section__container">
