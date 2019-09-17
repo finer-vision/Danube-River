@@ -60,6 +60,8 @@ export default class Map extends Component {
       direction = 'down';
     }
 
+    console.log(direction);
+
     // Handle the "zoomed" map behaviour.
     if (this.state.activeMap === 'zoomed') {
       // Allow user to scroll up and out of map when the map is in it's initial "zoomed" state.
@@ -68,7 +70,7 @@ export default class Map extends Component {
       // When the user scrolls, zoom into the map and go to the first active item.
       if (direction === 'down') {
         this.#setActiveMap('full');
-        this.setState({activeItem: {...DEFAULT_ACTIVE_ITEM}});
+        this.#setActiveItem({...DEFAULT_ACTIVE_ITEM});
       }
     }
 
@@ -90,10 +92,10 @@ export default class Map extends Component {
       if (direction === 'down' && this.state.activeItem.index + 1 > config.articles.length - 1) {
         this.props.app.toggleLockScroll(false);
         this.#setActiveMap('zoomed');
-        this.setState({activeItem: {...DEFAULT_ACTIVE_ITEM}});
+        this.#setActiveItem({...DEFAULT_ACTIVE_ITEM});
       }
 
-      this.setState({activeItem: {...config.articles[nextIndex]}});
+      this.#setActiveItem({...config.articles[nextIndex]});
     }
   };
 
@@ -109,8 +111,8 @@ export default class Map extends Component {
     // 2. Just before halfway through clouds animation, set activeMap.
     this.setState({showCloudsAnimation: true});
     this.#timeout = setTimeout(() => {
+      Services.event.emit('map.change', activeMap);
       this.setState({activeMap});
-      Services.event.emit('map.section.change', activeMap === 'zoomed' ? 'zoomed' : config.articles[0].id);
       this.#timeout = setTimeout(() => {
         this.setState({showCloudsAnimation: false});
       }, CLOUDS_ANIMATION_TIME * (1 - MAP_SWAP_AFTER_ANIMATION_PROGRESS));
@@ -136,7 +138,7 @@ export default class Map extends Component {
     this.#clearWaypointDelayTimeout();
     this.#waypointDelayTimeout = setTimeout(() => {
       this.props.app.toggleLockScroll(visible);
-      this.setState({visible: visible});
+      this.setState({visible});
     }, this.#waypointDelay);
   };
 

@@ -133,7 +133,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section
         parallax={{
           width: 1440,
-          height: 480,
+          height: 800,
         }}
         className="Section--background-img Section--height-480"
         backgroundImg={asset('assets/img/img9.jpg')}
@@ -257,7 +257,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section
         parallax={{
           width: 1440,
-          height: 480,
+          height: 800,
         }}
         className="Section--background-img Section--height-480"
         backgroundImg={asset('assets/img/img12.jpg')}
@@ -395,7 +395,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section
         parallax={{
           width: 1440,
-          height: 480,
+          height: 800,
         }}
         className="Section--background-img Section--height-480"
         backgroundImg={asset('assets/img/img14.jpg')}

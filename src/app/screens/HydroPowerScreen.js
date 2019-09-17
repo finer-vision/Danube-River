@@ -22,7 +22,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section show={true}>
         <Hero
           parallax
-          tag="Hydro Power"
+          tag="Hydropower"
           title="The Dam Danube"
           parallaxHeaderId={ARTICLE.id}
           pageTitleType="type-single-page"

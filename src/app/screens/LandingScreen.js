@@ -11,7 +11,8 @@ import config from "../core/config";
 @AppContext
 export default class LandingScreen extends BaseScreen {
   state = {
-    mapSection: 'zoomed',
+    activeMap: 'zoomed',
+    mapSection: config.articles[0].id,
     mapComponent: null,
     lockSections: false,
   };
@@ -21,14 +22,18 @@ export default class LandingScreen extends BaseScreen {
 
   #handleMapSectionChange = mapSection => this.setState({mapSection});
 
+  #handleMapChange = activeMap => this.setState({activeMap});
+
   componentDidMount() {
     Services.event.on('screen.scroll', this.#handleScroll);
     Services.event.on('map.section.change', this.#handleMapSectionChange);
+    Services.event.on('map.change', this.#handleMapChange);
   }
 
   componentWillUnmount() {
     Services.event.off('screen.scroll', this.#handleScroll);
     Services.event.off('map.section.change', this.#handleMapSectionChange);
+    Services.event.off('map.change', this.#handleMapChange);
   }
 
   render() {
