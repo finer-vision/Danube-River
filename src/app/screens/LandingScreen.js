@@ -6,10 +6,12 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import Section from "../components/Section";
 import Services from "../services";
+import config from "../core/config";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
   state = {
+    mapSection: config.articles[0].id,
     mapComponent: null,
     lockSections: false,
   };
@@ -17,12 +19,16 @@ export default class LandingScreen extends BaseScreen {
   // Don't lock sections until halfway past the header section, to allow for more of an impactful parallax effect.
   #handleScroll = () => this.setState({lockSections: this.props.app.scrollY >= this.props.app.screenH * 0.6});
 
+  #handleMapSectionChange = mapSection => this.setState({mapSection});
+
   componentDidMount() {
     Services.event.on('screen.scroll', this.#handleScroll);
+    Services.event.on('map.section.change', this.#handleMapSectionChange);
   }
 
   componentWillUnmount() {
     Services.event.off('screen.scroll', this.#handleScroll);
+    Services.event.off('map.section.change', this.#handleMapSectionChange);
   }
 
   render() {
@@ -41,7 +47,10 @@ export default class LandingScreen extends BaseScreen {
           {createElement(this.props.app.mapComponent)}
         </Section>
 
-        <Section show={true} className="Footer__section">
+        <Section
+          show={!this.props.app.isMobile && this.state.mapSection === config.articles[config.articles.length - 1].id}
+          className="Footer__section"
+        >
           <Footer/>
         </Section>
       </Screen>

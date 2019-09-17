@@ -8,7 +8,12 @@ import config from "../../core/config";
 import {clamp} from "../../core/utils";
 import {AppContext} from "../../context/AppContext";
 import Services from "../../services";
-import {CLOUDS_ANIMATION_TIME, MAP_SWAP_AFTER_ANIMATION_PROGRESS, SCROLL_THROTTLING, DEFAULT_ACTIVE_ITEM} from "./consts";
+import {
+  CLOUDS_ANIMATION_TIME,
+  DEFAULT_ACTIVE_ITEM,
+  MAP_SWAP_AFTER_ANIMATION_PROGRESS,
+  SCROLL_THROTTLING
+} from "./consts";
 
 @AppContext
 export default class Map extends Component {
@@ -19,10 +24,10 @@ export default class Map extends Component {
 
   state = {
     // @todo replace when finished development
-    // activeMap: 'full',
-    // activeItem: {...config.articles[0]},
-    activeMap: 'zoomed',
-    activeItem: {...DEFAULT_ACTIVE_ITEM},
+    activeMap: 'full',
+    activeItem: {...config.articles[0]},
+    // activeMap: 'zoomed',
+    // activeItem: {...DEFAULT_ACTIVE_ITEM},
     showCloudsAnimation: false,
     visible: false,
   };
@@ -114,6 +119,7 @@ export default class Map extends Component {
 
   #setActiveItem = activeItem => {
     this.setState({activeItem});
+    Services.event.emit('map.section.change', activeItem.id);
   };
 
   #handleHotSpotClick = async index => {
