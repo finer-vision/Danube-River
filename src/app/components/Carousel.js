@@ -29,6 +29,7 @@ export default class Carousel extends React.Component {
     imagesData: PropTypes.arrayOf(PropTypes.shape({
       imgUrl: PropTypes.string,
       imgTitle: PropTypes.string,
+      content: PropTypes.element,
     })),
   };
 
@@ -41,35 +42,41 @@ export default class Carousel extends React.Component {
     ],
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    activeIndex: 0,
+    settings: {
+      className: 'center',
+      centerMode: true,
+      infinite: true,
+      centerPadding: '0px',
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 500,
+      adaptiveHeight: true,
+      nextArrow: <NextArrow/>,
+      prevArrow: <PrevArrow/>,
+    },
+  };
 
-    this.state = {
-      settings: {
-        className: 'center',
-        centerMode: true,
-        infinite: true,
-        centerPadding: '0px',
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        speed: 500,
-        adaptiveHeight: true,
-        nextArrow: <NextArrow/>,
-        prevArrow: <PrevArrow/>,
-      },
-    };
-  }
+  #handleBeforeChange = (oldIndex, newIndex) => {
+    this.setState({activeIndex: newIndex});
+  };
 
   render() {
+    console.log(this.state.activeIndex);
     return (
       <div className="container">
-        <Slider {...this.state.settings}>
+        <Slider {...this.state.settings} beforeChange={this.#handleBeforeChange}>
           {this.props.imagesData.map((imgList, index) => (
             <div className="slideWrapper" key={index}>
               <LazyImage className="slideImage" src={imgList.imgUrl} title={imgList.imgTitle}/>
             </div>
           ))}
         </Slider>
+
+        <div className="carouse-content">
+          {this.props.imagesData[this.state.activeIndex].content && this.props.imagesData[this.state.activeIndex].content}
+        </div>
       </div>
     );
   }

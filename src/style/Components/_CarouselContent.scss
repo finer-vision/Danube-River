@@ -1,0 +1,15 @@
+.CarouselContent {
+  text-align: center;
+
+  &__title {
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+    font-weight: bold;
+  }
+
+  &__description {
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+}

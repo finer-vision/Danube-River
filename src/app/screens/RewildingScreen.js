@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
 import LazyImage from "../components/LazyImage";
+import CarouselContent from "../components/CarouselContent";
 
 const ARTICLE = config.articles.find(article => article.id === 'rewilding');
 
@@ -18,7 +19,7 @@ export default class MicroPlasticScreen extends BaseScreen {
   render = () => (
     <Screen name="Rewilding">
 
-      <Section show={true}>
+      <Section show={false}>
         <Hero
           parallax
           tag="Rewilding"
@@ -29,7 +30,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         />
       </Section>
 
-      <Section className="Section--auto-height Section--black">
+      <Section className="Section--auto-height Section--black" show={false}>
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-185px">
@@ -53,7 +54,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--black Section--auto-height pb-80px">
+      <Section className="Section--black Section--auto-height pb-80px" show={false}>
 
         <div className="text-center">
           <LazyImage src={asset('assets/img/img8.jpg')} className="img-fluid mt-50px"/>
@@ -129,7 +130,8 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img9.jpg')}>
+      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img9.jpg')}
+               show={false}>
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -138,7 +140,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--auto-height">
+      <Section className="Section--auto-height" show={false}>
         <div className="Image mt-80px">
           <Video
             showMuteButton={false}
@@ -207,13 +209,41 @@ export default class MicroPlasticScreen extends BaseScreen {
       <Section className="Section--auto-height">
         <div className="max-width-760 mt-80px mb-80px">
           <Carousel imagesData={[
-            {imgUrl: asset('assets/img/07-Eurasian Beaver.jpg'), imgTitle: 'image01'},
-            {imgUrl: asset('assets/img/06-Eagle owl.JPG'), imgTitle: 'image02'},
-            {imgUrl: asset('assets/img/04-Grey-cattle.jpg'), imgTitle: 'image03'},
-            {imgUrl: asset('assets/img/05-Hutsel horses.jpg'), imgTitle: 'image04'},
-            {imgUrl: asset('assets/img/03-Konik-horses.jpg'), imgTitle: 'image05'},
-            {imgUrl: asset('assets/img/02-Water-buffalo.jpg'), imgTitle: 'image06'},
-            {imgUrl: asset('assets/img/01-Tauros.jpg'), imgTitle: 'image07'},
+            {
+              imgUrl: asset('assets/img/07-Eurasian Beaver.jpg'),
+              imgTitle: 'image01',
+              content: <CarouselContent {...config.carouselContent.rewilding[0]}/>,
+            },
+            {
+              imgUrl: asset('assets/img/06-Eagle owl.JPG'),
+              imgTitle: 'image02',
+              content: <CarouselContent {...config.carouselContent.rewilding[1]}/>,
+            },
+            {
+              imgUrl: asset('assets/img/04-Grey-cattle.jpg'),
+              imgTitle: 'image03',
+              content: <CarouselContent {...config.carouselContent.rewilding[2]}/>,
+            },
+            {
+              imgUrl: asset('assets/img/05-Hutsel horses.jpg'),
+              imgTitle: 'image04',
+              content: <CarouselContent {...config.carouselContent.rewilding[3]}/>,
+            },
+            {
+              imgUrl: asset('assets/img/03-Konik-horses.jpg'),
+              imgTitle: 'image05',
+              content: <CarouselContent {...config.carouselContent.rewilding[4]}/>,
+            },
+            {
+              imgUrl: asset('assets/img/02-Water-buffalo.jpg'),
+              imgTitle: 'image06',
+              content: <CarouselContent {...config.carouselContent.rewilding[5]}/>,
+            },
+            {
+              imgUrl: asset('assets/img/01-Tauros.jpg'),
+              imgTitle: 'image07',
+              content: <CarouselContent {...config.carouselContent.rewilding[6]}/>,
+            },
           ]}/>
           <div className="Paragraph mt-80px">
             <div className="Paragraph__content Paragraph--v2 text-center">

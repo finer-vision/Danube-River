@@ -1,3 +1,4 @@
+import React from "react";
 import {asset} from "./utils";
 
 const domElementStyle = getComputedStyle(document.documentElement);
@@ -93,4 +94,136 @@ export default {
     },
   ],
   mapInfo: 'Stretching more than 2,000 kilometers from the heart of Europe to its eastern extremity, the waters of the Danube offer a living record of the balance between the needs of people and the resilience of nature.',
+  carouselContent: {
+    rewilding: [
+      {
+        title: 'Eurasian Beaver',
+        description: (
+          <>
+            <p>
+              Two families of approximately 12 beavers are located one hour north of Tulcea, Romania.
+            </p>
+            <p>
+              <strong>Benefits to the ecosystem</strong>: The beaver is nicknamed the “ecosystem engineer” because of
+              its ingenuity in building a habitat that extends and protects wetlands. When abandoned, beavers’ lodges,
+              which are built with huge heaps of branches, are often turned into new nest sites for birds or hiding
+              places for reptiles and amphibians, while the channels the beavers dig provide safe places for fish to
+              spawn.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: 'Eagle owl',
+        description: (
+          <>
+            <p>
+              The first chick has been successfully reintroduced to the delta, in the next four years this will increase
+              to up to 20 birds.
+            </p>
+            <p>
+              It is one of the biggest owls, reaching up to 75cm in height with wingspan up to 180cm. It is a settled
+              species, so after choosing a home, it will not migrate to other areas.
+            </p>
+            <p>
+              <strong>Benefits to the ecosystem</strong>: The eagle owl’s diet contains rats and small mammals, other
+              birds and it can even hunt some stray dogs and cats. As a big predator, together with the white-tailed
+              eagle, golden jackal and European wildcat, the eagle owl regulates the quantity of animals and bird
+              species in the region. This sanitary function is very important to the ecosystem as predators generally
+              eliminate old, ill and weak animals, which makes the whole population stronger and more adapted.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: 'Grey cattle',
+        description: (
+          <>
+            <p>
+              Two wild bulls were introduced to Tataru island from Transcarpathia, Ukraine.
+            </p>
+            <p>
+              <strong>Benefits to the ecosystem</strong>: The bulls will revitalize the local herd of grey cattle
+              already established. These large herbivores help to create mosaic landscapes.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: 'Hutsel horses',
+        description: (
+          <>
+            <p>
+              Ten were introduced to the delta in 2019 from Transcarpathia, Ukraine
+            </p>
+            <p>
+              An ancient breed of wild horse bearing a striking resemblance to the extinct Tarpan. They have been used
+              extensively by humans for hundreds of years. After World War Two, they faced extinction with only 300
+              remaining. A breeding program was introduced in the 1970s to ensure their survival.
+            </p>
+            <p>
+              <strong>Benefits to the ecosystem</strong>: Small, brave and resistant, they are able to withstand harsh
+              climates. They are self-sufficient and their grazing and foraging behavior helps to diversify the
+              ecosystem in the delta.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: 'Konik horses',
+        description: (
+          <>
+            <p>
+              There were 23 introduced in 2019 and four have since been born in the delta.
+            </p>
+            <p>
+              Koniks are related to a wild Eurasian horse called the Tarpan, which grazed this area in ancient times and
+              is now extinct. The last known Tarpan died in Russia in 1909.
+            </p>
+            <p>
+              <strong>Benefits to the ecosystem</strong>: Like their ancestors, they are resistant to harsh climates and
+              severe weather conditions. Adapted to foraging in the wild, they can live on a limited amount of food and
+              have an extremely resilient immune system. Through behavior such as browsing, grazing and fertilizing,
+              they will promote biodiversity in the Delta region.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: 'Water buffalo',
+        description: (
+          <>
+            <p>
+              A herd of seven animals was released in 2019 and one calf has been born since, so there are now eight
+              roaming the delta.
+            </p>
+            <p>
+              Natural grazers, they adapt well to wet conditions and the delta diet including young reeds.
+            </p>
+            <p>
+              <strong>Benefits to the ecosystem</strong>: Their grazing opens up scrub and reed beds, creating a dynamic
+              landscape, thereby benefiting an array of wildlife species, such as birds, amphibians, insects and fish.
+              Also, buffalo can carry and distribute more than 200 plant species in their fur and in their digestive
+              system.
+            </p>
+          </>
+        ),
+      },
+      {
+        title: 'Tauros',
+        description: (
+          <>
+            <p>
+              There are 18 grazing near Sfantu Gheorghe on the Romanian side of the delta.
+            </p>
+            <p>
+              <strong>Benefits to the ecosystem</strong>: Through their grazing, the growing number of Tauros in the
+              delta are gradually creating a biodiversity-rich mosaic landscape that benefits other species such as wild
+              boar, golden jackal and various rodents.
+            </p>
+          </>
+        ),
+      },
+    ],
+  },
 };
