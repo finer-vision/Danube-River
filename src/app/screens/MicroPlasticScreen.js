@@ -204,7 +204,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           width: 1440,
           height: 800,
         }}
-        className="Section--background-img Section--height-480 mt-80px"
+        className="Section--background-img Section--height-480 mt-40px"
         backgroundImg={asset('assets/img/chapter2.jpg')}
       >
         <div className="Section__container">
