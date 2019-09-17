@@ -1,15 +1,17 @@
-$padding: 2em;
+$padding-vertical: 1.25em;
+$padding-horizontal: 1.25em;
 
 .Navigation {
-  position: absolute;
+  position: sticky;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   top: 0;
   left: 0;
   width: 100%;
-  padding: $padding;
+  padding: $padding-vertical $padding-horizontal;
   z-index: $z-index-navigation;
+  background-color: rgba(#031C26, 0.7);
 
   &__items, &__logo {
     margin-left: auto;
@@ -19,6 +21,10 @@ $padding: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__logo {
+    height: 32px;
   }
 
   &__item {
@@ -55,8 +61,8 @@ $padding: 2em;
     &__toggle {
       position: absolute;
       cursor: pointer;
-      top: $padding;
-      left: $padding;
+      top: $padding-vertical;
+      left: $padding-horizontal;
     }
 
     &__items, &__logo {

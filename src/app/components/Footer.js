@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {withRouter} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import config from "../core/config";
 import {asset} from "../core/utils";
 import {Waypoint} from "react-waypoint";
@@ -13,10 +13,6 @@ export default class Footer extends Component {
 
   #toggleVisible = visible => () => this.setState({visible});
 
-  #goToArticle = article => () => {
-    this.props.history.push(`/article/${article.id}`);
-  };
-
   render = () => (
     <div className={`Footer ${this.state.visible ? 'Footer--visible' : ''}`}>
       <Waypoint onEnter={this.#toggleVisible(true)} onLeave={this.#toggleVisible(false)}/>
@@ -27,23 +23,23 @@ export default class Footer extends Component {
       </div>
 
       <div className="Footer__articles">
-        <div className="Footer__article" onClick={() => this.props.history.push('/')}>
+        <Link className="Footer__article" to="/about">
           <div className="type-tag text-center text-uppercase">
             Introduction
           </div>
           <div className="type-h4 text-center">
             About the Danube
           </div>
-        </div>
+        </Link>
         {config.articles.map(article => (
-          <div key={`footer.article.${article.id}`} className="Footer__article" onClick={this.#goToArticle(article)}>
+          <Link key={`footer.article.${article.id}`} className="Footer__article" to={`/article/${article.id}`}>
             <div className="type-tag text-center text-uppercase">
               {article.title}
             </div>
             <div className="type-h4 text-center">
               {article.intro}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
