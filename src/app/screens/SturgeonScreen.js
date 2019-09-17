@@ -165,7 +165,12 @@ export default class SturgeonScreen extends BaseScreen {
               </div>
             </div>
 
-            <Carousel/>
+            <Carousel imagesData={[
+              {imgUrl: asset('assets/img/Sturgeon in Odessa_s Privoz_ market - S.Bushuev_WWF Ukraine(2).jpg'), imgTitle: 'image01'},
+              {imgUrl: asset('assets/img/Sturgeon in Odessa_s Privoz_ market - S.Bushuev_WWF Ukraine.jpg'), imgTitle: 'image02'},
+              {imgUrl: asset('assets/img/Sturgeon 5 - S.Bushuev_WWF Ukraine_.jpg'), imgTitle: 'image03'},
+              {imgUrl: asset('assets/img/Caviar tins - Source_ Author_Source_ Vision China_TASS Tas Society.jpg'), imgTitle: 'image04'},
+            ]}/>
 
             <div className="Paragraph mb-50px mt-50px">
               <div className="Paragraph__content">
