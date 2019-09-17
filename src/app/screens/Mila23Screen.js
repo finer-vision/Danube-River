@@ -268,7 +268,12 @@ export default class Mila23Screen extends BaseScreen {
         </div>
 
         <div className="max-width-760 mt-80px mb-80px">
-          <Carousel/>
+          <Carousel imagesData={[
+            {imgUrl: asset('assets/img/Lotka-1.jpg'), imgTitle: 'image01'},
+            {imgUrl: asset('assets/img/Lotka-2.jpg'), imgTitle: 'image02'},
+            {imgUrl: asset('assets/img/Lotka-3.jpg'), imgTitle: 'image04'},
+            {imgUrl: asset('assets/img/Lotka-4.jpg'), imgTitle: 'image02'},
+          ]}/>
         </div>
 
       </Section>

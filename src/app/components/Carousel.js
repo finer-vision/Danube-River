@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import PropTypes from "prop-types";
 import LazyImage from "./LazyImage";
 import {asset} from "../core/utils";
 
@@ -24,16 +25,26 @@ const PrevArrow = props => (
 );
 
 export default class Carousel extends React.Component {
+  static propTypes = {
+    imagesData: PropTypes.arrayOf(PropTypes.shape({
+      imgUrl: PropTypes.string,
+      imgTitle: PropTypes.string,
+    })),
+  };
+
+  static defaultProps = {
+    imagesData: [
+      {imgUrl: asset('assets/img/img1-plastic.jpg'), imgTitle: 'image01'},
+      {imgUrl: asset('assets/img/img3-plastic.jpg'), imgTitle: 'image02'},
+      {imgUrl: asset('assets/img/carousel_img_2.png'), imgTitle: 'image04'},
+      {imgUrl: asset('assets/img/img3-plastic.jpg'), imgTitle: 'image02'},
+    ],
+  };
+
   constructor(props) {
     super(props);
 
     this.state = {
-      imagesData: [
-        {imgUrl: asset('assets/img/img1-plastic.jpg'), imgTitle: 'image01'},
-        {imgUrl: asset('assets/img/img3-plastic.jpg'), imgTitle: 'image02'},
-        {imgUrl: asset('assets/img/carousel_img_2.png'), imgTitle: 'image04'},
-        {imgUrl: asset('assets/img/img3-plastic.jpg'), imgTitle: 'image02'},
-      ],
       settings: {
         className: 'center',
         centerMode: true,
@@ -50,11 +61,10 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const {imagesData, settings} = this.state;
     return (
       <div className="container">
-        <Slider {...settings}>
-          {imagesData.map((imgList, index) => (
+        <Slider {...this.state.settings}>
+          {this.props.imagesData.map((imgList, index) => (
             <div className="slideWrapper" key={index}>
               <LazyImage className="slideImage" src={imgList.imgUrl} title={imgList.imgTitle}/>
             </div>
