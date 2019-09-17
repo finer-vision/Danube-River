@@ -98,7 +98,14 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img4.jpg')}>
+      <Section
+        parallax={{
+          width: 1440,
+          height: 800,
+        }}
+        className="Section--background-img Section--height-480"
+        backgroundImg={asset('assets/img/img4.jpg')}
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -211,6 +218,10 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
 
       <Section
+        parallax={{
+          width: 1440,
+          height: 800,
+        }}
         className="Section--background-img Section--height-480 mt-80px"
         backgroundImg={asset('assets/img/4_2.jpg')}
       >
@@ -266,7 +277,14 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/4_3.jpg')}>
+      <Section
+        parallax={{
+          width: 1440,
+          height: 800,
+        }}
+        className="Section--background-img Section--height-480"
+        backgroundImg={asset('assets/img/4_3.jpg')}
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 4</div>
@@ -316,8 +334,14 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px"
-               backgroundImg={asset('assets/img/img4.jpg')}>
+      <Section
+        parallax={{
+          width: 1440,
+          height: 800,
+        }}
+        className="Section--background-img Section--height-480 mt-80px"
+        backgroundImg={asset('assets/img/img4.jpg')}
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 5</div>

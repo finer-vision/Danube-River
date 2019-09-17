@@ -145,8 +145,14 @@ export default class Mila23Screen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480 mt-80px"
-               backgroundImg={asset('assets/img/img1.jpg')}>
+      <Section
+        parallax={{
+          width: 1438,
+          height: 480,
+        }}
+        className="Section--background-img Section--height-480 mt-80px"
+        backgroundImg={asset('assets/img/img1.jpg')}
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 2</div>
@@ -243,7 +249,14 @@ export default class Mila23Screen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img2.jpg')}>
+      <Section
+        parallax={{
+          width: 1440,
+          height: 480,
+        }}
+        className="Section--background-img Section--height-480"
+        backgroundImg={asset('assets/img/img2.jpg')}
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>
@@ -302,7 +315,14 @@ export default class Mila23Screen extends BaseScreen {
 
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/img3.jpg')}>
+      <Section
+        parallax={{
+          width: 1440,
+          height: 480,
+        }}
+        className="Section--background-img Section--height-480"
+        backgroundImg={asset('assets/img/img3.jpg')}
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>

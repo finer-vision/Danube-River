@@ -200,6 +200,10 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
 
       <Section
+        parallax={{
+          width: 1800,
+          height: 1011,
+        }}
         className="Section--background-img Section--height-480 mt-80px"
         backgroundImg={asset('assets/img/chapter2.jpg')}
       >
@@ -313,7 +317,14 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--background-img Section--height-480" backgroundImg={asset('assets/img/chapter3.jpg')}>
+      <Section
+        parallax={{
+          width: 1440,
+          height: 480,
+        }}
+        className="Section--background-img Section--height-480"
+        backgroundImg={asset('assets/img/chapter3.jpg')}
+      >
         <div className="Section__container">
           <div className="Section__background-img-flex">
             <div className="small-title-type2 primary mb-30px">Chapter 3</div>

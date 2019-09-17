@@ -96,9 +96,12 @@ export default class SturgeonScreen extends BaseScreen {
       </Section>
 
       <Section
+        parallax={{
+          width: 1440,
+          height: 800,
+        }}
         className="Section--background-img Section--height-480"
         backgroundImg={asset('assets/img/Sturgeon-chapter2.jpg')}
-
       >
         <div className="Section__container">
           <div className="Section__background-img-flex">

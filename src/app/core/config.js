@@ -10,6 +10,7 @@ export default {
     yellow: domElementStyle && domElementStyle.getPropertyValue('--color-yellow'),
     'blue-100': domElementStyle && domElementStyle.getPropertyValue('--color-blue-100'),
   },
+  navigationHeight: parseFloat(domElementStyle ? domElementStyle.getPropertyValue('--navigation-height') : 0),
   articles: [
     {
       index: 0,
