@@ -432,7 +432,7 @@ export default class SturgeonScreen extends BaseScreen {
           </div>
         </div>
 
-        <div className="Image mt-110pxx">
+        <div className="Image mt-110px">
           <Video
             showMuteButton={false}
             showPlayButton={true}
