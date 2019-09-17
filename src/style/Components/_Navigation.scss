@@ -13,6 +13,10 @@ $padding-horizontal: 1.25em;
   z-index: $z-index-navigation;
   background-color: rgba(#031C26, 0.7);
 
+  &__toggle {
+    display: none;
+  }
+
   &__items, &__logo {
     margin-left: auto;
   }
@@ -44,7 +48,7 @@ $padding-horizontal: 1.25em;
   }
 }
 
-.Screen--mobile {
+@mixin mobile-layout {
   .Navigation {
     flex-direction: column-reverse;
     align-items: center;
@@ -59,6 +63,7 @@ $padding-horizontal: 1.25em;
     }
 
     &__toggle {
+      display: block;
       position: absolute;
       cursor: pointer;
       top: $padding-vertical;
@@ -83,4 +88,12 @@ $padding-horizontal: 1.25em;
       margin-bottom: 1em;
     }
   }
+}
+
+@media (max-width: 1024px) {
+  @include mobile-layout;
+}
+
+.Screen--mobile {
+  @include mobile-layout;
 }

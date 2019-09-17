@@ -39,14 +39,12 @@ export default class Navigation extends Component {
   render() {
     return (
       <div className={`Navigation ${this.state.mobileOpen ? 'Navigation--open' : ''}`}>
-        {this.props.app.isMobile && (
-          <img
-            src={asset(`assets/img/mobile-menu-${this.state.mobileOpen ? 'close' : 'open'}.svg`)}
-            className="Navigation__toggle"
-            alt={`${this.state.mobileOpen ? 'Close' : 'Open'} mobile menu`}
-            onClick={this.#toggleMenu}
-          />
-        )}
+        <img
+          src={asset(`assets/img/mobile-menu-${this.state.mobileOpen ? 'close' : 'open'}.svg`)}
+          className="Navigation__toggle"
+          alt={`${this.state.mobileOpen ? 'Close' : 'Open'} mobile menu`}
+          onClick={this.#toggleMenu}
+        />
 
         <div className="Navigation__items">
           {this.state.items.map((item, index) => (
