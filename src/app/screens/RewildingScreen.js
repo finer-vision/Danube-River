@@ -206,7 +206,15 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--auto-height">
         <div className="max-width-760 mt-80px mb-80px">
-          <Carousel/>
+          <Carousel imagesData={[
+            {imgUrl: asset('assets/img/07-Eurasian Beaver.jpg'), imgTitle: 'image01'},
+            {imgUrl: asset('assets/img/06-Eagle owl.JPG'), imgTitle: 'image02'},
+            {imgUrl: asset('assets/img/04-Grey-cattle.jpg'), imgTitle: 'image03'},
+            {imgUrl: asset('assets/img/05-Hutsel horses.jpg'), imgTitle: 'image04'},
+            {imgUrl: asset('assets/img/03-Konik-horses.jpg'), imgTitle: 'image05'},
+            {imgUrl: asset('assets/img/02-Water-buffalo.jpg'), imgTitle: 'image06'},
+            {imgUrl: asset('assets/img/01-Tauros.jpg'), imgTitle: 'image07'},
+          ]}/>
           <div className="Paragraph mt-80px">
             <div className="Paragraph__content Paragraph--v2 text-center">
               There are 18 grazing near Sfantu Gheorghe on the Romanian side of the delta.

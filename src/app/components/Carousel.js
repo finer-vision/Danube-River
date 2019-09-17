@@ -36,8 +36,8 @@ export default class Carousel extends React.Component {
     imagesData: [
       {imgUrl: asset('assets/img/img1-plastic.jpg'), imgTitle: 'image01'},
       {imgUrl: asset('assets/img/img3-plastic.jpg'), imgTitle: 'image02'},
-      {imgUrl: asset('assets/img/carousel_img_2.png'), imgTitle: 'image04'},
-      {imgUrl: asset('assets/img/img3-plastic.jpg'), imgTitle: 'image02'},
+      {imgUrl: asset('assets/img/carousel_img_2.png'), imgTitle: 'image03'},
+      {imgUrl: asset('assets/img/img3-plastic.jpg'), imgTitle: 'image04'},
     ],
   };
 
