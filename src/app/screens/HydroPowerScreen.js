@@ -340,7 +340,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           height: 800,
         }}
         className="Section--background-img Section--height-480 mt-80px"
-        backgroundImg={asset('assets/img/img4.jpg')}
+        backgroundImg={asset('assets/img/Hydropower-chapter4.jpg')}
       >
         <div className="Section__container">
           <div className="Section__background-img-flex">
@@ -370,10 +370,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
 
       <Section className="Section--auto-height">
-        <div className="max-width-760 mt-80px mb-80px">
-          <Carousel/>
-        </div>
-        <div className="Section__container">
+        <div className="Section__container mt-80px">
           <div className="max-width-760 pb-40px">
             <div className="Paragraph mt-30px">
               <div className="Paragraph__content Paragraph--v2">

@@ -22,6 +22,8 @@ export default class AboutScreen extends BaseScreen {
           title="10 countries, 2,860KM"
           pageTitleType="type-single-page"
           pageTagType="type-single-page"
+          video="https://video.cgtn.com/public/2019-09-12/public/video/02ea8b8b20a646feb9702f124127bc11/02ea8b8b20a646feb9702f124127bc11.m3u8"
+          videoLoop
         />
       </Section>
 

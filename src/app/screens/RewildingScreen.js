@@ -402,7 +402,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       >
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div className="small-title-type2 primary mb-30px">Chapter 4</div>
+            <div className="small-title-type2 primary mb-30px">Chapter 5</div>
             <h1 className="type-h1 big-title-type-2">REWILDING THE DELTA</h1>
           </div>
         </div>

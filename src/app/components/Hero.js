@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import {withRouter} from "react-router-dom";
 import ParallaxHeader from "./ParallaxHeader";
 import {AppContext} from "../context/AppContext";
+import Video from "./Video";
 
 @withRouter
 @AppContext
@@ -16,6 +17,8 @@ export default class Hero extends Component {
     className: PropTypes.string,
     style: PropTypes.object,
     parallax: PropTypes.bool,
+    videoLoop: PropTypes.bool,
+    video: PropTypes.string,
   };
 
   static defaultProps = {
@@ -24,6 +27,7 @@ export default class Hero extends Component {
     className: '',
     style: {},
     parallax: false,
+    videoLoop: false,
   };
 
   displayPageTag() {
@@ -62,7 +66,16 @@ export default class Hero extends Component {
 
   render = () => (
     <div className="Hero" style={this.props.style}>
-      <ParallaxHeader id={this.props.parallaxHeaderId}/>
+      {!this.props.video && <ParallaxHeader id={this.props.parallaxHeaderId}/>}
+      {this.props.video && (
+        <Video
+          src={this.props.video}
+          muted
+          autoPlay
+          noSkin
+          loop={this.props.videoLoop}
+        />
+      )}
 
       <div className="Hero__title">
         {this.displayPageTag()}

@@ -1,6 +1,12 @@
 .Video {
   position: relative;
 
+  &--no-skin {
+    .video-react-big-play-button, .video-react-control-bar {
+      display: none;
+    }
+  }
+
   .video-react-big-play-button {
     $size: 148px;
     top: 0;

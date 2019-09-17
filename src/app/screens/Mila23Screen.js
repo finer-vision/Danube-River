@@ -325,7 +325,7 @@ export default class Mila23Screen extends BaseScreen {
       >
         <div className="Section__container">
           <div className="Section__background-img-flex">
-            <div className="small-title-type2 primary mb-30px">Chapter 3</div>
+            <div className="small-title-type2 primary mb-30px">Chapter 4</div>
             <h1 className="type-h1 big-title-type-2">AN UNCERTAIN FUTURE</h1>
           </div>
         </div>

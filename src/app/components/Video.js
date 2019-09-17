@@ -19,12 +19,16 @@ import Services from "../services";
 export default class Video extends Component {
   static propTypes = {
     src: PropTypes.string.isRequired,
+    loop: PropTypes.bool,
+    noSkin: PropTypes.bool,
   };
 
   static defaultProps = {
     autoPlay: false,
     controls: true,
     muted: false,
+    loop: false,
+    noSkin: false,
   };
 
   #video = createRef();
@@ -60,7 +64,7 @@ export default class Video extends Component {
 
   render() {
     return (
-      <div className={`Video ${this.props.className}`}>
+      <div className={`Video ${this.props.className} ${this.props.noSkin ? 'Video--no-skin' : ''}`}>
         <Player
           ref={this.#video}
           fluid
@@ -68,17 +72,20 @@ export default class Video extends Component {
           src={this.props.src}
           poster={this.props.poster}
           muted={this.props.muted}
-          controls={this.props.controls}
+          controls={this.props.controls && !this.props.noSkin}
           autoPlay={this.props.autoPlay}
+          loop={this.props.loop}
         >
-          <ControlBar>
-            <ReplayControl seconds={10} order={1.1}/>
-            <ForwardControl seconds={30} order={1.2}/>
-            <CurrentTimeDisplay order={4.1}/>
-            <TimeDivider order={4.2}/>
-            <PlaybackRateMenuButton rates={[5, 2, 1, 0.5, 0.1]} order={7.1}/>
-            <VolumeMenuButton disabled/>
-          </ControlBar>
+          {!this.props.noSkin && (
+            <ControlBar>
+              <ReplayControl seconds={10} order={1.1}/>
+              <ForwardControl seconds={30} order={1.2}/>
+              <CurrentTimeDisplay order={4.1}/>
+              <TimeDivider order={4.2}/>
+              <PlaybackRateMenuButton rates={[5, 2, 1, 0.5, 0.1]} order={7.1}/>
+              <VolumeMenuButton disabled/>
+            </ControlBar>
+          )}
         </Player>
         <Waypoint onLeave={this.#togglePlay(false)}/>
       </div>

@@ -1,5 +1,15 @@
 .Screen--About {
   .Hero {
     background-image: url("./assets/img/about-hero.jpg");
+    padding: 0;
+
+    .Video {
+      width: 100%;
+      pointer-events: none;
+
+      .video-react.video-react-fluid {
+        padding-top: 100% !important;
+      }
+    }
   }
 }

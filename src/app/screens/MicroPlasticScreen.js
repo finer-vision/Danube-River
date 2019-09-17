@@ -382,10 +382,6 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
         </div>
 
-        <div className="max-width-760 mt-80px">
-          <Carousel/>
-        </div>
-
         <div className="Section__container">
           <div className="max-width-760 mb-80px">
             <div className="Paragraph mt-80px">
