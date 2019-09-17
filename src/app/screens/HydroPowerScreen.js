@@ -255,7 +255,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 <br/>
                 In 2001, a World Commission on Dams (WCD), set up by the World Bank and the UN, issued a set of
                 principles to which members should adhere: they include public consultation and consent as well as
-                ensuring a healthy flow to protect marine line.
+                ensuring a healthy flow to protect marine life.
                 <br/>
                 <br/>
                 The EU requires any dam to meet those conditions before the owners can sell carbon credits based on the
@@ -336,7 +336,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
             <div className="Paragraph mt-30px">
               <div className="Paragraph__content Paragraph--v2">
-                In 1984, the riparian forest, was facing certain destruction as a result of the planned construction of
+                In 1984, the riparian forest was facing certain destruction as a result of the planned construction of
                 the Hainburg power plant, just downstream from Vienna. As news of the project spread, fierce nationwide
                 protests led to the occupation of the wetlands by thousands of people.
               </div>

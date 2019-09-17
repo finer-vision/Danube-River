@@ -129,7 +129,7 @@ export default class Mila23Screen extends BaseScreen {
               That has not be welcomed news for all. As Vassili puts it, there are now too many people for too few fish.
             </div>
           </div>
-          
+
           <br/>
           <br/>
 
