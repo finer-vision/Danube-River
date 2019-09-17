@@ -13,6 +13,7 @@ $padding-horizontal: 1.25em;
   padding: $padding-vertical $padding-horizontal;
   z-index: $z-index-navigation;
   background-color: rgba(#031C26, 0.7);
+  margin-bottom: -#{$navigation-height};
 
   &__toggle {
     display: none;

@@ -13,7 +13,6 @@ export default class LandingScreen extends BaseScreen {
   state = {
     activeMap: 'zoomed',
     mapSection: config.articles[0].id,
-    mapComponent: null,
     lockSections: false,
   };
 
@@ -39,10 +38,7 @@ export default class LandingScreen extends BaseScreen {
   render() {
     return (
       <Screen name="Landing" lockSections={this.state.lockSections}>
-        <Section
-          show={this.state.mapSection === 'zoomed'}
-          className="Section__landing-hero"
-        >
+        <Section className="Section__landing-hero">
           <Hero
             parallax
             tag="The Danube"
