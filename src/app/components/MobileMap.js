@@ -51,7 +51,7 @@ export default class MobileMap extends Component {
                 <div className="type-h2">{article.intro}</div>
                 <p className="type-p">{article.description}</p>
                 <div className="button" onClick={this.#goToArticle(article)}>
-                  <div className="type-h4">{article.title}</div>
+                  <div className="type-h4">Read more</div>
                   <LazyImage src={asset('assets/img/arrow-blue.svg')} alt="Read more"/>
                 </div>
               </div>
