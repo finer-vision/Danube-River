@@ -13,14 +13,14 @@
     left: 1rem;
     z-index: 11;
 
-    @include mobile {
+    @include tablet {
       left: auto;
-      right: 1rem;
+      right: 2rem;
     }
   }
 
   &.Screen--mobile {
     left: auto;
-    right: 1rem;
+    right: 2rem;
   }
 }
