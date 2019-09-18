@@ -11,6 +11,15 @@ export default {
     'blue-100': domElementStyle && domElementStyle.getPropertyValue('--color-blue-100'),
   },
   navigationHeight: parseFloat(domElementStyle ? domElementStyle.getPropertyValue('--navigation-height') : 0),
+  landing: {
+    sound: {
+      autoplay: true,
+      loop: true,
+      mute: true,
+      volume: 0.6,
+      fadeRate: 3000,
+    },
+  },
   articles: [
     {
       index: 0,
