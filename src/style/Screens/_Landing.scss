@@ -12,5 +12,15 @@
     top: 1rem;
     left: 1rem;
     z-index: 11;
+
+    @include mobile {
+      left: auto;
+      right: 1rem;
+    }
+  }
+
+  &.Screen--mobile {
+    left: auto;
+    right: 1rem;
   }
 }
