@@ -1,4 +1,5 @@
 import React, {createElement} from "react";
+import {Howl} from "howler";
 import BaseScreen from "./BaseScreen";
 import Screen from "../components/Screen";
 import {AppContext} from "../context/AppContext";
@@ -7,13 +8,26 @@ import Footer from "../components/Footer";
 import Section from "../components/Section";
 import Services from "../services";
 import config from "../core/config";
+import {asset} from "../core/utils";
+import MuteToggle from "../components/ToggleMute";
 
 @AppContext
 export default class LandingScreen extends BaseScreen {
+  #howl = new Howl({
+    src: [
+      asset('/assets/audio/background.wav'),
+      asset('/assets/audio/background.mp3'),
+    ],
+    autoplay: true,
+    loop: true,
+    mute: true,
+  });
+
   state = {
     activeMap: 'zoomed',
     mapSection: config.articles[0].id,
     lockSections: false,
+    audioMuted: true,
   };
 
   // Don't lock sections until halfway past the header section, to allow for more of an impactful parallax effect.
@@ -22,6 +36,12 @@ export default class LandingScreen extends BaseScreen {
   #handleMapSectionChange = mapSection => this.setState({mapSection});
 
   #handleMapChange = activeMap => this.setState({activeMap});
+
+  #toggleMute = () => {
+    const audioMuted = !this.state.audioMuted;
+    this.setState({audioMuted});
+    this.#howl.mute(audioMuted);
+  };
 
   componentDidMount() {
     document.title = 'Danube River';
@@ -43,6 +63,11 @@ export default class LandingScreen extends BaseScreen {
   render() {
     return (
       <Screen name="Landing" lockSections={this.state.lockSections}>
+        <MuteToggle
+          muted={this.state.audioMuted}
+          toggleMute={this.#toggleMute}
+        />
+
         <Section className="Section__landing-hero">
           <Hero
             parallax
