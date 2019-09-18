@@ -4,6 +4,7 @@ import config from "../core/config";
 import {asset} from "../core/utils";
 import {Waypoint} from "react-waypoint";
 import LazyImage from "./LazyImage";
+import FormatText from "./FormatText";
 
 @withRouter
 export default class Footer extends Component {
@@ -29,7 +30,7 @@ export default class Footer extends Component {
               {article.title}
             </div>
             <div className="type-h4 text-center">
-              {article.intro}
+              <FormatText>{article.intro}</FormatText>
             </div>
           </Link>
         ))}
