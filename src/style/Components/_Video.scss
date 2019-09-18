@@ -5,6 +5,10 @@
     .video-react-big-play-button, .video-react-control-bar {
       display: none;
     }
+
+    .video-react-icon-play-arrow:before {
+      content: "" !important;
+    }
   }
 
   .video-react-big-play-button {

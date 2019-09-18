@@ -148,7 +148,7 @@ export default class MicroPlasticScreen extends BaseScreen {
         </div>
       </Section>
 
-      <Section className="Section--auto-height" show={false}>
+      <Section className="Section--auto-height">
         <div className="Image mt-80px">
           <Video
             showMuteButton={false}
