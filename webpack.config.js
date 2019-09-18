@@ -61,7 +61,6 @@ module.exports = {
     filename: 'index.js',
     chunkFilename: `[name].[chunkhash].js`,
     path: BUILD_DIR,
-    publicPath: '/',
   },
   module: {
     rules: [
