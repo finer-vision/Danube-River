@@ -62,7 +62,7 @@ export default class AboutScreen extends BaseScreen {
         <div className="text-center mt-50px">
           <Video
             poster={asset('assets/img/about-video-poster.jpg')}
-            src={ARTICLE.videos[0]}
+            src="https://video.cgtn.com/public/2019-09-12/public/video/9d47b230a63242a093cc014420f88700/9d47b230a63242a093cc014420f88700.m3u8"
             className="Video--max-width-1257 Video--cursor-pointer"
           />
         </div>
