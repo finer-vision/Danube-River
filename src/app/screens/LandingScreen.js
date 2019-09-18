@@ -26,7 +26,6 @@ export default class LandingScreen extends BaseScreen {
     mapSection: config.articles[0].id,
     lockSections: false,
     audioMuted: true,
-    volume: parseFloat(JSON.parse(JSON.stringify(config.landing.sound.volume))),
   };
 
   // Don't lock sections until halfway past the header section, to allow for more of an impactful parallax effect.
