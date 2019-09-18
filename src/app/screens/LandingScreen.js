@@ -55,6 +55,7 @@ export default class LandingScreen extends BaseScreen {
   }
 
   componentWillUnmount() {
+    this.#howl.mute(true);
     Services.event.off('screen.scroll', this.#handleScroll);
     Services.event.off('map.section.change', this.#handleMapSectionChange);
     Services.event.off('map.change', this.#handleMapChange);
