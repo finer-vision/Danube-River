@@ -85,20 +85,20 @@ export default class Footer extends Component {
               </div>
             </div>
 
-            <div className="Footer__logo">
+            <a href="https://europe.cgtn.com" target="_blank" className="Footer__logo">
               <LazyImage src={asset('assets/img/cgtn-logo-header-white.png')} alt="CGTN Logo"/>
-            </div>
+            </a>
           </div>
 
           <div className="Footer__small">
             <div className="Footer__small-links type-p">
-              <a href="https://www.cgtn.com/privacy" target="_blank">
+              <a href="https://www.cgtn.com/terms-of-use" target="_blank">
                 Terms of use
               </a>
-              <a href="https://www.cgtn.com/terms-of-use" target="_blank">
+              <a href="https://www.cgtn.com/copyright" target="_blank">
                 Copyright
               </a>
-              <a href="https://www.cgtn.com/copyright" target="_blank">
+              <a href="https://www.cgtn.com/privacy" target="_blank">
                 Privacy policy
               </a>
             </div>
