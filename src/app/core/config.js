@@ -69,7 +69,7 @@ export default {
       x: 410,
       y: 146,
       images: [
-        asset('assets/img/articles/facts.svg'),
+        asset('assets/img/facts.png'),
       ],
       videos: [
         'https://video.cgtn.com/public/2019-09-12/public/video/6358f3e8140a4a0794f5cfb6cf32fa33/6358f3e8140a4a0794f5cfb6cf32fa33.m3u8',
