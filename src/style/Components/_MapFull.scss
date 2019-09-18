@@ -101,6 +101,18 @@
     animation: fade-in 1s ease-out forwards;
     animation-delay: 1s;
 
+    .MapFull__popup-img {
+      img {
+        width: 100%;
+      }
+    }
+
+    &--0, &--1 {
+      .MapFull__popup-img {
+        @include fluid-attr("max-width", 350px, 450px);
+        transform: translate(55%, -50%);
+      }
+    }
 
     &--0 {
       transform: translate(4vw, 17vh);
@@ -127,11 +139,11 @@
 
     &--2 {
       .MapFull__popup-img {
+        @include fluid-attr("max-width", 220px, 300px);
         right: auto;
         left: 0;
-        @include fluid-attr("max-width", 256px, 356px);
         width: 100%;
-        transform: translate(-70%, 50%);
+        transform: translate(-80%, 50%);
         animation: pop-in-img-3 1s ease-out forwards;
         animation-delay: 1s;
         opacity: 0;
@@ -142,7 +154,7 @@
           }
 
           100% {
-            transform: translate(-70%, 5%);
+            transform: translate(-80%, 5%);
           }
         }
       }

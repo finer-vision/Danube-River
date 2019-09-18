@@ -20,6 +20,9 @@ export default {
       description: 'For more than 200 million years, sturgeon have lurked beneath the waters of Earth, witnessing the demise of dinosaurs and the rise of man. The Danube long boasted one of the largest populations of the living fossil, but it is now under threat of extinction from dams, pollution and overfishing. Conservationists are working to save the species and are fighting an ongoing battle with the “caviar mafia,” which leads the illegal trade in the fish’s eggs.',
       x: 90,
       y: 136,
+      images: [
+        asset('/assets/img/map-sturgeon.jpg'),
+      ],
       videos: [
         'https://video.cgtn.com/public/2019-09-12/public/video/34e90658c667428dac723a516fc321dd/34e90658c667428dac723a516fc321dd.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/224589d3401f4b6980ef96bdc70db234/224589d3401f4b6980ef96bdc70db234.m3u8',
@@ -45,6 +48,9 @@ export default {
       description: 'Media images of bags and bottles drifting in the sea or tangled birds have made the fight against plastic waste emblematic of last-ditch attempts to reverse the damage inflicted by the economy of consumption. However, the invisible pollution caused by tiny plastic particles is harder to address and could prove more harmful in every corner of the Earth. From the way we wash and eat to what we wear, everyone has a part to play.',
       x: 170,
       y: 237,
+      images: [
+        asset('/assets/img/map-microplastics.jpg'),
+      ],
       videos: [
         'https://video.cgtn.com/public/2019-09-12/public/video/a3318b17e0dc4e9d8190e5e21d4fb1b8/a3318b17e0dc4e9d8190e5e21d4fb1b8.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/002bef0fa18e4cc689dee77c306d340e/002bef0fa18e4cc689dee77c306d340e.m3u8',
@@ -69,7 +75,7 @@ export default {
       x: 410,
       y: 146,
       images: [
-        asset('assets/img/facts.png'),
+        asset('/assets/img/facts.png'),
       ],
       videos: [
         'https://video.cgtn.com/public/2019-09-12/public/video/6358f3e8140a4a0794f5cfb6cf32fa33/6358f3e8140a4a0794f5cfb6cf32fa33.m3u8',
@@ -97,7 +103,7 @@ export default {
       x: 170,
       y: 146,
       images: [
-        asset('assets/img/articles/rewilding-beaver.jpg'),
+        asset('/assets/img/articles/rewilding-beaver.jpg'),
       ],
       videos: [
         'https://video.cgtn.com/public/2019-09-12/public/video/2c466686708d4652a0b423ff92ad0666/2c466686708d4652a0b423ff92ad0666.m3u8',
@@ -121,7 +127,7 @@ export default {
       intro: 'Life of the island people',
       description: 'The Danube is sanctuary to a mosaic of minorities who escaped from neighbouring countries for fear of persecution centuries ago. Notable are the Lipovans from Russia, they are expert fishermen and canoeists, but these traditions are being threatened by environmental changes and a growing tourism sector. In an increasingly connected world, the livelihood of these river people is contingent on their ability to adapt to modern changes, while living in harmony with nature.',
       images: [
-        asset('assets/img/articles/4.png'),
+        asset('/assets/img/articles/4.png'),
       ],
       x: 570,
       y: 100,
