@@ -45,13 +45,13 @@ export default class MicroPlasticScreen extends BaseScreen {
                 <br/>
                 <br/>
                 His son, however, has risen to become head of environmental campaign group the World Wide Fund for
-                Nature (WWF) in the Balkans and is working passionately to free the waters of the Danube from man - made
+                Nature (WWF) in the Balkans and is working passionately to free the waters of the Danube from man-made
                 controls.
                 <br/>
                 <br/>
                 Meeting together above the mammoth Iron Gates I, the two men – who have dedicated their lives to the
-                good of this eastern corner of Europe – recognize both the benefits and the harm that the centuries -
-                long taming of the Danube has produced.
+                good of this eastern corner of Europe – recognize both the benefits and the harm that the centuries-long
+                taming of the Danube has produced.
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               <div className="Stats">
                 <div className="Stats__number">16km</div>
                 <div className="Stats__text">There is an average of one dam</div>
-                <div className="Stats__text">every 16km along the Danube</div>
+                <div className="Stats__text">every 16km along the first 1,000km of the Danube</div>
               </div>
               <div className="Paragraph__content Paragraph--v2 Paragraph--moved-to-right">
                 After Slovakia’s capital Bratislava you enter the slower flowing Middle Danube where you’ll meet the

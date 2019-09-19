@@ -401,10 +401,10 @@ export default class Mila23Screen extends BaseScreen {
                   no roads”
                 </h2>
                 <div className="quote-author quote-author--type-2 white mt-10px">
-                  Philipp Hohenblum
+                  Florian Pavel
                 </div>
                 <div className="quote-author-position white mt-10px">
-                  Professor
+                  Hotel owner in Mila 23
                 </div>
               </div>
 

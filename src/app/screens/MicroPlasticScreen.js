@@ -52,7 +52,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 fish, animals and humans.
                 <br/>
                 <br/>
-                Indeed, the World Health Orgaization (WHO) has called for a “further assessment of microplastics in the
+                Indeed, the World Health Organization (WHO) has called for a “further assessment of microplastics in the
                 environment.” With Dr Maria Neira, director of public health and the environment at WHO, explaining: “We
                 urgently need to know more about the health impact of microplastics because they are everywhere.”
               </div>

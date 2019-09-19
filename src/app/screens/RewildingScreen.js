@@ -298,9 +298,8 @@ export default class MicroPlasticScreen extends BaseScreen {
                 Rewilding Europe team must uncover evidence for themselves.
                 <br/>
                 <br/>
-                Saavedra and Ion set out on a journey to a remotest part of the delta to hunt for
-                clues about the beavers’ return and to find out how successful they have been on
-                their return to the area.
+                Saavedra and Ion set out on a journey to a remote part of the delta to hunt for clues about the beavers’
+                return and to find out how successful they have been on their return to the area.
               </div>
             </div>
           </div>
@@ -427,7 +426,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               <div className="Stats">
                 <div className="Stats__number">15,000</div>
                 <div className="Stats__text white">
-                  football pitches in size to restore wetland each year.
+                  Wetland equivalent in size to 15,000 football pitches is being restored each year
                 </div>
               </div>
               <div className="Paragraph__content Paragraph--v2 Paragraph--moved-to-right">
