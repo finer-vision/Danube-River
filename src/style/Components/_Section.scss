@@ -175,6 +175,10 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include mobile {
+      height: 40vh !important;
+    }
   }
 
   &__background-img-flex {
@@ -189,6 +193,7 @@
 
   &--height-480 {
     height: 480px;
+
     @include mobile {
       height: 180px;
     }
