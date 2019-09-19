@@ -29,6 +29,7 @@
 
     &:before {
       display: none;
+      content: "" !important;
 
       .video-react-control-text {
         display: none;

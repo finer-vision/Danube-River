@@ -169,7 +169,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                   Very few stretches <br className="br-desktop"/>
                   can still be <br className="br-desktop"/>
                   characterized as <br className="br-desktop"/>
-                  free-flowing,”
+                  free-flowing”
                 </h2>
                 <div className="quote-author quote-author--type-2 primary mt-10px">
                   Philipp Hohenblum
@@ -323,7 +323,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
             <div className="Stats Stats--v3">
               <div className="Stats__number">
-                <span className="Stats--big">30</span> <span className="Stats--small-type-2">% of the river</span>
+                <span className="Stats--big">30%</span> <span className="Stats--small-type-2"> of the river</span>
               </div>
             </div>
 
@@ -352,7 +352,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--auto-height">
         <div className="Section__container">
-          <div className="max-width-760 pb-40px">
+          <div className="max-width-760">
             <h4 className="type-h4 mt-50px">
               The Donau-Auen National Park is a case study for advocates of liberating the river’s flow. Saving it
               changed Austrian politics.
@@ -370,7 +370,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
 
       <Section className="Section--auto-height">
-        <div className="Section__container mt-40px">
+        <div className="Section__container">
           <div className="max-width-760 pb-40px">
             <div className="Paragraph mt-30px">
               <div className="Paragraph__content Paragraph--v2">

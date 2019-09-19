@@ -178,7 +178,7 @@ export default class Mila23Screen extends BaseScreen {
             <span className="quote-open-type-2 primary">“</span>
             <h2 className="type-h2 type-quote primary">
               To become a champion you need to be determined – and living in the waters of the Danube Delta trains your
-              determination, because here you have only yourself to rely on.”
+              determination, because here you have only yourself to rely on”
             </h2>
             <div className="quote-author primary white-sm mt-30px">
               Ivan Patzaichin

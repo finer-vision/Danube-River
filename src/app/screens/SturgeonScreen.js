@@ -53,10 +53,10 @@ export default class SturgeonScreen extends BaseScreen {
 
             <div className="Paragraph mt-30px">
               <div className="Stats">
-                <div className="Stats__number">100<span className="Stats--small Stats--sm-small-type-2">years old</span>
+                <div className="Stats__number">100<span className="Stats--small Stats--sm-small-type-2"> years old</span>
                 </div>
                 <div className="Stats__text white">
-                  Sturgeon can live to more than 100-years-old
+                  Sturgeon can live to more than 100 years old
                 </div>
               </div>
               <div className="Paragraph__content Paragraph--v2 Paragraph--moved-to-right">
@@ -87,7 +87,7 @@ export default class SturgeonScreen extends BaseScreen {
             </div>
 
             <div className="Stats Stats--v2 mt-50px mw-100">
-              <div className="Stats__number Stats--big">200<span className="Stats--small">million years</span></div>
+              <div className="Stats__number Stats--big">200<span className="Stats--small">m years</span></div>
             </div>
             <h4 className="type-h4 mt-50px">
               Sturgeon have been in our waters for 200 million years, their fossils have been traced back to the
@@ -134,7 +134,7 @@ export default class SturgeonScreen extends BaseScreen {
               <div className="Stats">
                 <div className="Stats__number">$110,000</div>
                 <div className="Stats__text">
-                  Made from rare albino fish eggs and 22-carat gold, Grull's "Strottarga Bianco" caviar has sold for
+                  Made from rare albino fish eggs and 22-carat gold, Grull's 'Strottarga Bianco' caviar has sold for
                   more than $110,000 per kilo.
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default class SturgeonScreen extends BaseScreen {
                 so plentiful farmers would use it as pig feed and mothers gave it to their sick children as medicine.
               </div>
               <h4 className="type-h4 mt-30px">
-                Biggest sturgeon ever caught was 1,571 kg (3,463 lb) and 7.2 m (24 ft) long.
+                Biggest sturgeon ever caught was 1,571kg and 7.2m long.
               </h4>
             </div>
           </div>
@@ -225,10 +225,10 @@ export default class SturgeonScreen extends BaseScreen {
             </div>
 
             <div className="Stats Stats--v2 mt-50px mw-100">
-              <div className="Stats__number Stats--big">$1.55<span className="Stats--small">Billion</span></div>
+              <div className="Stats__number Stats--big">$1.55<span className="Stats--small">bn</span></div>
             </div>
             <h4 className="type-h4 mt-50px">
-              Analysts forecast the global caviar market to grow to USD 1.55bn by 2021
+              Analysts forecast the global caviar market to grow to $1.55 billion by 2021
             </h4>
           </div>
         </div>
@@ -257,13 +257,13 @@ export default class SturgeonScreen extends BaseScreen {
               <span className="quote-open-type-2 primary">“</span>
               <h2 className="type-h2 type-alert primary">
                 In the caviar trade, there is an illegal part and a legal part and it is very hard to distinguish
-                between the two.”
+                between the two”
               </h2>
               <div className="quote-author quote-author--type-2 primary mt-10px">
                 JUTTA JAHRL
               </div>
               <div className="quote-author-position black mt-10px">
-                sturgeon project leader for WWF Austria
+                Sturgeon project leader for WWF Austria
               </div>
             </div>
 
@@ -317,7 +317,7 @@ export default class SturgeonScreen extends BaseScreen {
             <div className="Quote Quote--relative">
               <span className="quote-open-type-2 primary">“</span>
               <h2 className="type-h2 type-alert primary">
-                Traditional fishermen are impoverished, and many poach to sustain themselves
+                Traditional fishermen are impoverished, and many poach to sustain themselves”
               </h2>
               <div className="quote-author quote-author--type-2 primary mt-10px">
                 IVAN JARIC
