@@ -57,7 +57,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 urgently need to know more about the health impact of microplastics because they are everywhere.”
               </div>
             </div>
-            <h4 className="type-h4 text-center mb-30px">Microplastics are pieces of plastic below 5mm</h4>
+            <h4 className="type-h4 text-center mb-30px">Smaller than 5mm</h4>
           </div>
           <div className="max-width-1100 mb-30px">
             <div className="CirclesGrid">
@@ -77,7 +77,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                   <LazyImage src={asset('assets/img/circle_2.png')}/>
                 </div>
                 <div className="CirclesGrid__title">
-                  Fibres
+                  Fibers
                 </div>
                 <div className="CirclesGrid__sub_title">
                   The most common type of microplastic. Plastic strands from clothing.
@@ -132,7 +132,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 inseparably are various sizes of plastic, some as tiny as 60 micrometers.
                 <br/>
                 <br/>
-                Bordos’s job is to separate the different layers that make up Danube water and to analyse the results to
+                Bordos’s job is to separate the different layers that make up Danube water and to analyze the results to
                 create a pollution map of the river.
               </div>
             </div>
@@ -224,13 +224,13 @@ export default class MicroPlasticScreen extends BaseScreen {
             </h4>
             <div className="Paragraph mt-30px">
               <div className="Paragraph__content Paragraph--v2">
-                They can also be small bits of plastic waste from factories washed off products after moulding or
+                They can also be small bits of plastic waste from factories washed off products after molding or
                 shaping. But they also include microbeads, which are found in cosmetic products such as shower gel or
                 some types of toothpaste.
                 <br/>
                 <br/>
                 Another source is from clothing made from artificial fabrics. Recent estimates suggest
-                hundreds of thousands of microscopic fibres can be shed from a single garment as it tumbles
+                hundreds of thousands of microscopic fibers can be shed from a single garment as it tumbles
                 through a washing machine. Too small to be filtered out by the appliance or further down the
                 chain in wastewater plants, they find their way into rivers and then oceans.
                 <br/>
@@ -309,7 +309,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               Your browser does not support HTML5 video.
             </video>
             <div className="PlasticSource__text">
-              Having made its way into the food chain through fish and other aquatic animals, the tiny plastic fibers
+              Having made their way into the food chain through fish and other aquatic animals, the tiny plastic fibers
               ultimately end up on our dinner plates.
             </div>
           </div>
@@ -398,7 +398,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 <h2 className="type-h2 type-alert primary">
                   It’s not as simple as<br className="br-desktop"/>
                   spotting a discarded <br className="br-desktop"/>
-                  fast food wrapper.”
+                  fast food wrapper”
                 </h2>
                 <div className="quote-author quote-author--type-2 black mt-10px">
                   Philipp Hohenblum
@@ -433,7 +433,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               <div className="Stats__number Stats--big">300,000<span className="Stats--small">tons</span></div>
             </div>
             <h4 className="type-h4 mt-30px mb-30px">Up to this amount of microplastics are emitted in the EU every
-              year’</h4>
+              year</h4>
             <div className="Paragraph">
               <div className="Paragraph__content Paragraph--v2">
                 So, some of the world’s brightest minds have been focusing on tackling the issue and pressure is growing

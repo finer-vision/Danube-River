@@ -88,7 +88,7 @@ export default class MicroPlasticScreen extends BaseScreen {
                 <span className="quote-open-type-2 primary">“</span>
                 <h2 className="type-h2 type-alert primary">
                   In a normal ecosystem, you have a species above the jackal and that species is the wolf. Nobody likes
-                  the wolf, but the wolf will be controlling the jackals.
+                  the wolf, but the wolf will be controlling the jackals“
                 </h2>
                 <div className="quote-author quote-author--type-2 primary mt-10px">
                   Deli Saavedra
