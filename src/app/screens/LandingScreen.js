@@ -95,7 +95,7 @@ export default class LandingScreen extends BaseScreen {
         </Section>
 
         <Section
-          show={!this.props.app.isMobile && this.state.mapSection === config.articles[config.articles.length - 1].id}
+          show={this.props.app.isMobile ? true : this.state.mapSection === config.articles[config.articles.length - 1].id}
           className="Footer__section"
         >
           <Footer/>
