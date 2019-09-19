@@ -34,9 +34,9 @@ export default {
       ],
       videos: [
         'https://video.cgtn.com/public/2019-09-12/public/video/34e90658c667428dac723a516fc321dd/34e90658c667428dac723a516fc321dd.m3u8',
-        'https://video.cgtn.com/public/2019-09-12/public/video/224589d3401f4b6980ef96bdc70db234/224589d3401f4b6980ef96bdc70db234.m3u8',
+        'https://video.cgtn.com/public/2019-09-19/public/video/738ad6ff645b4c96bb9e70fdb27bb01b/738ad6ff645b4c96bb9e70fdb27bb01b.m3u8',
         'https://video.cgtn.com/public/2019-09-12/public/video/8cb9d39dc24c40d4865569ab98d5a780/8cb9d39dc24c40d4865569ab98d5a780.m3u8',
-        'https://video.cgtn.com/public/2019-09-12/public/video/0a90386da3484e0186ce67bfdf1a6a13/0a90386da3484e0186ce67bfdf1a6a13.m3u8',
+        'https://video.cgtn.com/public/2019-09-19/public/video/d86bffc25c2242619c5c6915698e4ca7/d86bffc25c2242619c5c6915698e4ca7.m3u8',
       ],
       metaData: [
         {
@@ -115,8 +115,8 @@ export default {
         asset('/assets/img/articles/rewilding-beaver.jpg'),
       ],
       videos: [
-        'https://video.cgtn.com/public/2019-09-12/public/video/2c466686708d4652a0b423ff92ad0666/2c466686708d4652a0b423ff92ad0666.m3u8',
-        'https://video.cgtn.com/public/2019-09-12/public/video/ea022371bcf14fb793461e94a3fce863/ea022371bcf14fb793461e94a3fce863.m3u8',
+        'https://video.cgtn.com/public/2019-09-19/public/video/d7abcbbbbf6d44afa4a7479f624b7a5d/d7abcbbbbf6d44afa4a7479f624b7a5d.m3u8',
+        'https://video.cgtn.com/public/2019-09-19/public/video/dd647e93eb004a6da024272dfe55f299/dd647e93eb004a6da024272dfe55f299.m3u8',
       ],
       metaData: [
         {

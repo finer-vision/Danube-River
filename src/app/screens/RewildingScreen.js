@@ -418,8 +418,6 @@ export default class MicroPlasticScreen extends BaseScreen {
                 Rewilding Europe and several other organizations are giving nature a helping hand. Many wildlife species
                 are now protected and the active management of wildlife populations has been suspended in several areas.
               </h4>
-
-
             </div>
 
             <div className="Paragraph mt-30px">
