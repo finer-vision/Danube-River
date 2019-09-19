@@ -6,8 +6,9 @@
 
   @include mobile {
     position: relative;
-    margin-left: 0;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
   }
 

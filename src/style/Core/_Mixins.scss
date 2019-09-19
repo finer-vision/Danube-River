@@ -10,8 +10,12 @@
 }
 
 @mixin mobile {
+  @at-root .Screen--mobile & {
+    @content;
+  }
+
   @media (max-width: $mobile-screen-width) {
-    @content
+    @content;
   }
 }
 
