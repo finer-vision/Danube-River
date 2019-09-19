@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M104.235057,8.50322987 C104.840788,7.85985146 105.853392,7.82933256 106.49677,8.435064 C107.140149,9.04079544 107.170667,10.053399 106.564936,10.6967775 L97.5266803,20.2967721 C96.9206292,20.94049 95.9073634,20.9706505 95.2640979,20.3641193 L91.5023607,16.8171995 C90.8594344,16.2109882 90.8296712,15.1983621 91.4358825,14.5554358 C92.0420939,13.9125096 93.05472,13.8827463 93.6976462,14.4889576 L96.2943934,16.9374153 L104.235057,8.50322987 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-page-1440-Copy" transform="translate(-1360.000000, -823.000000)">
+            <g id="Cookie-banner" transform="translate(0.000000, 660.000000)">
+                <g id="Group-3" transform="translate(1245.000000, 139.000000)">
+                    <g id="Group-2" transform="translate(24.000000, 16.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

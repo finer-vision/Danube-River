@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import {withRouter} from "react-router-dom";
 import {AppContext} from "../context/AppContext";
 import Navigation from "./Navigation";
+import CookieNotice from "./CookieNotice";
 
 @AppContext
 @withRouter
@@ -34,6 +35,7 @@ export default class Screen extends Component {
     >
       <Navigation/>
       {this.props.children}
+      <CookieNotice/>
     </div>
   );
 }
