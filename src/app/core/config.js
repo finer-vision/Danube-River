@@ -11,6 +11,15 @@ export default {
     'blue-100': domElementStyle && domElementStyle.getPropertyValue('--color-blue-100'),
   },
   navigationHeight: parseFloat(domElementStyle ? domElementStyle.getPropertyValue('--navigation-height') : 0),
+  landing: {
+    sound: {
+      autoplay: true,
+      loop: true,
+      mute: true,
+      volume: 0.6,
+      fadeRate: 3000,
+    },
+  },
   articles: [
     {
       index: 0,
@@ -44,7 +53,7 @@ export default {
       index: 1,
       id: 'microplastics',
       title: 'Microplastics',
-      intro: 'Small thing, big problem',
+      intro: "Small thing,\nbig problem",
       description: 'Media images of bags and bottles drifting in the sea or tangled birds have made the fight against plastic waste emblematic of last-ditch attempts to reverse the damage inflicted by the economy of consumption. However, the invisible pollution caused by tiny plastic particles is harder to address and could prove more harmful in every corner of the Earth. From the way we wash and eat to what we wear, everyone has a part to play.',
       x: 170,
       y: 237,

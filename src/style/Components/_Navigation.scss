@@ -2,6 +2,7 @@ $padding-vertical: 1.25em;
 $padding-horizontal: 1.25em;
 
 .Navigation {
+  position: absolute;
   position: sticky;
   display: flex;
   align-items: center;

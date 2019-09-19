@@ -18,9 +18,7 @@ export default class LandingScreen extends BaseScreen {
       asset('/assets/audio/background.wav'),
       asset('/assets/audio/background.mp3'),
     ],
-    autoplay: true,
-    loop: true,
-    mute: true,
+    ...config.landing.sound,
   });
 
   state = {
@@ -31,7 +29,10 @@ export default class LandingScreen extends BaseScreen {
   };
 
   // Don't lock sections until halfway past the header section, to allow for more of an impactful parallax effect.
-  #handleScroll = () => this.setState({lockSections: this.props.app.scrollY >= this.props.app.screenH * 0.6});
+  #handleScroll = () => {
+    this.setState({lockSections: this.props.app.scrollY >= this.props.app.screenH * 0.6});
+    this.#fadeSound();
+  };
 
   #handleMapSectionChange = mapSection => this.setState({mapSection});
 
@@ -41,6 +42,17 @@ export default class LandingScreen extends BaseScreen {
     const audioMuted = !this.state.audioMuted;
     this.setState({audioMuted});
     this.#howl.mute(audioMuted);
+  };
+
+  // Fade the sound effect up and down on scroll, no higher than volume defined in config.landing.sound.volume
+  #fadeSound = () => {
+    if (this.state.audioMuted) {
+      return;
+    }
+
+    let volume = config.landing.sound.volume - (this.props.app.scrollY/config.landing.sound.fadeRate);
+    volume = Math.max(0, Math.min(config.landing.sound.volume, volume));
+    this.#howl.volume(volume);
   };
 
   componentDidMount() {
