@@ -30,6 +30,7 @@ export default class MicroPlasticScreen extends BaseScreen {
       </Section>
 
       <Section className="Section--auto-height Section--black">
+        <LazyImage src={asset('assets/img/subheader-microplastics.jpg')} className="img-fluid"/>
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-185px">
