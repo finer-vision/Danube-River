@@ -25,5 +25,9 @@
         transition-delay: 0.5s;
       }
     }
+    .Stats--hydromap {
+      opacity: 1;
+      transition: opacity 2s ease;
+    }
   }
 }
