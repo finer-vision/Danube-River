@@ -12,9 +12,17 @@
     &:first-of-type {
       z-index: 2;
     }
-    &.show-layer {
+  }
+
+  &--focused {
+    .HydroMap__layer {
       opacity: 1;
-      transition: opacity 2s ease;
+      transition: opacity 2.5s ease;
+      transition-delay: 2s;
+      &:first-of-type {
+        transition: opacity 2.5s ease;
+        transition-delay: 0.5s;
+      }
     }
   }
 }
