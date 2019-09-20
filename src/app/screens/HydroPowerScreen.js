@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import config from "../core/config";
 import LazyImage from "../components/LazyImage";
+import HydroMap from "../components/HydroMap";
 
 const ARTICLE = config.articles.find(article => article.id === 'hydropower');
 
@@ -138,9 +139,11 @@ export default class MicroPlasticScreen extends BaseScreen {
             </div>
           </div>
         </div>
+
         <div className="max-width-1257 text-center">
-          <LazyImage src={asset('assets/img/62dams.jpg')} className="img-fluid"/>
+          <HydroMap />
         </div>
+
         <div className="Section__container">
 
           <div className="max-width-760 mb-80px">

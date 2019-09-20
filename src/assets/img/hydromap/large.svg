@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1260px" height="710px" viewBox="0 0 1260 710" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Hydropower-map-Large</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1261" height="710"></rect>
+    </defs>
+    <g id="Hydropower-map-Large" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="map">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="Dams" mask="url(#mask-2)">
+                <g transform="translate(31.000000, 26.000000)" id="Major-Dams">
+                    <g transform="translate(109.184034, 5.016286)">
+                        <polygon id="Fill-54" stroke="#13B9C5" fill="#EAFDFF" points="18.030391 60.1954306 34.0574052 60.1954306 34.0574052 44.1433158 18.030391 44.1433158"></polygon>
+                        <polygon id="Fill-56" stroke="#13B9C5" fill="#EAFDFF" points="5.00844194 73.2377739 21.0354562 73.2377739 21.0354562 57.185659 5.00844194 57.185659"></polygon>
+                        <polygon id="Fill-57" stroke="#13B9C5" fill="#EAFDFF" points="56.0945497 46.1498301 72.121564 46.1498301 72.121564 30.0977153 56.0945497 30.0977153"></polygon>
+                        <polygon id="Fill-58" stroke="#13B9C5" fill="#EAFDFF" points="90.151955 48.1563445 106.178969 48.1563445 106.178969 32.1042296 90.151955 32.1042296"></polygon>
+                        <polygon id="Fill-59" stroke="#13B9C5" fill="#EAFDFF" points="68.1148104 48.1563445 84.1418246 48.1563445 84.1418246 32.1042296 68.1148104 32.1042296"></polygon>
+                        <polygon id="Fill-60" stroke="#13B9C5" fill="#EAFDFF" points="107.180658 45.1465729 123.207672 45.1465729 123.207672 29.0944581 107.180658 29.0944581"></polygon>
+                        <polygon id="Fill-61" stroke="#13B9C5" fill="#EAFDFF" points="78.1316943 47.1530873 94.1587085 47.1530873 94.1587085 31.1009725 78.1316943 31.1009725"></polygon>
+                        <polygon id="Fill-62" stroke="#13B9C5" fill="#EAFDFF" points="189.319105 28.0912009 205.34612 28.0912009 205.34612 12.0390861 189.319105 12.0390861"></polygon>
+                        <polygon id="Fill-63" stroke="#13B9C5" fill="#EAFDFF" points="172.290403 16.0521148 188.317417 16.0521148 188.317417 0 172.290403 0"></polygon>
+                        <polygon id="Fill-64" stroke="#13B9C5" fill="#EAFDFF" points="263.444046 69.2247452 279.47106 69.2247452 279.47106 53.1726303 263.444046 53.1726303"></polygon>
+                        <polygon id="Fill-65" stroke="#13B9C5" fill="#EAFDFF" points="597.006279 139.452747 613.033294 139.452747 613.033294 123.400633 597.006279 123.400633"></polygon>
+                        <polygon id="Fill-66" stroke="#13B9C5" fill="#EAFDFF" points="623.050178 160.521148 639.077192 160.521148 639.077192 144.469033 623.050178 144.469033"></polygon>
+                        <polygon id="Fill-67" stroke="#13B9C5" fill="#EAFDFF" points="347.585871 106.345261 363.612885 106.345261 363.612885 90.2931459 347.585871 90.2931459"></polygon>
+                        <polygon id="Fill-68" stroke="#13B9C5" fill="#EAFDFF" points="292.493009 82.2670884 308.520024 82.2670884 308.520024 66.2149736 292.493009 66.2149736"></polygon>
+                        <polygon id="Fill-69" stroke="#13B9C5" fill="#EAFDFF" points="315.531842 90.2931459 331.558857 90.2931459 331.558857 74.241031 315.531842 74.241031"></polygon>
+                        <polygon id="Fill-70" stroke="#13B9C5" fill="#EAFDFF" points="364.614573 112.364804 380.641588 112.364804 380.641588 96.3126889 364.614573 96.3126889"></polygon>
+                        <polygon id="Fill-71" stroke="#13B9C5" fill="#EAFDFF" points="265.447423 73.2377739 281.474437 73.2377739 281.474437 57.185659 265.447423 57.185659"></polygon>
+                        <polygon id="Fill-72" stroke="#13B9C5" fill="#EAFDFF" points="289.487944 78.2540597 305.514958 78.2540597 305.514958 62.2019449 289.487944 62.2019449"></polygon>
+                        <polygon id="Fill-73" stroke="#13B9C5" fill="#EAFDFF" points="354.597689 91.296403 370.624704 91.296403 370.624704 107.348518 354.597689 107.348518"></polygon>
+                        <polygon id="Fill-74" stroke="#13B9C5" fill="#EAFDFF" points="534.901599 120.390861 550.928614 120.390861 550.928614 104.338746 534.901599 104.338746"></polygon>
+                        <polygon id="Fill-75" stroke="#13B9C5" fill="#EAFDFF" points="327.552103 106.345261 343.579117 106.345261 343.579117 90.2931459 327.552103 90.2931459"></polygon>
+                        <polygon id="Fill-76" stroke="#13B9C5" fill="#EAFDFF" points="431.727695 115.374575 447.75471 115.374575 447.75471 99.3224604 431.727695 99.3224604"></polygon>
+                        <polygon id="Fill-77" stroke="#13B9C5" fill="#EAFDFF" points="377.636522 120.390861 393.663537 120.390861 393.663537 104.338746 377.636522 104.338746"></polygon>
+                        <polygon id="Fill-78" stroke="#13B9C5" fill="#EAFDFF" points="412.695616 117.38109 428.72263 117.38109 428.72263 101.328975 412.695616 101.328975"></polygon>
+                        <polygon id="Fill-79" stroke="#13B9C5" fill="#EAFDFF" points="318.536907 98.3192033 334.563922 98.3192033 334.563922 82.2670884 318.536907 82.2670884"></polygon>
+                        <polygon id="Fill-80" stroke="#13B9C5" fill="#EAFDFF" points="513.866143 98.3192033 529.893157 98.3192033 529.893157 82.2670884 513.866143 82.2670884"></polygon>
+                        <polygon id="Fill-81" stroke="#13B9C5" fill="#EAFDFF" points="480.810426 98.3192033 496.837441 98.3192033 496.837441 82.2670884 480.810426 82.2670884"></polygon>
+                        <polygon id="Fill-82" stroke="#13B9C5" fill="#EAFDFF" points="1062.79138 600.951049 1078.81839 600.951049 1078.81839 584.898934 1062.79138 584.898934"></polygon>
+                        <polygon id="Fill-83" stroke="#13B9C5" fill="#EAFDFF" points="1065.79645 568.846819 1081.82346 568.846819 1081.82346 552.794704 1065.79645 552.794704"></polygon>
+                        <polygon id="Fill-84" stroke="#13B9C5" fill="#EAFDFF" points="1065.79645 612.990135 1081.82346 612.990135 1081.82346 596.93802 1065.79645 596.93802"></polygon>
+                        <polygon id="Fill-85" stroke="#13B9C5" fill="#EAFDFF" points="0 130.423433 16.0270142 130.423433 16.0270142 114.371318 0 114.371318"></polygon>
+                        <polygon id="Fill-86" stroke="#13B9C5" fill="#EAFDFF" points="1.00168839 122.397375 17.0287026 122.397375 17.0287026 106.345261 1.00168839 106.345261"></polygon>
+                        <polygon id="Fill-87" stroke="#13B9C5" fill="#EAFDFF" points="3.00506517 116.377832 19.0320794 116.377832 19.0320794 100.325718 3.00506517 100.325718"></polygon>
+                        <polygon id="Fill-88" stroke="#13B9C5" fill="#EAFDFF" points="0 100.325718 16.0270142 100.325718 16.0270142 84.2736028 0 84.2736028"></polygon>
+                        <polygon id="Fill-89" stroke="#13B9C5" fill="#EAFDFF" points="1.00168839 108.351775 17.0287026 108.351775 17.0287026 92.2996602 1.00168839 92.2996602"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
