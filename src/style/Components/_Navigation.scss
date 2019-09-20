@@ -20,10 +20,6 @@ $padding-horizontal: 1.25em;
     display: none;
   }
 
-  &__items, &__logo {
-    margin-left: auto;
-  }
-
   &__items {
     display: flex;
     align-items: center;
@@ -31,7 +27,9 @@ $padding-horizontal: 1.25em;
   }
 
   &__logo {
-    height: 32px;
+    height: 2rem;
+    position: absolute;
+    right: 1rem;
   }
 
   &__item {
@@ -39,6 +37,7 @@ $padding-horizontal: 1.25em;
     @include fluid-attr("font-size", 14px, 16px);
     font-family: "Aktiv GroteskEx Bd", sans-serif;
     padding: 0.5em;
+    letter-spacing: 1.5px;
 
     &, &:hover, &:focus, &:visited {
       color: $color;
@@ -63,6 +62,10 @@ $padding-horizontal: 1.25em;
       .Navigation__items {
         display: flex;
       }
+
+      .Navigation__logo {
+        margin-top: rem(4px);
+      }
     }
 
     &__toggle {
@@ -75,6 +78,8 @@ $padding-horizontal: 1.25em;
 
     &__items, &__logo {
       margin-left: 0;
+      position: relative;
+      right: auto;
     }
 
     &__items {
@@ -86,10 +91,11 @@ $padding-horizontal: 1.25em;
       justify-content: space-evenly;
       max-height: 400px;
     }
+  }
 
-    &__logo {
-      margin-bottom: 1em;
-    }
+  .mute-videos {
+    left: auto !important;
+    right: 1.25rem;
   }
 }
 
