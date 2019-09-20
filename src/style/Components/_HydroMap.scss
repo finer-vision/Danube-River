@@ -15,6 +15,17 @@
     }
   }
 
+  @include mobile {
+    img {
+      width: 100%;
+    }
+    .HydroMap__layer {
+      object-fit: contain;
+      margin-top: rem(-3px);
+    }
+  }
+
+
   &--focused {
     .HydroMap__layer {
       opacity: 1;
@@ -28,6 +39,7 @@
     .Stats--hydromap {
       opacity: 1;
       transition: opacity 2s ease;
+      z-index: 5;
     }
   }
 }

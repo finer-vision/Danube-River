@@ -126,7 +126,7 @@ export default class MicroPlasticScreen extends BaseScreen {
             </h4>
 
             <div className="Paragraph mt-30px">
-              <div className="Stats">
+              <div className="Stats d-mobile-none">
                 <div className="Stats__number">16km</div>
                 <div className="Stats__text">There is an average of one dam</div>
                 <div className="Stats__text">every 16km along the first 1,000km of the Danube</div>
@@ -136,6 +136,13 @@ export default class MicroPlasticScreen extends BaseScreen {
                 Gabcikovo Dam and then, at the Romanian border with Serbia, the massive Iron Gates I and II, which
                 generate 37 percent of Serbia’s power and 27 percent of Romania’s.
               </div>
+
+              <div className="Stats d-desktop-none text-left mt-30px mb-0">
+                <div className="Stats__number">16<span className="Stats--small-type-2">km</span></div>
+                <div className="Stats__text">There is an average of one dam</div>
+                <div className="Stats__text">every 16km along the Danube</div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -148,11 +155,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
           <div className="max-width-760 mb-80px">
             <div className="Paragraph mt-80px">
-              <div className="Stats d-desktop-none text-left">
-                <div className="Stats__number">62<span className="Stats--small-type-2">dams</span></div>
-                <div className="Stats__text">There is an average of one dam</div>
-                <div className="Stats__text">every 16km along the Danube</div>
-              </div>
+
               <div className="Paragraph__content Paragraph--v2">
                 Those are the last two dams on the Danube proper before it winds across the Romanian and Bulgarian plain
                 and diffuses into the delta, where it meets the Black Sea.

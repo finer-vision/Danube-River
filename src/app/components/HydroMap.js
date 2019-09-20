@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {asset} from "../core/utils";
 import LazyImage from "./LazyImage";
 import {Waypoint} from "react-waypoint";
+import CountUp, { startAnimation } from 'react-countup';
 
 export default class HydroMap extends Component {
   state = {
@@ -19,8 +20,12 @@ export default class HydroMap extends Component {
 
         <div className="Stats Stats--hydromap">
           <div className="Stats__number">
-            <span className="Stats--big">62</span> <span className="Stats--small"> dams</span>
+            <span className="Stats--big">
+              {this.state.focused &&  <CountUp end={62} duration={4}/> }
+            </span>
+            <span className="Stats--small"> dams</span>
           </div>
+
           <h4 class="type-h4">on the Danube - 59 of which are on its first 1,000km</h4>
         </div>
 

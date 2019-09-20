@@ -119,12 +119,38 @@
     max-width: 100%;
     text-align: left;
     opacity: 0;
+
     .Stats--small {
       font-size: rem(60px);
     }
+
     .type-h4 {
       color: $white-color;
       font-weight: 400;
+    }
+
+    @include mobile {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: rem(24px);
+      width: 100%;
+
+      .Stats__number {
+        font-size: rem(55px);
+        .Stats--big {
+          font-size: rem(55px);
+          line-height: rem(55px);
+        }
+        .Stats--small {
+          font-size: rem(25px);
+        }
+      }
+
+      .type-h4 {
+        font-size: rem(16px);
+        max-width: rem(250px);
+        margin: auto;
+      }
     }
   }
 }
