@@ -116,7 +116,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
       <Section className="Section--auto-height">
         <div className="Section__container">
-          <div className="max-width-760 pb-40px">
+          <div className="max-width-760 pb-80px">
             <h4 className="type-h4 mt-50px">
               If you travel down the Danube from its source in the Black Forest you’ll hit a dam every 16 kilometers on
               average for the first 1,000 kilometers. They turn the kinetic energy of the water pouring off the Alps and
