@@ -112,4 +112,18 @@
       line-height: rem(30px);
     }
   }
+
+  &--hydromap {
+    margin-left: 3rem;
+    bottom: 5rem;
+    max-width: 100%;
+    text-align: left;
+    .Stats--small {
+      font-size: rem(60px);
+    }
+    .type-h4 {
+      color: $white-color;
+      font-weight: 400;
+    }
+  }
 }
