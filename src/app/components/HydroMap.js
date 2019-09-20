@@ -26,7 +26,7 @@ export default class HydroMap extends Component {
             <span className="Stats--small"> dams</span>
           </div>
 
-          <h4 class="type-h4">on the Danube - 59 of which are on its first 1,000km</h4>
+          <h4 className="type-h4">on the Danube - 59 of which are on its first 1,000km</h4>
         </div>
 
         <Waypoint onEnter={this.#toggleFocused(true)} onLeave={this.#toggleFocused(false)}/>
