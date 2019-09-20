@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {asset} from "../core/utils";
 import LazyImage from "./LazyImage";
 import {Waypoint} from "react-waypoint";
-import CountUp, { startAnimation } from 'react-countup';
+import CountUp from 'react-countup';
 
 export default class HydroMap extends Component {
   state = {
