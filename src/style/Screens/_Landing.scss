@@ -12,11 +12,6 @@
     top: 1rem;
     left: 1rem;
     z-index: 20;
-
-    @include tablet {
-      left: auto;
-      right: 2rem;
-    }
   }
 
   &.Screen--mobile {
