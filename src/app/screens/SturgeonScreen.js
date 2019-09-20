@@ -31,6 +31,7 @@ export default class SturgeonScreen extends BaseScreen {
       </Section>
 
       <Section className="Section--auto-height Section--black pb-80px">
+        <LazyImage src={asset('assets/img/subheader-sturgeon.jpg')} className="img-fluid"/>
         <div className="Section__container">
           <div className="max-width-760">
             <div className="Paragraph mb-50px mt-185px">
