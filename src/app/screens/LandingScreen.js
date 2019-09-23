@@ -88,7 +88,9 @@ export default class LandingScreen extends BaseScreen {
             title="Life of a River"
             parallaxHeaderId="landing"
           />
-          <div className='scroll-icon'></div>
+          <div className='scroll-icon'>
+            <div className='scroll-icon__text'>Scroll down</div>
+          </div>
         </Section>
 
         <Section name="map">
