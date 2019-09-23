@@ -250,7 +250,7 @@ export default class MicroPlasticScreen extends BaseScreen {
 
         <div className="Section__container mt-80px">
           <div className="PlasticSource">
-            <video autoPlay loop muted className="PlasticSource__video">
+            <video autoPlay playsInline loop muted className="PlasticSource__video">
               <source src={asset('assets/vid/1.mp4')} type="video/mp4"/>
               Your browser does not support HTML5 video.
             </video>
@@ -261,7 +261,7 @@ export default class MicroPlasticScreen extends BaseScreen {
           </div>
 
           <div className="PlasticSource PlasticSource--margin-left-160">
-            <video autoPlay loop muted className="PlasticSource__video">
+            <video autoPlay playsInline loop muted className="PlasticSource__video">
               <source src={asset('assets/vid/2.mp4')} type="video/mp4"/>
               Your browser does not support HTML5 video.
             </video>
@@ -276,7 +276,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               Despite the presence of an elaborate filtration process that includes physical, chemical and biological
               treatment, microfibers often slip through the net.
             </div>
-            <video autoPlay loop muted className="PlasticSource__video">
+            <video autoPlay playsInline loop muted className="PlasticSource__video">
               <source src={asset('assets/vid/3.mp4')} type="video/mp4"/>
               Your browser does not support HTML5 video.
             </video>
@@ -287,7 +287,7 @@ export default class MicroPlasticScreen extends BaseScreen {
               Having successfully defied wastewater filtration, the tiny particles are flushed into rivers and allowed
               to flow downstream into the ocean.
             </div>
-            <video autoPlay loop muted className="PlasticSource__video">
+            <video autoPlay playsInline loop muted className="PlasticSource__video">
               <source src={asset('assets/vid/4.mp4')} type="video/mp4"/>
               Your browser does not support HTML5 video.
             </video>
@@ -298,14 +298,14 @@ export default class MicroPlasticScreen extends BaseScreen {
               Microplastics pose a grave danger to aquatic habitats as they are often ingested by marine animals, both
               in river ecosystems and in oceans.
             </div>
-            <video autoPlay loop muted className="PlasticSource__video">
+            <video autoPlay playsInline loop muted className="PlasticSource__video">
               <source src={asset('assets/vid/5.mp4')} type="video/mp4"/>
               Your browser does not support HTML5 video.
             </video>
           </div>
 
           <div className="PlasticSource PlasticSource--margin-left-160 PlasticSource--align-left">
-            <video autoPlay loop muted className="PlasticSource__video">
+            <video autoPlay playsInline loop muted className="PlasticSource__video">
               <source src={asset('assets/vid/6.mp4')} type="video/mp4"/>
               Your browser does not support HTML5 video.
             </video>
