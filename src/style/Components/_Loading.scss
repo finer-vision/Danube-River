@@ -65,6 +65,21 @@
     animation-iteration-count: infinite;
     animation-name: scroll;
   }
+
+  &__text {
+    position: absolute;
+    width: rem(160px);
+    left: rem(-56px);
+    bottom: rem(-25px);
+    color: $white-color;
+    font-size: rem(14px);
+    font-family: "Aktiv GroteskEx Bd",sans-serif;
+    letter-spacing: rem(2px);
+    text-transform: uppercase;
+    @include tablet {
+      display: none;
+    }
+  }
 }
 
 @keyframes scroll {
